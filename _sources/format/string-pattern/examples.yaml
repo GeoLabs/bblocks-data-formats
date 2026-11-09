@@ -27,6 +27,8 @@ examples:
                 "description": "A regular expression, in the ECMA 262 dialect, that the value must match."
               }
             ],
+            "cwlCustomType": "Pattern",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {

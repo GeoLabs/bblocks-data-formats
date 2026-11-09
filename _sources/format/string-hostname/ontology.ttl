@@ -21,7 +21,9 @@
     rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/string-hostname/actions/addition> ;
     dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.3> ;
     df:jsonSchemaFragment "{\"format\":\"hostname\",\"type\":\"string\"}"^^rdf:JSON ;
-    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> .
+    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    df:cwlCustomType "Hostname" ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> .
 
 <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.3> dct:title "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.3 Hostnames" .
 

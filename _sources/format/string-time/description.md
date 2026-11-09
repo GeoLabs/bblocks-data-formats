@@ -21,6 +21,8 @@ A time of day with a time zone offset, as JSON Schema `time`.
 
 Record `Time` of the EOAP `string_format.yaml`: "Represents a time in the `hh:mm:ss.sTZD` format."
 
+This format is carried in CWL by that record, documented by the building block [`eoap.cct.string-format`](https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format) (`seeAlso` in `bblock.json`, `rdfs:seeAlso` and `df:cwlCustomType` in `ontology.ttl`).
+
 It was registered in the data-types register as the data type `string-time`, a proposal. Its withdrawal from that register is pending (see the data-formats README).
 
 ## Content of this block

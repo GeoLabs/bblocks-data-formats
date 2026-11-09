@@ -26,6 +26,8 @@ This format is parameterized: the fragment above is completed by the profile tha
 
 Record `Pattern` of the EOAP `string_format.yaml`: "Validate string value against a regular expression syntax based on the ECMA 262 (JavaScript) dialect."
 
+This format is carried in CWL by that record, documented by the building block [`eoap.cct.string-format`](https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format) (`seeAlso` in `bblock.json`, `rdfs:seeAlso` and `df:cwlCustomType` in `ontology.ttl`).
+
 It was never a data type of the data-types register.
 
 ## Content of this block

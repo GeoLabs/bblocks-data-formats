@@ -21,5 +21,8 @@
       "title": "EOAP schemas: string_format.yaml (record Email)",
       "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
     }
+  ],
+  "seeAlso": [
+    "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format"
   ]
 }

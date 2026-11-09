@@ -47,6 +47,10 @@ properties:
         name: {type: string}
         jsonSchemaKeyword: {type: string}
         description: {type: string}
+  cwlCustomType:
+    description: The record of the EOAP string_format.yaml that carries this format in CWL.
+    type: string
+  seeAlso: {type: string, format: uri}
   hasAction:
     type: object
     required: [id, actionType, proposer]

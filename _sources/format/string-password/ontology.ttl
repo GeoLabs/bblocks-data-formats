@@ -21,7 +21,9 @@
     rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/string-password/actions/addition> ;
     dct:conformsTo <https://spec.openapis.org/oas/v3.0.3#data-types> ;
     df:jsonSchemaFragment "{\"format\":\"password\",\"type\":\"string\"}"^^rdf:JSON ;
-    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> .
+    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    df:cwlCustomType "Password" ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> .
 
 <https://spec.openapis.org/oas/v3.0.3#data-types> dct:title "OpenAPI Specification 3.0.3, Data Types" .
 

@@ -21,6 +21,8 @@ examples:
               "type": "string",
               "format": "uri-reference"
             },
+            "cwlCustomType": "URIReference",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {

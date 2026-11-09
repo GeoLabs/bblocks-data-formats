@@ -21,6 +21,8 @@ examples:
               "type": "string",
               "format": "duration"
             },
+            "cwlCustomType": "Duration",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {

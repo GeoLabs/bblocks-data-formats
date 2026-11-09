@@ -102,3 +102,10 @@ df:jsonSchemaKeyword a owl:DatatypeProperty ;
     rdfs:label "JSON Schema keyword" ;
     rdfs:comment "The JSON Schema keyword whose value the parameter supplies." ;
     rdfs:range xsd:string .
+
+df:cwlCustomType a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "CWL custom type" ;
+    rdfs:comment "The name of the record of the EOAP schemas (string_format.yaml) that carries this format in CWL, documented by the eoap.cct.string-format building block (rdfs:seeAlso)." ;
+    rdfs:domain df:Format ;
+    rdfs:range xsd:string .

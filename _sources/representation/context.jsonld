@@ -104,6 +104,11 @@
     "format": {
       "@id": "df:format",
       "@type": "@id"
+    },
+    "cwlCustomType": "df:cwlCustomType",
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
     }
   }
 }

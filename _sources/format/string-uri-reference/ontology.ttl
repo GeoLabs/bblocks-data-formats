@@ -21,7 +21,9 @@
     rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/string-uri-reference/actions/addition> ;
     dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5> ;
     df:jsonSchemaFragment "{\"format\":\"uri-reference\",\"type\":\"string\"}"^^rdf:JSON ;
-    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> .
+    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    df:cwlCustomType "URIReference" ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> .
 
 <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5> dct:title "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.5 Resource Identifiers" .
 
