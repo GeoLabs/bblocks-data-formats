@@ -29,8 +29,8 @@ chosen. A representation is created when an existing role needs it, and lists th
 for now, control body, with the intention to delegate that role to the OGC or to an OSPD working
 group. It holds the definition of a substantive change, the table of substantive and clarifying
 changes for formats and representations, the version rule, the rule for proposals and
-`df:amendmentAction`, the action type of an in-place change to a proposal. No eligibility criteria
-and no commitments are set.
+`df:amendmentAction`, the action type of an in-place change to a proposal, and the rule for an item
+that replaces a data type (`rim:supersedes`). No eligibility criteria and no commitments are set.
 
 ## Building blocks
 
@@ -63,10 +63,14 @@ whether or not a process uses them; each declares its relation to the
 [`eoap.cct.string-format`](https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format)
 building block (`seeAlso`, `rdfs:seeAlso`) and the name of its CWL record (`df:cwlCustomType`).
 
-19 of them are still registered in data-types as the data types `string-*`. Their withdrawal from
-data-types, with `rim:supersededBy` towards these formats, is pending: `rim:RegisterItemShape`
-requires the target of `rim:supersededBy` to be typed in the graph data-types validates, and
-data-types does not depend on this register.
+19 of them were registered in data-types as the data types `string-*`, as proposals, and were
+withdrawn on 2026-11-09. Each of these 19 formats carries `rim:supersedes` towards the withdrawn item
+(`https://geolabs.github.io/bblocks-data-types/def/data-type/string-<name>/item`), which this register
+types through its dependency on data-types; the withdrawn item is unpublished, by an action
+classified substantive, and carries `dct:isReplacedBy` towards the format. The link is carried here
+because `rim:RegisterItemShape` rejects a `rim:supersededBy` towards an item data-types does not type,
+and data-types never depends on this register. Which way `rim:supersedes` points is read from its
+label; the question is asked to the model maintainers.
 
 ## Building locally
 
