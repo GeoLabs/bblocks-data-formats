@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: GeoTIFF",
+  "abstract": "A TIFF-based encoding of georeferenced raster data.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "OGC GeoTIFF Standard",
+      "link": "https://www.ogc.org/standards/geotiff/"
+    }
+  ]
+}

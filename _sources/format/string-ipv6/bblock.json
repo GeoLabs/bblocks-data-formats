@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: IPv6 address string",
+  "abstract": "An IPv6 address, as JSON Schema `ipv6`.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "JSON Schema string formats (EOAP)",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.4 IP Addresses",
+      "link": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4"
+    },
+    {
+      "title": "EOAP schemas: string_format.yaml (record IPv6)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ]
+}

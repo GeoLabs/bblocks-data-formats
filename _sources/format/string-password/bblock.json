@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: Password string",
+  "abstract": "A password, as the OpenAPI `password` format: a hint to obscure the value.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "JSON Schema string formats (EOAP)",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "OpenAPI Specification 3.0.3, Data Types",
+      "link": "https://spec.openapis.org/oas/v3.0.3#data-types"
+    },
+    {
+      "title": "EOAP schemas: string_format.yaml (record Password)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ]
+}

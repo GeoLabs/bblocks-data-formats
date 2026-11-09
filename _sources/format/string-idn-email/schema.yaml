@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Format item - Internationalized email address string
+description: >-
+  The register item of the Internationalized email address string format, in JSON.
+allOf:
+  - $ref: bblocks://data-formats.format
+properties:
+  id: {const: https://w3id.org/geolabs-ospd/data-formats/format/string-idn-email}

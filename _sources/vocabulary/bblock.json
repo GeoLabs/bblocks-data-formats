@@ -20,6 +20,150 @@
       "ref": "data.ttl",
       "format": "text/turtle",
       "title": "Register metadata (register, specification, owner, system and item classes)"
+    },
+    {
+      "role": "data",
+      "ref": "../format/geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "../format/gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Geography Markup Language (GML)"
+    },
+    {
+      "role": "data",
+      "ref": "../format/las/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: LAS"
+    },
+    {
+      "role": "data",
+      "ref": "../format/geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-date/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Date string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-date-time/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Date-time string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-duration/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Duration string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-email/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Email address string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-hostname/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Hostname string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-idn-email/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Internationalized email address string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-idn-hostname/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Internationalized hostname string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-ipv4/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IPv4 address string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-ipv6/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IPv6 address string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-iri/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IRI string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-iri-reference/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IRI reference string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-password/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Password string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-json-pointer/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: JSON Pointer string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-relative-json-pointer/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Relative JSON Pointer string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-uuid/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: UUID string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-uri/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: URI string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-uri-reference/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: URI reference string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-uri-template/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: URI template string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-time/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Time string"
+    },
+    {
+      "role": "data",
+      "ref": "../format/string-pattern/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Pattern-constrained string"
     }
   ],
   "tags": [

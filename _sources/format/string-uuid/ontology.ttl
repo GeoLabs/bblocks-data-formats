@@ -1,0 +1,32 @@
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<https://w3id.org/geolabs-ospd/data-formats/format/string-uuid> a df:Format, rim:RegisterItem ;
+    dct:title "UUID string"@en ;
+    dct:description "A UUID, as JSON Schema `uuid`."@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/string-uuid"^^xsd:anyURI ;
+    rim:itemClass df:formatItemClass ;
+    rim:inRegister df:register ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/string-uuid/actions/addition> ;
+    dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5> ;
+    df:jsonSchemaFragment "{\"format\":\"uuid\",\"type\":\"string\"}"^^rdf:JSON ;
+    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5> dct:title "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.5 Resource Identifiers" .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/string-uuid/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/string-uuid> ;
+    prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Format item - LAS
+description: >-
+  The register item of the LAS format, in JSON.
+allOf:
+  - $ref: bblocks://data-formats.format
+properties:
+  id: {const: https://w3id.org/geolabs-ospd/data-formats/format/las}

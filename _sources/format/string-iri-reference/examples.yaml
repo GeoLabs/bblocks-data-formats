@@ -1,0 +1,36 @@
+examples:
+  - title: IRI reference string
+    content: >-
+      The register item of the IRI reference string format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs-ospd/data-formats/format/string-iri-reference",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/string-iri-reference",
+            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5",
+                "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.5 Resource Identifiers"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "type": "string",
+              "format": "iri-reference"
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs-ospd/data-formats/format/string-iri-reference/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/string-iri-reference",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl
