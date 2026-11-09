@@ -22,7 +22,6 @@
       "title": "Register metadata (register, specification, owner, system and item classes)"
     }
   ],
-  "ldContext": "context.jsonld",
   "tags": [
     "format",
     "media type",

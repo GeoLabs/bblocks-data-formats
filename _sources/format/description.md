@@ -17,3 +17,5 @@ A format is bound to a data type by a [representation](../representation/).
 ## Content of this block
 
 - `schema.yaml`: a profile of `ogc.rim.schemas.register-item`.
+- `context.jsonld`: the JSON-LD context of the items, inherited by every item block through its
+  schema (the same context in the format and representation blocks).

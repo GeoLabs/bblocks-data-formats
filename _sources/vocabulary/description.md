@@ -23,7 +23,6 @@ SHACL closure; data-types never depends on this register.
 - `data.ttl`: the register, its owner and system, the two item classes, the register specification
   (`df:specification`) and the amendment action type (`df:amendmentAction`).
 - `shapes.shacl`: `df:FormatShape`, `df:RepresentationShape`, `df:AdditionProposalShape`.
-- `context.jsonld`: the JSON-LD context of the format and representation items.
 - `tests/`: Turtle items that must fail, one per rule.
 
 ## Sources

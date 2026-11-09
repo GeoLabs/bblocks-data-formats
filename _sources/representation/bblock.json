@@ -25,5 +25,6 @@
       "title": "Registered Item Model (OGC Building Block)",
       "link": "https://ogcincubator.github.io/registered-item-model/"
     }
-  ]
+  ],
+  "ldContext": "context.jsonld"
 }
