@@ -167,6 +167,12 @@
     },
     {
       "role": "data",
+      "ref": "../format/ogcapi-processes-bbox/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: OGC API - Processes bounding box"
+    },
+    {
+      "role": "data",
       "ref": "../representation/geometry-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GML"
@@ -212,6 +218,12 @@
       "ref": "../representation/point-cloud-las/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Point cloud as LAS"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/bounding-box-ogcapi-processes-bbox/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Bounding box as OGC API - Processes bbox"
     }
   ],
   "tags": [

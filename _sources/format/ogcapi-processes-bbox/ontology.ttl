@@ -1,0 +1,34 @@
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox> a df:Format, rim:RegisterItem ;
+    dct:title "OGC API - Processes bounding box"@en ;
+    dct:description "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: an array of 4 or 6 numbers (bbox) and an optional CRS (crs), as the schema of ogc.api.processes.v1.schemas.bbox gives it."@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox"^^xsd:anyURI ;
+    rim:itemClass df:formatItemClass ;
+    rim:inRegister df:register ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> ;
+    dct:conformsTo <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://geolabs.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json\"}"^^rdf:JSON ;
+    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-ogcapi-processes/> .
+
+<https://docs.ogc.org/is/18-062r2/18-062r2.html> dct:title "OGC 18-062r2 OGC API - Processes - Part 1: Core" .
+<https://docs.ogc.org/is/17-069r4/17-069r4.html> dct:title "OGC 17-069r4 OGC API - Features - Part 1: Core, 7.15.3 Parameter bbox" .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox> ;
+    prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

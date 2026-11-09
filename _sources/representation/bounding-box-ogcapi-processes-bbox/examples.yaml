@@ -1,0 +1,29 @@
+examples:
+  - title: Bounding box as OGC API - Processes bbox
+    content: >-
+      The register item of the representation Bounding box as OGC API - Processes bbox: it realizes version 1 of the bounding-box
+      data type of the data-types register and points to the ogcapi-processes-bbox format.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox",
+            "type": "Representation",
+            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox",
+            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/representationItemClass",
+            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1",
+            "format": "https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

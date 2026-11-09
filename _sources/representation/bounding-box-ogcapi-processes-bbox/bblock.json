@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Bounding box as OGC API - Processes bbox",
+  "abstract": "The bounding-box data type of the data-types register, represented as an OGC API - Processes bbox object.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.bounding-box",
+  "group": "Representations",
+  "highlighted": false
+}
