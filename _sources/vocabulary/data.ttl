@@ -19,7 +19,39 @@ df:register a rim:Register ;
     dct:description "A content register of the formats in which process inputs and outputs are encoded, and of the representations that bind a data type to a format."@en ;
     rim:registerOwner df:geolabs ;
     rim:registerManager df:geolabs ;
+    rim:controlBody df:geolabs ;
+    rim:hasSpecification df:specification ;
     rim:runsOn df:registerSystem .
+
+# The register specification. rim:definesSubstantiveChange, the rule for proposals and the table of
+# substantive and clarifying changes are the texts validated by GeoLabs on 2026-11-05, word for word;
+# the table was validated in French and is given verbatim, followed by an English rendering.
+# vocabulary/tests/specification-without-title-fail.ttl proves that rim:RegisterSpecificationShape
+# runs on this register.
+df:specification a rim:RegisterSpecification ;
+    dct:title "Data Formats register specification"@en ;
+    dct:description
+        "Scope. This register holds the content plane of the data axis: formats (df:Format) and representations (df:Representation). The meaning of data, the data types, is held by the data-types register (https://geolabs.github.io/bblocks-data-types/), not here."@en ,
+        "Register type. A content register, as the Registered Item Model uses the term: this register has no concept plane of its own. A format realizes no concept version. A representation realizes (rim:realizes) at most one dt:DataTypeVersion of the data-types register, which is the concept plane it represents, and points to one format. A representation is created when an existing role needs it."@en ,
+        "Relation with the data-types register. This register depends on the data-types register; the data-types register never depends on this register. A dt:DataTypeVersion may be realized by items of both registers: its own dt:DataTypeItem and representations of this register."@en ,
+        "Roles. GeoLabs SARL is the register owner, the register manager and, for now, the control body. GeoLabs intends to delegate the control body role to the OGC or to an OSPD working group."@en ,
+        "Identifiers. The object identifier of an item is its IRI, https://w3id.org/geolabs-ospd/data-formats/<class>/<name>, with <class> one of format or representation. This namespace is not resolved yet. An object identifier never redirects; only a functional identifier may. The identifier of a published item changes only by an explicit decision."@en ,
+        "Versions. An addition is an action of type addition, with no classification. A substantive change creates a new item or a new version, linked by rim:supersededBy, with an action classified substantive. A clarifying change keeps the item and its version, with an action classified clarifying. This version rule is specific to the registers of this project and does not come from ISO 19135. The classification correctional is not available. An item is retired by unpublishing it, not by deleting it."@en ,
+        "Ce qui est substantiel ici (tableau validé le 2026-11-05, repris tel quel). Substantiel : Media type principal, version de la spécification, fragment de schéma, version de concept réalisée. Clarification : Media type observé ajouté, description reformulée."@fr ,
+        "What is substantive here (English rendering of the validated table above). Substantive: the principal media type, the version of the specification, the schema fragment, the realized concept version. Clarifying: an observed media type added, a reworded description."@en ,
+        "Proposals. While an item is a proposal, with no control-body decision recorded, it is amended in place, with a classified `rim:RegisterAction`. The substantive rule applies once it has been accepted."@en ,
+        "Amendment. df:amendmentAction is the action type of an in-place change to a proposal, an item with no control-body decision recorded. Such an action is always classified, clarifying or substantive: it is the classified rim:RegisterAction of the rule for proposals. This type is specific to this register and will be replaced if the Registered Item Model defines one."@en ,
+        "Eligibility. No eligibility criteria for proposers have been set. GeoLabs is the only proposer recorded so far."@en ,
+        "Commitments. No commitment to register users has been set."@en ;
+    rim:definesSubstantiveChange "A change is substantive when a register user may have to change their data, profiles or processes because of it, or when it changes what an item means. Any other change to an existing item is clarifying." .
+
+# rim:actionType is required and the Registered Item Model has no type for an in-place change of a
+# proposal; it lets a register specification define further action types. Defined by
+# df:specification, specific to this register.
+df:amendmentAction a rim:RegisterActionType , skos:Concept ;
+    rdfs:isDefinedBy df: ;
+    skos:prefLabel "amendment"@en ;
+    skos:definition "An in-place change to a proposal, an item with no control-body decision recorded. Always classified, clarifying or substantive."@en .
 
 df:formatItemClass a rim:RegisterItemClass ;
     rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/formatItemClass"^^xsd:anyURI ;
