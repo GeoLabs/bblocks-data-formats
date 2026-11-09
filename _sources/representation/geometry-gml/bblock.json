@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Geometry as GML",
+  "abstract": "The geometry data type of the data-types register, represented in GML.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.geometry",
+  "group": "Representations",
+  "highlighted": false
+}

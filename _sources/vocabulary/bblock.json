@@ -164,6 +164,54 @@
       "ref": "../format/string-pattern/ontology.ttl",
       "format": "text/turtle",
       "title": "Format item: Pattern-constrained string"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Geometry as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/surface-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Surface as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/point-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Point as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/feature-collection-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature collection as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Raster as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-single-band-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Single-band raster as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/elevation-model-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Elevation model as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/point-cloud-las/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Point cloud as LAS"
     }
   ],
   "tags": [
