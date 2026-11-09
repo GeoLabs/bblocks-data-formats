@@ -17,7 +17,7 @@ Measured on 2026-11-09 in the Implementation Profiles of `bblocks-generic-profil
 | Media type | Observed in | Where |
 |---|---|---|
 | `text/xml` | implementation-profile | 38 roles of 19 Implementation Profiles (geometry, surface, point and feature-collection data types), each with a schema description that starts with `GML` |
-| `text/xml` | testbed | 35 inputs and outputs of the sqlmm processes whose description or contentSchema names GML |
+| `text/xml` | testbed | 34 inputs and outputs of the sqlmm processes whose description or contentSchema names GML |
 
 ## Content of this block
 
