@@ -21,6 +21,7 @@ examples:
               "type": "string",
               "format": "time"
             },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-time/item",
             "cwlCustomType": "Time",
             "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",

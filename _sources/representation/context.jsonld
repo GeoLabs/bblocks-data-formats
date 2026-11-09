@@ -43,6 +43,10 @@
       "@id": "rim:supersededBy",
       "@type": "@id"
     },
+    "supersedes": {
+      "@id": "rim:supersedes",
+      "@type": "@id"
+    },
     "validityStatus": {
       "@id": "rim:validityStatus",
       "@type": "@vocab"

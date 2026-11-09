@@ -21,6 +21,7 @@ examples:
               "type": "string",
               "format": "ipv6"
             },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item",
             "cwlCustomType": "IPv6",
             "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",

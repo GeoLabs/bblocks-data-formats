@@ -21,6 +21,7 @@ examples:
               "type": "string",
               "format": "uri-template"
             },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template/item",
             "cwlCustomType": "URITemplate",
             "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",

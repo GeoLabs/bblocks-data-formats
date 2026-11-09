@@ -23,7 +23,7 @@ Record `Date` of the EOAP `string_format.yaml`: "Represents a date in the `YYYY-
 
 This format is carried in CWL by that record, documented by the building block [`eoap.cct.string-format`](https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format) (`seeAlso` in `bblock.json`, `rdfs:seeAlso` and `df:cwlCustomType` in `ontology.ttl`).
 
-It was registered in the data-types register as the data type `string-date`, a proposal. Its withdrawal from that register is pending (see the data-formats README).
+It was registered in the data-types register as the data type `string-date`, a proposal, withdrawn on 2026-11-09. This format supersedes its item: `rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/item>`. The withdrawn item carries `dct:isReplacedBy` towards this format, unpublished by an action classified substantive. The link is carried here because data-formats depends on data-types, never the reverse.
 
 ## Content of this block
 

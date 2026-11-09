@@ -21,6 +21,7 @@ examples:
               "type": "string",
               "format": "idn-hostname"
             },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname/item",
             "cwlCustomType": "IDNHostname",
             "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",

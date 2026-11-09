@@ -21,6 +21,7 @@ examples:
               "type": "string",
               "format": "iri"
             },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri/item",
             "cwlCustomType": "IRI",
             "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
             "validityStatus": "invalid",

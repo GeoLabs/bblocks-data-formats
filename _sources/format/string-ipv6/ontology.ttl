@@ -22,6 +22,7 @@
     dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4> ;
     df:jsonSchemaFragment "{\"format\":\"ipv6\",\"type\":\"string\"}"^^rdf:JSON ;
     dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item> ;
     df:cwlCustomType "IPv6" ;
     rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> .
 
