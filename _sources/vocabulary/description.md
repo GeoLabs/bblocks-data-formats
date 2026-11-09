@@ -5,7 +5,7 @@ profile of the [Registered Item Model](https://ogcincubator.github.io/registered
 
 | Class | Item class | Realizes | Carries |
 |---|---|---|---|
-| `df:Format` | `df:formatItemClass` | nothing | specification (`dct:conformsTo`), observed media types (`df:observedMediaType`) and/or a JSON Schema fragment (`df:jsonSchemaFragment`), parameters (`df:parameter`) |
+| `df:Format` | `df:formatItemClass` | nothing | specification (`dct:conformsTo`), observed media types (`df:observedMediaType`), inferred media types (`df:inferredMediaType`, with source and justification) and/or a JSON Schema fragment (`df:jsonSchemaFragment`), parameters (`df:parameter`) |
 | `df:Representation` | `df:representationItemClass` | one `dt:DataTypeVersion` of the data-types register | one format (`df:format`) |
 
 Both are sub-classes of `rim:RegisterItem`, so `rim:RegisterItemShape` applies to every item. Every

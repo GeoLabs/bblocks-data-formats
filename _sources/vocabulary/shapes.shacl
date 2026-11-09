@@ -23,6 +23,7 @@ df:FormatShape a sh:NodeShape ;
     sh:property [ sh:path dct:conformsTo ; sh:nodeKind sh:IRI ; sh:minCount 1 ;
                   sh:message "A format must name its specification (dct:conformsTo)." ] ;
     sh:property [ sh:path df:observedMediaType ; sh:node df:MediaTypeObservationShape ] ;
+    sh:property [ sh:path df:inferredMediaType ; sh:node df:MediaTypeInferenceShape ] ;
     sh:property [ sh:path df:jsonSchemaFragment ; sh:datatype rdf:JSON ] ;
     sh:or ( [ sh:path df:observedMediaType ; sh:minCount 1 ]
             [ sh:path df:jsonSchemaFragment ; sh:minCount 1 ] ) ;
@@ -32,6 +33,16 @@ df:MediaTypeObservationShape a sh:NodeShape ;
     sh:property [ sh:path df:mediaType ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path df:observedIn ; sh:in ( "implementation-profile" "testbed" ) ; sh:minCount 1 ; sh:maxCount 1 ;
                   sh:message "A media type is observed in an implementation-profile or in the testbed." ] .
+
+# An inferred media type names what it was inferred from and why: it is not an observation.
+# vocabulary/tests/inferred-media-type-without-source-fail.ttl and
+# inferred-media-type-without-justification-fail.ttl prove each constraint.
+df:MediaTypeInferenceShape a sh:NodeShape ;
+    sh:property [ sh:path df:mediaType ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dct:source ; sh:nodeKind sh:IRI ; sh:minCount 1 ;
+                  sh:message "An inferred media type names the source it was inferred from (dct:source, an IRI)." ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ;
+                  sh:message "An inferred media type says why it was inferred (dct:description)." ] .
 
 df:RepresentationShape a sh:NodeShape ;
     sh:targetClass df:Representation ;

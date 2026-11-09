@@ -72,6 +72,18 @@ df:observedIn a owl:DatatypeProperty ;
     rdfs:domain df:MediaTypeObservation ;
     rdfs:range xsd:string .
 
+df:inferredMediaType a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "inferred media type" ;
+    rdfs:comment "A media type of this format that was not observed where it is served but inferred, for instance from its JSON Schema, when its specification states none. The inference names its source (dct:source) and its justification (dct:description). Adding one is a clarifying change." ;
+    rdfs:domain df:Format ;
+    rdfs:range df:MediaTypeInference .
+
+df:MediaTypeInference a owl:Class ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "Media type inference" ;
+    rdfs:comment "A media type inferred for a format (df:mediaType), with the source it was inferred from (dct:source) and why (dct:description)." .
+
 df:primaryMediaType a owl:DatatypeProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:label "principal media type" ;

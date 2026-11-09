@@ -93,6 +93,15 @@
     "observedMediaTypes": {
       "@id": "df:observedMediaType"
     },
+    "inferredMediaTypes": {
+      "@id": "df:inferredMediaType",
+      "@context": {
+        "source": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      }
+    },
     "mediaType": "df:mediaType",
     "observedIn": "df:observedIn",
     "primaryMediaType": "df:primaryMediaType",

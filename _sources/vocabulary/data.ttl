@@ -57,7 +57,7 @@ df:amendmentAction a rim:RegisterActionType , skos:Concept ;
 df:formatItemClass a rim:RegisterItemClass ;
     rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/formatItemClass"^^xsd:anyURI ;
     dct:title "Format" ;
-    dct:description "The abstraction every format item of this register shares: an encoding, with its specification, its observed media types and/or a JSON Schema fragment; it realizes no concept version."@en ;
+    dct:description "The abstraction every format item of this register shares: an encoding, with its specification, its observed media types, its inferred media types (each with source and justification) and/or a JSON Schema fragment; it realizes no concept version."@en ;
     rim:definedIn df:register ;
     rim:validatedBy df:FormatShape .
 

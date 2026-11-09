@@ -18,9 +18,12 @@
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> , <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-media-type> ;
     dct:conformsTo <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
     df:jsonSchemaFragment "{\"$ref\":\"https://geolabs.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json\"}"^^rdf:JSON ;
+    df:inferredMediaType [ df:mediaType "application/json" ;
+        dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+        dct:description "Inferred from the bbox JSON schema of OGC API - Processes - Part 1 (an object with the bbox array and crs): a JSON value. OGC 18-062r2 states no media type for a bounding box: Requirement 23 (/req/core/process-execute-input-inline-bbox, 7.11.2.2) only requires the bbox.yaml schema for an inline value, and Recommendation 17 with Table 13 (8.2) marks it with the JSON Schema format key ogc-bbox. Not observed on the testbed."@en ] ;
     dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
     rdfs:seeAlso <https://geolabs.github.io/bblocks-ogcapi-processes/> .
 
@@ -29,6 +32,15 @@
 
 <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox> ;
+    prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-media-type> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:affectedProperty df:inferredMediaType ;
+    dct:description "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09."@en ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

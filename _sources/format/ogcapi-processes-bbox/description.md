@@ -15,6 +15,15 @@ A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: `{"bbox
 
 No media type is observed: the testbed process `OTB.ExtractROI` takes the area as four numbers, not as this object.
 
+## Inferred media type
+
+`application/json` (`df:inferredMediaType`), inferred from the bbox JSON schema: a bbox value is a JSON
+object. OGC 18-062r2 states no media type for it: Requirement 23
+(`/req/core/process-execute-input-inline-bbox`, §7.11.2.2) only requires the `bbox.yaml` schema for an
+inline value, and Recommendation 17 with Table 13 (§8.2) marks it with the JSON Schema `format` key
+`ogc-bbox`. It is not an observation: no tier-3 profile declared it and the testbed does not serve it.
+Added on 2026-11-09 as a `df:amendmentAction` classified clarifying.
+
 ## Requested by
 
 Created on 2026-11-09 because one existing role needs it: `implementation-profile/raster-crop/inputs/areaOfInterest` of `bblocks-generic-profiles`, data type `bounding-box`.

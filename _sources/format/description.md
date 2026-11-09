@@ -8,7 +8,10 @@ A `df:Format` is a `rim:RegisterItem` of the `df:formatItemClass` item class. It
 - it names its specification (`specification`, `dct:conformsTo`);
 - it carries the media types under which it was observed (`observedMediaTypes`), each with where it
   was observed: `implementation-profile` (tier 3) or `testbed` (tier 4), and/or a JSON Schema
-  fragment (`jsonSchemaFragment`), with the `parameters` a profile must supply to complete it.
+  fragment (`jsonSchemaFragment`), with the `parameters` a profile must supply to complete it;
+- it may carry media types that were not observed but inferred (`inferredMediaTypes`,
+  `df:inferredMediaType`), each with its source (`dct:source`) and justification
+  (`dct:description`), checked by `df:MediaTypeInferenceShape`.
 
 No principal media type (`primaryMediaType`) is set on any format: none has been chosen.
 

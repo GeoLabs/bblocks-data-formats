@@ -36,6 +36,19 @@ properties:
       properties:
         mediaType: {type: string}
         observedIn: {enum: [implementation-profile, testbed]}
+  inferredMediaTypes:
+    description: >-
+      Media types not observed but inferred (e.g. from the format's JSON Schema, when its
+      specification states none), each with its source and justification.
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required: [mediaType, source, description]
+      properties:
+        mediaType: {type: string}
+        source: {type: string, format: uri}
+        description: {type: string}
   primaryMediaType: {type: string}
   jsonSchemaFragment: {type: object}
   parameters:
@@ -52,6 +65,19 @@ properties:
     type: string
   seeAlso: {type: string, format: uri}
   hasAction:
+    description: >-
+      The proposed addition, alone or followed by in-place amendments of the proposal
+      (df:amendmentAction, always classified).
+    oneOf:
+      - $ref: '#/$defs/addition'
+      - type: array
+        contains: {$ref: '#/$defs/addition'}
+        items:
+          oneOf:
+            - $ref: '#/$defs/addition'
+            - $ref: '#/$defs/amendment'
+$defs:
+  addition:
     type: object
     required: [id, actionType, proposer]
     properties:
@@ -60,3 +86,14 @@ properties:
       actionType: {const: addition}
       proposer: {type: string, format: uri}
       startedAtTime: {type: string, format: date-time}
+  amendment:
+    type: object
+    required: [id, actionType, changeClassification, proposer]
+    properties:
+      id: {type: string, format: uri}
+      type: {const: RegisterAction}
+      actionType: {const: https://w3id.org/geolabs-ospd/data-formats/amendmentAction}
+      changeClassification: {enum: [clarifying, substantive]}
+      proposer: {type: string, format: uri}
+      startedAtTime: {type: string, format: date-time}
+      description: {type: string}

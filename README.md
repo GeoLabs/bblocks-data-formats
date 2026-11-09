@@ -15,7 +15,7 @@ on it (`dependsOn: data-types.vocabulary`); data-types never depends on this reg
 
 | Class | Item class | Realizes | Carries |
 |---|---|---|---|
-| `df:Format` | `df:formatItemClass` | nothing | its specification (`dct:conformsTo`), the media types observed where it is served, each with where (`implementation-profile` or `testbed`), and/or a JSON Schema fragment, with its parameters |
+| `df:Format` | `df:formatItemClass` | nothing | its specification (`dct:conformsTo`), the media types observed where it is served, each with where (`implementation-profile` or `testbed`), and/or a JSON Schema fragment, with its parameters; media types inferred rather than observed (`df:inferredMediaType`), each with its source and justification |
 | `df:Representation` | `df:representationItemClass` | exactly one `dt:DataTypeVersion` of data-types | one format (`df:format`) |
 
 Both are sub-classes of `rim:RegisterItem`. Every item is a proposal: an addition by GeoLabs,
@@ -52,7 +52,7 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `gml` | OGC GML Encoding Standard (version not established) | `text/xml` (tier 3, testbed) |
 | `las` | OGC 17-030r1 LAS 1.4 | `application/vnd.las` (tier 3), `application/x-ogc-lasf` (testbed) |
 | `geojson` | RFC 7946 | `application/geo+json` (testbed) |
-| `ogcapi-processes-bbox` | OGC 18-062r2 OGC API - Processes - Part 1: Core (`bbox` schema) | none: a JSON Schema fragment, the `$ref` to `ogc.api.processes.v1.schemas.bbox` that tier 3 carried (added 2026-11-09) |
+| `ogcapi-processes-bbox` | OGC 18-062r2 OGC API - Processes - Part 1: Core (`bbox` schema) | none observed; `application/json` inferred from the bbox JSON schema (OGC 18-062r2 states none); a JSON Schema fragment, the `$ref` to `ogc.api.processes.v1.schemas.bbox` that tier 3 carried (added 2026-11-09) |
 | `string-*` (19) | JSON Schema Validation 2020-12, 7.3 (`password`: OpenAPI 3.0.3 data types) | none: a JSON Schema fragment `{"type": "string", "format": ...}` |
 | `string-pattern` | JSON Schema Validation 2020-12, 6.3.3 `pattern` | none: fragment `{"type": "string"}`, parameter `pattern` |
 
