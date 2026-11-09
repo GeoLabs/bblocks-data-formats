@@ -1,0 +1,16 @@
+examples:
+  - title: Shared register metadata
+    content: |
+      The register, its owner and system and the two item classes, format and representation. Each
+      format and representation Building Block publishes its own item and addition in its
+      `ontology.ttl`.
+    snippets:
+      - language: turtle
+        ref: data.ttl
+  - title: Ontology of the content plane
+    content: |
+      The classes df:Format and df:Representation, sub-classes of rim:RegisterItem, and their
+      properties.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

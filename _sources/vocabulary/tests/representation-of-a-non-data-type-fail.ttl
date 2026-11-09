@@ -1,0 +1,50 @@
+# Must fail: a representation that realizes a concept version which is not a dt:DataTypeVersion.
+# rim:RegisterItemShape accepts it (the target is a rim:ConceptVersion); only df:RepresentationShape
+# can reject it.
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://w3id.org/geolabs-ospd/data-formats/representation/of-a-non-data-type> a df:Representation ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representation/of-a-non-data-type"^^xsd:anyURI ;
+    rim:itemClass df:representationItemClass ;
+    rim:inRegister df:register ;
+    rim:realizes <https://w3id.org/geolabs-ospd/data-formats/not-a-data-type/v1> ;
+    df:format <https://w3id.org/geolabs-ospd/data-formats/format/test-format> ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/representation/of-a-non-data-type/actions/addition> .
+
+<https://w3id.org/geolabs-ospd/data-formats/not-a-data-type/v1> a rim:ConceptVersion ;
+    rim:versionOf <https://w3id.org/geolabs-ospd/data-formats/not-a-data-type> ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/not-a-data-type/v1"^^xsd:anyURI ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/test-format> a df:Format ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/test-format"^^xsd:anyURI ;
+    rim:itemClass df:formatItemClass ;
+    rim:inRegister df:register ;
+    dct:conformsTo <https://www.ogc.org/standards/geotiff/> ;
+    df:observedMediaType [ df:mediaType "image/tiff" ; df:observedIn "testbed" ] ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/test-format/actions/addition> .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/test-format/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs-ospd/data-formats/not-a-data-type> a rim:Concept ;
+    skos:prefLabel "Not a data type" .
+
+<https://w3id.org/geolabs-ospd/data-formats/representation/of-a-non-data-type/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs .

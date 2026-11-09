@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Formats shared model",
+  "abstract": "Shared RIM content-plane model, register metadata and SHACL rules for the format and representation Building Blocks of this register.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "model",
+  "dependsOn": [
+    "ogc.rim.core-ontology",
+    "data-types.vocabulary"
+  ],
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Register metadata (register, specification, owner, system and item classes)"
+    }
+  ],
+  "ldContext": "context.jsonld",
+  "tags": [
+    "format",
+    "media type",
+    "representation",
+    "content plane",
+    "ISO 19135",
+    "register"
+  ],
+  "sources": [
+    {
+      "title": "ISO 19135:2026, Geographic information — Registration and register governance",
+      "link": "https://www.iso.org/standard/86261.html"
+    },
+    {
+      "title": "Registered Item Model (OGC Building Block)",
+      "link": "https://ogcincubator.github.io/registered-item-model/"
+    }
+  ],
+  "group": "Shared model",
+  "highlighted": false
+}

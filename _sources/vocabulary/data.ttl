@@ -1,0 +1,42 @@
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Register-level metadata only. Each format and representation, with its addition action, is
+# canonical in the ontology.ttl of its own Building Block.
+
+df:register a rim:Register ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/register"^^xsd:anyURI ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-formats/"^^xsd:anyURI ;
+    dct:title "Data Formats"@en ;
+    dct:description "A content register of the formats in which process inputs and outputs are encoded, and of the representations that bind a data type to a format."@en ;
+    rim:registerOwner df:geolabs ;
+    rim:registerManager df:geolabs ;
+    rim:runsOn df:registerSystem .
+
+df:formatItemClass a rim:RegisterItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/formatItemClass"^^xsd:anyURI ;
+    dct:title "Format" ;
+    dct:description "The abstraction every format item of this register shares: an encoding, with its specification, its observed media types and/or a JSON Schema fragment; it realizes no concept version."@en ;
+    rim:definedIn df:register ;
+    rim:validatedBy df:FormatShape .
+
+df:representationItemClass a rim:RegisterItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representationItemClass"^^xsd:anyURI ;
+    dct:title "Representation" ;
+    dct:description "The abstraction every representation item of this register shares: one data type version of the data-types register, realized in one format."@en ;
+    rim:definedIn df:register ;
+    rim:validatedBy df:RepresentationShape .
+
+df:geolabs a prov:Organization ;
+    dct:title "GeoLabs SARL"@en .
+
+df:registerSystem a rim:RegisterSystem ;
+    dct:title "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)"@en .

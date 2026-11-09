@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Formats item classes",
+  "abstract": "The two item classes of this register, format and representation, in JSON: a profile of the Registered Item Model register item class.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ]
+}

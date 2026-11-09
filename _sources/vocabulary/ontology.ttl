@@ -1,0 +1,104 @@
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+#################################################################
+# Ontology metadata
+#
+# The content plane of the OSPD data axis, as a profile of the Registered
+# Item Model (ISO 19135:2026). Two classes of register item: df:Format,
+# an encoding, which realizes no concept version; df:Representation, which
+# realizes one dt:DataTypeVersion of the data-types register and points to
+# a df:Format. This register depends on the data-types register, never the
+# reverse.
+#################################################################
+
+df: a owl:Ontology ;
+    owl:imports rim: ;
+    dct:title "Data Formats vocabulary" ;
+    dct:description "Registered Item Model profile of the content plane: formats, and representations that bind a data type version of the data-types register to a format." ;
+    dct:creator "GeoLabs SARL" ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> .
+
+df:Format a owl:Class ;
+    rdfs:subClassOf rim:RegisterItem ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "Format" ;
+    rdfs:comment "An encoding of data, with its specification, the media types observed where it is served, and/or a JSON Schema fragment. A format realizes no concept version: it says nothing about what the data means." .
+
+df:Representation a owl:Class ;
+    rdfs:subClassOf rim:RegisterItem ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "Representation" ;
+    rdfs:comment "A data type in a format: realizes (rim:realizes) exactly one dt:DataTypeVersion of the data-types register and points (df:format) to one df:Format. Created when an existing role needs it." .
+
+df:MediaTypeObservation a owl:Class ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "Media type observation" ;
+    rdfs:comment "A media type under which a format was observed, and where: in an Implementation Profile (tier 3) or in a testbed process description (tier 4)." .
+
+df:format a owl:ObjectProperty ;
+    rdfs:subPropertyOf rim:relatedItem ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "format" ;
+    rdfs:comment "Relates a representation to the format it uses." ;
+    rdfs:domain df:Representation ;
+    rdfs:range df:Format .
+
+df:observedMediaType a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "observed media type" ;
+    rdfs:comment "A media type under which this format was observed. Adding one is a clarifying change." ;
+    rdfs:domain df:Format ;
+    rdfs:range df:MediaTypeObservation .
+
+df:mediaType a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "media type" ;
+    rdfs:domain df:MediaTypeObservation ;
+    rdfs:range xsd:string .
+
+df:observedIn a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "observed in" ;
+    rdfs:comment "Where the media type was observed: implementation-profile (tier 3) or testbed (tier 4)." ;
+    rdfs:domain df:MediaTypeObservation ;
+    rdfs:range xsd:string .
+
+df:primaryMediaType a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "principal media type" ;
+    rdfs:comment "The principal media type of a format; changing it is a substantive change. Set on no format yet: no principal media type has been chosen." ;
+    rdfs:domain df:Format ;
+    rdfs:range xsd:string .
+
+df:jsonSchemaFragment a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "JSON Schema fragment" ;
+    rdfs:comment "The JSON Schema that expresses this format, as a JSON literal; changing it is a substantive change." ;
+    rdfs:domain df:Format ;
+    rdfs:range rdf:JSON .
+
+df:parameter a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "parameter" ;
+    rdfs:comment "A value the profile that uses this format must supply to complete its JSON Schema fragment (e.g. the regular expression of a pattern-constrained string)." ;
+    rdfs:domain df:Format .
+
+df:parameterName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "parameter name" ;
+    rdfs:range xsd:string .
+
+df:jsonSchemaKeyword a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "JSON Schema keyword" ;
+    rdfs:comment "The JSON Schema keyword whose value the parameter supplies." ;
+    rdfs:range xsd:string .
