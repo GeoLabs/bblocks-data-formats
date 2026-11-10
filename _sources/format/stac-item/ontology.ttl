@@ -1,0 +1,33 @@
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/stac-item> a df:Format, rim:RegisterItem ;
+    dct:title "STAC Item"@en ;
+    dct:description "A GeoJSON Feature describing one spatiotemporal item, such as an Earth observation product, with its links and its assets."@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/stac-item"^^xsd:anyURI ;
+    rim:itemClass df:formatItemClass ;
+    rim:inRegister df:register ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition> ;
+    dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json\"}"^^rdf:JSON ;
+    df:inferredMediaType [ df:mediaType "application/geo+json" ;
+        dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
+        dct:description "Stated by the STAC Item Specification 1.1.0, section Media Type for STAC Item: a STAC Item is a GeoJSON file and should use application/geo+json. Not observed in an Implementation Profile or on the testbed: of the processes of bblocks-process-profiles that exchange STAC Items, kindgrove-steps.select-scene and kindgrove-steps.download-band serve application/octet-stream (their CWL declares no format) and the others pass the Item by URL. Observed on 2026-11-10 where the Items are served, the Earth Search STAC API read by those processes (https://earth-search.aws.element84.com/v1, items S2C_46PGC_20260913_0_L2A and S2A_29SPC_20190701_0_L2A of sentinel-2-l2a): Content-Type application/geo+json; charset=utf-8."@en ] .
+
+<https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> dct:title "STAC Item Specification 1.1.0" .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/stac-item> ;
+    prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .

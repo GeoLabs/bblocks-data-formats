@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Earth observation product as STAC Item",
+  "abstract": "The eo-product data type of the data-types register, represented in STAC Item.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.eo-product",
+  "group": "Representations",
+  "highlighted": false
+}

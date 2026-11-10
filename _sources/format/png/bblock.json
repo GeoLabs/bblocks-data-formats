@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: PNG",
+  "abstract": "A lossless raster image encoding of greyscale, truecolour or indexed-colour pictures, with optional transparency.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "W3C Portable Network Graphics (PNG) Specification (Third Edition), W3C Recommendation 24 June 2025",
+      "link": "https://www.w3.org/TR/png/"
+    }
+  ]
+}

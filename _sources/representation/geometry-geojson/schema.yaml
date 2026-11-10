@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Representation item - Geometry as GeoJSON
+description: >-
+  The register item of the representation Geometry as GeoJSON, in JSON.
+allOf:
+  - $ref: bblocks://data-formats.representation
+properties:
+  id: {const: https://w3id.org/geolabs-ospd/data-formats/representation/geometry-geojson}

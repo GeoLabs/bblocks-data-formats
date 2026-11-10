@@ -1,0 +1,28 @@
+examples:
+  - title: Earth observation product as STAC Item
+    content: >-
+      The register item of the representation Earth observation product as STAC Item: it realizes version 1 of the eo-product data type of the data-types register and points to the stac-item format.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs-ospd/data-formats/representation/eo-product-stac-item",
+            "type": "Representation",
+            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/representation/eo-product-stac-item",
+            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/representationItemClass",
+            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1",
+            "format": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs-ospd/data-formats/representation/eo-product-stac-item/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/representation/eo-product-stac-item",
+              "startedAtTime": "2026-11-10T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Representation item - Earth observation product as STAC Item
+description: >-
+  The register item of the representation Earth observation product as STAC Item, in JSON.
+allOf:
+  - $ref: bblocks://data-formats.representation
+properties:
+  id: {const: https://w3id.org/geolabs-ospd/data-formats/representation/eo-product-stac-item}

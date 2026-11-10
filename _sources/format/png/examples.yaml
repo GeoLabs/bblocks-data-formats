@@ -1,0 +1,38 @@
+examples:
+  - title: PNG
+    content: >-
+      The register item of the PNG format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs-ospd/data-formats/format/png",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/png",
+            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://www.w3.org/TR/png/",
+                "title": "W3C Portable Network Graphics (PNG) Specification (Third Edition), W3C Recommendation 24 June 2025"
+              }
+            ],
+            "observedMediaTypes": [
+              {
+                "mediaType": "image/png",
+                "observedIn": "testbed"
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs-ospd/data-formats/format/png/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/png",
+              "startedAtTime": "2026-11-10T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

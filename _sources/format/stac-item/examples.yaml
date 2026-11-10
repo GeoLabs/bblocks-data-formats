@@ -1,0 +1,42 @@
+examples:
+  - title: STAC Item
+    content: >-
+      The register item of the STAC Item format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md",
+                "title": "STAC Item Specification 1.1.0"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "$ref": "https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json"
+            },
+            "inferredMediaTypes": [
+              {
+                "mediaType": "application/geo+json",
+                "source": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md",
+                "description": "Stated by the STAC Item Specification 1.1.0, section Media Type for STAC Item: a STAC Item is a GeoJSON file and should use application/geo+json. Not observed in an Implementation Profile or on the testbed: of the processes of bblocks-process-profiles that exchange STAC Items, kindgrove-steps.select-scene and kindgrove-steps.download-band serve application/octet-stream (their CWL declares no format) and the others pass the Item by URL. Observed on 2026-11-10 where the Items are served, the Earth Search STAC API read by those processes (https://earth-search.aws.element84.com/v1, items S2C_46PGC_20260913_0_L2A and S2A_29SPC_20190701_0_L2A of sentinel-2-l2a): Content-Type application/geo+json; charset=utf-8."
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+              "startedAtTime": "2026-11-10T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

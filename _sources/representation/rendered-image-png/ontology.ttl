@@ -1,0 +1,27 @@
+@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://w3id.org/geolabs-ospd/data-formats/representation/rendered-image-png> a df:Representation, rim:RegisterItem ;
+    dct:title "Rendered image as PNG"@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representation/rendered-image-png"^^xsd:anyURI ;
+    rim:itemClass df:representationItemClass ;
+    rim:inRegister df:register ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1> ;
+    df:format <https://w3id.org/geolabs-ospd/data-formats/format/png> ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/representation/rendered-image-png/actions/addition> .
+
+<https://w3id.org/geolabs-ospd/data-formats/representation/rendered-image-png/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/representation/rendered-image-png> ;
+    prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .

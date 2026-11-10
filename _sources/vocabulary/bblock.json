@@ -173,6 +173,18 @@
     },
     {
       "role": "data",
+      "ref": "../format/png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: PNG"
+    },
+    {
+      "role": "data",
+      "ref": "../format/stac-item/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Item"
+    },
+    {
+      "role": "data",
       "ref": "../representation/geometry-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GML"
@@ -224,6 +236,24 @@
       "ref": "../representation/bounding-box-ogcapi-processes-bbox/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Bounding box as OGC API - Processes bbox"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Geometry as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/eo-product-stac-item/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Earth observation product as STAC Item"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/rendered-image-png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Rendered image as PNG"
     }
   ],
   "tags": [
