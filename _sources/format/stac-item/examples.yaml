@@ -17,6 +17,7 @@ examples:
                 "title": "STAC Item Specification 1.1.0"
               }
             ],
+            "primaryMediaType": "application/geo+json",
             "jsonSchemaFragment": {
               "$ref": "https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json"
             },
@@ -29,14 +30,26 @@ examples:
             ],
             "validityStatus": "invalid",
             "publicationStatus": "published",
-            "hasAction": {
-              "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition",
-              "type": "RegisterAction",
-              "actionType": "addition",
-              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
-              "startedAtTime": "2026-11-10T00:00:00Z"
-            }
+            "hasAction": [
+              {
+                "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+                "startedAtTime": "2026-11-10T00:00:00Z"
+              },
+              {
+                "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-primary-media-type",
+                "type": "RegisterAction",
+                "actionType": "https://w3id.org/geolabs-ospd/data-formats/amendmentAction",
+                "changeClassification": "substantive",
+                "description": "Principal media type set to application/geo+json, the media type the STAC Item Specification 1.1.0 states (section Media Type for STAC Item), already recorded with that source as df:inferredMediaType. Decision of 2026-11-10. Classified substantive: the validated table of this register lists the principal media type among the substantive changes; the item is a proposal, amended in place.",
+                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+                "startedAtTime": "2026-11-10T00:00:00Z"
+              }
+            ]
           }
       - language: turtle
         ref: ontology.ttl

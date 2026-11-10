@@ -67,3 +67,24 @@ df:AdditionProposalShape a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:message "An item must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer."
     ] .
+
+# The principal media type of a format (df:primaryMediaType) is one of its recorded media types,
+# observed or taken from a source, and that record carries its source (decision of 2026-11-10 on
+# stac-item). vocabulary/tests/primary-media-type-without-record-fail.ttl and its control show it.
+df:PrimaryMediaTypeShape a sh:NodeShape ;
+    sh:targetSubjectsOf df:primaryMediaType ;
+    sh:property [ sh:path df:primaryMediaType ; sh:datatype xsd:string ; sh:maxCount 1 ;
+                  sh:message "A format has at most one principal media type, a string." ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A principal media type is one of the format's observed or inferred media types, whose record gives its source." ;
+        sh:select """
+            SELECT $this ?value WHERE {
+                $this <https://w3id.org/geolabs-ospd/data-formats/primaryMediaType> ?value .
+                FILTER NOT EXISTS {
+                    $this <https://w3id.org/geolabs-ospd/data-formats/observedMediaType> | <https://w3id.org/geolabs-ospd/data-formats/inferredMediaType> ?record .
+                    ?record <https://w3id.org/geolabs-ospd/data-formats/mediaType> ?value .
+                }
+            }
+        """
+    ] .

@@ -12,9 +12,13 @@ The JSON Schema fragment `$ref`s the JSON Schema the specification publishes for
 
 ## Observed media types
 
-No media type observed in an Implementation Profile or on the testbed (measured on 2026-11-10, `bblocks-process-profiles-tests-1` `ea01115`). The media type is inferred, with its source and justification (`df:inferredMediaType`). No principal media type is set: none has been chosen.
+No media type observed in an Implementation Profile or on the testbed (measured on 2026-11-10, `bblocks-process-profiles-tests-1` `ea01115`). The media type is taken from the specification, with its source and justification (`df:inferredMediaType`).
 
-## Inferred media type
+## Principal media type
+
+`application/geo+json` (`df:primaryMediaType`), the media type the specification states, set on 2026-11-10 by an amendment of the proposal classified substantive: this register's table lists the principal media type among the substantive changes.
+
+## Media type taken from the specification
 
 `application/geo+json`, source [STAC Item Specification 1.1.0](https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md). Stated by the STAC Item Specification 1.1.0, section Media Type for STAC Item: a STAC Item is a GeoJSON file and should use application/geo+json. Not observed in an Implementation Profile or on the testbed: of the processes of bblocks-process-profiles that exchange STAC Items, kindgrove-steps.select-scene and kindgrove-steps.download-band serve application/octet-stream (their CWL declares no format) and the others pass the Item by URL. Observed on 2026-11-10 where the Items are served, the Earth Search STAC API read by those processes (https://earth-search.aws.element84.com/v1, items S2C_46PGC_20260913_0_L2A and S2A_29SPC_20190701_0_L2A of sentinel-2-l2a): Content-Type application/geo+json; charset=utf-8.
 

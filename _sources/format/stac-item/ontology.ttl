@@ -17,8 +17,10 @@
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition> ;
+    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition> ,
+        <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-primary-media-type> ;
     dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
+    df:primaryMediaType "application/geo+json" ;
     df:jsonSchemaFragment "{\"$ref\":\"https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json\"}"^^rdf:JSON ;
     df:inferredMediaType [ df:mediaType "application/geo+json" ;
         dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
@@ -28,6 +30,15 @@
 
 <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/stac-item> ;
+    prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-primary-media-type> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:affectedProperty df:primaryMediaType ;
+    dct:description "Principal media type set to application/geo+json, the media type the STAC Item Specification 1.1.0 states (section Media Type for STAC Item), already recorded with that source as df:inferredMediaType. Decision of 2026-11-10. Classified substantive: the validated table of this register lists the principal media type among the substantive changes; the item is a proposal, amended in place."@en ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .

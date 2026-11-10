@@ -75,19 +75,19 @@ df:observedIn a owl:DatatypeProperty ;
 df:inferredMediaType a owl:ObjectProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:label "inferred media type" ;
-    rdfs:comment "A media type of this format that was not observed where it is served but inferred, for instance from its JSON Schema, when its specification states none. The inference names its source (dct:source) and its justification (dct:description). Adding one is a clarifying change." ;
+    rdfs:comment "A media type of this format that was not observed in an Implementation Profile or on the testbed, but taken from a source: stated by the format's specification, or, when the specification states none, inferred, for instance from its JSON Schema. The record names its source (dct:source) and its justification (dct:description). Adding one is a clarifying change. Widened on 2026-11-10 to the media type a specification states (STAC Item); before, it covered only an inference when the specification states none." ;
     rdfs:domain df:Format ;
     rdfs:range df:MediaTypeInference .
 
 df:MediaTypeInference a owl:Class ;
     rdfs:isDefinedBy df: ;
     rdfs:label "Media type inference" ;
-    rdfs:comment "A media type inferred for a format (df:mediaType), with the source it was inferred from (dct:source) and why (dct:description)." .
+    rdfs:comment "A media type of a format taken from a source rather than observed (df:mediaType): stated by its specification, or inferred; with that source (dct:source) and why (dct:description)." .
 
 df:primaryMediaType a owl:DatatypeProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:label "principal media type" ;
-    rdfs:comment "The principal media type of a format; changing it is a substantive change. Set on no format yet: no principal media type has been chosen." ;
+    rdfs:comment "The principal media type of a format; changing it is a substantive change. It is one of the format's recorded media types, observed (df:observedMediaType) or taken from a source (df:inferredMediaType), and that record gives its source (df:PrimaryMediaTypeShape). Set on the STAC Item format only (2026-11-10): application/geo+json, as its specification states." ;
     rdfs:domain df:Format ;
     rdfs:range xsd:string .
 

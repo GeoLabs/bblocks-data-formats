@@ -21,6 +21,19 @@ properties:
     format: uri
     pattern: ^https://w3id\.org/geolabs-ospd/data-formats/format/[a-z0-9-]+$
   hasAction:
+    description: >-
+      The proposed addition, alone or followed by in-place amendments of the proposal
+      (df:amendmentAction, always classified), as for a format.
+    oneOf:
+      - $ref: '#/$defs/addition'
+      - type: array
+        contains: {$ref: '#/$defs/addition'}
+        items:
+          oneOf:
+            - $ref: '#/$defs/addition'
+            - $ref: '#/$defs/amendment'
+$defs:
+  addition:
     type: object
     required: [id, actionType, proposer]
     properties:
@@ -29,3 +42,14 @@ properties:
       actionType: {const: addition}
       proposer: {type: string, format: uri}
       startedAtTime: {type: string, format: date-time}
+  amendment:
+    type: object
+    required: [id, actionType, changeClassification, proposer]
+    properties:
+      id: {type: string, format: uri}
+      type: {const: RegisterAction}
+      actionType: {const: https://w3id.org/geolabs-ospd/data-formats/amendmentAction}
+      changeClassification: {enum: [clarifying, substantive]}
+      proposer: {type: string, format: uri}
+      startedAtTime: {type: string, format: date-time}
+      description: {type: string}

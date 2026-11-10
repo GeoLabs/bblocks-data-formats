@@ -38,8 +38,9 @@ properties:
         observedIn: {enum: [implementation-profile, testbed]}
   inferredMediaTypes:
     description: >-
-      Media types not observed but inferred (e.g. from the format's JSON Schema, when its
-      specification states none), each with its source and justification.
+      Media types not observed but taken from a source: stated by the format's specification, or
+      inferred (e.g. from its JSON Schema) when the specification states none; each with its
+      source and justification.
     type: array
     minItems: 1
     items:
