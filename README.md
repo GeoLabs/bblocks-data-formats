@@ -52,7 +52,7 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `gml` | OGC GML Encoding Standard (version not established) | `text/xml` (tier 3, testbed) |
 | `las` | OGC 17-030r1 LAS 1.4 | `application/vnd.las` (tier 3), `application/x-ogc-lasf` (testbed) |
 | `geojson` | RFC 7946 | `application/geo+json` (testbed) |
-| `ogcapi-processes-bbox` | OGC 18-062r2 OGC API - Processes - Part 1: Core (`bbox` schema) | none observed; `application/json` inferred from the bbox JSON schema (OGC 18-062r2 states none); a JSON Schema fragment, the `$ref` to `ogc.api.processes.v1.schemas.bbox` that tier 3 carried (added 2026-11-09) |
+| `ogcapi-processes-bbox` | OGC 18-062r2 OGC API - Processes - Part 1: Core (`bbox` schema) | none observed; `application/json` inferred from the bbox JSON schema (OGC 18-062r2 states none); a JSON Schema fragment, the `$ref` to `ogc.api.processes.part1.v1.schemas.bbox` that tier 3 carried (added 2026-11-09) |
 | `png` | W3C PNG Specification (Third Edition) | `image/png` (testbed: `algae-bloom.plot-image`, added 2026-11-10) |
 | `stac-item` | STAC Item Specification 1.1.0 | none observed in a profile or on the testbed; `application/geo+json` inferred from the specification, which states it, and seen where the Earth Search STAC API serves the Items (added 2026-11-10) |
 | `string-*` (19) | JSON Schema Validation 2020-12, 7.3 (`password`: OpenAPI 3.0.3 data types) | none: a JSON Schema fragment `{"type": "string", "format": ...}` |

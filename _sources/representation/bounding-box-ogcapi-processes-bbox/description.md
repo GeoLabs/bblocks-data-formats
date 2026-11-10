@@ -6,7 +6,7 @@ The bounding-box data type of the data-types register, represented as an OGC API
 
 ## Requested by
 
-Created on 2026-11-09 because one existing role needs it: `implementation-profile/raster-crop/inputs/areaOfInterest` of `bblocks-generic-profiles`, data type `bounding-box`, whose `schema` was a `$ref` to `ogc.api.processes.v1.schemas.bbox`. That role points to this representation from branch `planes/phase-3` of that register.
+Created on 2026-11-09 because one existing role needs it: `implementation-profile/raster-crop/inputs/areaOfInterest` of `bblocks-generic-profiles`, data type `bounding-box`, whose `schema` was a `$ref` to `ogc.api.processes.part1.v1.schemas.bbox`. That role points to this representation from branch `planes/phase-3` of that register.
 
 ## Content of this block
 

@@ -12,7 +12,7 @@
 
 <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox> a df:Format, rim:RegisterItem ;
     dct:title "OGC API - Processes bounding box"@en ;
-    dct:description "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: an array of 4 or 6 numbers (bbox) and an optional CRS (crs), as the schema of ogc.api.processes.v1.schemas.bbox gives it."@en ;
+    dct:description "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: an array of 4 or 6 numbers (bbox) and an optional CRS (crs), as the schema of ogc.api.processes.part1.v1.schemas.bbox gives it."@en ;
     rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox"^^xsd:anyURI ;
     rim:itemClass df:formatItemClass ;
     rim:inRegister df:register ;

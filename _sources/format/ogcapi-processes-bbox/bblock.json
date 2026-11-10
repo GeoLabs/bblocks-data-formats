@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Format: OGC API - Processes bounding box",
-  "abstract": "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON (ogc.api.processes.v1.schemas.bbox).",
+  "abstract": "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON (ogc.api.processes.part1.v1.schemas.bbox).",
   "status": "under-development",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
@@ -22,7 +22,7 @@
       "link": "https://docs.ogc.org/is/17-069r4/17-069r4.html"
     },
     {
-      "title": "ogc.api.processes.v1.schemas.bbox -- bbox schema (OGC API - Processes - Part 1: Core)",
+      "title": "ogc.api.processes.part1.v1.schemas.bbox -- bbox schema (OGC API - Processes - Part 1: Core)",
       "link": "https://geolabs.github.io/bblocks-ogcapi-processes/"
     }
   ]

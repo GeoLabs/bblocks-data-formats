@@ -6,7 +6,7 @@ A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: `{"bbox
 
 ## Specification
 
-- [OGC 18-062r2 OGC API - Processes - Part 1: Core](https://docs.ogc.org/is/18-062r2/18-062r2.html) (`dct:conformsTo`), whose `bbox` schema is published as the building block `ogc.api.processes.v1.schemas.bbox`.
+- [OGC 18-062r2 OGC API - Processes - Part 1: Core](https://docs.ogc.org/is/18-062r2/18-062r2.html) (`dct:conformsTo`), whose `bbox` schema is published as the building block `ogc.api.processes.part1.v1.schemas.bbox`.
 - [OGC 17-069r4 OGC API - Features - Part 1: Core](https://docs.ogc.org/is/17-069r4/17-069r4.html), 7.15.3, defines the `bbox` parameter that schema cites (`dct:source`).
 
 ## JSON Schema fragment
