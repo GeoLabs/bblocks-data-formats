@@ -48,6 +48,16 @@ examples:
                 "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
                 "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox",
                 "startedAtTime": "2026-11-09T00:00:00Z"
+              },
+              {
+                "id": "https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-identifier-2026-11-10",
+                "type": "RegisterAction",
+                "actionType": "https://w3id.org/geolabs-ospd/data-formats/amendmentAction",
+                "changeClassification": "clarifying",
+                "description": "The description, the title of the source and the abstract of the block name the OGC API - Processes bbox building block by its identifier after its renaming by GeoLabs on 2026-11-10 (Part 1, edition 1.0: ogc.api.processes.part1.v1.schemas.bbox). The format, its specification and its media types are unchanged. Classified clarifying: a reworded description.",
+                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox",
+                "startedAtTime": "2026-11-10T00:00:00Z"
               }
             ]
           }
