@@ -67,16 +67,15 @@ properties:
   seeAlso: {type: string, format: uri}
   hasAction:
     description: >-
-      The proposed addition, alone or followed by in-place amendments of the proposal
-      (df:amendmentAction, always classified).
+      The proposed addition, alone or followed by later actions on the item. The schema
+      requires the addition; it does not constrain the action type or the classification of the
+      other actions (decision Q5, option b, of 2026-11-11: pending a decision common to all
+      registers).
     oneOf:
       - $ref: '#/$defs/addition'
       - type: array
         contains: {$ref: '#/$defs/addition'}
-        items:
-          oneOf:
-            - $ref: '#/$defs/addition'
-            - $ref: '#/$defs/amendment'
+        items: {$ref: '#/$defs/action'}
 $defs:
   addition:
     type: object
@@ -87,14 +86,13 @@ $defs:
       actionType: {const: addition}
       proposer: {type: string, format: uri}
       startedAtTime: {type: string, format: date-time}
-  amendment:
+  action:
     type: object
-    required: [id, actionType, changeClassification, proposer]
+    required: [id, actionType, proposer]
     properties:
       id: {type: string, format: uri}
       type: {const: RegisterAction}
-      actionType: {const: https://w3id.org/geolabs-ospd/data-formats/amendmentAction}
-      changeClassification: {enum: [clarifying, substantive]}
+      actionType: {type: string}
       proposer: {type: string, format: uri}
       startedAtTime: {type: string, format: date-time}
       description: {type: string}
