@@ -185,6 +185,24 @@
     },
     {
       "role": "data",
+      "ref": "../format/stac-item-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Item Collection"
+    },
+    {
+      "role": "data",
+      "ref": "../format/stac-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Collection"
+    },
+    {
+      "role": "data",
+      "ref": "../format/stac-catalog/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Catalog"
+    },
+    {
+      "role": "data",
       "ref": "../representation/geometry-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GML"

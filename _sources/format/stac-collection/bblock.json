@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: STAC Collection",
+  "abstract": "A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-11T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "STAC Collection Specification 1.1.0",
+      "link": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md"
+    }
+  ],
+  "seeAlso": [
+    "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md"
+  ]
+}

@@ -13,7 +13,7 @@ A `df:Format` is a `rim:RegisterItem` of the `df:formatItemClass` item class. It
   `df:inferredMediaType`), each with its source (`dct:source`) and justification
   (`dct:description`), checked by `df:MediaTypeInferenceShape`.
 
-No principal media type (`primaryMediaType`) is set on any format: none has been chosen.
+A principal media type (`primaryMediaType`, `df:primaryMediaType`) is set only where a specification states the media type: the four STAC formats (`stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`). It is one of the format's recorded media types, checked by `df:PrimaryMediaTypeShape`. None is set on the other formats: none has been chosen.
 
 A format is bound to a data type by a [representation](../representation/).
 

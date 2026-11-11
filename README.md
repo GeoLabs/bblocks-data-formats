@@ -19,8 +19,8 @@ on it (`dependsOn: data-types.vocabulary`); data-types never depends on this reg
 | `df:Representation` | `df:representationItemClass` | exactly one `dt:DataTypeVersion` of data-types | one format (`df:format`) |
 
 Both are sub-classes of `rim:RegisterItem`. Every item is a proposal: an addition by GeoLabs,
-`rim:invalid` and `rim:published`. No principal media type is set on any format: none has been
-chosen. A representation is created when an existing role needs it, and lists the roles that do.
+`rim:invalid` and `rim:published`. A principal media type is set only on the four STAC formats, where
+the STAC specification states it; none has been chosen for the other formats. A representation is created when an existing role needs it, and lists the roles that do.
 
 ## Register specification
 
@@ -40,7 +40,7 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `data-formats.register` | The register, in JSON; profile of the RIM `register` schema |
 | `data-formats.item-class` | The two item classes, in JSON; profile of the RIM `register-item-class` schema |
 | `data-formats.format` | The format item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, and the 20 EOAP string formats `string-*` |
+| `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, and the 20 EOAP string formats `string-*` |
 | `data-formats.representation` | The representation item schema and JSON-LD context; profile of the RIM `register-item` schema |
 | `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `eo-product-stac-item`, `rendered-image-png` |
 
@@ -54,7 +54,10 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `geojson` | RFC 7946 | `application/geo+json` (testbed) |
 | `ogcapi-processes-bbox` | OGC 18-062r2 OGC API - Processes - Part 1: Core (`bbox` schema) | none observed; `application/json` inferred from the bbox JSON schema (OGC 18-062r2 states none); a JSON Schema fragment, the `$ref` to `ogc.api.processes.part1.v1.schemas.bbox` that tier 3 carried (added 2026-11-09) |
 | `png` | W3C PNG Specification (Third Edition) | `image/png` (testbed: `algae-bloom.plot-image`, added 2026-11-10) |
-| `stac-item` | STAC Item Specification 1.1.0 | none observed in a profile or on the testbed; `application/geo+json` inferred from the specification, which states it, and seen where the Earth Search STAC API serves the Items (added 2026-11-10) |
+| `stac-item` | STAC Item Specification 1.1.0 | none observed in a profile or on the testbed; `application/geo+json` inferred from the specification, which states it, and seen where the Earth Search STAC API serves the Items (added 2026-11-10); principal media type |
+| `stac-item-collection` | STAC API - ItemCollection Fragment 1.0.0 | none observed in a profile or on the testbed; `application/geo+json`, stated by STAC API - Item Search 1.0.0 (Endpoints) and seen on the Earth Search `/search` endpoint; principal media type (added 2026-11-11) |
+| `stac-collection` | STAC Collection Specification 1.1.0 | none observed; `application/json`, stated by the specification; principal media type (added 2026-11-11) |
+| `stac-catalog` | STAC Catalog Specification 1.1.0 | none observed (six testbed outputs return a Catalog as a JSON object schema with no media type); `application/json`, stated by the specification; principal media type (added 2026-11-11) |
 | `string-*` (19) | JSON Schema Validation 2020-12, 7.3 (`password`: OpenAPI 3.0.3 data types) | none: a JSON Schema fragment `{"type": "string", "format": ...}` |
 | `string-pattern` | JSON Schema Validation 2020-12, 6.3.3 `pattern` | none: fragment `{"type": "string"}`, parameter `pattern` |
 
@@ -74,6 +77,18 @@ classified substantive, and carries `dct:isReplacedBy` towards the format. The l
 because `rim:RegisterItemShape` rejects a `rim:supersededBy` towards an item data-types does not type,
 and data-types never depends on this register. Which way `rim:supersedes` points is read from its
 label; the question is asked to the model maintainers.
+
+The four STAC formats replace, in the same way, the four STAC data types of data-types (`stac-item`,
+`stac-item-collection`, `stac-collection`, `stac-catalog`), proposals withdrawn on 2026-11-11
+(decision Q4, option b): each format carries `rim:supersedes` towards
+`https://geolabs.github.io/bblocks-data-types/def/data-type/stac-<name>/item` (for `stac-item`, by an
+amendment classified clarifying). Their JSON Schema fragments `$ref` the schemas the STAC
+specifications publish (`schemas.stacspec.org` v1.1.0 for Item, Collection and Catalog; for the Item
+Collection, which has no JSON Schema there, the `itemCollection` schema object of the STAC API 1.0.0
+Item Search OpenAPI document). The ogcincubator `bblocks-stac` blocks `ogc.contrib.stac.item-v1-1-0`
+and `ogc.contrib.stac.collection-v1-1-0` are cited as `seeAlso` by URL, not imported: they combine
+those schemas with their own constraints, and the register items, statuses and actions stay here.
+bblocks-stac has no Catalog and no Item Collection block.
 
 ## Building locally
 

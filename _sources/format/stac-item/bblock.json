@@ -17,5 +17,8 @@
       "title": "STAC Item Specification 1.1.0",
       "link": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md"
     }
+  ],
+  "seeAlso": [
+    "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md"
   ]
 }

@@ -22,6 +22,14 @@ No media type observed in an Implementation Profile or on the testbed (measured 
 
 `application/geo+json`, source [STAC Item Specification 1.1.0](https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md). Stated by the STAC Item Specification 1.1.0, section Media Type for STAC Item: a STAC Item is a GeoJSON file and should use application/geo+json. Not observed in an Implementation Profile or on the testbed. Of the processes of bblocks-process-profiles that exchange STAC Items, kindgrove-steps.select-scene and kindgrove-steps.download-band serve application/geo+json since their CWL declares it (GeoLabs/KindGrove 10887a4, 2026-11-10, not released; until then their CWL declared no format and they served application/octet-stream), and the others pass the Item by URL. Observed on 2026-11-10 where the Items are served, the Earth Search STAC API read by those processes (https://earth-search.aws.element84.com/v1, items S2C_46PGC_20260913_0_L2A and S2A_29SPC_20190701_0_L2A of sentinel-2-l2a): Content-Type application/geo+json; charset=utf-8.
 
+## Replaces
+
+The data type `stac-item` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item`, which carries `dct:isReplacedBy` towards this format. Recorded by an amendment of the proposal classified clarifying (`https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11`).
+
+## Related building block
+
+The ogcincubator building block `ogc.contrib.stac.item-v1-1-0` (STAC Item (v1.1.0), `under-development`) publishes a schema that combines the same STAC Item 1.1.0 JSON Schema (`allOf`) with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON and its own block `ogc.contrib.stac.item`; on 2026-11-11 both accepted the three Item examples of STAC 1.1.0 (`simple-item`, `core-item`, `extended-item`) and rejected one without `assets`. It is cited as `seeAlso` (https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md), not imported, and the fragment keeps the specification's own schema: the register item, its statuses and its actions are this register's.
+
 ## Requested by
 
 Added on 2026-11-10 for the representation [`eo-product-stac-item`](../../representation/eo-product-stac-item/), needed by the new process profiles of `bblocks-generic-profiles` (branch `planes/new-profiles`).

@@ -19,9 +19,12 @@
     rim:publicationStatus rim:published ;
     rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/addition> ,
         <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-primary-media-type> ,
-        <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-observation-2026-11-11> ;
+        <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-observation-2026-11-11> ,
+        <https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11> ;
     dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
     df:primaryMediaType "application/geo+json" ;
+    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item> ;
+    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md> ;
     df:jsonSchemaFragment "{\"$ref\":\"https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json\"}"^^rdf:JSON ;
     df:inferredMediaType [ df:mediaType "application/geo+json" ;
         dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
@@ -49,6 +52,15 @@
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty df:inferredMediaType ;
     dct:description "The justification of the media type taken from the specification (df:inferredMediaType) is brought up to date: kindgrove-steps.select-scene and kindgrove-steps.download-band now serve application/geo+json, their CWL declaring it (GeoLabs/KindGrove 10887a4), where it said they served application/octet-stream. The media types and the principal media type are unchanged. Classified clarifying: a reworded justification."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/stac-item> ;
+    prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:affectedProperty rim:supersedes , rdfs:seeAlso ;
+    dct:description "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change."@en ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .
