@@ -1,0 +1,31 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> a rim:RegisterAction ;
+    dct:description "The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do." ;
+    prov:startedAtTime "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType df:amendmentAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> a df:Representation ;
+    df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition>,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:representationItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
+    rim:validityStatus rim:invalid .
+

@@ -1,0 +1,34 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/las/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/las",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/las",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://www.ogc.org/standards/las/",
+      "title": "OGC 17-030r1 LAS Specification 1.4 OGC Community Standard"
+    }
+  ],
+  "observedMediaTypes": [
+    {
+      "mediaType": "application/vnd.las",
+      "observedIn": "implementation-profile"
+    },
+    {
+      "mediaType": "application/x-ogc-lasf",
+      "observedIn": "testbed"
+    }
+  ],
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/las/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/las",
+    "startedAtTime": "2026-11-09T00:00:00Z"
+  }
+}

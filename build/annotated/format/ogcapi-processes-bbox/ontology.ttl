@@ -1,0 +1,56 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://docs.ogc.org/is/17-069r4/17-069r4.html> dct:title "OGC 17-069r4 OGC API - Features - Part 1: Core, 7.15.3 Parameter bbox" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-identifier-2026-11-10> a rim:RegisterAction ;
+    dct:description "The description, the title of the source and the abstract of the block name the OGC API - Processes bbox building block by its identifier after its renaming by GeoLabs on 2026-11-10 (Part 1, edition 1.0: ogc.api.processes.part1.v1.schemas.bbox). The format, its specification and its media types are unchanged. Classified clarifying: a reworded description."@en ;
+    prov:startedAtTime "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType df:amendmentAction ;
+    rim:affectedProperty dct:description ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-media-type> a rim:RegisterAction ;
+    dct:description "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09."@en ;
+    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType df:amendmentAction ;
+    rim:affectedProperty df:inferredMediaType ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:proposer df:geolabs .
+
+<https://docs.ogc.org/is/18-062r2/18-062r2.html> dct:title "OGC 18-062r2 OGC API - Processes - Part 1: Core" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> a df:Format,
+        rim:RegisterItem ;
+    dct:conformsTo <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+    dct:description "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: an array of 4 or 6 numbers (bbox) and an optional CRS (crs), as the schema of ogc.api.processes.part1.v1.schemas.bbox gives it."@en ;
+    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html> ;
+    dct:title "OGC API - Processes bounding box"@en ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-ogcapi-processes/> ;
+    df:inferredMediaType [ dct:description "Inferred from the bbox JSON schema of OGC API - Processes - Part 1 (an object with the bbox array and crs): a JSON value. OGC 18-062r2 states no media type for a bounding box: Requirement 23 (/req/core/process-execute-input-inline-bbox, 7.11.2.2) only requires the bbox.yaml schema for an inline value, and Recommendation 17 with Table 13 (8.2) marks it with the JSON Schema format key ogc-bbox. Not observed on the testbed."@en ;
+            dct:source <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
+            df:mediaType "application/json" ] ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://geolabs.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json\"}"^^rdf:JSON ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/addition>,
+        <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-identifier-2026-11-10>,
+        <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-media-type> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:formatItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid .
+

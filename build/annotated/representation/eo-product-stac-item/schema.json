@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Representation item - Earth observation product as STAC Item",
+  "description": "The register item of the representation Earth observation product as STAC Item, in JSON.",
+  "allOf": [
+    {
+      "$ref": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.json"
+    }
+  ],
+  "properties": {
+    "id": {
+      "const": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "data-formats.representation.eo-product-stac-item",
+    "register": "https://geolabs.github.io/bblocks-data-formats/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-10"
+  }
+}

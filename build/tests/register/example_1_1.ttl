@@ -1,0 +1,12 @@
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geolabs/ospd/data-formats/register> a rim:Register ;
+    rim:controlBody <https://w3id.org/geolabs/ospd/data-formats/geolabs> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-formats/"^^xsd:anyURI ;
+    rim:hasSpecification <https://w3id.org/geolabs/ospd/data-formats/specification> ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/register"^^xsd:anyURI ;
+    rim:registerManager <https://w3id.org/geolabs/ospd/data-formats/geolabs> ;
+    rim:registerOwner <https://w3id.org/geolabs/ospd/data-formats/geolabs> ;
+    rim:runsOn <https://w3id.org/geolabs/ospd/data-formats/registerSystem> .
+

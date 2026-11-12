@@ -1,0 +1,14 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Representation item - Single-band raster as GeoTIFF
+description: The register item of the representation Single-band raster as GeoTIFF,
+  in JSON.
+allOf:
+- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+properties:
+  id:
+    const: https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff
+x-bblocks-metadata:
+  itemIdentifier: data-formats.representation.raster-single-band-geotiff
+  register: https://geolabs.github.io/bblocks-data-formats/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-09'

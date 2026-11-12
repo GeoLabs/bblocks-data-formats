@@ -1,0 +1,82 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.geometry-gml",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Geometry as GML",
+  "abstract": "The geometry data type of the data-types register, represented in GML.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.geometry"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.geometry"
+  ],
+  "hasFormat": [
+    "data-formats.representation.geometry-geojson"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-gml/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-gml/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/geometry-gml/",
+  "description": "The geometry data type of the data-types register, represented in GML.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`.\n\n## Requested by\n\nCreated because existing roles need it: 31 roles of 15 Implementation Profiles of `bblocks-generic-profiles` (branch `planes/phase-1-docs`, `b0da6aa`) have the data type `geometry` and a schema with `contentMediaType` `text/xml`, measured on 2026-11-09. They still carry that schema; they do not point to this representation yet.\n\n- `implementation-profile/buffer/inputs/geometry`\n- `implementation-profile/contains/inputs/geometry1`\n- `implementation-profile/contains/inputs/geometry2`\n- `implementation-profile/convex-hull/inputs/geometry`\n- `implementation-profile/convex-hull/outputs/result`\n- `implementation-profile/crosses/inputs/geometry1`\n- `implementation-profile/crosses/inputs/geometry2`\n- `implementation-profile/difference/inputs/geometry1`\n- `implementation-profile/difference/inputs/geometry2`\n- `implementation-profile/difference/outputs/result`\n- `implementation-profile/disjoint/inputs/geometry1`\n- `implementation-profile/disjoint/inputs/geometry2`\n- `implementation-profile/equals/inputs/geometry1`\n- `implementation-profile/equals/inputs/geometry2`\n- `implementation-profile/geometry-extent/inputs/geometry`\n- `implementation-profile/intersection/inputs/geometry1`\n- `implementation-profile/intersection/inputs/geometry2`\n- `implementation-profile/intersection/outputs/result`\n- `implementation-profile/intersects/inputs/geometry1`\n- `implementation-profile/intersects/inputs/geometry2`\n- `implementation-profile/is-simple/inputs/geometry`\n- `implementation-profile/symdifference/inputs/geometry1`\n- `implementation-profile/symdifference/inputs/geometry2`\n- `implementation-profile/symdifference/outputs/result`\n- `implementation-profile/touches/inputs/geometry1`\n- `implementation-profile/touches/inputs/geometry2`\n- `implementation-profile/union/inputs/geometry1`\n- `implementation-profile/union/inputs/geometry2`\n- `implementation-profile/union/outputs/result`\n- `implementation-profile/within/inputs/geometry1`\n- `implementation-profile/within/inputs/geometry2`\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "Geometry as GML",
+      "content": "The register item of the representation Geometry as GML: it realizes version 1 of the geometry data type of the data-types register and points to the gml format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/geometry-gml/example_1_1.json",
+          "sizeBytes": 1945,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/gml\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": [\n    {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n      \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n      \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n    },\n    {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"https://w3id.org/geolabs/ospd/data-formats/amendmentAction\",\n      \"changeClassification\": \"clarifying\",\n      \"description\": \"The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do.\",\n      \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n      \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n      \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-gml/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/geometry-gml/example_1_2.ttl",
+          "sizeBytes": 2538,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> a df:Representation, rim:RegisterItem ;\n    dct:title \"Geometry as GML\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition> ,\n        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;\n    prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> a rim:RegisterAction ;\n    rim:actionType df:amendmentAction ;\n    rim:changeClassification rim:clarifyingChange ;\n    dct:description \"The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do.\"@en ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;\n    prov:startedAtTime \"2026-11-10T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/geometry-gml/example_1_1.jsonld",
+          "sizeBytes": 2067,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/gml\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": [\n    {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n      \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n      \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n    },\n    {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"https://w3id.org/geolabs/ospd/data-formats/amendmentAction\",\n      \"changeClassification\": \"clarifying\",\n      \"description\": \"The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do.\",\n      \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n      \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\",\n      \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n    }\n  ]\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - Geometry as GML\ndescription: The register item of the representation Geometry as GML, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.geometry-gml\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/geometry-gml"
+}

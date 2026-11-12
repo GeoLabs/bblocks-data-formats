@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Format item - LAS",
+  "description": "The register item of the LAS format, in JSON.",
+  "allOf": [
+    {
+      "$ref": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.json"
+    }
+  ],
+  "properties": {
+    "id": {
+      "const": "https://w3id.org/geolabs/ospd/data-formats/format/las"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "data-formats.format.las",
+    "register": "https://geolabs.github.io/bblocks-data-formats/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-09"
+  }
+}

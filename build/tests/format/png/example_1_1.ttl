@@ -1,0 +1,25 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/png> a df:Format ;
+    dct:conformsTo <https://www.w3.org/TR/png/> ;
+    df:observedMediaType [ df:mediaType "image/png" ;
+            df:observedIn "testbed" ] ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/png/actions/addition> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:formatItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/png"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/png/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/png> ;
+    rim:proposer df:geolabs .
+
+<https://www.w3.org/TR/png/> dct:title "W3C Portable Network Graphics (PNG) Specification (Third Edition), W3C Recommendation 24 June 2025" .
+

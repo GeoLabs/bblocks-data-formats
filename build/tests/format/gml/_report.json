@@ -1,0 +1,365 @@
+{
+  "title": "Validation report for data-formats.format.gml - Format: Geography Markup Language (GML)",
+  "bblockName": "Format: Geography Markup Language (GML)",
+  "bblockId": "data-formats.format.gml",
+  "generated": "2026-11-12T14:41:46.369785+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/format/gml/example_1_1.json",
+        "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/gml/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 20,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/time-interval/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/bounding-box-ogcapi-processes-bbox/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/gml/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/expression/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/rendered-image/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/radiometric-index/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/point-gml/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-email/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-ipv4/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/collection-identifier/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uri-template/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-idn-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/geojson/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/eo-product/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-item-collection/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-pattern/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/point-cloud-las/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-hostname/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uri/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-password/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-item/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/format-identifier/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/geotiff/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/ontology.ttl\n - /github/workspace/_sources/vocabulary/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-ipv6/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/line/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/raster-geotiff/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/band-identifier/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/polyhedral-surface/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-date/ontology.ttl\n - /github/workspace/_sources/format/gml/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-json-pointer/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/data.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/linear-ring/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/binary-mask/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/feature-collection-gml/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-date-time/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/triangle/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/coordinate-reference-system/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/eo-product-stac-item/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-time/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/png/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/colour-map/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-iri-reference/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/rendered-image-png/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/las/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-iri/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/geometry-geojson/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-relative-json-pointer/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/raster-single-band-geotiff/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/surface-gml/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-duration/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uuid/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/ogcapi-processes-bbox/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-idn-hostname/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-catalog/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uri-reference/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/grid-resolution/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/data.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/elevation-model-geotiff/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/geometry-gml/ontology.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/vocabulary/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/vocabulary/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "_sources/vocabulary/shapes.shacl",
+              "focusNodes": {
+                "df:RepresentationShape": {
+                  "nodes": []
+                },
+                "df:PrimaryMediaTypeShape": {
+                  "nodes": []
+                },
+                "df:MediaTypeInferenceShape": {
+                  "nodes": []
+                },
+                "df:AdditionProposalShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml>"
+                  ]
+                },
+                "df:FormatShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml>"
+                  ]
+                },
+                "df:AdditionProposalShape/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
+                },
+                "df:MediaTypeObservationShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/vocabulary/shapes.shacl:\n - Shape df:RepresentationShape: *none*\n - Shape df:PrimaryMediaTypeShape: *none*\n - Shape df:MediaTypeInferenceShape: *none*\n - Shape df:AdditionProposalShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml>\n - Shape df:FormatShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml>\n - Shape df:AdditionProposalShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape df:MediaTypeObservationShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl",
+              "focusNodes": {
+                "dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
+                },
+                "dt:DataTypeVersionShape": {
+                  "nodes": []
+                },
+                "dt:RegisterShape": {
+                  "nodes": [
+                    "dt:register"
+                  ]
+                },
+                "dt:DataTypeShape": {
+                  "nodes": []
+                },
+                "dt:DataTypeItemShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl:\n - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape dt:DataTypeVersionShape: *none*\n - Shape dt:RegisterShape: dt:register\n - Shape dt:DataTypeShape: *none*\n - Shape dt:DataTypeItemShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "focusNodes": {
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
+                  "nodes": []
+                },
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:ConceptShape": {
+                  "nodes": []
+                },
+                "rim:RegisterActionShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition>\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/format/gml/example_1_2.ttl",
+        "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/gml/example_1_2.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 2,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using ontology.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_2.ttl",
+              "size": 23,
+              "isError": false,
+              "message": "Output Turtle example_1_2.ttl kept as provided"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/time-interval/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/bounding-box-ogcapi-processes-bbox/ontology.ttl\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/gml/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/expression/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/rendered-image/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/radiometric-index/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/point-gml/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-email/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-ipv4/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/collection-identifier/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uri-template/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-idn-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/geojson/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/eo-product/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-item-collection/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-pattern/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/point-cloud-las/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-hostname/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uri/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-password/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-item/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/format-identifier/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/geotiff/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/ontology.ttl\n - /github/workspace/_sources/vocabulary/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-ipv6/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/line/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/raster-geotiff/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/band-identifier/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/polyhedral-surface/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-date/ontology.ttl\n - /github/workspace/_sources/format/gml/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-json-pointer/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/data.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/linear-ring/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/binary-mask/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/feature-collection-gml/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-date-time/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/triangle/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/coordinate-reference-system/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/eo-product-stac-item/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-time/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/png/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/colour-map/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-iri-reference/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/rendered-image-png/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/las/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-iri/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/geometry-geojson/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-relative-json-pointer/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/raster-single-band-geotiff/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/surface-gml/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-duration/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uuid/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/ogcapi-processes-bbox/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-idn-hostname/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-catalog/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/string-uri-reference/ontology.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/grid-resolution/ontology.ttl\n - /github/workspace/_sources/vocabulary/../format/stac-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/data.ttl\n - https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/elevation-model-geotiff/ontology.ttl\n - /github/workspace/_sources/vocabulary/../representation/geometry-gml/ontology.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/vocabulary/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/vocabulary/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "_sources/vocabulary/shapes.shacl",
+              "focusNodes": {
+                "df:RepresentationShape": {
+                  "nodes": []
+                },
+                "df:PrimaryMediaTypeShape": {
+                  "nodes": []
+                },
+                "df:MediaTypeInferenceShape": {
+                  "nodes": []
+                },
+                "df:AdditionProposalShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml>"
+                  ]
+                },
+                "df:FormatShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml>"
+                  ]
+                },
+                "df:AdditionProposalShape/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
+                },
+                "df:MediaTypeObservationShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/vocabulary/shapes.shacl:\n - Shape df:RepresentationShape: *none*\n - Shape df:PrimaryMediaTypeShape: *none*\n - Shape df:MediaTypeInferenceShape: *none*\n - Shape df:AdditionProposalShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml>\n - Shape df:FormatShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml>\n - Shape df:AdditionProposalShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape df:MediaTypeObservationShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl",
+              "focusNodes": {
+                "dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
+                },
+                "dt:DataTypeVersionShape": {
+                  "nodes": []
+                },
+                "dt:RegisterShape": {
+                  "nodes": [
+                    "dt:register"
+                  ]
+                },
+                "dt:DataTypeShape": {
+                  "nodes": []
+                },
+                "dt:DataTypeItemShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl:\n - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape dt:DataTypeVersionShape: *none*\n - Shape dt:RegisterShape: dt:register\n - Shape dt:DataTypeShape: *none*\n - Shape dt:DataTypeItemShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results"
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "focusNodes": {
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml>"
+                  ]
+                },
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:ConceptShape": {
+                  "nodes": []
+                },
+                "rim:RegisterActionShape": {
+                  "nodes": [
+                    "<https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterItemShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml>\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: <https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition>\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  }
+}

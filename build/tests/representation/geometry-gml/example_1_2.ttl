@@ -1,0 +1,37 @@
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> a df:Representation, rim:RegisterItem ;
+    dct:title "Geometry as GML"@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml"^^xsd:anyURI ;
+    rim:itemClass df:representationItemClass ;
+    rim:inRegister df:register ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
+    df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition> ,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
+    prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    dct:description "The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
+    prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .

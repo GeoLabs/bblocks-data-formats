@@ -1,0 +1,81 @@
+
+
+{
+  "itemIdentifier": "data-formats.format.geojson",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: GeoJSON",
+  "abstract": "A JSON encoding of geographic features and geometries.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "RFC 7946 The GeoJSON Format",
+      "link": "https://www.rfc-editor.org/rfc/rfc7946"
+    }
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geojson/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geojson/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/format/geojson/",
+  "description": "A JSON encoding of geographic features and geometries.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/format/geojson` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type.\n\n## Specification\n\n- [RFC 7946 The GeoJSON Format](https://www.rfc-editor.org/rfc/rfc7946) (`dct:conformsTo`)\n\nRFC 7946 is the only GeoJSON specification cited; the testbed states no version.\n\n## Observed media types\n\nMeasured on 2026-11-09 in the Implementation Profiles of `bblocks-generic-profiles` (branch `planes/phase-1-docs`, `b0da6aa`) and in the testbed process descriptions of `bblocks-process-profiles-tests-1` (`5e4116d`). No principal media type is set: none has been chosen.\n\n| Media type | Observed in | Where |\n|---|---|---|\n| `application/geo+json` | testbed | 3 `aoi` inputs of the algae-bloom processes |\n\n## Content of this block\n\n- `ontology.ttl`: the format item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.\n",
+  "examples": [
+    {
+      "title": "GeoJSON",
+      "content": "The register item of the GeoJSON format, of the register's format item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/geojson/example_1_1.json",
+          "sizeBytes": 1005,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://www.rfc-editor.org/rfc/rfc7946\",\n      \"title\": \"RFC 7946 The GeoJSON Format\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"application/geo+json\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geojson/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/geojson/example_1_2.ttl",
+          "sizeBytes": 1641,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/format/geojson> a df:Format, rim:RegisterItem ;\n    dct:title \"GeoJSON\"@en ;\n    dct:description \"A JSON encoding of geographic features and geometries.\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\"^^xsd:anyURI ;\n    rim:itemClass df:formatItemClass ;\n    rim:inRegister df:register ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition> ;\n    dct:conformsTo <https://www.rfc-editor.org/rfc/rfc7946> ;\n    df:observedMediaType [ df:mediaType \"application/geo+json\" ; df:observedIn \"testbed\" ] .\n\n<https://www.rfc-editor.org/rfc/rfc7946> dct:title \"RFC 7946 The GeoJSON Format\" .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;\n    prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/geojson/example_1_1.jsonld",
+          "sizeBytes": 1114,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://www.rfc-editor.org/rfc/rfc7946\",\n      \"title\": \"RFC 7946 The GeoJSON Format\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"application/geo+json\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/geojson\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Format item - GeoJSON\ndescription: The register item of the GeoJSON format, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/format/geojson\nx-bblocks-metadata:\n  itemIdentifier: data-formats.format.geojson\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/format/geojson"
+}

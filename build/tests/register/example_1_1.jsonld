@@ -1,0 +1,12 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/register/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "type": "Register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "functionalIdentifier": "https://geolabs.github.io/bblocks-data-formats/",
+  "runsOn": "https://w3id.org/geolabs/ospd/data-formats/registerSystem",
+  "registerOwner": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+  "registerManager": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+  "controlBody": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+  "hasSpecification": "https://w3id.org/geolabs/ospd/data-formats/specification"
+}

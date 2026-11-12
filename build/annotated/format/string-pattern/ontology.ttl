@@ -1,0 +1,35 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3> dct:title "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 6.3.3 pattern" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/string-pattern> a df:Format,
+        rim:RegisterItem ;
+    dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3> ;
+    dct:description "A string that matches a regular expression supplied as a parameter, as the JSON Schema `pattern` keyword."@en ;
+    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    dct:title "Pattern-constrained string"@en ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    df:cwlCustomType "Pattern" ;
+    df:jsonSchemaFragment "{\"type\":\"string\"}"^^rdf:JSON ;
+    df:parameter [ dct:description "A regular expression, in the ECMA 262 dialect, that the value must match." ;
+            df:jsonSchemaKeyword "pattern" ;
+            df:parameterName "pattern" ] ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/string-pattern/actions/addition> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:formatItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/string-pattern"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/string-pattern/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/string-pattern> ;
+    rim:proposer df:geolabs .
+

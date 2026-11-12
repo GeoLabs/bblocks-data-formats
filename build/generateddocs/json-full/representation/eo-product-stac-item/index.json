@@ -1,0 +1,79 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.eo-product-stac-item",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Earth observation product as STAC Item",
+  "abstract": "The eo-product data type of the data-types register, represented in STAC Item.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.eo-product"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.eo-product"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/eo-product-stac-item/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/eo-product-stac-item/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/eo-product-stac-item/",
+  "description": "The eo-product data type of the data-types register, represented in STAC Item.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [STAC Item](../../format/stac-item/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`.\n\n## Requested by\n\nAdded on 2026-11-10 for roles of the new Implementation Profiles of `bblocks-generic-profiles` (branch `planes/new-profiles`):\n\n- [`implementation-profile/product-selection/outputs/products`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/product-selection/outputs/products)\n- [`implementation-profile/band-retrieval/inputs/product`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/band-retrieval/inputs/product)\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "Earth observation product as STAC Item",
+      "content": "The register item of the representation Earth observation product as STAC Item: it realizes version 1 of the eo-product data type of the data-types register and points to the stac-item format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/eo-product-stac-item/example_1_1.json",
+          "sizeBytes": 1017,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-item\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\",\n    \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/eo-product-stac-item/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/eo-product-stac-item/example_1_2.ttl",
+          "sizeBytes": 1643,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item> a df:Representation, rim:RegisterItem ;\n    dct:title \"Earth observation product as STAC Item\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item> ;\n    prov:startedAtTime \"2026-11-10T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/eo-product-stac-item/example_1_1.jsonld",
+          "sizeBytes": 1147,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-item\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\",\n    \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - Earth observation product as STAC Item\ndescription: The register item of the representation Earth observation product as\n  STAC Item, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.eo-product-stac-item\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-10'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/eo-product-stac-item"
+}

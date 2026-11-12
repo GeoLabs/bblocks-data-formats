@@ -1,0 +1,62 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation item",
+  "abstract": "A representation of this register, in JSON: a profile of the Registered Item Model register item that realizes one data type version of the data-types register and points to one format.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item"
+  ],
+  "dependsOn": [
+    "data-formats.vocabulary",
+    "ogc.rim.schemas.register-item"
+  ],
+  "group": "Representations",
+  "highlighted": true,
+  "sources": [
+    {
+      "title": "ISO 19135:2026, Geographic information \u2014 Registration and register governance",
+      "link": "https://www.iso.org/standard/86261.html"
+    },
+    {
+      "title": "Registered Item Model (OGC Building Block)",
+      "link": "https://ogcincubator.github.io/registered-item-model/"
+    }
+  ],
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/context.jsonld",
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/schema.yaml",
+  "sourceLdContext": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/",
+  "description": "The representation item of the data-formats register, in JSON.\n\n## Definition\n\nA `df:Representation` is a `rim:RegisterItem` of the `df:representationItemClass` item class. It\nrealizes (`rim:realizes`) exactly one `dt:DataTypeVersion` of the data-types register and points\n(`df:format`) to exactly one [format](../format/) of this register. `df:RepresentationShape` checks\nboth; the Registered Item Model already limits an item to one `rim:realizes`.\n\nA representation is created when an existing role needs it: each one lists the Implementation\nProfile roles that request it. In `bblock.json`, `isDescribedBy` names the data type block of the\ndata-types register; `hasFormat` will link the representations of a same data type once a data type\nhas more than one.\n\n## Content of this block\n\n- `schema.yaml`: a profile of `ogc.rim.schemas.register-item`.\n- `context.jsonld`: the JSON-LD context of the items, inherited by every item block through its\n  schema (the same context in the format and representation blocks).\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item\ndescription: 'A representation of the data-formats register, in JSON: a profile of\n  the Registered Item Model register item (`type` pinned to `Representation`). It\n  realizes exactly one data type version of the data-types register (`realizes`) and\n  points to one format of this register (`format`).'\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item/schema.yaml\ntype: object\nrequired:\n- realizes\n- format\n- hasAction\nproperties:\n  type:\n    const: Representation\n    x-jsonld-id: '@type'\n  itemClass:\n    const: https://w3id.org/geolabs/ospd/data-formats/representationItemClass\n    x-jsonld-id: https://w3id.org/ogc/rim/itemClass\n    x-jsonld-type: '@id'\n  inRegister:\n    const: https://w3id.org/geolabs/ospd/data-formats/register\n    x-jsonld-id: https://w3id.org/ogc/rim/inRegister\n    x-jsonld-type: '@id'\n  realizes:\n    type: string\n    format: uri\n    pattern: ^https://geolabs\\.github\\.io/bblocks-data-types/def/data-type/[a-z0-9-]+/v[0-9]+$\n    x-jsonld-id: https://w3id.org/ogc/rim/realizes\n    x-jsonld-type: '@id'\n  format:\n    type: string\n    format: uri\n    pattern: ^https://w3id\\.org/geolabs/ospd/data-formats/format/[a-z0-9-]+$\n    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/format\n    x-jsonld-type: '@id'\n  hasAction:\n    description: 'The proposed addition, alone or followed by later actions on the\n      item, as for a format. The schema requires the addition; it does not constrain\n      the action type or the classification of the other actions (decision Q5, option\n      b, of 2026-11-11: pending a decision common to all registers).'\n    oneOf:\n    - $ref: '#/$defs/addition'\n    - type: array\n      contains:\n        $ref: '#/$defs/addition'\n      items:\n        $ref: '#/$defs/action'\n    x-jsonld-id: https://w3id.org/ogc/rim/hasAction\n    x-jsonld-type: '@id'\n$defs:\n  addition:\n    type: object\n    required:\n    - id\n    - actionType\n    - proposer\n    properties:\n      id:\n        type: string\n        format: uri\n        x-jsonld-id: '@id'\n      type:\n        const: RegisterAction\n        x-jsonld-id: '@type'\n      actionType:\n        const: addition\n        x-jsonld-id: https://w3id.org/ogc/rim/actionType\n        x-jsonld-type: '@vocab'\n      proposer:\n        type: string\n        format: uri\n        x-jsonld-id: https://w3id.org/ogc/rim/proposer\n        x-jsonld-type: '@id'\n      startedAtTime:\n        type: string\n        format: date-time\n        x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  action:\n    type: object\n    required:\n    - id\n    - actionType\n    - proposer\n    properties:\n      id:\n        type: string\n        format: uri\n        x-jsonld-id: '@id'\n      type:\n        const: RegisterAction\n        x-jsonld-id: '@type'\n      actionType:\n        type: string\n        x-jsonld-id: https://w3id.org/ogc/rim/actionType\n        x-jsonld-type: '@vocab'\n      proposer:\n        type: string\n        format: uri\n        x-jsonld-id: https://w3id.org/ogc/rim/proposer\n        x-jsonld-type: '@id'\n      startedAtTime:\n        type: string\n        format: date-time\n        x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n      description:\n        type: string\n        x-jsonld-id: http://purl.org/dc/terms/description\nx-jsonld-extra-terms:\n  Register: https://w3id.org/ogc/rim/Register\n  RegisterItem: https://w3id.org/ogc/rim/RegisterItem\n  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass\n  RegisterAction: https://w3id.org/ogc/rim/RegisterAction\n  Format: https://w3id.org/geolabs/ospd/data-formats/Format\n  Representation: https://w3id.org/geolabs/ospd/data-formats/Representation\n  title: http://purl.org/dc/terms/title\n  objectIdentifier:\n    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  functionalIdentifier:\n    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  supersededBy:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy\n    x-jsonld-type: '@id'\n  supersedes:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersedes\n    x-jsonld-type: '@id'\n  validityStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus\n    x-jsonld-type: '@vocab'\n  publicationStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus\n    x-jsonld-type: '@vocab'\n  valid: https://w3id.org/ogc/rim/valid\n  invalid: https://w3id.org/ogc/rim/invalid\n  published: https://w3id.org/ogc/rim/published\n  unpublished: https://w3id.org/ogc/rim/unpublished\n  appliesTo:\n    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo\n    x-jsonld-type: '@id'\n  changeClassification:\n    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification\n    x-jsonld-type: '@vocab'\n  addition: https://w3id.org/ogc/rim/additionAction\n  substantive: https://w3id.org/ogc/rim/substantiveChange\n  clarifying: https://w3id.org/ogc/rim/clarifyingChange\n  specification:\n    x-jsonld-id: http://purl.org/dc/terms/conformsTo\n    x-jsonld-type: '@id'\n  observedMediaTypes: https://w3id.org/geolabs/ospd/data-formats/observedMediaType\n  mediaType: https://w3id.org/geolabs/ospd/data-formats/mediaType\n  observedIn: https://w3id.org/geolabs/ospd/data-formats/observedIn\n  primaryMediaType: https://w3id.org/geolabs/ospd/data-formats/primaryMediaType\n  jsonSchemaFragment:\n    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment\n    x-jsonld-type: '@json'\n  parameters: https://w3id.org/geolabs/ospd/data-formats/parameter\n  name: https://w3id.org/geolabs/ospd/data-formats/parameterName\n  jsonSchemaKeyword: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaKeyword\n  cwlCustomType: https://w3id.org/geolabs/ospd/data-formats/cwlCustomType\n  seeAlso:\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  df: https://w3id.org/geolabs/ospd/data-formats/\n  dct: http://purl.org/dc/terms/\n  xsd: http://www.w3.org/2001/XMLSchema#\n  prov: http://www.w3.org/ns/prov#\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  dt: https://geolabs.github.io/bblocks-data-types/def/\n  skos: http://www.w3.org/2004/02/skos/core#\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation"
+}

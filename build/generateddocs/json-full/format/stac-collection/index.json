@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-formats.format.stac-collection",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: STAC Collection",
+  "abstract": "A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-11T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "STAC Collection Specification 1.1.0",
+      "link": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md"
+    }
+  ],
+  "seeAlso": [
+    "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md"
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-collection/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-collection/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/format/stac-collection/",
+  "description": "A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/format/stac-collection` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type; none is created until a role needs it.\n\n## Specification\n\n- [STAC Collection Specification 1.1.0](https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md) (`dct:conformsTo`)\n\nThe JSON Schema fragment `$ref`s the JSON Schema the specification publishes for a Collection: https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json (checked on 2026-11-11, HTTP 200).\n\nThe ogcincubator building block `ogc.contrib.stac.collection-v1-1-0` (STAC Collection (v1.1.0), `under-development`) publishes a schema that combines this one (`allOf`) with the constraints of its own block `ogc.contrib.stac.collection`; on 2026-11-11 both accepted the Collection example of STAC 1.1.0 (`examples/collection.json`) and rejected it without `extent`. It is cited as `seeAlso` (https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md), not imported: the register item, its statuses and its actions are this register's.\n\n## Media type taken from the specification\n\n`application/json` (`df:inferredMediaType`, and `df:primaryMediaType`), source [STAC Collection Specification 1.1.0](https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md). Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection.\n\n## Replaces\n\nThe data type `stac-collection` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item`, which carries `dct:isReplacedBy` towards this format.\n\n## Requested by\n\nAdded on 2026-11-11 by decision Q4, option b: the STAC types of data-types describe encodings and are withdrawn in favour of formats. No role uses it yet.\n\n## Content of this block\n\n- `ontology.ttl`: the format item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.\n",
+  "examples": [
+    {
+      "title": "STAC Collection",
+      "content": "The register item of the STAC Collection format, of the register's format item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/stac-collection/example_1_1.json",
+          "sizeBytes": 1999,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md\",\n      \"title\": \"STAC Collection Specification 1.1.0\"\n    }\n  ],\n  \"primaryMediaType\": \"application/json\",\n  \"jsonSchemaFragment\": {\n    \"$ref\": \"https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json\"\n  },\n  \"inferredMediaTypes\": [\n    {\n      \"mediaType\": \"application/json\",\n      \"source\": \"https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md\",\n      \"description\": \"Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \\\"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\\\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection.\"\n    }\n  ],\n  \"supersedes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item\",\n  \"seeAlso\": \"https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\",\n    \"startedAtTime\": \"2026-11-11T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-collection/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/stac-collection/example_1_2.ttl",
+          "sizeBytes": 2803,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> a df:Format, rim:RegisterItem ;\n    dct:title \"STAC Collection\"@en ;\n    dct:description \"A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links.\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\"^^xsd:anyURI ;\n    rim:itemClass df:formatItemClass ;\n    rim:inRegister df:register ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition> ;\n    dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> ;\n    df:primaryMediaType \"application/json\" ;\n    df:jsonSchemaFragment \"{\\\"$ref\\\":\\\"https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json\\\"}\"^^rdf:JSON ;\n    df:inferredMediaType [ df:mediaType \"application/json\" ;\n        dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> ;\n        dct:description \"Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \\\"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\\\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection.\"@en ] ;\n    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md> ;\n    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item> .\n\n<https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> dct:title \"STAC Collection Specification 1.1.0\" .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> ;\n    prov:startedAtTime \"2026-11-11T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/stac-collection/example_1_1.jsonld",
+          "sizeBytes": 2116,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md\",\n      \"title\": \"STAC Collection Specification 1.1.0\"\n    }\n  ],\n  \"primaryMediaType\": \"application/json\",\n  \"jsonSchemaFragment\": {\n    \"$ref\": \"https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json\"\n  },\n  \"inferredMediaTypes\": [\n    {\n      \"mediaType\": \"application/json\",\n      \"source\": \"https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md\",\n      \"description\": \"Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \\\"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\\\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection.\"\n    }\n  ],\n  \"supersedes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item\",\n  \"seeAlso\": \"https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\",\n    \"startedAtTime\": \"2026-11-11T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Format item - STAC Collection\ndescription: The register item of the STAC Collection format, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/format/stac-collection\nx-bblocks-metadata:\n  itemIdentifier: data-formats.format.stac-collection\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-11'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/format/stac-collection"
+}

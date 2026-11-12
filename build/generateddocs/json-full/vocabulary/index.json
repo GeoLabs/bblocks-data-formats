@@ -1,0 +1,348 @@
+
+
+{
+  "itemIdentifier": "data-formats.vocabulary",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Formats shared model",
+  "abstract": "Shared RIM content-plane model, register metadata and SHACL rules for the format and representation Building Blocks of this register.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "model",
+  "dependsOn": [
+    "data-types.vocabulary",
+    "ogc.rim.core-ontology"
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/data.ttl",
+      "format": "text/turtle",
+      "title": "Register metadata (register, specification, owner, system and item classes)"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Geography Markup Language (GML)"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/las/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: LAS"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-date/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Date string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-date-time/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Date-time string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-duration/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Duration string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-email/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Email address string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-hostname/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Hostname string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-idn-email/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Internationalized email address string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-idn-hostname/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Internationalized hostname string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-ipv4/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IPv4 address string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-ipv6/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IPv6 address string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-iri/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IRI string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-iri-reference/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: IRI reference string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-password/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Password string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-json-pointer/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: JSON Pointer string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-relative-json-pointer/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Relative JSON Pointer string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uuid/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: UUID string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uri/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: URI string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uri-reference/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: URI reference string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uri-template/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: URI template string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-time/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Time string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-pattern/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Pattern-constrained string"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/ogcapi-processes-bbox/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: OGC API - Processes bounding box"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: PNG"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-item/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Item"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-item-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Item Collection"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Collection"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-catalog/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: STAC Catalog"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Geometry as GML"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/surface-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Surface as GML"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/point-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Point as GML"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/feature-collection-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature collection as GML"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Raster as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Single-band raster as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/elevation-model-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Elevation model as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/point-cloud-las/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Point cloud as LAS"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/bounding-box-ogcapi-processes-bbox/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Bounding box as OGC API - Processes bbox"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Geometry as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/eo-product-stac-item/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Earth observation product as STAC Item"
+    },
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/rendered-image-png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Rendered image as PNG"
+    }
+  ],
+  "tags": [
+    "format",
+    "media type",
+    "representation",
+    "content plane",
+    "ISO 19135",
+    "register"
+  ],
+  "sources": [
+    {
+      "title": "ISO 19135:2026, Geographic information \u2014 Registration and register governance",
+      "link": "https://www.iso.org/standard/86261.html"
+    },
+    {
+      "title": "Registered Item Model (OGC Building Block)",
+      "link": "https://ogcincubator.github.io/registered-item-model/"
+    }
+  ],
+  "group": "Shared model",
+  "highlighted": false,
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/vocabulary/ontology.ttl",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/vocabulary/",
+  "description": "The shared model of the data-formats register: the content plane of the OSPD data axis, as a\nprofile of the [Registered Item Model](https://ogcincubator.github.io/registered-item-model/).\n\n## Model\n\n| Class | Item class | Realizes | Carries |\n|---|---|---|---|\n| `df:Format` | `df:formatItemClass` | nothing | specification (`dct:conformsTo`), observed media types (`df:observedMediaType`), media types taken from a source (`df:inferredMediaType`: stated by the specification, or inferred when it states none; with source and justification), at most one principal media type (`df:primaryMediaType`, one of those recorded) and/or a JSON Schema fragment (`df:jsonSchemaFragment`), parameters (`df:parameter`) |\n| `df:Representation` | `df:representationItemClass` | one `dt:DataTypeVersion` of the data-types register | one format (`df:format`) |\n\nBoth are sub-classes of `rim:RegisterItem`, so `rim:RegisterItemShape` applies to every item. Every\nitem records its addition, proposed by GeoLabs, and is `rim:invalid` and `rim:published`: a proposal\nawaiting a decision.\n\nThe meaning of data is not here: it is the concept plane of the\n[data-types register](https://geolabs.github.io/bblocks-data-types/). This register depends on it\n(`dependsOn: data-types.vocabulary`), so the data type versions a representation realizes are in the\nSHACL closure; data-types never depends on this register.\n\n## Content of this block\n\n- `ontology.ttl`: classes and properties.\n- `data.ttl`: the register, its owner and system, the two item classes, the register specification\n  (`df:specification`) and the amendment action type (`df:amendmentAction`).\n- `shapes.shacl`: `df:FormatShape`, `df:RepresentationShape`, `df:AdditionProposalShape`.\n- `tests/`: Turtle items that must fail, one per rule.\n\n## Sources\n\n- [ISO 19135:2026, Geographic information \u2014 Registration and register governance](https://www.iso.org/standard/86261.html)\n- [Registered Item Model](https://ogcincubator.github.io/registered-item-model/)\n",
+  "examples": [
+    {
+      "title": "Shared register metadata",
+      "content": "The register, its owner and system and the two item classes, format and representation. Each\nformat and representation Building Block publishes its own item and addition in its\n`ontology.ttl`.\n",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/data.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/vocabulary/example_1_1.ttl",
+          "sizeBytes": 7616,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n# Register-level metadata only. Each format and representation, with its addition action, is\n# canonical in the ontology.ttl of its own Building Block.\n\ndf:register a rim:Register ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/register\"^^xsd:anyURI ;\n    rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-formats/\"^^xsd:anyURI ;\n    dct:title \"Data Formats\"@en ;\n    dct:description \"A content register of the formats in which process inputs and outputs are encoded, and of the representations that bind a data type to a format.\"@en ;\n    rim:registerOwner df:geolabs ;\n    rim:registerManager df:geolabs ;\n    rim:controlBody df:geolabs ;\n    rim:hasSpecification df:specification ;\n    rim:runsOn df:registerSystem .\n\n# The register specification. rim:definesSubstantiveChange, the rule for proposals and the table of\n# substantive and clarifying changes are the texts validated by GeoLabs on 2026-11-05, word for word;\n# the table was validated in French and is given verbatim, followed by an English rendering.\n# vocabulary/tests/specification-without-title-fail.ttl proves that rim:RegisterSpecificationShape\n# runs on this register.\ndf:specification a rim:RegisterSpecification ;\n    dct:title \"Data Formats register specification\"@en ;\n    dct:description\n        \"Scope. This register holds the content plane of the data axis: formats (df:Format) and representations (df:Representation). The meaning of data, the data types, is held by the data-types register (https://geolabs.github.io/bblocks-data-types/), not here.\"@en ,\n        \"Register type. A content register, as the Registered Item Model uses the term: this register has no concept plane of its own. A format realizes no concept version. A representation realizes (rim:realizes) at most one dt:DataTypeVersion of the data-types register, which is the concept plane it represents, and points to one format. A representation is created when an existing role needs it.\"@en ,\n        \"Relation with the data-types register. This register depends on the data-types register; the data-types register never depends on this register. The Registered Item Model allows a dt:DataTypeVersion to be realized by items of both registers, its own dt:DataTypeItem and representations of this register: it limits rim:realizes to one version per item (rim:RegisterItemShape), not to one item per version.\"@en ,\n        \"Replacement of a data type. When a format or a representation replaces an item of the data-types register, it carries rim:supersedes towards that item, which is typed in the closure this register validates; the replaced item carries dct:isReplacedBy towards it. The 19 string-* formats supersede the withdrawn string-* data types.\"@en ,\n        \"Roles. GeoLabs SARL is the register owner, the register manager and, for now, the control body. GeoLabs intends to delegate the control body role to the OGC or to an OSPD working group.\"@en ,\n        \"Identifiers. The object identifier of an item is its IRI, https://w3id.org/geolabs/ospd/data-formats/<class>/<name>, with <class> one of format or representation. This namespace is not resolved yet. An object identifier never redirects; only a functional identifier may. The identifier of a published item changes only by an explicit decision.\"@en ,\n        \"Versions. An addition is an action of type addition, with no classification. A substantive change creates a new item or a new version, linked by rim:supersededBy, with an action classified substantive. A clarifying change keeps the item and its version, with an action classified clarifying. This version rule is specific to the registers of this project and does not come from ISO 19135. The classification correctional is not available. An item is retired by unpublishing it, not by deleting it.\"@en ,\n        \"Ce qui est substantiel ici (tableau valid\u00e9 le 2026-11-05, repris tel quel). Substantiel : Media type principal, version de la sp\u00e9cification, fragment de sch\u00e9ma, version de concept r\u00e9alis\u00e9e. Clarification : Media type observ\u00e9 ajout\u00e9, description reformul\u00e9e.\"@fr ,\n        \"What is substantive here (English rendering of the validated table above). Substantive: the principal media type, the version of the specification, the schema fragment, the realized concept version. Clarifying: an observed media type added, a reworded description.\"@en ,\n        \"Proposals. While an item is a proposal, with no control-body decision recorded, it is amended in place, with a classified `rim:RegisterAction`. The substantive rule applies once it has been accepted.\"@en ,\n        \"Amendment. df:amendmentAction is the action type of an in-place change to a proposal, an item with no control-body decision recorded. Such an action is always classified, clarifying or substantive: it is the classified rim:RegisterAction of the rule for proposals. This type is specific to this register and will be replaced if the Registered Item Model defines one.\"@en ,\n        \"Eligibility. No eligibility criteria for proposers have been set. GeoLabs is the only proposer recorded so far.\"@en ,\n        \"Commitments. No commitment to register users has been set.\"@en ;\n    rim:definesSubstantiveChange \"A change is substantive when a register user may have to change their data, profiles or processes because of it, or when it changes what an item means. Any other change to an existing item is clarifying.\" .\n\n# rim:actionType is required and the Registered Item Model has no type for an in-place change of a\n# proposal; it lets a register specification define further action types. Defined by\n# df:specification, specific to this register.\ndf:amendmentAction a rim:RegisterActionType , skos:Concept ;\n    rdfs:isDefinedBy df: ;\n    skos:prefLabel \"amendment\"@en ;\n    skos:definition \"An in-place change to a proposal, an item with no control-body decision recorded. Always classified, clarifying or substantive.\"@en .\n\ndf:formatItemClass a rim:RegisterItemClass ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\"^^xsd:anyURI ;\n    dct:title \"Format\" ;\n    dct:description \"The abstraction every format item of this register shares: an encoding, with its specification, its observed media types, its inferred media types (each with source and justification) and/or a JSON Schema fragment; it realizes no concept version.\"@en ;\n    rim:definedIn df:register ;\n    rim:validatedBy df:FormatShape .\n\ndf:representationItemClass a rim:RegisterItemClass ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\"^^xsd:anyURI ;\n    dct:title \"Representation\" ;\n    dct:description \"The abstraction every representation item of this register shares: one data type version of the data-types register, realized in one format.\"@en ;\n    rim:definedIn df:register ;\n    rim:validatedBy df:RepresentationShape .\n\ndf:geolabs a prov:Organization ;\n    dct:title \"GeoLabs SARL\"@en .\n\ndf:registerSystem a rim:RegisterSystem ;\n    dct:title \"OGC Building Blocks register (bblocks-postprocess, GitHub Pages)\"@en .\n"
+        }
+      ]
+    },
+    {
+      "title": "Ontology of the content plane",
+      "content": "The classes df:Format and df:Representation, sub-classes of rim:RegisterItem, and their\nproperties.\n",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/vocabulary/example_2_1.ttl",
+          "sizeBytes": 6236,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n#################################################################\n# Ontology metadata\n#\n# The content plane of the OSPD data axis, as a profile of the Registered\n# Item Model (ISO 19135:2026). Two classes of register item: df:Format,\n# an encoding, which realizes no concept version; df:Representation, which\n# realizes one dt:DataTypeVersion of the data-types register and points to\n# a df:Format. This register depends on the data-types register, never the\n# reverse.\n#################################################################\n\ndf: a owl:Ontology ;\n    owl:imports rim: ;\n    dct:title \"Data Formats vocabulary\" ;\n    dct:description \"Registered Item Model profile of the content plane: formats, and representations that bind a data type version of the data-types register to a format.\" ;\n    dct:creator \"GeoLabs SARL\" ;\n    dct:license <https://www.apache.org/licenses/LICENSE-2.0> .\n\ndf:Format a owl:Class ;\n    rdfs:subClassOf rim:RegisterItem ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"Format\" ;\n    rdfs:comment \"An encoding of data, with its specification, the media types observed where it is served, and/or a JSON Schema fragment. A format realizes no concept version: it says nothing about what the data means.\" .\n\ndf:Representation a owl:Class ;\n    rdfs:subClassOf rim:RegisterItem ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"Representation\" ;\n    rdfs:comment \"A data type in a format: realizes (rim:realizes) exactly one dt:DataTypeVersion of the data-types register and points (df:format) to one df:Format. Created when an existing role needs it.\" .\n\ndf:MediaTypeObservation a owl:Class ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"Media type observation\" ;\n    rdfs:comment \"A media type under which a format was observed, and where: in an Implementation Profile (tier 3) or in a testbed process description (tier 4).\" .\n\ndf:format a owl:ObjectProperty ;\n    rdfs:subPropertyOf rim:relatedItem ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"format\" ;\n    rdfs:comment \"Relates a representation to the format it uses.\" ;\n    rdfs:domain df:Representation ;\n    rdfs:range df:Format .\n\ndf:observedMediaType a owl:ObjectProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"observed media type\" ;\n    rdfs:comment \"A media type under which this format was observed. Adding one is a clarifying change.\" ;\n    rdfs:domain df:Format ;\n    rdfs:range df:MediaTypeObservation .\n\ndf:mediaType a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"media type\" ;\n    rdfs:domain df:MediaTypeObservation ;\n    rdfs:range xsd:string .\n\ndf:observedIn a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"observed in\" ;\n    rdfs:comment \"Where the media type was observed: implementation-profile (tier 3) or testbed (tier 4).\" ;\n    rdfs:domain df:MediaTypeObservation ;\n    rdfs:range xsd:string .\n\ndf:inferredMediaType a owl:ObjectProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"inferred media type\" ;\n    rdfs:comment \"A media type of this format that was not observed in an Implementation Profile or on the testbed, but taken from a source: stated by the format's specification, or, when the specification states none, inferred, for instance from its JSON Schema. The record names its source (dct:source) and its justification (dct:description). Adding one is a clarifying change. Widened on 2026-11-10 to the media type a specification states (STAC Item); before, it covered only an inference when the specification states none.\" ;\n    rdfs:domain df:Format ;\n    rdfs:range df:MediaTypeInference .\n\ndf:MediaTypeInference a owl:Class ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"Media type inference\" ;\n    rdfs:comment \"A media type of a format taken from a source rather than observed (df:mediaType): stated by its specification, or inferred; with that source (dct:source) and why (dct:description).\" .\n\ndf:primaryMediaType a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"principal media type\" ;\n    rdfs:comment \"The principal media type of a format; changing it is a substantive change. It is one of the format's recorded media types, observed (df:observedMediaType) or taken from a source (df:inferredMediaType), and that record gives its source (df:PrimaryMediaTypeShape). Set on the STAC Item format only (2026-11-10): application/geo+json, as its specification states.\" ;\n    rdfs:domain df:Format ;\n    rdfs:range xsd:string .\n\ndf:jsonSchemaFragment a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"JSON Schema fragment\" ;\n    rdfs:comment \"The JSON Schema that expresses this format, as a JSON literal; changing it is a substantive change.\" ;\n    rdfs:domain df:Format ;\n    rdfs:range rdf:JSON .\n\ndf:parameter a owl:ObjectProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"parameter\" ;\n    rdfs:comment \"A value the profile that uses this format must supply to complete its JSON Schema fragment (e.g. the regular expression of a pattern-constrained string).\" ;\n    rdfs:domain df:Format .\n\ndf:parameterName a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"parameter name\" ;\n    rdfs:range xsd:string .\n\ndf:jsonSchemaKeyword a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"JSON Schema keyword\" ;\n    rdfs:comment \"The JSON Schema keyword whose value the parameter supplies.\" ;\n    rdfs:range xsd:string .\n\ndf:cwlCustomType a owl:DatatypeProperty ;\n    rdfs:isDefinedBy df: ;\n    rdfs:label \"CWL custom type\" ;\n    rdfs:comment \"The name of the record of the EOAP schemas (string_format.yaml) that carries this format in CWL, documented by the eoap.cct.string-format building block (rdfs:seeAlso).\" ;\n    rdfs:domain df:Format ;\n    rdfs:range xsd:string .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/vocabulary"
+}

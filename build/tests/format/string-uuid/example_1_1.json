@@ -1,0 +1,30 @@
+{
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-uuid",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-uuid",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5",
+      "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.5 Resource Identifiers"
+    }
+  ],
+  "jsonSchemaFragment": {
+    "type": "string",
+    "format": "uuid"
+  },
+  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uuid/item",
+  "cwlCustomType": "UUID",
+  "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-uuid/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-uuid",
+    "startedAtTime": "2026-11-09T00:00:00Z"
+  }
+}

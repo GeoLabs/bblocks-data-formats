@@ -1,0 +1,31 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-password",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-password",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://spec.openapis.org/oas/v3.0.3#data-types",
+      "title": "OpenAPI Specification 3.0.3, Data Types"
+    }
+  ],
+  "jsonSchemaFragment": {
+    "type": "string",
+    "format": "password"
+  },
+  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item",
+  "cwlCustomType": "Password",
+  "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-password",
+    "startedAtTime": "2026-11-09T00:00:00Z"
+  }
+}

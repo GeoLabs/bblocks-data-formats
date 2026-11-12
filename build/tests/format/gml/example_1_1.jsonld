@@ -1,0 +1,34 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/gml/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://www.ogc.org/standards/gml/",
+      "title": "OGC Geography Markup Language (GML) Encoding Standard"
+    }
+  ],
+  "observedMediaTypes": [
+    {
+      "mediaType": "text/xml",
+      "observedIn": "implementation-profile"
+    },
+    {
+      "mediaType": "text/xml",
+      "observedIn": "testbed"
+    }
+  ],
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+    "startedAtTime": "2026-11-09T00:00:00Z"
+  }
+}

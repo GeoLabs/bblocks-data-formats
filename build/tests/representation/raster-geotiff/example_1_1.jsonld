@@ -1,0 +1,20 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff",
+  "type": "Representation",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1",
+  "format": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff",
+    "startedAtTime": "2026-11-09T00:00:00Z"
+  }
+}

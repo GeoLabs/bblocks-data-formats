@@ -1,0 +1,81 @@
+
+
+{
+  "itemIdentifier": "data-formats.format.geotiff",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: GeoTIFF",
+  "abstract": "A TIFF-based encoding of georeferenced raster data.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "OGC GeoTIFF Standard",
+      "link": "https://www.ogc.org/standards/geotiff/"
+    }
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geotiff/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geotiff/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/format/geotiff/",
+  "description": "A TIFF-based encoding of georeferenced raster data.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/format/geotiff` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type.\n\n## Specification\n\n- [OGC GeoTIFF Standard](https://www.ogc.org/standards/geotiff/) (`dct:conformsTo`)\n\nNo version of the GeoTIFF standard is stated where the format is served.\n\n## Observed media types\n\nMeasured on 2026-11-09 in the Implementation Profiles of `bblocks-generic-profiles` (branch `planes/phase-1-docs`, `b0da6aa`) and in the testbed process descriptions of `bblocks-process-profiles-tests-1` (`5e4116d`). No principal media type is set: none has been chosen.\n\n| Media type | Observed in | Where |\n|---|---|---|\n| `image/tiff` | implementation-profile | 22 roles of 12 Implementation Profiles (elevation-model, raster and raster-single-band data types), 20 of them with the schema description `GeoTIFF` |\n| `image/tiff` | testbed | 61 inputs and outputs of the testbed processes |\n| `image/tiff; application=geotiff` | testbed | 56 inputs and outputs of the algae-bloom processes |\n\n## Content of this block\n\n- `ontology.ttl`: the format item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.\n",
+  "examples": [
+    {
+      "title": "GeoTIFF",
+      "content": "The register item of the GeoTIFF format, of the register's format item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/geotiff/example_1_1.json",
+          "sizeBytes": 1176,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://www.ogc.org/standards/geotiff/\",\n      \"title\": \"OGC GeoTIFF Standard\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"image/tiff\",\n      \"observedIn\": \"implementation-profile\"\n    },\n    {\n      \"mediaType\": \"image/tiff\",\n      \"observedIn\": \"testbed\"\n    },\n    {\n      \"mediaType\": \"image/tiff; application=geotiff\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/geotiff/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/geotiff/example_1_2.ttl",
+          "sizeBytes": 1823,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/format/geotiff> a df:Format, rim:RegisterItem ;\n    dct:title \"GeoTIFF\"@en ;\n    dct:description \"A TIFF-based encoding of georeferenced raster data.\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\"^^xsd:anyURI ;\n    rim:itemClass df:formatItemClass ;\n    rim:inRegister df:register ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/geotiff/actions/addition> ;\n    dct:conformsTo <https://www.ogc.org/standards/geotiff/> ;\n    df:observedMediaType [ df:mediaType \"image/tiff\" ; df:observedIn \"implementation-profile\" ] ;\n    df:observedMediaType [ df:mediaType \"image/tiff\" ; df:observedIn \"testbed\" ] ;\n    df:observedMediaType [ df:mediaType \"image/tiff; application=geotiff\" ; df:observedIn \"testbed\" ] .\n\n<https://www.ogc.org/standards/geotiff/> dct:title \"OGC GeoTIFF Standard\" .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/geotiff/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/geotiff> ;\n    prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/geotiff/example_1_1.jsonld",
+          "sizeBytes": 1285,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://www.ogc.org/standards/geotiff/\",\n      \"title\": \"OGC GeoTIFF Standard\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"image/tiff\",\n      \"observedIn\": \"implementation-profile\"\n    },\n    {\n      \"mediaType\": \"image/tiff\",\n      \"observedIn\": \"testbed\"\n    },\n    {\n      \"mediaType\": \"image/tiff; application=geotiff\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Format item - GeoTIFF\ndescription: The register item of the GeoTIFF format, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/format/geotiff\nx-bblocks-metadata:\n  itemIdentifier: data-formats.format.geotiff\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/format/geotiff"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Format item - STAC Collection",
+  "description": "The register item of the STAC Collection format, in JSON.",
+  "allOf": [
+    {
+      "$ref": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.json"
+    }
+  ],
+  "properties": {
+    "id": {
+      "const": "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "data-formats.format.stac-collection",
+    "register": "https://geolabs.github.io/bblocks-data-formats/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-11"
+  }
+}

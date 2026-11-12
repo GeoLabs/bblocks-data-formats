@@ -1,0 +1,2933 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/relation/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns3: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix shacl: <https://www.w3.org/TR/shacl/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bblocks://data-formats.format.geojson> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: GeoJSON" ;
+    dct:abstract "A JSON encoding of geographic features and geometries."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/geojson/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.geojson> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/geojson/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://www.rfc-editor.org/rfc/rfc7946> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: GeoJSON" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geojson/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.geotiff> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: GeoTIFF" ;
+    dct:abstract "A TIFF-based encoding of georeferenced raster data."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/geotiff/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/geotiff/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.geotiff> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://www.ogc.org/standards/geotiff/> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: GeoTIFF" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/geotiff/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.gml> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Geography Markup Language (GML)" ;
+    dct:abstract "An XML encoding of geographic features and geometries."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.gml> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/gml/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/gml/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://www.ogc.org/standards/gml/> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Geography Markup Language (GML)" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/gml/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/gml/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/gml/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/gml/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.las> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: LAS" ;
+    dct:abstract "A binary encoding of point cloud records."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/las/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.las> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/las/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://www.ogc.org/standards/las/> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: LAS" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/las/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/las/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/las/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/las/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.ogcapi-processes-bbox> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: OGC API - Processes bounding box" ;
+    dct:abstract "A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON (ogc.api.processes.part1.v1.schemas.bbox)."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.ogcapi-processes-bbox> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/ogcapi-processes-bbox/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/ogcapi-processes-bbox/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/17-069r4/17-069r4.html>,
+        <https://docs.ogc.org/is/18-062r2/18-062r2.html>,
+        <https://geolabs.github.io/bblocks-ogcapi-processes/> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: OGC API - Processes bounding box" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/ogcapi-processes-bbox/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/ogcapi-processes-bbox/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/ogcapi-processes-bbox/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/ogcapi-processes-bbox/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.png> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: PNG" ;
+    dct:abstract "A lossless raster image encoding of greyscale, truecolour or indexed-colour pictures, with optional transparency."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/png/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.png> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/png/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/png/> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: PNG" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/png/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/png/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/png/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/png/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.stac-catalog> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: STAC Catalog" ;
+    dct:abstract "A JSON object that links STAC Items, Collections and child Catalogs into a browsable structure through its links."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-11T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/stac-catalog/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.stac-catalog> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/stac-catalog/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: STAC Catalog" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-catalog/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-catalog/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-catalog/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-catalog/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.stac-collection> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: STAC Collection" ;
+    dct:abstract "A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-11T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/stac-collection/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/stac-collection/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.stac-collection> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> ;
+    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: STAC Collection" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.stac-item> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: STAC Item" ;
+    dct:abstract "A GeoJSON Feature describing one spatiotemporal item, such as an Earth observation product, with its links and its assets."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.stac-item> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/stac-item/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/stac-item/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
+    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: STAC Item" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.stac-item-collection> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: STAC Item Collection" ;
+    dct:abstract "A GeoJSON FeatureCollection whose features are STAC Items, with optional links and counts, such as the response of a STAC API Item Search."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-11T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/stac-item-collection/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/stac-item-collection/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.stac-item-collection> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/fragments/itemcollection/README.md>,
+        <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/item-search/README.md> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: STAC Item Collection" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item-collection/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item-collection/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item-collection/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-item-collection/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-date> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Date string" ;
+    dct:abstract "A full date, as JSON Schema `date`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-date/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-date/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-date> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Date string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-date-time> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Date-time string" ;
+    dct:abstract "A date and time with a time zone offset, as JSON Schema `date-time`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-date-time/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-date-time/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-date-time> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Date-time string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date-time/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date-time/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date-time/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-date-time/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-duration> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Duration string" ;
+    dct:abstract "A duration, as JSON Schema `duration`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-duration/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-duration/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-duration> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Duration string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-duration/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-duration/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-duration/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-duration/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-email> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Email address string" ;
+    dct:abstract "An email address, as JSON Schema `email`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-email/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-email> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-email/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.2>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Email address string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-email/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-email/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-email/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-email/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-hostname> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Hostname string" ;
+    dct:abstract "An Internet host name, as JSON Schema `hostname`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-hostname/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-hostname/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-hostname> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.3>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Hostname string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-hostname/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-hostname/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-hostname/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-hostname/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-idn-email> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Internationalized email address string" ;
+    dct:abstract "An internationalized email address, as JSON Schema `idn-email`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-idn-email> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-idn-email/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-idn-email/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.2>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Internationalized email address string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-email/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-email/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-email/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-email/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-idn-hostname> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Internationalized hostname string" ;
+    dct:abstract "An internationalized Internet host name, as JSON Schema `idn-hostname`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-idn-hostname> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-idn-hostname/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-idn-hostname/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.3>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Internationalized hostname string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-hostname/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-hostname/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-hostname/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-hostname/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-ipv4> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: IPv4 address string" ;
+    dct:abstract "An IPv4 address, as JSON Schema `ipv4`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-ipv4/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-ipv4> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-ipv4/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: IPv4 address string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv4/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv4/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv4/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv4/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-ipv6> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: IPv6 address string" ;
+    dct:abstract "An IPv6 address, as JSON Schema `ipv6`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-ipv6> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-ipv6/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-ipv6/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: IPv6 address string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv6/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv6/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv6/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-ipv6/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-iri> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: IRI string" ;
+    dct:abstract "An IRI, as JSON Schema `iri`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-iri> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-iri/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-iri/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: IRI string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-iri-reference> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: IRI reference string" ;
+    dct:abstract "An IRI reference, as JSON Schema `iri-reference`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-iri-reference/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-iri-reference> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-iri-reference/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: IRI reference string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri-reference/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri-reference/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri-reference/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri-reference/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-json-pointer> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: JSON Pointer string" ;
+    dct:abstract "An absolute JSON Pointer, as JSON Schema `json-pointer`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-json-pointer/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-json-pointer/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-json-pointer> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.7>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: JSON Pointer string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-json-pointer/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-json-pointer/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-json-pointer/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-json-pointer/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-password> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Password string" ;
+    dct:abstract "A password, as the OpenAPI `password` format: a hint to obscure the value."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-password/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-password/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-password> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml>,
+        <https://spec.openapis.org/oas/v3.0.3#data-types> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Password string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-pattern> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Pattern-constrained string" ;
+    dct:abstract "A string that matches a regular expression supplied as a parameter, as the JSON Schema `pattern` keyword."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-pattern/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-pattern/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-pattern> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Pattern-constrained string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-pattern/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-pattern/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-pattern/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-pattern/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-relative-json-pointer> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Relative JSON Pointer string" ;
+    dct:abstract "A relative JSON Pointer, as JSON Schema `relative-json-pointer`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-relative-json-pointer/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-relative-json-pointer/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-relative-json-pointer> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.7>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Relative JSON Pointer string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-relative-json-pointer/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-relative-json-pointer/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-relative-json-pointer/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-relative-json-pointer/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-time> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: Time string" ;
+    dct:abstract "A time of day with a time zone offset, as JSON Schema `time`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-time/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-time> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-time/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: Time string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-time/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-time/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-time/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-time/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-uri> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: URI string" ;
+    dct:abstract "A URI, as JSON Schema `uri`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-uri> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-uri/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-uri/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: URI string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-uri-reference> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: URI reference string" ;
+    dct:abstract "A URI reference, as JSON Schema `uri-reference`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-uri-reference> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-uri-reference/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-uri-reference/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: URI reference string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-reference/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-reference/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-reference/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-reference/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-uri-template> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: URI template string" ;
+    dct:abstract "A URI template, as JSON Schema `uri-template`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-uri-template/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-uri-template> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-uri-template/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.6>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: URI template string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-template/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-template/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-template/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uri-template/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.format.string-uuid> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format: UUID string" ;
+    dct:abstract "A UUID, as JSON Schema `uuid`."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/string-uuid/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/string-uuid/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format.string-uuid> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5>,
+        <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format: UUID string" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uuid/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uuid/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uuid/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-uuid/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://data-formats.format> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.item-class> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Data Formats item classes" ;
+    dct:abstract "The two item classes of this register, format and representation, in JSON: a profile of the Registered Item Model register item class."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/item-class/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/item-class/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.item-class> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Data Formats item classes" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.rim.schemas.register-item-class> ;
+    bblocks:dependsOn <bblocks://ogc.rim.schemas.register-item-class> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.register> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Data Formats register" ;
+    dct:abstract "The data-formats register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/register/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/register/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.register> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Data Formats register" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/register/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/register/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/register/schema.json> ;
+            prof:hasRole role:schema ] ;
+    prof:isProfileOf <bblocks://ogc.rim.schemas.register> ;
+    bblocks:dependsOn <bblocks://ogc.rim.schemas.register> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.bounding-box-ogcapi-processes-bbox> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Bounding box as OGC API - Processes bbox" ;
+    dct:abstract "The bounding-box data type of the data-types register, represented as an OGC API - Processes bbox object."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/bounding-box-ogcapi-processes-bbox/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/bounding-box-ogcapi-processes-bbox/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.bounding-box-ogcapi-processes-bbox> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.bounding-box> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Bounding box as OGC API - Processes bbox" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/bounding-box-ogcapi-processes-bbox/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/bounding-box-ogcapi-processes-bbox/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/bounding-box-ogcapi-processes-bbox/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/bounding-box-ogcapi-processes-bbox/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.bounding-box> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.elevation-model-geotiff> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Elevation model as GeoTIFF" ;
+    dct:abstract "The elevation-model data type of the data-types register, represented in GeoTIFF."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/elevation-model-geotiff/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/elevation-model-geotiff/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.elevation-model-geotiff> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.elevation-model> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Elevation model as GeoTIFF" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-geotiff/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-geotiff/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-geotiff/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-geotiff/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.elevation-model> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.eo-product-stac-item> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Earth observation product as STAC Item" ;
+    dct:abstract "The eo-product data type of the data-types register, represented in STAC Item."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/eo-product-stac-item/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.eo-product-stac-item> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/eo-product-stac-item/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.eo-product> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Earth observation product as STAC Item" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.eo-product> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.feature-collection-gml> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Feature collection as GML" ;
+    dct:abstract "The feature-collection data type of the data-types register, represented in GML."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/feature-collection-gml/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/feature-collection-gml/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.feature-collection-gml> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.feature-collection> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Feature collection as GML" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/feature-collection-gml/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/feature-collection-gml/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/feature-collection-gml/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/feature-collection-gml/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.feature-collection> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.geometry-geojson> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Geometry as GeoJSON" ;
+    dct:abstract "The geometry data type of the data-types register, represented in GeoJSON."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/geometry-geojson/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.geometry-geojson> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/geometry-geojson/index.json> ] ;
+    dct:hasFormat <https://geolabs.github.io/data-formats.representation.geometry-gml> ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.geometry> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Geometry as GeoJSON" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-geojson/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-geojson/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-geojson/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-geojson/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.geometry> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.geometry-gml> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Geometry as GML" ;
+    dct:abstract "The geometry data type of the data-types register, represented in GML."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/geometry-gml/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.geometry-gml> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/geometry-gml/index.md> ] ;
+    dct:hasFormat <https://geolabs.github.io/data-formats.representation.geometry-geojson> ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.geometry> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Geometry as GML" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-gml/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.geometry> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.point-cloud-las> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Point cloud as LAS" ;
+    dct:abstract "The point-cloud data type of the data-types register, represented in LAS."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.point-cloud-las> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/point-cloud-las/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/point-cloud-las/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.point-cloud> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Point cloud as LAS" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-cloud-las/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-cloud-las/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-cloud-las/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-cloud-las/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.point-cloud> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.point-gml> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Point as GML" ;
+    dct:abstract "The point data type of the data-types register, represented in GML."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/point-gml/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.point-gml> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/point-gml/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.point> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Point as GML" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-gml/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-gml/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-gml/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/point-gml/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.point> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.raster-geotiff> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Raster as GeoTIFF" ;
+    dct:abstract "The raster data type of the data-types register, represented in GeoTIFF."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/raster-geotiff/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/raster-geotiff/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.raster-geotiff> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.raster> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Raster as GeoTIFF" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.raster> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.raster-single-band-geotiff> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Single-band raster as GeoTIFF" ;
+    dct:abstract "The raster-single-band data type of the data-types register, represented in GeoTIFF."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.raster-single-band-geotiff> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/raster-single-band-geotiff/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/raster-single-band-geotiff/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.raster-single-band> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Single-band raster as GeoTIFF" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.raster-single-band> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.rendered-image-png> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Rendered image as PNG" ;
+    dct:abstract "The rendered-image data type of the data-types register, represented in PNG."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/rendered-image-png/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/rendered-image-png/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.rendered-image-png> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.rendered-image> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Rendered image as PNG" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/rendered-image-png/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/rendered-image-png/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/rendered-image-png/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/rendered-image-png/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.rendered-image> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.representation.surface-gml> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation: Surface as GML" ;
+    dct:abstract "The surface data type of the data-types register, represented in GML."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/surface-gml/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/surface-gml/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation.surface-gml> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    ns1:describedby <bblocks://data-types.data-type.surface> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation: Surface as GML" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/surface-gml/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/surface-gml/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/surface-gml/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/surface-gml/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:dependsOn <bblocks://data-formats.representation>,
+        <bblocks://data-types.data-type.surface> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://docs.ogc.org/is/17-069r4/17-069r4.html> rdfs:label "OGC 17-069r4 OGC API - Features - Part 1: Core, 7.15.3 Parameter bbox" .
+
+<https://docs.ogc.org/is/18-062r2/18-062r2.html> rdfs:label "OGC 18-062r2 OGC API - Processes - Part 1: Core" .
+
+<https://geolabs.github.io/bblocks-data-formats/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:Nf4351b78da3f44c98bc7f714050bdd12 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-11-12T14:43:27.427096"^^xsd:dateTime ;
+            prov:startedAtTime "2026-11-12T14:43:27.037122"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:945865eccca7a9c4dd0c6e8cc427efd076fda012" ;
+                    rdfs:seeAlso <https://geolabs.github.io/bblocks-data-formats/build/register.json> ] ;
+            prov:wasAssociatedWith _:Nf4351b78da3f44c98bc7f714050bdd12 ] .
+
+<https://geolabs.github.io/bblocks-ogcapi-processes/> rdfs:label "ogc.api.processes.part1.v1.schemas.bbox -- bbox schema (OGC API - Processes - Part 1: Core)" .
+
+<https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/fragments/itemcollection/README.md> rdfs:label "STAC API - ItemCollection Fragment 1.0.0" .
+
+<https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/item-search/README.md> rdfs:label "STAC API - Item Search 1.0.0" .
+
+<https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> rdfs:label "STAC Catalog Specification 1.1.0" .
+
+<https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> rdfs:label "STAC Collection Specification 1.1.0" .
+
+<https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> rdfs:label "STAC Item Specification 1.1.0" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 6.3.3 pattern" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.6> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.6 uri-template" .
+
+<https://spec.openapis.org/oas/v3.0.3#data-types> rdfs:label "OpenAPI Specification 3.0.3, Data Types" .
+
+<https://www.ogc.org/standards/geotiff/> rdfs:label "OGC GeoTIFF Standard" .
+
+<https://www.ogc.org/standards/gml/> rdfs:label "OGC Geography Markup Language (GML) Encoding Standard" .
+
+<https://www.ogc.org/standards/las/> rdfs:label "OGC 17-030r1 LAS Specification 1.4 OGC Community Standard" .
+
+<https://www.rfc-editor.org/rfc/rfc7946> rdfs:label "RFC 7946 The GeoJSON Format" .
+
+<https://www.w3.org/TR/png/> rdfs:label "W3C Portable Network Graphics (PNG) Specification (Third Edition), W3C Recommendation 24 June 2025" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.2> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.2 Email Addresses" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.3> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.3 Hostnames" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.4 IP Addresses" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.7> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.7 JSON Pointers" .
+
+<https://ogcincubator.github.io/registered-item-model/> rdfs:label "Registered Item Model (OGC Building Block)" .
+
+<https://www.iso.org/standard/86261.html> rdfs:label "ISO 19135:2026, Geographic information — Registration and register governance" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.1 Dates, Times, and Duration" .
+
+<https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.5> rdfs:label "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.5 Resource Identifiers" .
+
+<bblocks://data-formats.representation> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Representation item" ;
+    dct:abstract "A representation of this register, in JSON: a profile of the Registered Item Model register item that realizes one data type version of the data-types register and points to one format."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/representation/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/representation/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.representation> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://ogcincubator.github.io/registered-item-model/>,
+        <https://www.iso.org/standard/86261.html> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Representation item" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.rim.schemas.register-item> ;
+    bblocks:dependsOn <bblocks://data-formats.vocabulary>,
+        <bblocks://ogc.rim.schemas.register-item> ;
+    bblocks:hasSourceJsonLdContext <https://geolabs.github.io/bblocks-data-formats/_sources/representation/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> rdfs:label "EOAP schemas: string_format.yaml (record Date)",
+        "EOAP schemas: string_format.yaml (record DateTime)",
+        "EOAP schemas: string_format.yaml (record Duration)",
+        "EOAP schemas: string_format.yaml (record Email)",
+        "EOAP schemas: string_format.yaml (record Hostname)",
+        "EOAP schemas: string_format.yaml (record IDNEmail)",
+        "EOAP schemas: string_format.yaml (record IDNHostname)",
+        "EOAP schemas: string_format.yaml (record IPv4)",
+        "EOAP schemas: string_format.yaml (record IPv6)",
+        "EOAP schemas: string_format.yaml (record IRI)",
+        "EOAP schemas: string_format.yaml (record IRIReference)",
+        "EOAP schemas: string_format.yaml (record JsonPointer)",
+        "EOAP schemas: string_format.yaml (record Password)",
+        "EOAP schemas: string_format.yaml (record Pattern)",
+        "EOAP schemas: string_format.yaml (record RelativeJsonPointer)",
+        "EOAP schemas: string_format.yaml (record Time)",
+        "EOAP schemas: string_format.yaml (record URI)",
+        "EOAP schemas: string_format.yaml (record URIReference)",
+        "EOAP schemas: string_format.yaml (record URITemplate)",
+        "EOAP schemas: string_format.yaml (record UUID)" .
+
+<bblocks://data-formats.format> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Format item" ;
+    dct:abstract "A format of this register, in JSON: a profile of the Registered Item Model register item that realizes no concept version and names its specification, its observed media types and/or a JSON Schema fragment."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.format> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/format/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/format/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://ogcincubator.github.io/registered-item-model/>,
+        <https://www.iso.org/standard/86261.html> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Format item" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/format/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    prof:isProfileOf <bblocks://ogc.rim.schemas.register-item> ;
+    bblocks:dependsOn <bblocks://data-formats.vocabulary>,
+        <bblocks://ogc.rim.schemas.register-item> ;
+    bblocks:hasSourceJsonLdContext <https://geolabs.github.io/bblocks-data-formats/_sources/format/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://data-formats.vocabulary> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "Data Formats shared model" ;
+    dct:abstract "Shared RIM content-plane model, register metadata and SHACL rules for the format and representation Building Blocks of this register."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/json-full/vocabulary/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/bblock/data-formats.vocabulary> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-formats/build/generateddocs/markdown/vocabulary/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12"^^xsd:date ;
+    dct:source <https://ogcincubator.github.io/registered-item-model/>,
+        <https://www.iso.org/standard/86261.html> ;
+    skos:inScheme <https://geolabs.github.io/bblocks-data-formats/> ;
+    skos:prefLabel "Data Formats shared model" ;
+    skos:topConceptOf <https://geolabs.github.io/bblocks-data-formats/> ;
+    dcat:keyword "ISO 19135",
+        "content plane",
+        "format",
+        "media type",
+        "register",
+        "representation" ;
+    prof:hasResource [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-hostname/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/feature-collection-gml/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/bounding-box-ogcapi-processes-bbox/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-idn-email/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-iri/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/png/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.rim.core-ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uri-template/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/las/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-pattern/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/rendered-image-png/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-formats.vocabulary> ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-email/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-duration/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-collection/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-catalog/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-json-pointer/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/data.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-date-time/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-idn-hostname/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-item/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uri/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/gml/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-password/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/eo-product-stac-item/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-gml/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-relative-json-pointer/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uri-reference/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-date/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/surface-gml/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/point-cloud-las/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-time/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/stac-item-collection/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-uuid/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/geometry-geojson/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-iri-reference/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/point-gml/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-ipv4/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/geojson/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/string-ipv6/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-geotiff/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/elevation-model-geotiff/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/ogcapi-processes-bbox/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/format/geotiff/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/build/annotated/vocabulary/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-geotiff/ontology.ttl> ;
+            prof:hasRole <https://geolabs.github.io/data> ] ;
+    bblocks:dependsOn <bblocks://data-types.vocabulary>,
+        <bblocks://ogc.rim.core-ontology> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://geolabs.github.io/bblocks-data-formats/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
+    rdfs:label "Building Blocks - Data Formats" ;
+    dct:abstract """A content register (ISO 19135:2026, via the Registered Item Model) of the formats in which OSPD
+process inputs and outputs are encoded, and of the representations that bind a data type of the
+data-types register to a format.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """The content plane of the OSPD data axis. A **format** (`df:Format`) is an encoding: its
+specification, the media types observed where it is served, and/or a JSON Schema fragment. It
+realizes no concept. A **representation** (`df:Representation`) realizes one data type version of
+[GeoLabs/bblocks-data-types](https://github.com/GeoLabs/bblocks-data-types), the concept plane, and
+points to one format.
+
+Identifiers are minted under `https://w3id.org/geolabs/ospd/data-formats/` (prefix `df:`). This
+namespace is not resolved yet.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-11-12T14:41:08.574279"^^xsd:dateTime ;
+    owl:imports <https://geolabs.github.io/bblocks-data-types/build/register.json>,
+        <https://ogcincubator.github.io/registered-item-model/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://data-formats.format>,
+        <bblocks://data-formats.format.geojson>,
+        <bblocks://data-formats.format.geotiff>,
+        <bblocks://data-formats.format.gml>,
+        <bblocks://data-formats.format.las>,
+        <bblocks://data-formats.format.ogcapi-processes-bbox>,
+        <bblocks://data-formats.format.png>,
+        <bblocks://data-formats.format.stac-catalog>,
+        <bblocks://data-formats.format.stac-collection>,
+        <bblocks://data-formats.format.stac-item>,
+        <bblocks://data-formats.format.stac-item-collection>,
+        <bblocks://data-formats.format.string-date>,
+        <bblocks://data-formats.format.string-date-time>,
+        <bblocks://data-formats.format.string-duration>,
+        <bblocks://data-formats.format.string-email>,
+        <bblocks://data-formats.format.string-hostname>,
+        <bblocks://data-formats.format.string-idn-email>,
+        <bblocks://data-formats.format.string-idn-hostname>,
+        <bblocks://data-formats.format.string-ipv4>,
+        <bblocks://data-formats.format.string-ipv6>,
+        <bblocks://data-formats.format.string-iri>,
+        <bblocks://data-formats.format.string-iri-reference>,
+        <bblocks://data-formats.format.string-json-pointer>,
+        <bblocks://data-formats.format.string-password>,
+        <bblocks://data-formats.format.string-pattern>,
+        <bblocks://data-formats.format.string-relative-json-pointer>,
+        <bblocks://data-formats.format.string-time>,
+        <bblocks://data-formats.format.string-uri>,
+        <bblocks://data-formats.format.string-uri-reference>,
+        <bblocks://data-formats.format.string-uri-template>,
+        <bblocks://data-formats.format.string-uuid>,
+        <bblocks://data-formats.item-class>,
+        <bblocks://data-formats.register>,
+        <bblocks://data-formats.representation>,
+        <bblocks://data-formats.representation.bounding-box-ogcapi-processes-bbox>,
+        <bblocks://data-formats.representation.elevation-model-geotiff>,
+        <bblocks://data-formats.representation.eo-product-stac-item>,
+        <bblocks://data-formats.representation.feature-collection-gml>,
+        <bblocks://data-formats.representation.geometry-geojson>,
+        <bblocks://data-formats.representation.geometry-gml>,
+        <bblocks://data-formats.representation.point-cloud-las>,
+        <bblocks://data-formats.representation.point-gml>,
+        <bblocks://data-formats.representation.raster-geotiff>,
+        <bblocks://data-formats.representation.raster-single-band-geotiff>,
+        <bblocks://data-formats.representation.rendered-image-png>,
+        <bblocks://data-formats.representation.surface-gml>,
+        <bblocks://data-formats.vocabulary> ;
+    skos:prefLabel "Building Blocks - Data Formats" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns2:relation ns1:self ;
+            ns3:hasTarget <https://geolabs.github.io/bblocks-data-formats/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns2:relation ns1:self ;
+            ns3:hasTarget <https://geolabs.github.io/bblocks-data-formats/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns2:relation ns1:self ;
+            ns3:hasTarget <https://geolabs.github.io/bblocks-data-formats/build/bblocks.jsonld> ] ;
+    foaf:homepage <https://geolabs.github.io/bblocks-data-formats/> ;
+    bblocks:hasValidationReport <https://geolabs.github.io/bblocks-data-formats/build/tests/report.html> .
+
+_:Nf4351b78da3f44c98bc7f714050bdd12 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.6.0" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+

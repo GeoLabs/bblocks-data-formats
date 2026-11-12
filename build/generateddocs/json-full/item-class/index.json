@@ -1,0 +1,97 @@
+
+
+{
+  "itemIdentifier": "data-formats.item-class",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Formats item classes",
+  "abstract": "The two item classes of this register, format and representation, in JSON: a profile of the Registered Item Model register item class.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ],
+  "shaclShapes": {
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/item-class/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/item-class/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/item-class/",
+  "description": "The item classes of the data-formats register, as Registered Item Model **register item classes**, in JSON.\n\n## Definition\n\nTwo item classes, both defined in the register (`definedIn`) and validated (`validatedBy`) by a shape\nof the [shared vocabulary](../vocabulary/):\n\n- `df:formatItemClass`, validated by `df:FormatShape`: an encoding, which realizes no concept version;\n- `df:representationItemClass`, validated by `df:RepresentationShape`: one data type version of the\n  data-types register, realized in one format.\n\nTheir titles and descriptions are in the vocabulary's `data.ttl`, which the SHACL closure of this\nblock includes.\n\n## Sources\n\n- [ISO 19135:2026, Geographic information \u2014 Registration and register governance](https://www.iso.org/standard/86261.html)\n- [Registered Item Model](https://ogcincubator.github.io/registered-item-model/)\n",
+  "examples": [
+    {
+      "title": "The format item class (JSON)",
+      "content": "The abstraction every format shares, validated by df:FormatShape.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/item-class/example_1_1.json",
+          "sizeBytes": 270,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Format\",\n  \"definedIn\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"validatedBy\": \"https://w3id.org/geolabs/ospd/data-formats/FormatShape\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/item-class/example_1_1.jsonld",
+          "sizeBytes": 375,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Format\",\n  \"definedIn\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"validatedBy\": \"https://w3id.org/geolabs/ospd/data-formats/FormatShape\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/item-class/example_1_1.ttl",
+          "sizeBytes": 353,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<https://w3id.org/geolabs/ospd/data-formats/formatItemClass> a rim:RegisterItemClass ;\n    dct:title \"Format\" ;\n    rim:definedIn <https://w3id.org/geolabs/ospd/data-formats/register> ;\n    rim:validatedBy <https://w3id.org/geolabs/ospd/data-formats/FormatShape> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "The representation item class (JSON)",
+      "content": "The abstraction every representation shares, validated by df:RepresentationShape.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/item-class/example_2_1.json",
+          "sizeBytes": 294,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Representation\",\n  \"definedIn\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"validatedBy\": \"https://w3id.org/geolabs/ospd/data-formats/RepresentationShape\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/item-class/example_2_1.jsonld",
+          "sizeBytes": 399,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/item-class/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Representation\",\n  \"definedIn\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"validatedBy\": \"https://w3id.org/geolabs/ospd/data-formats/RepresentationShape\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/item-class/example_2_1.ttl",
+          "sizeBytes": 377,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representationItemClass> a rim:RegisterItemClass ;\n    dct:title \"Representation\" ;\n    rim:definedIn <https://w3id.org/geolabs/ospd/data-formats/register> ;\n    rim:validatedBy <https://w3id.org/geolabs/ospd/data-formats/RepresentationShape> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data Formats item class\ndescription: 'One of the two item classes of the data-formats register, in JSON: format\n  or representation. Each is defined in the register and validated by a shape of the\n  shared vocabulary.'\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml\nrequired:\n- definedIn\n- validatedBy\nproperties:\n  id:\n    enum:\n    - https://w3id.org/geolabs/ospd/data-formats/formatItemClass\n    - https://w3id.org/geolabs/ospd/data-formats/representationItemClass\nx-bblocks-metadata:\n  itemIdentifier: data-formats.item-class\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/item-class"
+}

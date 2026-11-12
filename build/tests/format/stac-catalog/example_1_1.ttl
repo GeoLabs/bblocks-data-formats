@@ -1,0 +1,30 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog> a df:Format ;
+    dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> ;
+    df:inferredMediaType [ dct:description "Stated by the STAC Catalog Specification 1.1.0, section Media Type for STAC Catalogs: \"A STAC Catalog is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): the six testbed outputs that return a STAC Catalog (kindgrove.mangrove result, kindgrove.mangrove-workflow stac, kindgrove-steps.mangrove-workflow-steps stac, kindgrove-steps.export-stac stac_catalog, water-bodies.stac stac_catalog, water-bodies.water-bodies stac) declare a JSON object schema with format stac-catalog and no media type." ;
+            dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> ;
+            df:mediaType "application/json" ] ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://schemas.stacspec.org/v1.1.0/catalog-spec/json-schema/catalog.json\"}"^^rdf:JSON ;
+    df:primaryMediaType "application/json" ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:formatItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item> ;
+    rim:validityStatus rim:invalid .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-11T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog> ;
+    rim:proposer df:geolabs .
+
+<https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> dct:title "STAC Catalog Specification 1.1.0" .
+

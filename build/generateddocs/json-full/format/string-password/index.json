@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "data-formats.format.string-password",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: Password string",
+  "abstract": "A password, as the OpenAPI `password` format: a hint to obscure the value.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "JSON Schema string formats (EOAP)",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "OpenAPI Specification 3.0.3, Data Types",
+      "link": "https://spec.openapis.org/oas/v3.0.3#data-types"
+    },
+    {
+      "title": "EOAP schemas: string_format.yaml (record Password)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ],
+  "seeAlso": [
+    "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format"
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-password/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-password/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/format/string-password/",
+  "description": "A password, as the OpenAPI `password` format: a hint to obscure the value.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/format/string-password` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type.\n\n## Specification\n\n- [OpenAPI Specification 3.0.3, Data Types](https://spec.openapis.org/oas/v3.0.3#data-types) (`dct:conformsTo`)\n\n## JSON Schema fragment\n\n```json\n{\n  \"type\": \"string\",\n  \"format\": \"password\"\n}\n```\n\n## EOAP\n\nRecord `Password` of the EOAP `string_format.yaml`: \"Represents a valid password.\"\n\nThis format is carried in CWL by that record, documented by the building block [`eoap.cct.string-format`](https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format) (`seeAlso` in `bblock.json`, `rdfs:seeAlso` and `df:cwlCustomType` in `ontology.ttl`).\n\nIt was registered in the data-types register as the data type `string-password`, a proposal, withdrawn on 2026-11-09. This format supersedes its item: `rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item>`. The withdrawn item carries `dct:isReplacedBy` towards this format, unpublished by an action classified substantive. The link is carried here because data-formats depends on data-types, never the reverse.\n\n## Content of this block\n\n- `ontology.ttl`: the format item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.\n",
+  "examples": [
+    {
+      "title": "Password string",
+      "content": "The register item of the Password string format, of the register's format item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/string-password/example_1_1.json",
+          "sizeBytes": 1239,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://spec.openapis.org/oas/v3.0.3#data-types\",\n      \"title\": \"OpenAPI Specification 3.0.3, Data Types\"\n    }\n  ],\n  \"jsonSchemaFragment\": {\n    \"type\": \"string\",\n    \"format\": \"password\"\n  },\n  \"supersedes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item\",\n  \"cwlCustomType\": \"Password\",\n  \"seeAlso\": \"https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/string-password/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/string-password/example_1_2.ttl",
+          "sizeBytes": 2053,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/format/string-password> a df:Format, rim:RegisterItem ;\n    dct:title \"Password string\"@en ;\n    dct:description \"A password, as the OpenAPI `password` format: a hint to obscure the value.\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\"^^xsd:anyURI ;\n    rim:itemClass df:formatItemClass ;\n    rim:inRegister df:register ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition> ;\n    dct:conformsTo <https://spec.openapis.org/oas/v3.0.3#data-types> ;\n    df:jsonSchemaFragment \"{\\\"format\\\":\\\"password\\\",\\\"type\\\":\\\"string\\\"}\"^^rdf:JSON ;\n    dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;\n    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item> ;\n    df:cwlCustomType \"Password\" ;\n    rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> .\n\n<https://spec.openapis.org/oas/v3.0.3#data-types> dct:title \"OpenAPI Specification 3.0.3, Data Types\" .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/string-password> ;\n    prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/string-password/example_1_1.jsonld",
+          "sizeBytes": 1356,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-password/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://spec.openapis.org/oas/v3.0.3#data-types\",\n      \"title\": \"OpenAPI Specification 3.0.3, Data Types\"\n    }\n  ],\n  \"jsonSchemaFragment\": {\n    \"type\": \"string\",\n    \"format\": \"password\"\n  },\n  \"supersedes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item\",\n  \"cwlCustomType\": \"Password\",\n  \"seeAlso\": \"https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/string-password\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Format item - Password string\ndescription: The register item of the Password string format, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/format/string-password\nx-bblocks-metadata:\n  itemIdentifier: data-formats.format.string-password\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/format/string-password"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+  "type": "RegisterItemClass",
+  "title": "Representation",
+  "definedIn": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "validatedBy": "https://w3id.org/geolabs/ospd/data-formats/RepresentationShape"
+}

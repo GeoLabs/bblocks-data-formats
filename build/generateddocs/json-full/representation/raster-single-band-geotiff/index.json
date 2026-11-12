@@ -1,0 +1,79 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.raster-single-band-geotiff",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Single-band raster as GeoTIFF",
+  "abstract": "The raster-single-band data type of the data-types register, represented in GeoTIFF.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.raster-single-band"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.raster-single-band"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-geotiff/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-geotiff/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/raster-single-band-geotiff/",
+  "description": "The raster-single-band data type of the data-types register, represented in GeoTIFF.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster-single-band`.\n\n## Requested by\n\nCreated because existing roles need it: 6 roles of 6 Implementation Profiles of `bblocks-generic-profiles` (branch `planes/phase-1-docs`, `b0da6aa`) have the data type `raster-single-band` and a schema with `contentMediaType` `image/tiff`, measured on 2026-11-09. They still carry that schema; they do not point to this representation yet.\n\n- `implementation-profile/analytical-hillshading/outputs/result`\n- `implementation-profile/point-cloud-to-grid/outputs/result`\n- `implementation-profile/raster-band-math/outputs/raster`\n- `implementation-profile/slope/outputs/result`\n- `implementation-profile/terrain-ruggedness-index/outputs/result`\n- `implementation-profile/topographic-position-index/outputs/result`\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "Single-band raster as GeoTIFF",
+      "content": "The register item of the representation Single-band raster as GeoTIFF: it realizes version 1 of the raster-single-band data type of the data-types register and points to the geotiff format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-single-band-geotiff/example_1_1.json",
+          "sizeBytes": 1047,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-geotiff/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-single-band-geotiff/example_1_2.ttl",
+          "sizeBytes": 1671,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff> a df:Representation, rim:RegisterItem ;\n    dct:title \"Single-band raster as GeoTIFF\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/geotiff> ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff/actions/addition> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff> ;\n    prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-single-band-geotiff/example_1_1.jsonld",
+          "sizeBytes": 1183,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/geotiff\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\",\n    \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - Single-band raster as GeoTIFF\ndescription: The register item of the representation Single-band raster as GeoTIFF,\n  in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.raster-single-band-geotiff\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/raster-single-band-geotiff"
+}

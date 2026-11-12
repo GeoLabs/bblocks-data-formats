@@ -1,0 +1,261 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Format item
+description: 'A format of the data-formats register, in JSON: a profile of the Registered
+  Item Model register item (`type` pinned to `Format`). A format realizes no concept
+  version (`realizes` is forbidden); it names its specification and carries the media
+  types observed where it is served and/or a JSON Schema fragment, with its parameters
+  when the fragment is completed by the profile.'
+allOf:
+- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item/schema.yaml
+type: object
+required:
+- specification
+- hasAction
+anyOf:
+- required:
+  - observedMediaTypes
+- required:
+  - jsonSchemaFragment
+not:
+  required:
+  - realizes
+properties:
+  type:
+    const: Format
+    x-jsonld-id: '@type'
+  itemClass:
+    const: https://w3id.org/geolabs/ospd/data-formats/formatItemClass
+    x-jsonld-id: https://w3id.org/ogc/rim/itemClass
+    x-jsonld-type: '@id'
+  inRegister:
+    const: https://w3id.org/geolabs/ospd/data-formats/register
+    x-jsonld-id: https://w3id.org/ogc/rim/inRegister
+    x-jsonld-type: '@id'
+  specification:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+      - id
+      - title
+      properties:
+        id:
+          type: string
+          format: uri
+          x-jsonld-id: '@id'
+        title:
+          type: string
+          x-jsonld-id: http://purl.org/dc/terms/title
+    x-jsonld-id: http://purl.org/dc/terms/conformsTo
+    x-jsonld-type: '@id'
+  observedMediaTypes:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+      - mediaType
+      - observedIn
+      properties:
+        mediaType:
+          type: string
+          x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/mediaType
+        observedIn:
+          enum:
+          - implementation-profile
+          - testbed
+          x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/observedIn
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/observedMediaType
+  inferredMediaTypes:
+    description: 'Media types not observed but taken from a source: stated by the
+      format''s specification, or inferred (e.g. from its JSON Schema) when the specification
+      states none; each with its source and justification.'
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+      - mediaType
+      - source
+      - description
+      properties:
+        mediaType:
+          type: string
+          x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/mediaType
+        source:
+          type: string
+          format: uri
+          x-jsonld-id: http://purl.org/dc/terms/source
+          x-jsonld-type: '@id'
+        description:
+          type: string
+          x-jsonld-id: http://purl.org/dc/terms/description
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/inferredMediaType
+  primaryMediaType:
+    type: string
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/primaryMediaType
+  jsonSchemaFragment:
+    type: object
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment
+    x-jsonld-type: '@json'
+  parameters:
+    type: array
+    items:
+      type: object
+      required:
+      - name
+      - jsonSchemaKeyword
+      properties:
+        name:
+          type: string
+          x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/parameterName
+        jsonSchemaKeyword:
+          type: string
+          x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaKeyword
+        description:
+          type: string
+          x-jsonld-id: http://purl.org/dc/terms/description
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/parameter
+  cwlCustomType:
+    description: The record of the EOAP string_format.yaml that carries this format
+      in CWL.
+    type: string
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/cwlCustomType
+  seeAlso:
+    type: string
+    format: uri
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    x-jsonld-type: '@id'
+  hasAction:
+    description: 'The proposed addition, alone or followed by later actions on the
+      item. The schema requires the addition; it does not constrain the action type
+      or the classification of the other actions (decision Q5, option b, of 2026-11-11:
+      pending a decision common to all registers).'
+    oneOf:
+    - $ref: '#/$defs/addition'
+    - type: array
+      contains:
+        $ref: '#/$defs/addition'
+      items:
+        $ref: '#/$defs/action'
+    x-jsonld-id: https://w3id.org/ogc/rim/hasAction
+    x-jsonld-type: '@id'
+$defs:
+  addition:
+    type: object
+    required:
+    - id
+    - actionType
+    - proposer
+    properties:
+      id:
+        type: string
+        format: uri
+        x-jsonld-id: '@id'
+      type:
+        const: RegisterAction
+        x-jsonld-id: '@type'
+      actionType:
+        const: addition
+        x-jsonld-id: https://w3id.org/ogc/rim/actionType
+        x-jsonld-type: '@vocab'
+      proposer:
+        type: string
+        format: uri
+        x-jsonld-id: https://w3id.org/ogc/rim/proposer
+        x-jsonld-type: '@id'
+      startedAtTime:
+        type: string
+        format: date-time
+        x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+  action:
+    type: object
+    required:
+    - id
+    - actionType
+    - proposer
+    properties:
+      id:
+        type: string
+        format: uri
+        x-jsonld-id: '@id'
+      type:
+        const: RegisterAction
+        x-jsonld-id: '@type'
+      actionType:
+        type: string
+        x-jsonld-id: https://w3id.org/ogc/rim/actionType
+        x-jsonld-type: '@vocab'
+      proposer:
+        type: string
+        format: uri
+        x-jsonld-id: https://w3id.org/ogc/rim/proposer
+        x-jsonld-type: '@id'
+      startedAtTime:
+        type: string
+        format: date-time
+        x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+      description:
+        type: string
+        x-jsonld-id: http://purl.org/dc/terms/description
+x-jsonld-extra-terms:
+  Register: https://w3id.org/ogc/rim/Register
+  RegisterItem: https://w3id.org/ogc/rim/RegisterItem
+  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass
+  RegisterAction: https://w3id.org/ogc/rim/RegisterAction
+  Format: https://w3id.org/geolabs/ospd/data-formats/Format
+  Representation: https://w3id.org/geolabs/ospd/data-formats/Representation
+  objectIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  functionalIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  realizes:
+    x-jsonld-id: https://w3id.org/ogc/rim/realizes
+    x-jsonld-type: '@id'
+  supersededBy:
+    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy
+    x-jsonld-type: '@id'
+  supersedes:
+    x-jsonld-id: https://w3id.org/ogc/rim/supersedes
+    x-jsonld-type: '@id'
+  validityStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus
+    x-jsonld-type: '@vocab'
+  publicationStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus
+    x-jsonld-type: '@vocab'
+  valid: https://w3id.org/ogc/rim/valid
+  invalid: https://w3id.org/ogc/rim/invalid
+  published: https://w3id.org/ogc/rim/published
+  unpublished: https://w3id.org/ogc/rim/unpublished
+  appliesTo:
+    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo
+    x-jsonld-type: '@id'
+  changeClassification:
+    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification
+    x-jsonld-type: '@vocab'
+  addition: https://w3id.org/ogc/rim/additionAction
+  substantive: https://w3id.org/ogc/rim/substantiveChange
+  clarifying: https://w3id.org/ogc/rim/clarifyingChange
+  format:
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/format
+    x-jsonld-type: '@id'
+x-jsonld-prefixes:
+  rim: https://w3id.org/ogc/rim/
+  df: https://w3id.org/geolabs/ospd/data-formats/
+  dct: http://purl.org/dc/terms/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  prov: http://www.w3.org/ns/prov#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dt: https://geolabs.github.io/bblocks-data-types/def/
+  skos: http://www.w3.org/2004/02/skos/core#
+x-bblocks-metadata:
+  itemIdentifier: data-formats.format
+  register: https://geolabs.github.io/bblocks-data-formats/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-09'

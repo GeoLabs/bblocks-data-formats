@@ -1,0 +1,14 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Representation item - Elevation model as GeoTIFF
+description: The register item of the representation Elevation model as GeoTIFF, in
+  JSON.
+allOf:
+- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+properties:
+  id:
+    const: https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-geotiff
+x-bblocks-metadata:
+  itemIdentifier: data-formats.representation.elevation-model-geotiff
+  register: https://geolabs.github.io/bblocks-data-formats/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-09'

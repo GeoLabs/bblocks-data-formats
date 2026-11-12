@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "data-formats.register",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Formats register",
+  "abstract": "The data-formats register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ],
+  "shaclShapes": {
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/register/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/register/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/register/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/register/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/register/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/register/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/register/",
+  "description": "The data-formats register as a Registered Item Model **register**, in JSON.\n\n## Definition\n\nA profile of the RIM `register` schema: the governed collection of formats and representations,\ndistinct from the register system it runs on (`runsOn`) and from the roles that govern it. Its\ntitle, description and item classes are declared in the `data.ttl` of the\n[shared vocabulary](../vocabulary/), which the SHACL closure of this block includes.\n\n## Register specification\n\n`df:specification` is a `rim:RegisterSpecification`. It records:\n\n- the register type: a content register, as the Registered Item Model uses the term;\n- the roles: GeoLabs SARL is owner, manager and, for now, control body, with the written intention\n  to delegate the control body role to the OGC or to an OSPD working group;\n- the `rim:realizes` link with the data-types register: a representation realizes at most one\n  `dt:DataTypeVersion`; this register depends on data-types, never the reverse;\n- the definition of a substantive change (`rim:definesSubstantiveChange`), the table of substantive\n  and clarifying changes for formats and representations, the version rule and the rule for\n  proposals;\n- `df:amendmentAction`, the action type of an in-place change to a proposal;\n- that no eligibility criteria and no commitments have been set.\n\n## Sources\n\n- [ISO 19135:2026, Geographic information \u2014 Registration and register governance](https://www.iso.org/standard/86261.html)\n- [Registered Item Model](https://ogcincubator.github.io/registered-item-model/)\n",
+  "examples": [
+    {
+      "title": "The data-formats register (JSON)",
+      "content": "The register, the system it runs on and the roles that govern it. Its title, description, item classes and specification are in the shared vocabulary's `data.ttl`.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/register/example_1_1.json",
+          "sizeBytes": 616,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-formats/\",\n  \"runsOn\": \"https://w3id.org/geolabs/ospd/data-formats/registerSystem\",\n  \"registerOwner\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n  \"registerManager\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n  \"controlBody\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n  \"hasSpecification\": \"https://w3id.org/geolabs/ospd/data-formats/specification\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/register/example_1_1.jsonld",
+          "sizeBytes": 719,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/register/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-formats/\",\n  \"runsOn\": \"https://w3id.org/geolabs/ospd/data-formats/registerSystem\",\n  \"registerOwner\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n  \"registerManager\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n  \"controlBody\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n  \"hasSpecification\": \"https://w3id.org/geolabs/ospd/data-formats/specification\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/register/example_1_1.ttl",
+          "sizeBytes": 747,
+          "code": "@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/geolabs/ospd/data-formats/register> a rim:Register ;\n    rim:controlBody <https://w3id.org/geolabs/ospd/data-formats/geolabs> ;\n    rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-formats/\"^^xsd:anyURI ;\n    rim:hasSpecification <https://w3id.org/geolabs/ospd/data-formats/specification> ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/register\"^^xsd:anyURI ;\n    rim:registerManager <https://w3id.org/geolabs/ospd/data-formats/geolabs> ;\n    rim:registerOwner <https://w3id.org/geolabs/ospd/data-formats/geolabs> ;\n    rim:runsOn <https://w3id.org/geolabs/ospd/data-formats/registerSystem> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data Formats register\ndescription: 'The data-formats register, in JSON: the governed collection itself,\n  the system it runs on and the roles that govern it.'\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register/schema.yaml\nrequired:\n- objectIdentifier\n- runsOn\n- registerOwner\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/register\nx-bblocks-metadata:\n  itemIdentifier: data-formats.register\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/register"
+}

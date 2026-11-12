@@ -1,0 +1,37 @@
+{
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://www.ogc.org/standards/geotiff/",
+      "title": "OGC GeoTIFF Standard"
+    }
+  ],
+  "observedMediaTypes": [
+    {
+      "mediaType": "image/tiff",
+      "observedIn": "implementation-profile"
+    },
+    {
+      "mediaType": "image/tiff",
+      "observedIn": "testbed"
+    },
+    {
+      "mediaType": "image/tiff; application=geotiff",
+      "observedIn": "testbed"
+    }
+  ],
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
+    "startedAtTime": "2026-11-09T00:00:00Z"
+  }
+}
