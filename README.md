@@ -92,8 +92,9 @@ bblocks-stac has no Catalog and no Item Collection block.
 
 ## Building locally
 
-The register imports the published data-types register. Until it is published with the same
-content, map it to a local build in `bblocks-config-local.yml` (ignored by git):
+The register imports the published data-types register (published 2026-11-12); no local
+configuration is needed. To test a data-types change before it is published, map it to a local
+build in `bblocks-config-local.yml` (ignored by git):
 
 ```yaml
 url-mappings:
