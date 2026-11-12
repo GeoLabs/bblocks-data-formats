@@ -6,11 +6,11 @@ examples:
       - language: json
         code: |
           {
-            "id": "https://w3id.org/geolabs-ospd/data-formats/format/string-date",
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-date",
             "type": "Format",
-            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/string-date",
-            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
-            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-date",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
             "specification": [
               {
                 "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1",
@@ -27,11 +27,11 @@ examples:
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {
-              "id": "https://w3id.org/geolabs-ospd/data-formats/format/string-date/actions/addition",
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-date/actions/addition",
               "type": "RegisterAction",
               "actionType": "addition",
-              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/string-date",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-date",
               "startedAtTime": "2026-11-09T00:00:00Z"
             }
           }

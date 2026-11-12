@@ -1,5 +1,5 @@
 # Must pass: the control of the inferred-media-type-*-fail fixtures here, an inferred media type with its source and justification.
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -10,8 +10,8 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/fixture-inferred-media-type-control> a df:Format ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/fixture-inferred-media-type-control"^^xsd:anyURI ;
+<https://w3id.org/geolabs/ospd/data-formats/format/fixture-inferred-media-type-control> a df:Format ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/fixture-inferred-media-type-control"^^xsd:anyURI ;
     rim:itemClass df:formatItemClass ;
     rim:inRegister df:register ;
     dct:conformsTo <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
@@ -21,8 +21,8 @@
         dct:description "Inferred from the JSON schema of the format."@en ] ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/fixture-inferred-media-type-control/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/fixture-inferred-media-type-control/actions/addition> .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/fixture-inferred-media-type-control/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/format/fixture-inferred-media-type-control/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs .

@@ -1,6 +1,6 @@
 # Must fail: a representation that points to no format. It realizes a real data type version, so
 # only df:RepresentationShape can reject it.
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -11,15 +11,15 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-<https://w3id.org/geolabs-ospd/data-formats/representation/without-format> a df:Representation ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representation/without-format"^^xsd:anyURI ;
+<https://w3id.org/geolabs/ospd/data-formats/representation/without-format> a df:Representation ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/without-format"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1> ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/representation/without-format/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/without-format/actions/addition> .
 
-<https://w3id.org/geolabs-ospd/data-formats/representation/without-format/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/representation/without-format/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs .

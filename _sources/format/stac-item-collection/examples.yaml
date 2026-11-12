@@ -6,11 +6,11 @@ examples:
       - language: json
         code: |
           {
-            "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection",
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection",
             "type": "Format",
-            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection",
-            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
-            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
             "specification": [
               {
                 "id": "https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/fragments/itemcollection/README.md",
@@ -38,31 +38,31 @@ examples:
             "publicationStatus": "published",
             "hasAction": [
               {
-                "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection/actions/addition",
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection/actions/addition",
                 "type": "RegisterAction",
                 "actionType": "addition",
-                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection",
                 "startedAtTime": "2026-11-11T00:00:00Z"
               },
               {
-                "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection/actions/amendment-media-type-sources-2026-11-11",
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection/actions/amendment-media-type-sources-2026-11-11",
                 "type": "RegisterAction",
-                "actionType": "https://w3id.org/geolabs-ospd/data-formats/amendmentAction",
+                "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
                 "changeClassification": "clarifying",
                 "description": "Second source of the media type taken from the specification: the STAC API - Features 1.0.0, section Endpoints (df:inferredMediaType with dct:source https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/ogcapi-features/README.md). The justification of the first source now states that the media type is derived, not stated, by STAC: the GeoJSON FeatureCollection the ItemCollection fragment requires, RFC 7946 section 12 and the STAC best practices 1.1.0. Checked online on 2026-11-11 in stac-spec v1.1.0 and stac-api-spec v1.0.0, the latest releases. Decision of Gérald, 2026-11-11. The media type, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a source is added and a justification reworded, and what the format is does not change.",
-                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection",
                 "startedAtTime": "2026-11-11T00:00:00Z"
               },
               {
-                "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection/actions/amendment-best-practices-section-2026-11-12",
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection/actions/amendment-best-practices-section-2026-11-12",
                 "type": "RegisterAction",
-                "actionType": "https://w3id.org/geolabs-ospd/data-formats/amendmentAction",
+                "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
                 "changeClassification": "clarifying",
                 "description": "The justification of the first source of the media type taken from the specification (df:inferredMediaType with dct:source https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/item-search/README.md) cites the section of the STAC best practices 1.1.0 that asks for as specific a media type as possible: Working with Media Types, instead of its subsection Common Media Types in STAC, which lists media types (checked on 2026-11-12 in https://raw.githubusercontent.com/radiantearth/stac-spec/v1.1.0/best-practices.md: the sentence is at line 322, under the heading of line 319; the subsection starts at line 331). Decision of Gérald, 2026-11-12. The media type, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a reference in a justification is corrected.",
-                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item-collection",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection",
                 "startedAtTime": "2026-11-12T00:00:00Z"
               }
             ]

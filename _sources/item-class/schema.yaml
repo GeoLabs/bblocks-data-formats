@@ -9,5 +9,5 @@ required: [definedIn, validatedBy]
 properties:
   id:
     enum:
-      - https://w3id.org/geolabs-ospd/data-formats/formatItemClass
-      - https://w3id.org/geolabs-ospd/data-formats/representationItemClass
+      - https://w3id.org/geolabs/ospd/data-formats/formatItemClass
+      - https://w3id.org/geolabs/ospd/data-formats/representationItemClass

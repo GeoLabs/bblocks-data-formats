@@ -2,7 +2,7 @@ The surface data type of the data-types register, represented in GML.
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/surface-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.surface`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.surface`.
 
 ## Requested by
 

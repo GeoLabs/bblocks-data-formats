@@ -7,4 +7,4 @@ allOf:
   - $ref: bblocks://ogc.rim.schemas.register
 required: [objectIdentifier, runsOn, registerOwner]
 properties:
-  id: {const: https://w3id.org/geolabs-ospd/data-formats/register}
+  id: {const: https://w3id.org/geolabs/ospd/data-formats/register}

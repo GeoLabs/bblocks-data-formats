@@ -1,4 +1,4 @@
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -10,15 +10,15 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 
-<https://w3id.org/geolabs-ospd/data-formats/format/string-ipv6> a df:Format, rim:RegisterItem ;
+<https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6> a df:Format, rim:RegisterItem ;
     dct:title "IPv6 address string"@en ;
     dct:description "An IPv6 address, as JSON Schema `ipv6`."@en ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/string-ipv6"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6"^^xsd:anyURI ;
     rim:itemClass df:formatItemClass ;
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/string-ipv6/actions/addition> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6/actions/addition> ;
     dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4> ;
     df:jsonSchemaFragment "{\"format\":\"ipv6\",\"type\":\"string\"}"^^rdf:JSON ;
     dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
@@ -28,8 +28,8 @@
 
 <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.4> dct:title "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.4 IP Addresses" .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/string-ipv6/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
-    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/string-ipv6> ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

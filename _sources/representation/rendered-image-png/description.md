@@ -2,7 +2,7 @@ The rendered-image data type of the data-types register, represented in PNG.
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/rendered-image-png` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1` of the data-types register and points (`df:format`) to the format [PNG](../../format/png/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.rendered-image`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1` of the data-types register and points (`df:format`) to the format [PNG](../../format/png/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.rendered-image`.
 
 ## Requested by
 

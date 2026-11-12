@@ -2,7 +2,7 @@ The bounding-box data type of the data-types register, represented as an OGC API
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1` of the data-types register and points (`df:format`) to the format [OGC API - Processes bounding box](../../format/ogcapi-processes-bbox/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.bounding-box`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1` of the data-types register and points (`df:format`) to the format [OGC API - Processes bounding box](../../format/ogcapi-processes-bbox/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.bounding-box`.
 
 ## Requested by
 

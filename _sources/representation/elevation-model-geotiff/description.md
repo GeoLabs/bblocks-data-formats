@@ -2,7 +2,7 @@ The elevation-model data type of the data-types register, represented in GeoTIFF
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/elevation-model-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.elevation-model`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.elevation-model`.
 
 ## Requested by
 

@@ -10,8 +10,8 @@ type: object
 required: [realizes, format, hasAction]
 properties:
   type: {const: Representation}
-  itemClass: {const: https://w3id.org/geolabs-ospd/data-formats/representationItemClass}
-  inRegister: {const: https://w3id.org/geolabs-ospd/data-formats/register}
+  itemClass: {const: https://w3id.org/geolabs/ospd/data-formats/representationItemClass}
+  inRegister: {const: https://w3id.org/geolabs/ospd/data-formats/register}
   realizes:
     type: string
     format: uri
@@ -19,7 +19,7 @@ properties:
   format:
     type: string
     format: uri
-    pattern: ^https://w3id\.org/geolabs-ospd/data-formats/format/[a-z0-9-]+$
+    pattern: ^https://w3id\.org/geolabs/ospd/data-formats/format/[a-z0-9-]+$
   hasAction:
     description: >-
       The proposed addition, alone or followed by later actions on the item, as for a format. The schema

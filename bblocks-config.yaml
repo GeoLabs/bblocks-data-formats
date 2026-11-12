@@ -12,7 +12,7 @@ description: |
   [GeoLabs/bblocks-data-types](https://github.com/GeoLabs/bblocks-data-types), the concept plane, and
   points to one format.
 
-  Identifiers are minted under `https://w3id.org/geolabs-ospd/data-formats/` (prefix `df:`). This
+  Identifiers are minted under `https://w3id.org/geolabs/ospd/data-formats/` (prefix `df:`). This
   namespace is not resolved yet.
 
 contact:

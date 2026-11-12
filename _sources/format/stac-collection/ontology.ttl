@@ -1,4 +1,4 @@
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -9,15 +9,15 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/stac-collection> a df:Format, rim:RegisterItem ;
+<https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> a df:Format, rim:RegisterItem ;
     dct:title "STAC Collection"@en ;
     dct:description "A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links."@en ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/stac-collection"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection"^^xsd:anyURI ;
     rim:itemClass df:formatItemClass ;
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/stac-collection/actions/addition> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition> ;
     dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> ;
     df:primaryMediaType "application/json" ;
     df:jsonSchemaFragment "{\"$ref\":\"https://schemas.stacspec.org/v1.1.0/collection-spec/json-schema/collection.json\"}"^^rdf:JSON ;
@@ -29,8 +29,8 @@
 
 <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> dct:title "STAC Collection Specification 1.1.0" .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/stac-collection/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
-    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/stac-collection> ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> ;
     prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .

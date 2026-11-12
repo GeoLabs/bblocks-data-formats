@@ -2,7 +2,7 @@ A bounding box as OGC API - Processes - Part 1: Core encodes it in JSON: `{"bbox
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version. The representation [`bounding-box-ogcapi-processes-bbox`](../../representation/bounding-box-ogcapi-processes-bbox/) binds it to the bounding-box data type.
+`https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version. The representation [`bounding-box-ogcapi-processes-bbox`](../../representation/bounding-box-ogcapi-processes-bbox/) binds it to the bounding-box data type.
 
 ## Specification
 

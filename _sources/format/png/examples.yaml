@@ -6,11 +6,11 @@ examples:
       - language: json
         code: |
           {
-            "id": "https://w3id.org/geolabs-ospd/data-formats/format/png",
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/png",
             "type": "Format",
-            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/png",
-            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
-            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/png",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
             "specification": [
               {
                 "id": "https://www.w3.org/TR/png/",
@@ -26,11 +26,11 @@ examples:
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {
-              "id": "https://w3id.org/geolabs-ospd/data-formats/format/png/actions/addition",
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/png/actions/addition",
               "type": "RegisterAction",
               "actionType": "addition",
-              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/png",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/png",
               "startedAtTime": "2026-11-10T00:00:00Z"
             }
           }

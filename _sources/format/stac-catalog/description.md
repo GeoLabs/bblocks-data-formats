@@ -2,7 +2,7 @@ A JSON object that links STAC Items, Collections and child Catalogs into a brows
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/format/stac-catalog` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type; none is created until a role needs it.
+`https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type; none is created until a role needs it.
 
 ## Specification
 

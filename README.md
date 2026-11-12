@@ -4,7 +4,7 @@ OGC Building Blocks register holding the **content plane** of the OSPD data axis
 which process inputs and outputs are encoded, and the representations that bind a data type to a
 format. It is a profile of the
 [Registered Item Model](https://ogcincubator.github.io/registered-item-model/) (RIM, ISO 19135:2026).
-Identifier prefix: `data-formats.`; namespace `https://w3id.org/geolabs-ospd/data-formats/`, prefix
+Identifier prefix: `data-formats.`; namespace `https://w3id.org/geolabs/ospd/data-formats/`, prefix
 `df:`. The namespace is not resolved yet.
 
 The meaning of data is not here: it is the concept plane held by

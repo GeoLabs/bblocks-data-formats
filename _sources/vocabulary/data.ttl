@@ -1,4 +1,4 @@
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -13,7 +13,7 @@
 # canonical in the ontology.ttl of its own Building Block.
 
 df:register a rim:Register ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/register"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/register"^^xsd:anyURI ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-formats/"^^xsd:anyURI ;
     dct:title "Data Formats"@en ;
     dct:description "A content register of the formats in which process inputs and outputs are encoded, and of the representations that bind a data type to a format."@en ;
@@ -36,7 +36,7 @@ df:specification a rim:RegisterSpecification ;
         "Relation with the data-types register. This register depends on the data-types register; the data-types register never depends on this register. The Registered Item Model allows a dt:DataTypeVersion to be realized by items of both registers, its own dt:DataTypeItem and representations of this register: it limits rim:realizes to one version per item (rim:RegisterItemShape), not to one item per version."@en ,
         "Replacement of a data type. When a format or a representation replaces an item of the data-types register, it carries rim:supersedes towards that item, which is typed in the closure this register validates; the replaced item carries dct:isReplacedBy towards it. The 19 string-* formats supersede the withdrawn string-* data types."@en ,
         "Roles. GeoLabs SARL is the register owner, the register manager and, for now, the control body. GeoLabs intends to delegate the control body role to the OGC or to an OSPD working group."@en ,
-        "Identifiers. The object identifier of an item is its IRI, https://w3id.org/geolabs-ospd/data-formats/<class>/<name>, with <class> one of format or representation. This namespace is not resolved yet. An object identifier never redirects; only a functional identifier may. The identifier of a published item changes only by an explicit decision."@en ,
+        "Identifiers. The object identifier of an item is its IRI, https://w3id.org/geolabs/ospd/data-formats/<class>/<name>, with <class> one of format or representation. This namespace is not resolved yet. An object identifier never redirects; only a functional identifier may. The identifier of a published item changes only by an explicit decision."@en ,
         "Versions. An addition is an action of type addition, with no classification. A substantive change creates a new item or a new version, linked by rim:supersededBy, with an action classified substantive. A clarifying change keeps the item and its version, with an action classified clarifying. This version rule is specific to the registers of this project and does not come from ISO 19135. The classification correctional is not available. An item is retired by unpublishing it, not by deleting it."@en ,
         "Ce qui est substantiel ici (tableau validé le 2026-11-05, repris tel quel). Substantiel : Media type principal, version de la spécification, fragment de schéma, version de concept réalisée. Clarification : Media type observé ajouté, description reformulée."@fr ,
         "What is substantive here (English rendering of the validated table above). Substantive: the principal media type, the version of the specification, the schema fragment, the realized concept version. Clarifying: an observed media type added, a reworded description."@en ,
@@ -55,14 +55,14 @@ df:amendmentAction a rim:RegisterActionType , skos:Concept ;
     skos:definition "An in-place change to a proposal, an item with no control-body decision recorded. Always classified, clarifying or substantive."@en .
 
 df:formatItemClass a rim:RegisterItemClass ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/formatItemClass"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/formatItemClass"^^xsd:anyURI ;
     dct:title "Format" ;
     dct:description "The abstraction every format item of this register shares: an encoding, with its specification, its observed media types, its inferred media types (each with source and justification) and/or a JSON Schema fragment; it realizes no concept version."@en ;
     rim:definedIn df:register ;
     rim:validatedBy df:FormatShape .
 
 df:representationItemClass a rim:RegisterItemClass ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representationItemClass"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representationItemClass"^^xsd:anyURI ;
     dct:title "Representation" ;
     dct:description "The abstraction every representation item of this register shares: one data type version of the data-types register, realized in one format."@en ;
     rim:definedIn df:register ;

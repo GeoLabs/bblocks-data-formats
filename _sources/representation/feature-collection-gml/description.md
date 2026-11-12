@@ -2,7 +2,7 @@ The feature-collection data type of the data-types register, represented in GML.
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/feature-collection-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.feature-collection`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.feature-collection`.
 
 ## Requested by
 

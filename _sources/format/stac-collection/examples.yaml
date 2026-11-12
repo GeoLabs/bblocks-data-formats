@@ -6,11 +6,11 @@ examples:
       - language: json
         code: |
           {
-            "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-collection",
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection",
             "type": "Format",
-            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/stac-collection",
-            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
-            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
             "specification": [
               {
                 "id": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md",
@@ -33,11 +33,11 @@ examples:
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {
-              "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-collection/actions/addition",
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection/actions/addition",
               "type": "RegisterAction",
               "actionType": "addition",
-              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-collection",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection",
               "startedAtTime": "2026-11-11T00:00:00Z"
             }
           }

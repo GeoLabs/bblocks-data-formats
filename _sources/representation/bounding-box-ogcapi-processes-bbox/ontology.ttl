@@ -1,4 +1,4 @@
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -10,19 +10,19 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 
-<https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox> a df:Representation, rim:RegisterItem ;
+<https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox> a df:Representation, rim:RegisterItem ;
     dct:title "Bounding box as OGC API - Processes bbox"@en ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1> ;
-    df:format <https://w3id.org/geolabs-ospd/data-formats/format/ogcapi-processes-bbox> ;
+    df:format <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition> .
 
-<https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
-    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox> ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

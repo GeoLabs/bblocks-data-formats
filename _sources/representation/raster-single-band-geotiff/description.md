@@ -2,7 +2,7 @@ The raster-single-band data type of the data-types register, represented in GeoT
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/raster-single-band-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster-single-band`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster-single-band`.
 
 ## Requested by
 

@@ -1,22 +1,22 @@
 {
-  "id": "https://w3id.org/geolabs-ospd/data-formats/representation/geometry-gml",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
   "type": "Representation",
-  "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/representation/geometry-gml",
-  "itemClass": "https://w3id.org/geolabs-ospd/data-formats/representationItemClass",
-  "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
-  "format": "https://w3id.org/geolabs-ospd/data-formats/format/gml",
+  "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
   "validityStatus": "invalid",
   "publicationStatus": "published",
   "hasAction": [
     {
-      "id": "https://w3id.org/geolabs-ospd/data-formats/representation/geometry-gml/actions/amendment-has-format",
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format",
       "type": "RegisterAction",
-      "actionType": "https://w3id.org/geolabs-ospd/data-formats/amendmentAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do.",
-      "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-      "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/representation/geometry-gml",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
   ]

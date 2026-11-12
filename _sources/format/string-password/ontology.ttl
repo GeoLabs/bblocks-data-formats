@@ -1,4 +1,4 @@
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -10,15 +10,15 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 
-<https://w3id.org/geolabs-ospd/data-formats/format/string-password> a df:Format, rim:RegisterItem ;
+<https://w3id.org/geolabs/ospd/data-formats/format/string-password> a df:Format, rim:RegisterItem ;
     dct:title "Password string"@en ;
     dct:description "A password, as the OpenAPI `password` format: a hint to obscure the value."@en ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/string-password"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/string-password"^^xsd:anyURI ;
     rim:itemClass df:formatItemClass ;
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/string-password/actions/addition> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition> ;
     dct:conformsTo <https://spec.openapis.org/oas/v3.0.3#data-types> ;
     df:jsonSchemaFragment "{\"format\":\"password\",\"type\":\"string\"}"^^rdf:JSON ;
     dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
@@ -28,8 +28,8 @@
 
 <https://spec.openapis.org/oas/v3.0.3#data-types> dct:title "OpenAPI Specification 3.0.3, Data Types" .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/string-password/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/format/string-password/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
-    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/format/string-password> ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/string-password> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

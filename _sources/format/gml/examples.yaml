@@ -6,11 +6,11 @@ examples:
       - language: json
         code: |
           {
-            "id": "https://w3id.org/geolabs-ospd/data-formats/format/gml",
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
             "type": "Format",
-            "objectIdentifier": "https://w3id.org/geolabs-ospd/data-formats/format/gml",
-            "itemClass": "https://w3id.org/geolabs-ospd/data-formats/formatItemClass",
-            "inRegister": "https://w3id.org/geolabs-ospd/data-formats/register",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
             "specification": [
               {
                 "id": "https://www.ogc.org/standards/gml/",
@@ -30,11 +30,11 @@ examples:
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {
-              "id": "https://w3id.org/geolabs-ospd/data-formats/format/gml/actions/addition",
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition",
               "type": "RegisterAction",
               "actionType": "addition",
-              "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
-              "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/gml",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
               "startedAtTime": "2026-11-09T00:00:00Z"
             }
           }

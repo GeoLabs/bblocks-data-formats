@@ -16,8 +16,8 @@ not:
   required: [realizes]
 properties:
   type: {const: Format}
-  itemClass: {const: https://w3id.org/geolabs-ospd/data-formats/formatItemClass}
-  inRegister: {const: https://w3id.org/geolabs-ospd/data-formats/register}
+  itemClass: {const: https://w3id.org/geolabs/ospd/data-formats/formatItemClass}
+  inRegister: {const: https://w3id.org/geolabs/ospd/data-formats/register}
   specification:
     type: array
     minItems: 1

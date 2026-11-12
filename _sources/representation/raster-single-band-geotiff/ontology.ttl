@@ -1,4 +1,4 @@
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -10,19 +10,19 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 
-<https://w3id.org/geolabs-ospd/data-formats/representation/raster-single-band-geotiff> a df:Representation, rim:RegisterItem ;
+<https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff> a df:Representation, rim:RegisterItem ;
     dct:title "Single-band raster as GeoTIFF"@en ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/representation/raster-single-band-geotiff"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> ;
-    df:format <https://w3id.org/geolabs-ospd/data-formats/format/geotiff> ;
+    df:format <https://w3id.org/geolabs/ospd/data-formats/format/geotiff> ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/representation/raster-single-band-geotiff/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff/actions/addition> .
 
-<https://w3id.org/geolabs-ospd/data-formats/representation/raster-single-band-geotiff/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
-    rim:appliesTo <https://w3id.org/geolabs-ospd/data-formats/representation/raster-single-band-geotiff> ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-geotiff> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .

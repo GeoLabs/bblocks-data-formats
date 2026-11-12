@@ -1,6 +1,6 @@
 # Must fail: a format with neither an observed media type nor a JSON Schema fragment. Only
 # df:FormatShape can reject it.
-@prefix df:   <https://w3id.org/geolabs-ospd/data-formats/> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -11,15 +11,15 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/empty> a df:Format ;
-    rim:objectIdentifier "https://w3id.org/geolabs-ospd/data-formats/format/empty"^^xsd:anyURI ;
+<https://w3id.org/geolabs/ospd/data-formats/format/empty> a df:Format ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/empty"^^xsd:anyURI ;
     rim:itemClass df:formatItemClass ;
     rim:inRegister df:register ;
     dct:conformsTo <https://www.ogc.org/standards/geotiff/> ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs-ospd/data-formats/format/empty/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/empty/actions/addition> .
 
-<https://w3id.org/geolabs-ospd/data-formats/format/empty/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-formats/format/empty/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs .

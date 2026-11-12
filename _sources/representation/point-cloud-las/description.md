@@ -2,7 +2,7 @@ The point-cloud data type of the data-types register, represented in LAS.
 
 ## Definition
 
-`https://w3id.org/geolabs-ospd/data-formats/representation/point-cloud-las` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1` of the data-types register and points (`df:format`) to the format [LAS](../../format/las/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.point-cloud`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/point-cloud-las` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1` of the data-types register and points (`df:format`) to the format [LAS](../../format/las/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.point-cloud`.
 
 ## Requested by
 
