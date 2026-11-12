@@ -27,7 +27,7 @@ examples:
               {
                 "mediaType": "application/geo+json",
                 "source": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md",
-                "description": "Stated by the STAC Item Specification 1.1.0, section Media Type for STAC Item: a STAC Item is a GeoJSON file and should use application/geo+json. Not observed in an Implementation Profile or on the testbed. Of the processes of bblocks-process-profiles that exchange STAC Items, kindgrove-steps.select-scene and kindgrove-steps.download-band serve application/geo+json since their CWL declares it (GeoLabs/KindGrove 10887a4, 2026-11-10, not released; until then their CWL declared no format and they served application/octet-stream), and the others pass the Item by URL. Observed on 2026-11-10 where the Items are served, the Earth Search STAC API read by those processes (https://earth-search.aws.element84.com/v1, items S2C_46PGC_20260913_0_L2A and S2A_29SPC_20190701_0_L2A of sentinel-2-l2a): Content-Type application/geo+json; charset=utf-8."
+                "description": "Stated by the STAC Item Specification 1.1.0, section Media Type for STAC Item: a STAC Item is a GeoJSON file and should use application/geo+json. Not observed in an Implementation Profile or on the testbed. Of the processes of bblocks-process-profiles that exchange STAC Items, kindgrove-steps.select-scene and kindgrove-steps.download-band serve application/geo+json since their CWL declares it (GeoLabs/KindGrove 89e3d36, 2026-11-10, released in v0.0.2-rc3 on 2026-11-11; until then their CWL declared no format and they served application/octet-stream), and the others pass the Item by URL. Observed on 2026-11-10 where the Items are served, the Earth Search STAC API read by those processes (https://earth-search.aws.element84.com/v1, items S2C_46PGC_20260913_0_L2A and S2A_29SPC_20190701_0_L2A of sentinel-2-l2a): Content-Type application/geo+json; charset=utf-8."
               }
             ],
             "validityStatus": "invalid",
@@ -70,6 +70,16 @@ examples:
                 "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
                 "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
                 "startedAtTime": "2026-11-11T00:00:00Z"
+              },
+              {
+                "id": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item/actions/amendment-kindgrove-release-2026-11-12",
+                "type": "RegisterAction",
+                "actionType": "https://w3id.org/geolabs-ospd/data-formats/amendmentAction",
+                "changeClassification": "clarifying",
+                "description": "The justification of the media type taken from the specification (df:inferredMediaType) cites the commit of GeoLabs/KindGrove that makes kindgrove-steps.select-scene and kindgrove-steps.download-band declare application/geo+json as it was published: 89e3d36, released in v0.0.2-rc3 on 2026-11-11, instead of 10887a4, said not released, a commit that is not public (checked on 2026-11-12: https://github.com/GeoLabs/KindGrove/commit/10887a4 HTTP 404, https://github.com/GeoLabs/KindGrove/commit/89e3d36 HTTP 200, 89e3d36 an ancestor of the tag v0.0.2-rc3). The action amendment-observation-2026-11-11, which cites 10887a4, stays as recorded. Decision of Gérald, 2026-11-12. The media types and the principal media type are unchanged. Classified clarifying: a reference in a justification is corrected.",
+                "proposer": "https://w3id.org/geolabs-ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs-ospd/data-formats/format/stac-item",
+                "startedAtTime": "2026-11-12T00:00:00Z"
               }
             ]
           }
