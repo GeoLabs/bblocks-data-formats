@@ -1,0 +1,28 @@
+examples:
+  - title: Geometry as GeoJSON
+    content: >-
+      The register item of the representation Geometry as GeoJSON: it realizes version 1 of the geometry data type of the data-types register and points to the geojson format.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+            "type": "Representation",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
+            "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+              "startedAtTime": "2026-11-10T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

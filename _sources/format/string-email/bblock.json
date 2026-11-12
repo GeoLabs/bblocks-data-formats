@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: Email address string",
+  "abstract": "An email address, as JSON Schema `email`.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "JSON Schema string formats (EOAP)",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.2 Email Addresses",
+      "link": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.2"
+    },
+    {
+      "title": "EOAP schemas: string_format.yaml (record Email)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ],
+  "seeAlso": [
+    "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format"
+  ]
+}

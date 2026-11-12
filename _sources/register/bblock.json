@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Formats register",
+  "abstract": "The data-formats register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ]
+}

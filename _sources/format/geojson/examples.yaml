@@ -1,0 +1,38 @@
+examples:
+  - title: GeoJSON
+    content: >-
+      The register item of the GeoJSON format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://www.rfc-editor.org/rfc/rfc7946",
+                "title": "RFC 7946 The GeoJSON Format"
+              }
+            ],
+            "observedMediaTypes": [
+              {
+                "mediaType": "application/geo+json",
+                "observedIn": "testbed"
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

@@ -1,0 +1,90 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Constrained-profile shapes. df:Format and df:Representation are sub-classes of rim:RegisterItem
+# (ontology.ttl), so the Registered Item Model's rim:RegisterItemShape (object identifier, item
+# class, validity and publication status, at most one rim:realizes) already applies. These shapes add
+# what makes this a data-formats register. The data type versions a representation realizes come
+# from the data-types register, through the dependency on data-types.vocabulary.
+
+df:FormatShape a sh:NodeShape ;
+    sh:targetClass df:Format ;
+    sh:property [ sh:path rim:itemClass ; sh:hasValue df:formatItemClass ;
+                  sh:message "A format must be of the df:formatItemClass item class." ] ;
+    sh:property [ sh:path rim:inRegister ; sh:hasValue df:register ; sh:minCount 1 ;
+                  sh:message "A format must be in the df:register register." ] ;
+    sh:property [ sh:path rim:realizes ; sh:maxCount 0 ;
+                  sh:message "A format realizes no concept version: a df:Representation binds it to a data type." ] ;
+    sh:property [ sh:path dct:conformsTo ; sh:nodeKind sh:IRI ; sh:minCount 1 ;
+                  sh:message "A format must name its specification (dct:conformsTo)." ] ;
+    sh:property [ sh:path df:observedMediaType ; sh:node df:MediaTypeObservationShape ] ;
+    sh:property [ sh:path df:inferredMediaType ; sh:node df:MediaTypeInferenceShape ] ;
+    sh:property [ sh:path df:jsonSchemaFragment ; sh:datatype rdf:JSON ] ;
+    sh:or ( [ sh:path df:observedMediaType ; sh:minCount 1 ]
+            [ sh:path df:jsonSchemaFragment ; sh:minCount 1 ] ) ;
+    sh:message "A format carries at least an observed media type or a JSON Schema fragment." .
+
+df:MediaTypeObservationShape a sh:NodeShape ;
+    sh:property [ sh:path df:mediaType ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path df:observedIn ; sh:in ( "implementation-profile" "testbed" ) ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "A media type is observed in an implementation-profile or in the testbed." ] .
+
+# An inferred media type names what it was inferred from and why: it is not an observation.
+# vocabulary/tests/inferred-media-type-without-source-fail.ttl and
+# inferred-media-type-without-justification-fail.ttl prove each constraint.
+df:MediaTypeInferenceShape a sh:NodeShape ;
+    sh:property [ sh:path df:mediaType ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dct:source ; sh:nodeKind sh:IRI ; sh:minCount 1 ;
+                  sh:message "An inferred media type names the source it was inferred from (dct:source, an IRI)." ] ;
+    sh:property [ sh:path dct:description ; sh:minCount 1 ;
+                  sh:message "An inferred media type says why it was inferred (dct:description)." ] .
+
+df:RepresentationShape a sh:NodeShape ;
+    sh:targetClass df:Representation ;
+    sh:property [ sh:path rim:itemClass ; sh:hasValue df:representationItemClass ;
+                  sh:message "A representation must be of the df:representationItemClass item class." ] ;
+    sh:property [ sh:path rim:inRegister ; sh:hasValue df:register ; sh:minCount 1 ;
+                  sh:message "A representation must be in the df:register register." ] ;
+    sh:property [ sh:path rim:realizes ; sh:class dt:DataTypeVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "A representation realizes exactly one dt:DataTypeVersion of the data-types register." ] ;
+    sh:property [ sh:path df:format ; sh:class df:Format ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "A representation points to exactly one df:Format." ] .
+
+df:AdditionProposalShape a sh:NodeShape ;
+    sh:targetClass df:Format , df:Representation ;
+    sh:property [
+        sh:path rim:hasAction ;
+        sh:qualifiedValueShape [
+            sh:class rim:RegisterAction ;
+            sh:property [ sh:path rim:actionType ; sh:hasValue rim:additionAction ] ,
+                        [ sh:path rim:proposer ;   sh:minCount 1 ]
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "An item must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer."
+    ] .
+
+# The principal media type of a format (df:primaryMediaType) is one of its recorded media types,
+# observed or taken from a source, and that record carries its source (decision of 2026-11-10 on
+# stac-item). vocabulary/tests/primary-media-type-without-record-fail.ttl and its control show it.
+df:PrimaryMediaTypeShape a sh:NodeShape ;
+    sh:targetSubjectsOf df:primaryMediaType ;
+    sh:property [ sh:path df:primaryMediaType ; sh:datatype xsd:string ; sh:maxCount 1 ;
+                  sh:message "A format has at most one principal media type, a string." ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A principal media type is one of the format's observed or inferred media types, whose record gives its source." ;
+        sh:select """
+            SELECT $this ?value WHERE {
+                $this <https://w3id.org/geolabs/ospd/data-formats/primaryMediaType> ?value .
+                FILTER NOT EXISTS {
+                    $this <https://w3id.org/geolabs/ospd/data-formats/observedMediaType> | <https://w3id.org/geolabs/ospd/data-formats/inferredMediaType> ?record .
+                    ?record <https://w3id.org/geolabs/ospd/data-formats/mediaType> ?value .
+                }
+            }
+        """
+    ] .

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation item",
+  "abstract": "A representation of this register, in JSON: a profile of the Registered Item Model register item that realizes one data type version of the data-types register and points to one format.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register-item",
+    "data-formats.vocabulary"
+  ],
+  "group": "Representations",
+  "highlighted": true,
+  "sources": [
+    {
+      "title": "ISO 19135:2026, Geographic information — Registration and register governance",
+      "link": "https://www.iso.org/standard/86261.html"
+    },
+    {
+      "title": "Registered Item Model (OGC Building Block)",
+      "link": "https://ogcincubator.github.io/registered-item-model/"
+    }
+  ],
+  "ldContext": "context.jsonld"
+}

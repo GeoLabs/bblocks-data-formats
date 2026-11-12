@@ -1,0 +1,44 @@
+examples:
+  - title: STAC Catalog
+    content: >-
+      The register item of the STAC Catalog format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md",
+                "title": "STAC Catalog Specification 1.1.0"
+              }
+            ],
+            "primaryMediaType": "application/json",
+            "jsonSchemaFragment": {
+              "$ref": "https://schemas.stacspec.org/v1.1.0/catalog-spec/json-schema/catalog.json"
+            },
+            "inferredMediaTypes": [
+              {
+                "mediaType": "application/json",
+                "source": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md",
+                "description": "Stated by the STAC Catalog Specification 1.1.0, section Media Type for STAC Catalogs: \"A STAC Catalog is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): the six testbed outputs that return a STAC Catalog (kindgrove.mangrove result, kindgrove.mangrove-workflow stac, kindgrove-steps.mangrove-workflow-steps stac, kindgrove-steps.export-stac stac_catalog, water-bodies.stac stac_catalog, water-bodies.water-bodies stac) declare a JSON object schema with format stac-catalog and no media type."
+              }
+            ],
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
+              "startedAtTime": "2026-11-11T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

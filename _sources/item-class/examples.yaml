@@ -1,0 +1,27 @@
+examples:
+  - title: The format item class (JSON)
+    content: >-
+      The abstraction every format shares, validated by df:FormatShape.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "type": "RegisterItemClass",
+            "title": "Format",
+            "definedIn": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "validatedBy": "https://w3id.org/geolabs/ospd/data-formats/FormatShape"
+          }
+  - title: The representation item class (JSON)
+    content: >-
+      The abstraction every representation shares, validated by df:RepresentationShape.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+            "type": "RegisterItemClass",
+            "title": "Representation",
+            "definedIn": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "validatedBy": "https://w3id.org/geolabs/ospd/data-formats/RepresentationShape"
+          }

@@ -1,0 +1,39 @@
+examples:
+  - title: Time string
+    content: >-
+      The register item of the Time string format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-time",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-time",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1",
+                "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.1 Dates, Times, and Duration"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "type": "string",
+              "format": "time"
+            },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-time/item",
+            "cwlCustomType": "Time",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-time/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-time",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

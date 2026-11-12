@@ -1,0 +1,10 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data Formats register
+description: >-
+  The data-formats register, in JSON: the governed collection itself, the system it runs on and the
+  roles that govern it.
+allOf:
+  - $ref: bblocks://ogc.rim.schemas.register
+required: [objectIdentifier, runsOn, registerOwner]
+properties:
+  id: {const: https://w3id.org/geolabs/ospd/data-formats/register}

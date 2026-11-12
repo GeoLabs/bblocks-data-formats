@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "df": "https://w3id.org/geolabs/ospd/data-formats/",
+    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "rim": "https://w3id.org/ogc/rim/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "Register": "rim:Register",
+    "RegisterItem": "rim:RegisterItem",
+    "RegisterItemClass": "rim:RegisterItemClass",
+    "RegisterAction": "rim:RegisterAction",
+    "Format": "df:Format",
+    "Representation": "df:Representation",
+    "title": "dct:title",
+    "description": "dct:description",
+    "objectIdentifier": {
+      "@id": "rim:objectIdentifier",
+      "@type": "xsd:anyURI"
+    },
+    "functionalIdentifier": {
+      "@id": "rim:functionalIdentifier",
+      "@type": "xsd:anyURI"
+    },
+    "itemClass": {
+      "@id": "rim:itemClass",
+      "@type": "@id"
+    },
+    "inRegister": {
+      "@id": "rim:inRegister",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "rim:realizes",
+      "@type": "@id"
+    },
+    "supersededBy": {
+      "@id": "rim:supersededBy",
+      "@type": "@id"
+    },
+    "supersedes": {
+      "@id": "rim:supersedes",
+      "@type": "@id"
+    },
+    "validityStatus": {
+      "@id": "rim:validityStatus",
+      "@type": "@vocab"
+    },
+    "publicationStatus": {
+      "@id": "rim:publicationStatus",
+      "@type": "@vocab"
+    },
+    "valid": "rim:valid",
+    "invalid": "rim:invalid",
+    "published": "rim:published",
+    "unpublished": "rim:unpublished",
+    "hasAction": {
+      "@id": "rim:hasAction",
+      "@type": "@id"
+    },
+    "appliesTo": {
+      "@id": "rim:appliesTo",
+      "@type": "@id"
+    },
+    "proposer": {
+      "@id": "rim:proposer",
+      "@type": "@id"
+    },
+    "actionType": {
+      "@id": "rim:actionType",
+      "@type": "@vocab"
+    },
+    "changeClassification": {
+      "@id": "rim:changeClassification",
+      "@type": "@vocab"
+    },
+    "addition": "rim:additionAction",
+    "substantive": "rim:substantiveChange",
+    "clarifying": "rim:clarifyingChange",
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "specification": {
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+    "observedMediaTypes": {
+      "@id": "df:observedMediaType"
+    },
+    "mediaType": "df:mediaType",
+    "observedIn": "df:observedIn",
+    "primaryMediaType": "df:primaryMediaType",
+    "jsonSchemaFragment": {
+      "@id": "df:jsonSchemaFragment",
+      "@type": "@json"
+    },
+    "parameters": {
+      "@id": "df:parameter"
+    },
+    "name": "df:parameterName",
+    "jsonSchemaKeyword": "df:jsonSchemaKeyword",
+    "format": {
+      "@id": "df:format",
+      "@type": "@id"
+    },
+    "cwlCustomType": "df:cwlCustomType",
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    }
+  }
+}

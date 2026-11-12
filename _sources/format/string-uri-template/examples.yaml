@@ -1,0 +1,39 @@
+examples:
+  - title: URI template string
+    content: >-
+      The register item of the URI template string format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-uri-template",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-uri-template",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.6",
+                "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.6 uri-template"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "type": "string",
+              "format": "uri-template"
+            },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template/item",
+            "cwlCustomType": "URITemplate",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-uri-template/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-uri-template",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

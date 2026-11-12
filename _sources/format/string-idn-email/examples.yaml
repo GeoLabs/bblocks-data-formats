@@ -1,0 +1,39 @@
+examples:
+  - title: Internationalized email address string
+    content: >-
+      The register item of the Internationalized email address string format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-idn-email",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-idn-email",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.2",
+                "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.2 Email Addresses"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "type": "string",
+              "format": "idn-email"
+            },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-email/item",
+            "cwlCustomType": "IDNEmail",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-idn-email/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-idn-email",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

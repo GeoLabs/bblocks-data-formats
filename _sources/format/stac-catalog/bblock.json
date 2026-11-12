@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: STAC Catalog",
+  "abstract": "A JSON object that links STAC Items, Collections and child Catalogs into a browsable structure through its links.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-11T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "STAC Catalog Specification 1.1.0",
+      "link": "https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md"
+    }
+  ]
+}

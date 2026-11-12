@@ -1,0 +1,39 @@
+examples:
+  - title: Relative JSON Pointer string
+    content: >-
+      The register item of the Relative JSON Pointer string format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-relative-json-pointer",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/string-relative-json-pointer",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.7",
+                "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.7 JSON Pointers"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "type": "string",
+              "format": "relative-json-pointer"
+            },
+            "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-relative-json-pointer/item",
+            "cwlCustomType": "RelativeJsonPointer",
+            "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-relative-json-pointer/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-relative-json-pointer",
+              "startedAtTime": "2026-11-09T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

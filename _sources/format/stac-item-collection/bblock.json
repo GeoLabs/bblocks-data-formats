@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: STAC Item Collection",
+  "abstract": "A GeoJSON FeatureCollection whose features are STAC Items, with optional links and counts, such as the response of a STAC API Item Search.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-11T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "STAC API - ItemCollection Fragment 1.0.0",
+      "link": "https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/fragments/itemcollection/README.md"
+    },
+    {
+      "title": "STAC API - Item Search 1.0.0",
+      "link": "https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/item-search/README.md"
+    }
+  ]
+}

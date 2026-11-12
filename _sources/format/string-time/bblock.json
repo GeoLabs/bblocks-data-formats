@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: Time string",
+  "abstract": "A time of day with a time zone offset, as JSON Schema `time`.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "JSON Schema string formats (EOAP)",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON (draft 2020-12), 7.3.1 Dates, Times, and Duration",
+      "link": "https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1"
+    },
+    {
+      "title": "EOAP schemas: string_format.yaml (record Time)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ],
+  "seeAlso": [
+    "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format"
+  ]
+}

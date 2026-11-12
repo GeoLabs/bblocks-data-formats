@@ -1,0 +1,65 @@
+examples:
+  - title: OGC API - Processes bounding box
+    content: >-
+      The register item of the OGC API - Processes bounding box format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://docs.ogc.org/is/18-062r2/18-062r2.html",
+                "title": "OGC 18-062r2 OGC API - Processes - Part 1: Core"
+              }
+            ],
+            "jsonSchemaFragment": {
+              "$ref": "https://geolabs.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/bbox/schema.json"
+            },
+            "inferredMediaTypes": [
+              {
+                "mediaType": "application/json",
+                "source": "https://docs.ogc.org/is/18-062r2/18-062r2.html",
+                "description": "Inferred from the bbox JSON schema of OGC API - Processes - Part 1 (an object with the bbox array and crs): a JSON value. OGC 18-062r2 states no media type for a bounding box: Requirement 23 (/req/core/process-execute-input-inline-bbox, 7.11.2.2) only requires the bbox.yaml schema for an inline value, and Recommendation 17 with Table 13 (8.2) marks it with the JSON Schema format key ogc-bbox. Not observed on the testbed."
+              }
+            ],
+            "seeAlso": "https://geolabs.github.io/bblocks-ogcapi-processes/",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": [
+              {
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
+                "startedAtTime": "2026-11-09T00:00:00Z"
+              },
+              {
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-media-type",
+                "type": "RegisterAction",
+                "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+                "changeClassification": "clarifying",
+                "description": "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09.",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
+                "startedAtTime": "2026-11-09T00:00:00Z"
+              },
+              {
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/amendment-identifier-2026-11-10",
+                "type": "RegisterAction",
+                "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+                "changeClassification": "clarifying",
+                "description": "The description, the title of the source and the abstract of the block name the OGC API - Processes bbox building block by its identifier after its renaming by GeoLabs on 2026-11-10 (Part 1, edition 1.0: ogc.api.processes.part1.v1.schemas.bbox). The format, its specification and its media types are unchanged. Classified clarifying: a reworded description.",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
+                "startedAtTime": "2026-11-10T00:00:00Z"
+              }
+            ]
+          }
+      - language: turtle
+        ref: ontology.ttl
