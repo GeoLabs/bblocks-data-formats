@@ -5,7 +5,9 @@ which process inputs and outputs are encoded, and the representations that bind 
 format. It is a profile of the
 [Registered Item Model](https://ogcincubator.github.io/registered-item-model/) (RIM, ISO 19135:2026).
 Identifier prefix: `data-formats.`; namespace `https://w3id.org/geolabs/ospd/data-formats/`, prefix
-`df:`. The namespace is not resolved yet.
+`df:`. The namespace resolves through w3id.org (since 2026-11-13): each IRI redirects to Turtle
+(`Accept: text/turtle` or `?format=ttl`), Markdown (`Accept: text/markdown` or `?format=md`) or the
+viewer page.
 
 The meaning of data is not here: it is the concept plane held by
 [`GeoLabs/bblocks-data-types`](https://github.com/GeoLabs/bblocks-data-types). This register depends
