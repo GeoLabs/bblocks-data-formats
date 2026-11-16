@@ -6,6 +6,7 @@
   "name": "Format: STAC Catalog",
   "abstract": "A JSON object that links STAC Items, Collections and child Catalogs into a browsable structure through its links.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.stac-catalog",
   "dateTimeAddition": "2026-11-11T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
@@ -35,7 +36,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-12",
+  "dateOfLastChange": "2026-11-16",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-catalog/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-catalog/schema.yaml",

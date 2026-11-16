@@ -6,6 +6,7 @@
   "name": "Format: Relative JSON Pointer string",
   "abstract": "A relative JSON Pointer, as JSON Schema `relative-json-pointer`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-relative-json-pointer",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
@@ -42,7 +43,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-12",
+  "dateOfLastChange": "2026-11-16",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-relative-json-pointer/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-relative-json-pointer/schema.yaml",

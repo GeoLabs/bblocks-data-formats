@@ -12,7 +12,7 @@ realizes no concept. A **representation** (`df:Representation`) realizes one dat
 points to one format.
 
 Identifiers are minted under `https://w3id.org/geolabs/ospd/data-formats/` (prefix `df:`). This
-namespace is not resolved yet.
+namespace resolves through w3id.org (since 2026-11-13).
 
 
 ## Building Blocks

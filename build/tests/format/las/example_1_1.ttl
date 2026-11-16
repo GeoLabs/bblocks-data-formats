@@ -6,10 +6,10 @@
 
 <https://w3id.org/geolabs/ospd/data-formats/format/las> a df:Format ;
     dct:conformsTo <https://www.ogc.org/standards/las/> ;
-    df:observedMediaType [ df:mediaType "application/x-ogc-lasf" ;
-            df:observedIn "testbed" ],
-        [ df:mediaType "application/vnd.las" ;
-            df:observedIn "implementation-profile" ] ;
+    df:observedMediaType [ df:mediaType "application/vnd.las" ;
+            df:observedIn "implementation-profile" ],
+        [ df:mediaType "application/x-ogc-lasf" ;
+            df:observedIn "testbed" ] ;
     rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/las/actions/addition> ;
     rim:inRegister df:register ;
     rim:itemClass df:formatItemClass ;

@@ -6,6 +6,7 @@
   "name": "Format: IRI string",
   "abstract": "An IRI, as JSON Schema `iri`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-iri",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
@@ -42,7 +43,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-12",
+  "dateOfLastChange": "2026-11-16",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-iri/schema.yaml",

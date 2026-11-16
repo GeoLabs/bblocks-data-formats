@@ -6,6 +6,7 @@
   "name": "Format: STAC Collection",
   "abstract": "A JSON object describing a set of related STAC Items, with its license, its spatial and temporal extents and its links.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.stac-collection",
   "dateTimeAddition": "2026-11-11T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
@@ -38,7 +39,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-12",
+  "dateOfLastChange": "2026-11-16",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/stac-collection/schema.yaml",

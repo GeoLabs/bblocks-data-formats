@@ -2,7 +2,7 @@
   "title": "Validation report for data-formats.register - Data Formats register",
   "bblockName": "Data Formats register",
   "bblockId": "data-formats.register",
-  "generated": "2026-11-12T14:41:23.364389+00:00",
+  "generated": "2026-11-16T22:21:53.665587+00:00",
   "result": true,
   "items": [
     {
@@ -77,25 +77,7 @@
             {
               "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:ConceptVersionShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "rim:RegisterItemShape": {
-                  "nodes": []
-                },
-                "rim:TextShape": {
+                "rim:ConceptShape": {
                   "nodes": []
                 },
                 "rim:RegisterShape": {
@@ -106,15 +88,33 @@
                 "rim:RegisterSpecificationShape": {
                   "nodes": []
                 },
-                "rim:ConceptShape": {
+                "rim:RegisterActionShape": {
                   "nodes": []
                 },
-                "rim:RegisterActionShape": {
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:ConceptVersionShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: <https://w3id.org/geolabs/ospd/data-formats/register>\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterShape: <https://w3id.org/geolabs/ospd/data-formats/register>\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n"
             }
           ]
         }

@@ -6,6 +6,7 @@
   "name": "Format: Internationalized hostname string",
   "abstract": "An internationalized Internet host name, as JSON Schema `idn-hostname`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-idn-hostname",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
@@ -42,7 +43,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-12",
+  "dateOfLastChange": "2026-11-16",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-hostname/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/string-idn-hostname/schema.yaml",
