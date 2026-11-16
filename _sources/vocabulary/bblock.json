@@ -263,6 +263,24 @@
     },
     {
       "role": "data",
+      "ref": "../representation/point-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Point as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/surface-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Surface as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/feature-collection-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature collection as GeoJSON"
+    },
+    {
+      "role": "data",
       "ref": "../representation/eo-product-stac-item/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Earth observation product as STAC Item"

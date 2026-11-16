@@ -22,7 +22,7 @@ on it (`dependsOn: data-types.vocabulary`); data-types never depends on this reg
 
 Both are sub-classes of `rim:RegisterItem`. Every item is a proposal: an addition by GeoLabs,
 `rim:invalid` and `rim:published`. A principal media type is set only on the four STAC formats, where
-the STAC specification states it; none has been chosen for the other formats. A representation is created when an existing role needs it, and lists the roles that do.
+the STAC specification states it; none has been chosen for the other formats. A representation is created when an existing role needs it, or to complete, in another format, the representations of a data type that already has one; it lists the roles that need it, if any.
 
 ## Register specification
 
@@ -44,7 +44,7 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `data-formats.format` | The format item schema and JSON-LD context; profile of the RIM `register-item` schema |
 | `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, and the 20 EOAP string formats `string-*` |
 | `data-formats.representation` | The representation item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `eo-product-stac-item`, `rendered-image-png` |
+| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `eo-product-stac-item`, `rendered-image-png` |
 
 ### Formats
 
