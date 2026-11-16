@@ -3,6 +3,7 @@
   "name": "Format: IPv6 address string",
   "abstract": "An IPv6 address, as JSON Schema `ipv6`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-ipv6",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

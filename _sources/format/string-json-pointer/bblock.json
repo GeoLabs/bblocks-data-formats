@@ -3,6 +3,7 @@
   "name": "Format: JSON Pointer string",
   "abstract": "An absolute JSON Pointer, as JSON Schema `json-pointer`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-json-pointer",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

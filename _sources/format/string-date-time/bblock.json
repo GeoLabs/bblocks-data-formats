@@ -3,6 +3,7 @@
   "name": "Format: Date-time string",
   "abstract": "A date and time with a time zone offset, as JSON Schema `date-time`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-date-time",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

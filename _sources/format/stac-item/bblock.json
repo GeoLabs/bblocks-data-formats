@@ -3,6 +3,7 @@
   "name": "Format: STAC Item",
   "abstract": "A GeoJSON Feature describing one spatiotemporal item, such as an Earth observation product, with its links and its assets.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.stac-item",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

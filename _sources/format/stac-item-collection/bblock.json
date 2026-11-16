@@ -3,6 +3,7 @@
   "name": "Format: STAC Item Collection",
   "abstract": "A GeoJSON FeatureCollection whose features are STAC Items, with optional links and counts, such as the response of a STAC API Item Search.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.stac-item-collection",
   "dateTimeAddition": "2026-11-11T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

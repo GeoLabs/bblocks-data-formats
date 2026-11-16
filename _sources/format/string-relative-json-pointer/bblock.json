@@ -3,6 +3,7 @@
   "name": "Format: Relative JSON Pointer string",
   "abstract": "A relative JSON Pointer, as JSON Schema `relative-json-pointer`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-relative-json-pointer",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

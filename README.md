@@ -5,7 +5,9 @@ which process inputs and outputs are encoded, and the representations that bind 
 format. It is a profile of the
 [Registered Item Model](https://ogcincubator.github.io/registered-item-model/) (RIM, ISO 19135:2026).
 Identifier prefix: `data-formats.`; namespace `https://w3id.org/geolabs/ospd/data-formats/`, prefix
-`df:`. The namespace is not resolved yet.
+`df:`. The namespace resolves through w3id.org (since 2026-11-13): each IRI redirects to Turtle
+(`Accept: text/turtle` or `?format=ttl`), Markdown (`Accept: text/markdown` or `?format=md`) or the
+viewer page.
 
 The meaning of data is not here: it is the concept plane held by
 [`GeoLabs/bblocks-data-types`](https://github.com/GeoLabs/bblocks-data-types). This register depends
@@ -92,8 +94,9 @@ bblocks-stac has no Catalog and no Item Collection block.
 
 ## Building locally
 
-The register imports the published data-types register. Until it is published with the same
-content, map it to a local build in `bblocks-config-local.yml` (ignored by git):
+The register imports the published data-types register (published 2026-11-12); no local
+configuration is needed. To test a data-types change before it is published, map it to a local
+build in `bblocks-config-local.yml` (ignored by git):
 
 ```yaml
 url-mappings:

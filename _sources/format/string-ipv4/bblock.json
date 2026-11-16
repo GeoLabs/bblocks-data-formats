@@ -3,6 +3,7 @@
   "name": "Format: IPv4 address string",
   "abstract": "An IPv4 address, as JSON Schema `ipv4`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-ipv4",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
