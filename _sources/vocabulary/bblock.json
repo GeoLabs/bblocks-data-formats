@@ -203,6 +203,12 @@
     },
     {
       "role": "data",
+      "ref": "../format/eo-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: EO GeoJSON"
+    },
+    {
+      "role": "data",
       "ref": "../representation/geometry-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GML"
@@ -260,6 +266,12 @@
       "ref": "../representation/geometry-geojson/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/eo-product-eo-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Earth observation product as EO GeoJSON"
     },
     {
       "role": "data",

@@ -42,9 +42,9 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `data-formats.register` | The register, in JSON; profile of the RIM `register` schema |
 | `data-formats.item-class` | The two item classes, in JSON; profile of the RIM `register-item-class` schema |
 | `data-formats.format` | The format item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, and the 20 EOAP string formats `string-*` |
+| `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, `eo-geojson`, and the 20 EOAP string formats `string-*` |
 | `data-formats.representation` | The representation item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `eo-product-stac-item`, `rendered-image-png` |
+| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `eo-product-stac-item`, `eo-product-eo-geojson`, `rendered-image-png` |
 
 ### Formats
 
@@ -53,7 +53,8 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `geotiff` | OGC GeoTIFF Standard (version not stated where served) | `image/tiff` (tier 3, testbed), `image/tiff; application=geotiff` (testbed) |
 | `gml` | OGC GML Encoding Standard (version not established) | `text/xml` (tier 3, testbed) |
 | `las` | OGC 17-030r1 LAS 1.4 | `application/vnd.las` (tier 3), `application/x-ogc-lasf` (testbed) |
-| `geojson` | RFC 7946 | `application/geo+json` (testbed) |
+| `geojson` | RFC 7946 | `application/geo+json` (testbed); a JSON Schema fragment, the `$ref` to `https://geojson.org/schema/GeoJSON.json` (added 2026-11-17) |
+| `eo-geojson` | OGC 17-003r2 EO Dataset Metadata GeoJSON(-LD) Encoding Standard 1.0 | none observed; `application/geo+json`, stated by the specification (chapter 9); a JSON Schema fragment, the `$ref` to `https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json` (added 2026-11-17) |
 | `ogcapi-processes-bbox` | OGC 18-062r2 OGC API - Processes - Part 1: Core (`bbox` schema) | none observed; `application/json` inferred from the bbox JSON schema (OGC 18-062r2 states none); a JSON Schema fragment, the `$ref` to `ogc.api.processes.part1.v1.schemas.bbox` that tier 3 carried (added 2026-11-09) |
 | `png` | W3C PNG Specification (Third Edition) | `image/png` (testbed: `algae-bloom.plot-image`, added 2026-11-10) |
 | `stac-item` | STAC Item Specification 1.1.0 | none observed in a profile or on the testbed; `application/geo+json` inferred from the specification, which states it, and seen where the Earth Search STAC API serves the Items (added 2026-11-10); principal media type |

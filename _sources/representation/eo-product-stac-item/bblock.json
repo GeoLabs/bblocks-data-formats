@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.eo-product",
+  "hasFormat": [
+    "data-formats.representation.eo-product-eo-geojson"
+  ],
   "group": "Representations",
   "highlighted": false
 }
