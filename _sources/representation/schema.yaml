@@ -20,6 +20,9 @@ properties:
     type: string
     format: uri
     pattern: ^https://w3id\.org/geolabs/ospd/data-formats/format/[a-z0-9-]+$
+  jsonSchemaFragment:
+    description: The JSON Schema of the data type in this format, when one exists.
+    type: object
   hasAction:
     description: >-
       The proposed addition, alone or followed by later actions on the item, as for a format. The schema

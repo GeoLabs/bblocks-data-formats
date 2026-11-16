@@ -10,6 +10,10 @@ A JSON encoding of geographic features and geometries.
 
 RFC 7946 is the only GeoJSON specification cited; the testbed states no version.
 
+## JSON Schema fragment
+
+`df:jsonSchemaFragment` is a reference to `https://geojson.org/schema/GeoJSON.json`, the schema of any GeoJSON object, published by [geojson/schema](https://github.com/geojson/schema) (added on 2026-11-17, action `amendment-schema-fragment-2026-11-17`, classified substantive). The GeoJSON representations carry the schema of their own data type. The schemas are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule.
+
 ## Observed media types
 
 Measured on 2026-11-09 in the Implementation Profiles of `bblocks-generic-profiles` (branch `planes/phase-1-docs`, `b0da6aa`) and in the testbed process descriptions of `bblocks-process-profiles-tests-1` (`5e4116d`). No principal media type is set: none has been chosen.

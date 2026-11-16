@@ -16,6 +16,7 @@
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://geojson.org/schema/FeatureCollection.json\"}"^^rdf:JSON ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
     rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-geojson/actions/addition> .

@@ -94,8 +94,8 @@ df:primaryMediaType a owl:DatatypeProperty ;
 df:jsonSchemaFragment a owl:DatatypeProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:label "JSON Schema fragment" ;
-    rdfs:comment "The JSON Schema that expresses this format, as a JSON literal; changing it is a substantive change." ;
-    rdfs:domain df:Format ;
+    rdfs:comment "The JSON Schema that expresses this format or, on a representation, the data type it realizes in its format, as a JSON literal; changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( df:Format df:Representation ) ] ;
     rdfs:range rdf:JSON .
 
 df:parameter a owl:ObjectProperty ;

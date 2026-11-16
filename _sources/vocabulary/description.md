@@ -6,7 +6,7 @@ profile of the [Registered Item Model](https://ogcincubator.github.io/registered
 | Class | Item class | Realizes | Carries |
 |---|---|---|---|
 | `df:Format` | `df:formatItemClass` | nothing | specification (`dct:conformsTo`), observed media types (`df:observedMediaType`), media types taken from a source (`df:inferredMediaType`: stated by the specification, or inferred when it states none; with source and justification), at most one principal media type (`df:primaryMediaType`, one of those recorded) and/or a JSON Schema fragment (`df:jsonSchemaFragment`), parameters (`df:parameter`) |
-| `df:Representation` | `df:representationItemClass` | one `dt:DataTypeVersion` of the data-types register | one format (`df:format`) |
+| `df:Representation` | `df:representationItemClass` | one `dt:DataTypeVersion` of the data-types register | one format (`df:format`), and optionally the JSON Schema fragment of the data type in that format (`df:jsonSchemaFragment`) |
 
 Both are sub-classes of `rim:RegisterItem`, so `rim:RegisterItemShape` applies to every item. Every
 item records its addition, proposed by GeoLabs, and is `rim:invalid` and `rim:published`: a proposal

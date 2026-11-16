@@ -53,7 +53,9 @@ df:RepresentationShape a sh:NodeShape ;
     sh:property [ sh:path rim:realizes ; sh:class dt:DataTypeVersion ; sh:minCount 1 ; sh:maxCount 1 ;
                   sh:message "A representation realizes exactly one dt:DataTypeVersion of the data-types register." ] ;
     sh:property [ sh:path df:format ; sh:class df:Format ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:message "A representation points to exactly one df:Format." ] .
+                  sh:message "A representation points to exactly one df:Format." ] ;
+    sh:property [ sh:path df:jsonSchemaFragment ; sh:datatype rdf:JSON ; sh:maxCount 1 ;
+                  sh:message "The JSON Schema fragment of a representation is one JSON literal (rdf:JSON)." ] .
 
 df:AdditionProposalShape a sh:NodeShape ;
     sh:targetClass df:Format , df:Representation ;

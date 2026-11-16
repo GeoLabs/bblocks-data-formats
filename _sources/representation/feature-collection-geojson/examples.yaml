@@ -13,6 +13,9 @@ examples:
             "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
             "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1",
             "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+            "jsonSchemaFragment": {
+              "$ref": "https://geojson.org/schema/FeatureCollection.json"
+            },
             "validityStatus": "invalid",
             "publicationStatus": "published",
             "hasAction": {

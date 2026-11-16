@@ -16,6 +16,7 @@
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
+    df:jsonSchemaFragment "{\"oneOf\":[{\"$ref\":\"https://geojson.org/schema/Polygon.json\"},{\"$ref\":\"https://geojson.org/schema/MultiPolygon.json\"}]}"^^rdf:JSON ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
     rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/surface-geojson/actions/addition> .

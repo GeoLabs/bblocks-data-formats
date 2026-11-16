@@ -18,8 +18,10 @@
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/addition> ,
+        <https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/amendment-schema-fragment-2026-11-17> ;
     dct:conformsTo <https://www.rfc-editor.org/rfc/rfc7946> ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://geojson.org/schema/GeoJSON.json\"}"^^rdf:JSON ;
     df:observedMediaType [ df:mediaType "application/geo+json" ; df:observedIn "testbed" ] .
 
 <https://www.rfc-editor.org/rfc/rfc7946> dct:title "RFC 7946 The GeoJSON Format" .
@@ -29,3 +31,12 @@
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/amendment-schema-fragment-2026-11-17> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:affectedProperty df:jsonSchemaFragment ;
+    dct:description "JSON Schema fragment added (df:jsonSchemaFragment): a reference to https://geojson.org/schema/GeoJSON.json, the schema of any GeoJSON object published by https://github.com/geojson/schema. The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6). Decision of Gérald, 2026-11-17. The specification and the observed media type are unchanged. Classified substantive: the register specification lists the schema fragment among the substantive changes."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
