@@ -3,6 +3,7 @@
   "name": "Format: Email address string",
   "abstract": "An email address, as JSON Schema `email`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-email",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

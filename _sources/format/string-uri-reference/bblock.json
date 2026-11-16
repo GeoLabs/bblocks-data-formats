@@ -3,6 +3,7 @@
   "name": "Format: URI reference string",
   "abstract": "A URI reference, as JSON Schema `uri-reference`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-uri-reference",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",

@@ -3,6 +3,7 @@
   "name": "Format: UUID string",
   "abstract": "A UUID, as JSON Schema `uuid`.",
   "status": "under-development",
+  "predecessor": "data-types.data-type.string-uuid",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
   "version": "0.1",
   "register": "data-formats",
