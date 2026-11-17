@@ -389,6 +389,20 @@ Links to the schema:
       "@id": "df:jsonSchemaFragment",
       "@type": "@json"
     },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
+    },
     "parameters": {
       "@context": {
         "name": "df:parameterName",

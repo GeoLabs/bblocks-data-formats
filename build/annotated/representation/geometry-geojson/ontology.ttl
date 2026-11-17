@@ -1,24 +1,36 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson> a df:Representation,
-        rim:RegisterItem ;
-    dct:title "Geometry as GeoJSON"@en ;
-    df:format <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition> ;
-    rim:inRegister df:register ;
-    rim:itemClass df:representationItemClass ;
-    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson"^^xsd:anyURI ;
-    rim:publicationStatus rim:published ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
-    rim:validityStatus rim:invalid .
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson> ;
     rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/amendment-schema-fragment-2026-11-17> a rim:RegisterAction ;
+    dct:description "JSON Schema fragment added (df:jsonSchemaFragment): a reference to https://geojson.org/schema/Geometry.json, the schema of a GeoJSON geometry object published by https://github.com/geojson/schema. The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6). Decision of Gérald, 2026-11-17: each GeoJSON representation carries the schema of its data type. The realized data type version and the format are unchanged. Classified substantive: the register specification lists the schema fragment among the substantive changes."@en ;
+    prov:startedAtTime "2026-11-17T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType df:amendmentAction ;
+    rim:affectedProperty df:jsonSchemaFragment ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson> ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson> a df:Representation,
+        rim:RegisterItem ;
+    dct:title "Geometry as GeoJSON"@en ;
+    df:format <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://geojson.org/schema/Geometry.json\"}"^^rdf:JSON ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition>,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/amendment-schema-fragment-2026-11-17> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:representationItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
+    rim:validityStatus rim:invalid .
 

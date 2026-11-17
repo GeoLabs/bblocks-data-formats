@@ -17,6 +17,9 @@
   "isDescribedBy": [
     "data-types.data-type.eo-product"
   ],
+  "hasFormat": [
+    "data-formats.representation.eo-product-eo-geojson"
+  ],
   "group": "Representations",
   "highlighted": false,
   "shaclShapes": {
@@ -33,7 +36,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-16",
+  "dateOfLastChange": "2026-11-17",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/eo-product-stac-item/schema.yaml",
@@ -45,7 +48,7 @@
   "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/eo-product-stac-item/",
   "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/eo-product-stac-item/",
-  "description": "The eo-product data type of the data-types register, represented in STAC Item.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [STAC Item](../../format/stac-item/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`.\n\n## Requested by\n\nAdded on 2026-11-10 for roles of the new Implementation Profiles of `bblocks-generic-profiles` (branch `planes/new-profiles`):\n\n- [`implementation-profile/product-selection/outputs/products`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/product-selection/outputs/products)\n- [`implementation-profile/band-retrieval/inputs/product`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/band-retrieval/inputs/product)\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "description": "The eo-product data type of the data-types register, represented in STAC Item.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [STAC Item](../../format/stac-item/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`. `hasFormat` names [`eo-product-eo-geojson`](../eo-product-eo-geojson/), which represents the same data type in another format.\n\n## Requested by\n\nAdded on 2026-11-10 for roles of the new Implementation Profiles of `bblocks-generic-profiles` (branch `planes/new-profiles`):\n\n- [`implementation-profile/product-selection/outputs/products`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/product-selection/outputs/products)\n- [`implementation-profile/band-retrieval/inputs/product`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/band-retrieval/inputs/product)\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
   "examples": [
     {
       "title": "Earth observation product as STAC Item",

@@ -15,11 +15,17 @@ The geometry data type of the data-types register, represented in GeoJSON.
 
 `https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`. `hasFormat` names [`geometry-gml`](../geometry-gml/), which represents the same data type in another format.
 
+## Schema
+
+`df:jsonSchemaFragment` is a reference to `https://geojson.org/schema/Geometry.json`, published by [geojson/schema](https://github.com/geojson/schema). The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6).
+
 ## Requested by
 
 Added on 2026-11-10 for roles of the new Implementation Profiles of `bblocks-generic-profiles` (branch `planes/new-profiles`):
 
 - [`implementation-profile/product-selection/inputs/areaOfInterest`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/product-selection/inputs/areaOfInterest)
+
+The other GeoJSON object types were added the same day: every object type that geojson/schema publishes and that the data-types register defines now has a GeoJSON representation.
 
 ## Content of this block
 
@@ -41,16 +47,31 @@ The register item of the representation Geometry as GeoJSON: it realizes version
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+  "jsonSchemaFragment": {
+    "$ref": "https://geojson.org/schema/Geometry.json"
+  },
   "validityStatus": "invalid",
   "publicationStatus": "published",
-  "hasAction": {
-    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition",
-    "type": "RegisterAction",
-    "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
-    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
-    "startedAtTime": "2026-11-10T00:00:00Z"
-  }
+  "hasAction": [
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+      "startedAtTime": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/amendment-schema-fragment-2026-11-17",
+      "type": "RegisterAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+      "changeClassification": "substantive",
+      "description": "JSON Schema fragment added (df:jsonSchemaFragment): a reference to https://geojson.org/schema/Geometry.json, the schema of a GeoJSON geometry object published by https://github.com/geojson/schema. The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6). Decision of Gérald, 2026-11-17: each GeoJSON representation carries the schema of its data type. The realized data type version and the format are unchanged. Classified substantive: the register specification lists the schema fragment among the substantive changes.",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+      "startedAtTime": "2026-11-17T00:00:00Z"
+    }
+  ]
 }
 
 ```
@@ -75,15 +96,26 @@ The register item of the representation Geometry as GeoJSON: it realizes version
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
+    df:jsonSchemaFragment "{\"$ref\":\"https://geojson.org/schema/Geometry.json\"}"^^rdf:JSON ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition> ,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/amendment-schema-fragment-2026-11-17> .
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/amendment-schema-fragment-2026-11-17> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:affectedProperty df:jsonSchemaFragment ;
+    dct:description "JSON Schema fragment added (df:jsonSchemaFragment): a reference to https://geojson.org/schema/Geometry.json, the schema of a GeoJSON geometry object published by https://github.com/geojson/schema. The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6). Decision of Gérald, 2026-11-17: each GeoJSON representation carries the schema of its data type. The realized data type version and the format are unchanged. Classified substantive: the register specification lists the schema fragment among the substantive changes."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
 ```
 
@@ -98,16 +130,31 @@ The register item of the representation Geometry as GeoJSON: it realizes version
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
+  "jsonSchemaFragment": {
+    "$ref": "https://geojson.org/schema/Geometry.json"
+  },
   "validityStatus": "invalid",
   "publicationStatus": "published",
-  "hasAction": {
-    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition",
-    "type": "RegisterAction",
-    "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
-    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
-    "startedAtTime": "2026-11-10T00:00:00Z"
-  }
+  "hasAction": [
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+      "startedAtTime": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson/actions/amendment-schema-fragment-2026-11-17",
+      "type": "RegisterAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+      "changeClassification": "substantive",
+      "description": "JSON Schema fragment added (df:jsonSchemaFragment): a reference to https://geojson.org/schema/Geometry.json, the schema of a GeoJSON geometry object published by https://github.com/geojson/schema. The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6). Decision of G\u00e9rald, 2026-11-17: each GeoJSON representation carries the schema of its data type. The realized data type version and the format are unchanged. Classified substantive: the register specification lists the schema fragment among the substantive changes.",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
+      "startedAtTime": "2026-11-17T00:00:00Z"
+    }
+  ]
 }
 ```
 
@@ -322,10 +369,6 @@ Links to the schema:
     "mediaType": "df:mediaType",
     "observedIn": "df:observedIn",
     "primaryMediaType": "df:primaryMediaType",
-    "jsonSchemaFragment": {
-      "@id": "df:jsonSchemaFragment",
-      "@type": "@json"
-    },
     "parameters": "df:parameter",
     "name": "df:parameterName",
     "jsonSchemaKeyword": "df:jsonSchemaKeyword",
@@ -337,6 +380,24 @@ Links to the schema:
     "format": {
       "@id": "df:format",
       "@type": "@id"
+    },
+    "jsonSchemaFragment": {
+      "@id": "df:jsonSchemaFragment",
+      "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
     },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",

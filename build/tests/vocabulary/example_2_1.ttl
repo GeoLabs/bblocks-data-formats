@@ -94,9 +94,34 @@ df:primaryMediaType a owl:DatatypeProperty ;
 df:jsonSchemaFragment a owl:DatatypeProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:label "JSON Schema fragment" ;
-    rdfs:comment "The JSON Schema that expresses this format, as a JSON literal; changing it is a substantive change." ;
-    rdfs:domain df:Format ;
+    rdfs:comment "The JSON Schema that expresses this format or, on a representation, the data type it realizes in its format, as a JSON literal; changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( df:Format df:Representation ) ] ;
     rdfs:range rdf:JSON .
+
+df:XmlSchemaElement a owl:Class ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML Schema element" ;
+    rdfs:comment "A global element declared by an XML Schema: its namespace, its local name and the schema document that declares it." .
+
+df:xmlSchemaElement a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML Schema element" ;
+    rdfs:comment "The XML Schema element that expresses this format or, on a representation, the data type it realizes in its format: the XML counterpart of df:jsonSchemaFragment. Changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( df:Format df:Representation ) ] ;
+    rdfs:range df:XmlSchemaElement .
+
+df:xmlNamespace a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML namespace" ;
+    rdfs:comment "The target namespace of the element, as an IRI." ;
+    rdfs:domain df:XmlSchemaElement .
+
+df:xmlLocalName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML local name" ;
+    rdfs:comment "The local name of the element (an XML NCName)." ;
+    rdfs:domain df:XmlSchemaElement ;
+    rdfs:range xsd:string .
 
 df:parameter a owl:ObjectProperty ;
     rdfs:isDefinedBy df: ;

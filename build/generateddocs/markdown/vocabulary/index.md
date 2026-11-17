@@ -17,7 +17,7 @@ profile of the [Registered Item Model](https://ogcincubator.github.io/registered
 | Class | Item class | Realizes | Carries |
 |---|---|---|---|
 | `df:Format` | `df:formatItemClass` | nothing | specification (`dct:conformsTo`), observed media types (`df:observedMediaType`), media types taken from a source (`df:inferredMediaType`: stated by the specification, or inferred when it states none; with source and justification), at most one principal media type (`df:primaryMediaType`, one of those recorded) and/or a JSON Schema fragment (`df:jsonSchemaFragment`), parameters (`df:parameter`) |
-| `df:Representation` | `df:representationItemClass` | one `dt:DataTypeVersion` of the data-types register | one format (`df:format`) |
+| `df:Representation` | `df:representationItemClass` | one `dt:DataTypeVersion` of the data-types register | one format (`df:format`), and optionally the JSON Schema fragment (`df:jsonSchemaFragment`) or the XML Schema element (`df:xmlSchemaElement`: namespace, local name, schema document) of the data type in that format |
 
 Both are sub-classes of `rim:RegisterItem`, so `rim:RegisterItemShape` applies to every item. Every
 item records its addition, proposed by GeoLabs, and is `rim:invalid` and `rim:published`: a proposal
@@ -84,7 +84,7 @@ df:specification a rim:RegisterSpecification ;
     dct:title "Data Formats register specification"@en ;
     dct:description
         "Scope. This register holds the content plane of the data axis: formats (df:Format) and representations (df:Representation). The meaning of data, the data types, is held by the data-types register (https://geolabs.github.io/bblocks-data-types/), not here."@en ,
-        "Register type. A content register, as the Registered Item Model uses the term: this register has no concept plane of its own. A format realizes no concept version. A representation realizes (rim:realizes) at most one dt:DataTypeVersion of the data-types register, which is the concept plane it represents, and points to one format. A representation is created when an existing role needs it."@en ,
+        "Register type. A content register, as the Registered Item Model uses the term: this register has no concept plane of its own. A format realizes no concept version. A representation realizes (rim:realizes) at most one dt:DataTypeVersion of the data-types register, which is the concept plane it represents, and points to one format. A representation is created when an existing role needs it, or to complete, in another format, the representations of a data type that already has one, or for each object type that the specification of a format defines and that the data-types register defines as a data type."@en ,
         "Relation with the data-types register. This register depends on the data-types register; the data-types register never depends on this register. The Registered Item Model allows a dt:DataTypeVersion to be realized by items of both registers, its own dt:DataTypeItem and representations of this register: it limits rim:realizes to one version per item (rim:RegisterItemShape), not to one item per version."@en ,
         "Replacement of a data type. When a format or a representation replaces an item of the data-types register, it carries rim:supersedes towards that item, which is typed in the closure this register validates; the replaced item carries dct:isReplacedBy towards it. The 19 string-* formats supersede the withdrawn string-* data types."@en ,
         "Roles. GeoLabs SARL is the register owner, the register manager and, for now, the control body. GeoLabs intends to delegate the control body role to the OGC or to an OSPD working group."@en ,
@@ -231,9 +231,34 @@ df:primaryMediaType a owl:DatatypeProperty ;
 df:jsonSchemaFragment a owl:DatatypeProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:label "JSON Schema fragment" ;
-    rdfs:comment "The JSON Schema that expresses this format, as a JSON literal; changing it is a substantive change." ;
-    rdfs:domain df:Format ;
+    rdfs:comment "The JSON Schema that expresses this format or, on a representation, the data type it realizes in its format, as a JSON literal; changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( df:Format df:Representation ) ] ;
     rdfs:range rdf:JSON .
+
+df:XmlSchemaElement a owl:Class ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML Schema element" ;
+    rdfs:comment "A global element declared by an XML Schema: its namespace, its local name and the schema document that declares it." .
+
+df:xmlSchemaElement a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML Schema element" ;
+    rdfs:comment "The XML Schema element that expresses this format or, on a representation, the data type it realizes in its format: the XML counterpart of df:jsonSchemaFragment. Changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( df:Format df:Representation ) ] ;
+    rdfs:range df:XmlSchemaElement .
+
+df:xmlNamespace a owl:ObjectProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML namespace" ;
+    rdfs:comment "The target namespace of the element, as an IRI." ;
+    rdfs:domain df:XmlSchemaElement .
+
+df:xmlLocalName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy df: ;
+    rdfs:label "XML local name" ;
+    rdfs:comment "The local name of the element (an XML NCName)." ;
+    rdfs:domain df:XmlSchemaElement ;
+    rdfs:range xsd:string .
 
 df:parameter a owl:ObjectProperty ;
     rdfs:isDefinedBy df: ;

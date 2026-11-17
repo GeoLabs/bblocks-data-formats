@@ -47,6 +47,12 @@ A format of this register, in JSON: a profile of the Registered Item Model regis
 
 A representation of this register, in JSON: a profile of the Registered Item Model register item that realizes one data type version of the data-types register and points to one format.
 
+### `data-formats.format.eo-geojson` — Format: EO GeoJSON
+
+**Type:** schema
+
+A GeoJSON encoding of Earth observation dataset metadata: a Feature, or a FeatureCollection, that describes EO products.
+
 ### `data-formats.format.geojson` — Format: GeoJSON
 
 **Type:** schema
@@ -233,17 +239,53 @@ A UUID, as JSON Schema `uuid`.
 
 The bounding-box data type of the data-types register, represented as an OGC API - Processes bbox object.
 
+### `data-formats.representation.curve-gml` — Representation: Curve as GML
+
+**Type:** schema
+
+The curve data type of the data-types register, represented in GML.
+
+### `data-formats.representation.eo-product-eo-geojson` — Representation: Earth observation product as EO GeoJSON
+
+**Type:** schema
+
+The eo-product data type of the data-types register, represented in EO GeoJSON.
+
 ### `data-formats.representation.eo-product-stac-item` — Representation: Earth observation product as STAC Item
 
 **Type:** schema
 
 The eo-product data type of the data-types register, represented in STAC Item.
 
+### `data-formats.representation.feature-collection-geojson` — Representation: Feature collection as GeoJSON
+
+**Type:** schema
+
+The feature-collection data type of the data-types register, represented in GeoJSON.
+
 ### `data-formats.representation.feature-collection-gml` — Representation: Feature collection as GML
 
 **Type:** schema
 
 The feature-collection data type of the data-types register, represented in GML.
+
+### `data-formats.representation.feature-geojson` — Representation: Feature as GeoJSON
+
+**Type:** schema
+
+The feature data type of the data-types register, represented in GeoJSON.
+
+### `data-formats.representation.geometry-collection-geojson` — Representation: GeometryCollection as GeoJSON
+
+**Type:** schema
+
+The geometry-collection data type of the data-types register, represented in GeoJSON.
+
+### `data-formats.representation.geometry-collection-gml` — Representation: GeometryCollection as GML
+
+**Type:** schema
+
+The geometry-collection data type of the data-types register, represented in GML.
 
 ### `data-formats.representation.geometry-geojson` — Representation: Geometry as GeoJSON
 
@@ -262,6 +304,12 @@ The geometry data type of the data-types register, represented in GML.
 **Type:** schema
 
 The point-cloud data type of the data-types register, represented in LAS.
+
+### `data-formats.representation.point-geojson` — Representation: Point as GeoJSON
+
+**Type:** schema
+
+The point data type of the data-types register, represented in GeoJSON.
 
 ### `data-formats.representation.point-gml` — Representation: Point as GML
 
@@ -287,15 +335,81 @@ The raster-single-band data type of the data-types register, represented in GeoT
 
 The rendered-image data type of the data-types register, represented in PNG.
 
+### `data-formats.representation.surface-geojson` — Representation: Surface as GeoJSON
+
+**Type:** schema
+
+The surface data type of the data-types register, represented in GeoJSON.
+
 ### `data-formats.representation.surface-gml` — Representation: Surface as GML
 
 **Type:** schema
 
 The surface data type of the data-types register, represented in GML.
 
+### `data-formats.representation.line-string-geojson` — Representation: LineString as GeoJSON
+
+**Type:** schema
+
+The line-string data type of the data-types register, represented in GeoJSON.
+
+### `data-formats.representation.line-string-gml` — Representation: LineString as GML
+
+**Type:** schema
+
+The line-string data type of the data-types register, represented in GML.
+
+### `data-formats.representation.multi-curve-gml` — Representation: MultiCurve as GML
+
+**Type:** schema
+
+The multi-curve data type of the data-types register, represented in GML.
+
+### `data-formats.representation.multi-point-geojson` — Representation: MultiPoint as GeoJSON
+
+**Type:** schema
+
+The multi-point data type of the data-types register, represented in GeoJSON.
+
+### `data-formats.representation.multi-point-gml` — Representation: MultiPoint as GML
+
+**Type:** schema
+
+The multi-point data type of the data-types register, represented in GML.
+
+### `data-formats.representation.multi-surface-gml` — Representation: MultiSurface as GML
+
+**Type:** schema
+
+The multi-surface data type of the data-types register, represented in GML.
+
+### `data-formats.representation.polygon-geojson` — Representation: Polygon as GeoJSON
+
+**Type:** schema
+
+The polygon data type of the data-types register, represented in GeoJSON.
+
+### `data-formats.representation.polygon-gml` — Representation: Polygon as GML
+
+**Type:** schema
+
+The polygon data type of the data-types register, represented in GML.
+
 ### `data-formats.representation.elevation-model-geotiff` — Representation: Elevation model as GeoTIFF
 
 **Type:** schema
 
 The elevation-model data type of the data-types register, represented in GeoTIFF.
+
+### `data-formats.representation.multi-line-string-geojson` — Representation: MultiLineString as GeoJSON
+
+**Type:** schema
+
+The multi-line-string data type of the data-types register, represented in GeoJSON.
+
+### `data-formats.representation.multi-polygon-geojson` — Representation: MultiPolygon as GeoJSON
+
+**Type:** schema
+
+The multi-polygon data type of the data-types register, represented in GeoJSON.
 

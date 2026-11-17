@@ -1,0 +1,25 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-collection-gml/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-collection-gml",
+  "type": "Representation",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-collection-gml",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/v1",
+  "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+  "xmlSchemaElement": {
+    "namespace": "http://www.opengis.net/gml/3.2",
+    "localName": "MultiGeometry",
+    "schema": "https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd"
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-collection-gml/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-collection-gml",
+    "startedAtTime": "2026-11-17T00:00:00Z"
+  }
+}

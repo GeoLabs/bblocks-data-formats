@@ -30,8 +30,9 @@ df:inferredMediaType a owl:ObjectProperty ;
 
 df:jsonSchemaFragment a owl:DatatypeProperty ;
     rdfs:label "JSON Schema fragment" ;
-    rdfs:comment "The JSON Schema that expresses this format, as a JSON literal; changing it is a substantive change." ;
-    rdfs:domain df:Format ;
+    rdfs:comment "The JSON Schema that expresses this format or, on a representation, the data type it realizes in its format, as a JSON literal; changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( df:Format df:Representation ) ] ;
     rdfs:isDefinedBy df: ;
     rdfs:range rdf:JSON .
 
@@ -79,9 +80,35 @@ df:primaryMediaType a owl:DatatypeProperty ;
     rdfs:isDefinedBy df: ;
     rdfs:range xsd:string .
 
+df:xmlLocalName a owl:DatatypeProperty ;
+    rdfs:label "XML local name" ;
+    rdfs:comment "The local name of the element (an XML NCName)." ;
+    rdfs:domain df:XmlSchemaElement ;
+    rdfs:isDefinedBy df: ;
+    rdfs:range xsd:string .
+
+df:xmlNamespace a owl:ObjectProperty ;
+    rdfs:label "XML namespace" ;
+    rdfs:comment "The target namespace of the element, as an IRI." ;
+    rdfs:domain df:XmlSchemaElement ;
+    rdfs:isDefinedBy df: .
+
+df:xmlSchemaElement a owl:ObjectProperty ;
+    rdfs:label "XML Schema element" ;
+    rdfs:comment "The XML Schema element that expresses this format or, on a representation, the data type it realizes in its format: the XML counterpart of df:jsonSchemaFragment. Changing it is a substantive change." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( df:Format df:Representation ) ] ;
+    rdfs:isDefinedBy df: ;
+    rdfs:range df:XmlSchemaElement .
+
 df:MediaTypeInference a owl:Class ;
     rdfs:label "Media type inference" ;
     rdfs:comment "A media type of a format taken from a source rather than observed (df:mediaType): stated by its specification, or inferred; with that source (dct:source) and why (dct:description)." ;
+    rdfs:isDefinedBy df: .
+
+df:MediaTypeObservation a owl:Class ;
+    rdfs:label "Media type observation" ;
+    rdfs:comment "A media type under which a format was observed, and where: in an Implementation Profile (tier 3) or in a testbed process description (tier 4)." ;
     rdfs:isDefinedBy df: .
 
 df:Representation a owl:Class ;
@@ -90,9 +117,9 @@ df:Representation a owl:Class ;
     rdfs:isDefinedBy df: ;
     rdfs:subClassOf rim:RegisterItem .
 
-df:MediaTypeObservation a owl:Class ;
-    rdfs:label "Media type observation" ;
-    rdfs:comment "A media type under which a format was observed, and where: in an Implementation Profile (tier 3) or in a testbed process description (tier 4)." ;
+df:XmlSchemaElement a owl:Class ;
+    rdfs:label "XML Schema element" ;
+    rdfs:comment "A global element declared by an XML Schema: its namespace, its local name and the schema document that declares it." ;
     rdfs:isDefinedBy df: .
 
 df:Format a owl:Class ;

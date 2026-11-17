@@ -24,7 +24,7 @@ A `df:Format` is a `rim:RegisterItem` of the `df:formatItemClass` item class. It
   `df:inferredMediaType`), each with its source (`dct:source`) and justification
   (`dct:description`), checked by `df:MediaTypeInferenceShape`.
 
-A principal media type (`primaryMediaType`, `df:primaryMediaType`) is set only where a specification states the media type: the four STAC formats (`stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`). It is one of the format's recorded media types, checked by `df:PrimaryMediaTypeShape`. None is set on the other formats: none has been chosen.
+A principal media type (`primaryMediaType`, `df:primaryMediaType`) is set only where a specification states the media type: the four STAC formats (`stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`) and `eo-geojson` (OGC 17-003r2, chapter 9). It is one of the format's recorded media types, checked by `df:PrimaryMediaTypeShape`. None is set on the other formats: none has been chosen.
 
 A format is bound to a data type by a [representation](../representation/).
 
@@ -138,6 +138,30 @@ properties:
     type: object
     x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment
     x-jsonld-type: '@json'
+  xmlSchemaElement:
+    description: The XML Schema element of the data type in this format, when one
+      exists.
+    type: object
+    required:
+    - namespace
+    - localName
+    - schema
+    properties:
+      namespace:
+        type: string
+        format: uri
+        x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/xmlNamespace
+        x-jsonld-type: '@id'
+      localName:
+        type: string
+        pattern: ^[A-Za-z_][A-Za-z0-9._-]*$
+        x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/xmlLocalName
+      schema:
+        type: string
+        format: uri
+        x-jsonld-id: http://purl.org/dc/terms/source
+        x-jsonld-type: '@id'
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/xmlSchemaElement
   parameters:
     type: array
     items:
@@ -514,6 +538,20 @@ Links to the schema:
     "jsonSchemaFragment": {
       "@id": "df:jsonSchemaFragment",
       "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
     },
     "parameters": {
       "@context": {

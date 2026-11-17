@@ -13,7 +13,11 @@ The surface data type of the data-types register, represented in GML.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.surface`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.surface`. `hasFormat` names [`surface-geojson`](../surface-geojson/), which represents the same data type in another format.
+
+## Schema
+
+`df:xmlSchemaElement` names the element `gml:Surface` (namespace `http://www.opengis.net/gml/3.2`), declared in [`geometryPrimitives.xsd`](https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd) of the GML 3.2.1 XML Schemas.
 
 ## Requested by
 
@@ -45,16 +49,33 @@ The register item of the representation Surface as GML: it realizes version 1 of
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+  "xmlSchemaElement": {
+    "namespace": "http://www.opengis.net/gml/3.2",
+    "localName": "Surface",
+    "schema": "https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd"
+  },
   "validityStatus": "invalid",
   "publicationStatus": "published",
-  "hasAction": {
-    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition",
-    "type": "RegisterAction",
-    "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
-    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml",
-    "startedAtTime": "2026-11-09T00:00:00Z"
-  }
+  "hasAction": [
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml",
+      "startedAtTime": "2026-11-09T00:00:00Z"
+    },
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/amendment-xml-schema-element-2026-11-17",
+      "type": "RegisterAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+      "changeClassification": "substantive",
+      "description": "XML Schema element named (df:xmlSchemaElement): gml:Surface, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format.",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml",
+      "startedAtTime": "2026-11-17T00:00:00Z"
+    }
+  ]
 }
 
 ```
@@ -80,15 +101,28 @@ The register item of the representation Surface as GML: it realizes version 1 of
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
+    df:xmlSchemaElement [ df:xmlNamespace <http://www.opengis.net/gml/3.2> ;
+        df:xmlLocalName "Surface" ;
+        dct:source <https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd> ] ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition> ,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/amendment-xml-schema-element-2026-11-17> .
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/amendment-xml-schema-element-2026-11-17> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:affectedProperty df:xmlSchemaElement ;
+    dct:description "XML Schema element named (df:xmlSchemaElement): gml:Surface, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
 ```
 
@@ -103,16 +137,33 @@ The register item of the representation Surface as GML: it realizes version 1 of
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+  "xmlSchemaElement": {
+    "namespace": "http://www.opengis.net/gml/3.2",
+    "localName": "Surface",
+    "schema": "https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd"
+  },
   "validityStatus": "invalid",
   "publicationStatus": "published",
-  "hasAction": {
-    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition",
-    "type": "RegisterAction",
-    "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
-    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml",
-    "startedAtTime": "2026-11-09T00:00:00Z"
-  }
+  "hasAction": [
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml",
+      "startedAtTime": "2026-11-09T00:00:00Z"
+    },
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/amendment-xml-schema-element-2026-11-17",
+      "type": "RegisterAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+      "changeClassification": "substantive",
+      "description": "XML Schema element named (df:xmlSchemaElement): gml:Surface, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). Decision of G\u00e9rald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format.",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml",
+      "startedAtTime": "2026-11-17T00:00:00Z"
+    }
+  ]
 }
 ```
 
@@ -327,10 +378,6 @@ Links to the schema:
     "mediaType": "df:mediaType",
     "observedIn": "df:observedIn",
     "primaryMediaType": "df:primaryMediaType",
-    "jsonSchemaFragment": {
-      "@id": "df:jsonSchemaFragment",
-      "@type": "@json"
-    },
     "parameters": "df:parameter",
     "name": "df:parameterName",
     "jsonSchemaKeyword": "df:jsonSchemaKeyword",
@@ -342,6 +389,24 @@ Links to the schema:
     "format": {
       "@id": "df:format",
       "@type": "@id"
+    },
+    "jsonSchemaFragment": {
+      "@id": "df:jsonSchemaFragment",
+      "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
     },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",

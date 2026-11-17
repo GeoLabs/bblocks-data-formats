@@ -4,21 +4,34 @@
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml> ;
+    rim:proposer df:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/amendment-xml-schema-element-2026-11-17> a rim:RegisterAction ;
+    dct:description "XML Schema element named (df:xmlSchemaElement): gml:FeatureCollection, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). GML 3.2.1 declares it deprecated (`appinfo` deprecated): an application schema is expected to define its own feature collection. Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format."@en ;
+    prov:startedAtTime "2026-11-17T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType df:amendmentAction ;
+    rim:affectedProperty df:xmlSchemaElement ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml> ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:proposer df:geolabs .
+
 <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml> a df:Representation,
         rim:RegisterItem ;
     dct:title "Feature collection as GML"@en ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition> ;
+    df:xmlSchemaElement [ dct:source <https://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd> ;
+            df:xmlLocalName "FeatureCollection" ;
+            df:xmlNamespace <http://www.opengis.net/gml/3.2> ] ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition>,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/amendment-xml-schema-element-2026-11-17> ;
     rim:inRegister df:register ;
     rim:itemClass df:representationItemClass ;
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1> ;
     rim:validityStatus rim:invalid .
-
-<https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition> a rim:RegisterAction ;
-    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
-    rim:actionType rim:additionAction ;
-    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml> ;
-    rim:proposer df:geolabs .
 

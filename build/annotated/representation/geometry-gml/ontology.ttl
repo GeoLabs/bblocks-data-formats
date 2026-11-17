@@ -18,12 +18,25 @@
     rim:changeClassification rim:clarifyingChange ;
     rim:proposer df:geolabs .
 
+<https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-xml-schema-element-2026-11-17> a rim:RegisterAction ;
+    dct:description "XML Schema element named (df:xmlSchemaElement): gml:AbstractGeometry, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). It is abstract: a GML geometry is any element of its substitution group. Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format."@en ;
+    prov:startedAtTime "2026-11-17T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType df:amendmentAction ;
+    rim:affectedProperty df:xmlSchemaElement ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:proposer df:geolabs .
+
 <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> a df:Representation,
         rim:RegisterItem ;
     dct:title "Geometry as GML"@en ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
+    df:xmlSchemaElement [ dct:source <https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd> ;
+            df:xmlLocalName "AbstractGeometry" ;
+            df:xmlNamespace <http://www.opengis.net/gml/3.2> ] ;
     rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition>,
-        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format> ;
+        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-has-format>,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/amendment-xml-schema-element-2026-11-17> ;
     rim:inRegister df:register ;
     rim:itemClass df:representationItemClass ;
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml"^^xsd:anyURI ;

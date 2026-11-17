@@ -69,6 +69,35 @@ properties:
     pattern: ^https://w3id\.org/geolabs/ospd/data-formats/format/[a-z0-9-]+$
     x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/format
     x-jsonld-type: '@id'
+  jsonSchemaFragment:
+    description: The JSON Schema of the data type in this format, when one exists.
+    type: object
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment
+    x-jsonld-type: '@json'
+  xmlSchemaElement:
+    description: The XML Schema element of the data type in this format, when one
+      exists.
+    type: object
+    required:
+    - namespace
+    - localName
+    - schema
+    properties:
+      namespace:
+        type: string
+        format: uri
+        x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/xmlNamespace
+        x-jsonld-type: '@id'
+      localName:
+        type: string
+        pattern: ^[A-Za-z_][A-Za-z0-9._-]*$
+        x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/xmlLocalName
+      schema:
+        type: string
+        format: uri
+        x-jsonld-id: http://purl.org/dc/terms/source
+        x-jsonld-type: '@id'
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/xmlSchemaElement
   hasAction:
     description: 'The proposed addition, alone or followed by later actions on the
       item, as for a format. The schema requires the addition; it does not constrain
@@ -189,9 +218,6 @@ x-jsonld-extra-terms:
   mediaType: https://w3id.org/geolabs/ospd/data-formats/mediaType
   observedIn: https://w3id.org/geolabs/ospd/data-formats/observedIn
   primaryMediaType: https://w3id.org/geolabs/ospd/data-formats/primaryMediaType
-  jsonSchemaFragment:
-    x-jsonld-id: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment
-    x-jsonld-type: '@json'
   parameters: https://w3id.org/geolabs/ospd/data-formats/parameter
   name: https://w3id.org/geolabs/ospd/data-formats/parameterName
   jsonSchemaKeyword: https://w3id.org/geolabs/ospd/data-formats/jsonSchemaKeyword
@@ -408,10 +434,6 @@ Links to the schema:
     "mediaType": "df:mediaType",
     "observedIn": "df:observedIn",
     "primaryMediaType": "df:primaryMediaType",
-    "jsonSchemaFragment": {
-      "@id": "df:jsonSchemaFragment",
-      "@type": "@json"
-    },
     "parameters": "df:parameter",
     "name": "df:parameterName",
     "jsonSchemaKeyword": "df:jsonSchemaKeyword",
@@ -423,6 +445,24 @@ Links to the schema:
     "format": {
       "@id": "df:format",
       "@type": "@id"
+    },
+    "jsonSchemaFragment": {
+      "@id": "df:jsonSchemaFragment",
+      "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
     },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",

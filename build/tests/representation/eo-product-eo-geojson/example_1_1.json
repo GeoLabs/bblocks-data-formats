@@ -1,0 +1,22 @@
+{
+  "id": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson",
+  "type": "Representation",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1",
+  "format": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
+  "jsonSchemaFragment": {
+    "$ref": "https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json#/definitions/EarthObservation"
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson",
+    "startedAtTime": "2026-11-17T00:00:00Z"
+  }
+}

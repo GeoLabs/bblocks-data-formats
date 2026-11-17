@@ -6,11 +6,11 @@
 
 <https://w3id.org/geolabs/ospd/data-formats/format/geotiff> a df:Format ;
     dct:conformsTo <https://www.ogc.org/standards/geotiff/> ;
-    df:observedMediaType [ df:mediaType "image/tiff; application=geotiff" ;
-            df:observedIn "testbed" ],
-        [ df:mediaType "image/tiff" ;
+    df:observedMediaType [ df:mediaType "image/tiff" ;
             df:observedIn "implementation-profile" ],
         [ df:mediaType "image/tiff" ;
+            df:observedIn "testbed" ],
+        [ df:mediaType "image/tiff; application=geotiff" ;
             df:observedIn "testbed" ] ;
     rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/geotiff/actions/addition> ;
     rim:inRegister df:register ;

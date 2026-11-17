@@ -17,12 +17,25 @@
     rim:inRegister df:register ;
     rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
+    df:xmlSchemaElement [ df:xmlNamespace <http://www.opengis.net/gml/3.2> ;
+        df:xmlLocalName "Surface" ;
+        dct:source <https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd> ] ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition> .
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition> ,
+        <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/amendment-xml-schema-element-2026-11-17> .
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml/actions/amendment-xml-schema-element-2026-11-17> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:affectedProperty df:xmlSchemaElement ;
+    dct:description "XML Schema element named (df:xmlSchemaElement): gml:Surface, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/surface-gml> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .

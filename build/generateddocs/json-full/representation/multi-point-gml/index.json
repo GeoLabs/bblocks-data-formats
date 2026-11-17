@@ -1,0 +1,82 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.multi-point-gml",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: MultiPoint as GML",
+  "abstract": "The multi-point data type of the data-types register, represented in GML.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-17T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.multi-point"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.multi-point"
+  ],
+  "hasFormat": [
+    "data-formats.representation.multi-point-geojson"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-17",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/multi-point-gml/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/multi-point-gml/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/multi-point-gml/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/multi-point-gml/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/multi-point-gml/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/multi-point-gml/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/multi-point-gml/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/multi-point-gml/",
+  "description": "The multi-point data type of the data-types register, represented in GML.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/multi-point/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.multi-point`. `hasFormat` names [`multi-point-geojson`](../multi-point-geojson/), which represents the same data type in another format.\n\n## Schema\n\n`df:xmlSchemaElement` names the element `gml:MultiPoint` (namespace `http://www.opengis.net/gml/3.2`), declared in [`geometryAggregates.xsd`](https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd) of the GML 3.2.1 XML Schemas.\n\n## Requested by\n\nNo role requests it yet. Added on 2026-11-17 by decision of G\u00e9rald: every geometry element that the GML 3.2.1 XML Schemas declare and that the data-types register defines as a data type has a GML representation. `gml:MultiLineString` and `gml:MultiPolygon` are not declared by GML 3.2.1, so `multi-line-string` and `multi-polygon` have no GML representation. The register specification allows a representation for each object type a format's specification defines.\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "MultiPoint as GML",
+      "content": "The register item of the representation MultiPoint as GML: it realizes version 1 of the multi-point data type of the data-types register and points to the gml format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/multi-point-gml/example_1_1.json",
+          "sizeBytes": 1180,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/multi-point/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/gml\",\n  \"xmlSchemaElement\": {\n    \"namespace\": \"http://www.opengis.net/gml/3.2\",\n    \"localName\": \"MultiPoint\",\n    \"schema\": \"https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd\"\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\",\n    \"startedAtTime\": \"2026-11-17T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/multi-point-gml/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/multi-point-gml/example_1_2.ttl",
+          "sizeBytes": 1795,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml> a df:Representation, rim:RegisterItem ;\n    dct:title \"MultiPoint as GML\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-point/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;\n    df:xmlSchemaElement [ df:xmlNamespace <http://www.opengis.net/gml/3.2> ;\n        df:xmlLocalName \"MultiPoint\" ;\n        dct:source <https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd> ] ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml/actions/addition> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml> ;\n    prov:startedAtTime \"2026-11-17T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/multi-point-gml/example_1_1.jsonld",
+          "sizeBytes": 1305,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/multi-point-gml/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/multi-point/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/gml\",\n  \"xmlSchemaElement\": {\n    \"namespace\": \"http://www.opengis.net/gml/3.2\",\n    \"localName\": \"MultiPoint\",\n    \"schema\": \"https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd\"\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\",\n    \"startedAtTime\": \"2026-11-17T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - MultiPoint as GML\ndescription: The register item of the representation MultiPoint as GML, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-gml\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.multi-point-gml\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/multi-point-gml"
+}

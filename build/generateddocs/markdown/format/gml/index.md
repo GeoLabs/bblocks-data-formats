@@ -17,9 +17,9 @@ An XML encoding of geographic features and geometries.
 
 ## Specification
 
-- [OGC Geography Markup Language (GML) Encoding Standard](https://www.ogc.org/standards/gml/) (`dct:conformsTo`)
+- [OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007)](http://www.opengis.net/doc/IS/GML/3.2.1) (`dct:conformsTo`)
 
-No GML version is established: the Implementation Profiles say `GML` only, and the testbed's `contentSchema` values (`http://fooa/gml/3.1.0/polygon.xsd`, `http://fooa/gml/3.1.0/point.xsd`) are on a placeholder host.
+GML 3.2.1 since 2026-11-17 (decision of Gérald, action `amendment-gml-3-2-1-2026-11-17`, classified substantive). Its XML Schemas are published at <https://schemas.opengis.net/gml/3.2.1/> (`gml.xsd` declares version 3.2.2), target namespace `http://www.opengis.net/gml/3.2`; each GML representation names its element there (`df:xmlSchemaElement`). When the format was added, no version was established: the Implementation Profiles said `GML` only, and the testbed's `contentSchema` values (`http://fooa/gml/3.1.0/polygon.xsd`, `http://fooa/gml/3.1.0/point.xsd`) are on a placeholder host and name GML 3.1.0.
 
 ## Observed media types
 
@@ -50,8 +50,8 @@ The register item of the Geography Markup Language (GML) format, of the register
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "specification": [
     {
-      "id": "https://www.ogc.org/standards/gml/",
-      "title": "OGC Geography Markup Language (GML) Encoding Standard"
+      "id": "http://www.opengis.net/doc/IS/GML/3.2.1",
+      "title": "OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007)"
     }
   ],
   "observedMediaTypes": [
@@ -66,14 +66,26 @@ The register item of the Geography Markup Language (GML) format, of the register
   ],
   "validityStatus": "invalid",
   "publicationStatus": "published",
-  "hasAction": {
-    "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition",
-    "type": "RegisterAction",
-    "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
-    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
-    "startedAtTime": "2026-11-09T00:00:00Z"
-  }
+  "hasAction": [
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+      "startedAtTime": "2026-11-09T00:00:00Z"
+    },
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/amendment-gml-3-2-1-2026-11-17",
+      "type": "RegisterAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+      "changeClassification": "substantive",
+      "description": "Specification made precise (dct:conformsTo): OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007), http://www.opengis.net/doc/IS/GML/3.2.1, instead of the unversioned OGC GML page https://www.ogc.org/standards/gml/. Its XML Schemas are published at https://schemas.opengis.net/gml/3.2.1/ (gml.xsd declares version 3.2.2), target namespace http://www.opengis.net/gml/3.2. The representations of this format name their XML Schema element there (df:xmlSchemaElement). No version was established when the format was added: the Implementation Profiles said GML only and the testbed contentSchema values (http://fooa/gml/3.1.0/...) are on a placeholder host. Decision of Gérald, 2026-11-17. The observed media types are unchanged. Classified substantive: the register specification lists the version of the specification among the substantive changes.",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+      "startedAtTime": "2026-11-17T00:00:00Z"
+    }
+  ]
 }
 
 ```
@@ -100,18 +112,28 @@ The register item of the Geography Markup Language (GML) format, of the register
     rim:inRegister df:register ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
-    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition> ;
-    dct:conformsTo <https://www.ogc.org/standards/gml/> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition> ,
+        <https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/amendment-gml-3-2-1-2026-11-17> ;
+    dct:conformsTo <http://www.opengis.net/doc/IS/GML/3.2.1> ;
     df:observedMediaType [ df:mediaType "text/xml" ; df:observedIn "implementation-profile" ] ;
     df:observedMediaType [ df:mediaType "text/xml" ; df:observedIn "testbed" ] .
 
-<https://www.ogc.org/standards/gml/> dct:title "OGC Geography Markup Language (GML) Encoding Standard" .
+<http://www.opengis.net/doc/IS/GML/3.2.1> dct:title "OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007)" .
 
 <https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/amendment-gml-3-2-1-2026-11-17> a rim:RegisterAction ;
+    rim:actionType df:amendmentAction ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:affectedProperty dct:conformsTo ;
+    dct:description "Specification made precise (dct:conformsTo): OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007), http://www.opengis.net/doc/IS/GML/3.2.1, instead of the unversioned OGC GML page https://www.ogc.org/standards/gml/. Its XML Schemas are published at https://schemas.opengis.net/gml/3.2.1/ (gml.xsd declares version 3.2.2), target namespace http://www.opengis.net/gml/3.2. The representations of this format name their XML Schema element there (df:xmlSchemaElement). No version was established when the format was added: the Implementation Profiles said GML only and the testbed contentSchema values (http://fooa/gml/3.1.0/...) are on a placeholder host. Decision of Gérald, 2026-11-17. The observed media types are unchanged. Classified substantive: the register specification lists the version of the specification among the substantive changes."@en ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
 ```
 
@@ -126,8 +148,8 @@ The register item of the Geography Markup Language (GML) format, of the register
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
   "specification": [
     {
-      "id": "https://www.ogc.org/standards/gml/",
-      "title": "OGC Geography Markup Language (GML) Encoding Standard"
+      "id": "http://www.opengis.net/doc/IS/GML/3.2.1",
+      "title": "OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007)"
     }
   ],
   "observedMediaTypes": [
@@ -142,14 +164,26 @@ The register item of the Geography Markup Language (GML) format, of the register
   ],
   "validityStatus": "invalid",
   "publicationStatus": "published",
-  "hasAction": {
-    "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition",
-    "type": "RegisterAction",
-    "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
-    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
-    "startedAtTime": "2026-11-09T00:00:00Z"
-  }
+  "hasAction": [
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+      "startedAtTime": "2026-11-09T00:00:00Z"
+    },
+    {
+      "id": "https://w3id.org/geolabs/ospd/data-formats/format/gml/actions/amendment-gml-3-2-1-2026-11-17",
+      "type": "RegisterAction",
+      "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+      "changeClassification": "substantive",
+      "description": "Specification made precise (dct:conformsTo): OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007), http://www.opengis.net/doc/IS/GML/3.2.1, instead of the unversioned OGC GML page https://www.ogc.org/standards/gml/. Its XML Schemas are published at https://schemas.opengis.net/gml/3.2.1/ (gml.xsd declares version 3.2.2), target namespace http://www.opengis.net/gml/3.2. The representations of this format name their XML Schema element there (df:xmlSchemaElement). No version was established when the format was added: the Implementation Profiles said GML only and the testbed contentSchema values (http://fooa/gml/3.1.0/...) are on a placeholder host. Decision of G\u00e9rald, 2026-11-17. The observed media types are unchanged. Classified substantive: the register specification lists the version of the specification among the substantive changes.",
+      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+      "startedAtTime": "2026-11-17T00:00:00Z"
+    }
+  ]
 }
 ```
 
@@ -385,6 +419,20 @@ Links to the schema:
     "jsonSchemaFragment": {
       "@id": "df:jsonSchemaFragment",
       "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
     },
     "parameters": {
       "@context": {

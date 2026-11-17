@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Representation item - Earth observation product as EO GeoJSON",
+  "description": "The register item of the representation Earth observation product as EO GeoJSON, in JSON.",
+  "allOf": [
+    {
+      "$ref": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.json"
+    }
+  ],
+  "properties": {
+    "id": {
+      "const": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "data-formats.representation.eo-product-eo-geojson",
+    "register": "https://geolabs.github.io/bblocks-data-formats/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-17"
+  }
+}

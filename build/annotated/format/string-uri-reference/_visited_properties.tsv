@@ -29,6 +29,10 @@ path	@id	schema
 /inferredMediaTypes/description	http://purl.org/dc/terms/description	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
 /primaryMediaType	https://w3id.org/geolabs/ospd/data-formats/primaryMediaType	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
 /jsonSchemaFragment	https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
+/xmlSchemaElement	https://w3id.org/geolabs/ospd/data-formats/xmlSchemaElement	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
+/xmlSchemaElement/namespace	https://w3id.org/geolabs/ospd/data-formats/xmlNamespace	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
+/xmlSchemaElement/localName	https://w3id.org/geolabs/ospd/data-formats/xmlLocalName	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
+/xmlSchemaElement/schema	http://purl.org/dc/terms/source	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
 /parameters	https://w3id.org/geolabs/ospd/data-formats/parameter	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
 /parameters/name	https://w3id.org/geolabs/ospd/data-formats/parameterName	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
 /parameters/jsonSchemaKeyword	https://w3id.org/geolabs/ospd/data-formats/jsonSchemaKeyword	https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml

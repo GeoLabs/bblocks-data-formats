@@ -326,10 +326,6 @@ Links to the schema:
     "mediaType": "df:mediaType",
     "observedIn": "df:observedIn",
     "primaryMediaType": "df:primaryMediaType",
-    "jsonSchemaFragment": {
-      "@id": "df:jsonSchemaFragment",
-      "@type": "@json"
-    },
     "parameters": "df:parameter",
     "name": "df:parameterName",
     "jsonSchemaKeyword": "df:jsonSchemaKeyword",
@@ -341,6 +337,24 @@ Links to the schema:
     "format": {
       "@id": "df:format",
       "@type": "@id"
+    },
+    "jsonSchemaFragment": {
+      "@id": "df:jsonSchemaFragment",
+      "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
     },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",

@@ -18,6 +18,11 @@ path	@id	schema
 /supersedes	https://w3id.org/ogc/rim/supersedes	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item/schema.yaml
 /hasAction	https://w3id.org/ogc/rim/hasAction	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
 /format	https://w3id.org/geolabs/ospd/data-formats/format	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+/jsonSchemaFragment	https://w3id.org/geolabs/ospd/data-formats/jsonSchemaFragment	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+/xmlSchemaElement	https://w3id.org/geolabs/ospd/data-formats/xmlSchemaElement	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+/xmlSchemaElement/namespace	https://w3id.org/geolabs/ospd/data-formats/xmlNamespace	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+/xmlSchemaElement/localName	https://w3id.org/geolabs/ospd/data-formats/xmlLocalName	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
+/xmlSchemaElement/schema	http://purl.org/dc/terms/source	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
 /hasAction/_oneOf/0/id	@id	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
 /hasAction/_oneOf/0/type	@type	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
 /hasAction/_oneOf/0/actionType	https://w3id.org/ogc/rim/actionType	https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml
