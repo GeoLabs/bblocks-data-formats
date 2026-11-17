@@ -14,6 +14,8 @@ Added on 2026-11-10 for roles of the new Implementation Profiles of `bblocks-gen
 
 - [`implementation-profile/product-selection/inputs/areaOfInterest`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/product-selection/inputs/areaOfInterest)
 
+The other GeoJSON object types were added the same day: every object type that geojson/schema publishes and that the data-types register defines now has a GeoJSON representation.
+
 ## Content of this block
 
 - `ontology.ttl`: the representation item and its proposed addition (canonical source).

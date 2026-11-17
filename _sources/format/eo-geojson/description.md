@@ -12,9 +12,9 @@ The JSON Schema fragment `$ref`s the JSON Schema OGC publishes for the standard:
 
 ## Media type taken from the specification
 
-`application/geo+json` (`df:inferredMediaType`), source [OGC 17-003r2 EO Dataset Metadata GeoJSON(-LD) Encoding Standard 1.0](https://docs.ogc.org/is/17-003r2/17-003r2.html). Stated by OGC 17-003r2, chapter 9, Media Types for any data encoding(s): "When EO Dataset Metadata is delivered using HTTP, the following MIME media types shall be used." The table gives application/geo+json for the "GeoJSON representation with implicit normative context or normative context linked via a http://www.w3.org/ns/json-ld#context HTTP Link Header"; its two other rows are the GeoJSON-LD representations (application/ld+json, with or without a profile parameter), which are not this format. Read on 2026-11-17. Not observed in an Implementation Profile or on the testbed: no role uses this format yet.
+`application/geo+json` (`df:inferredMediaType`, and `df:primaryMediaType`), source [OGC 17-003r2 EO Dataset Metadata GeoJSON(-LD) Encoding Standard 1.0](https://docs.ogc.org/is/17-003r2/17-003r2.html). Stated by OGC 17-003r2, chapter 9, Media Types for any data encoding(s): "When EO Dataset Metadata is delivered using HTTP, the following MIME media types shall be used." The table gives application/geo+json for the "GeoJSON representation with implicit normative context or normative context linked via a http://www.w3.org/ns/json-ld#context HTTP Link Header"; its two other rows are the GeoJSON-LD representations (application/ld+json, with or without a profile parameter), which are not this format. Read on 2026-11-17. Not observed in an Implementation Profile or on the testbed: no role uses this format yet.
 
-No principal media type is set: the standard lists three media types, one per encoding, and none has been chosen here.
+It is also the principal media type (`df:primaryMediaType`), set on 2026-11-17 by an amendment classified substantive (`amendment-primary-media-type-2026-11-17`): the standard lists three media types, one per encoding, and `application/geo+json` is the one of the GeoJSON encoding this format describes; the two `application/ld+json` rows are the GeoJSON-LD encodings. It is also the media type RFC 7946 registers for GeoJSON.
 
 ## Requested by
 

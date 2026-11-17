@@ -12,6 +12,8 @@ The point data type of the data-types register, represented in GeoJSON.
 
 No role requests it yet. Added on 2026-11-17 to complete, in GeoJSON, the representations of a data type already represented in GML (decision of 2026-11-17; the register specification allows it since that date): the geometry, point, surface and feature-collection data types each have a GML and a GeoJSON representation.
 
+The other GeoJSON object types were added the same day: every object type that geojson/schema publishes and that the data-types register defines now has a GeoJSON representation.
+
 ## Content of this block
 
 - `ontology.ttl`: the representation item and its proposed addition (canonical source).

@@ -293,6 +293,48 @@
     },
     {
       "role": "data",
+      "ref": "../representation/line-string-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: LineString as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/polygon-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Polygon as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-point-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiPoint as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-line-string-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiLineString as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-polygon-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiPolygon as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-collection-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: GeometryCollection as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/feature-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature as GeoJSON"
+    },
+    {
+      "role": "data",
       "ref": "../representation/eo-product-stac-item/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Earth observation product as STAC Item"
