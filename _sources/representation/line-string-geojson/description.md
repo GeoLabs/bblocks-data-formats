@@ -2,7 +2,7 @@ The line-string data type of the data-types register, represented in GeoJSON.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/line-string-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `LineString` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.line-string`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/line-string-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `LineString` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.line-string`. `hasFormat` names [`line-string-gml`](../line-string-gml/), which represents the same data type in another format.
 
 ## Schema
 

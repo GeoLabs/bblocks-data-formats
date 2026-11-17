@@ -233,6 +233,48 @@
     },
     {
       "role": "data",
+      "ref": "../representation/line-string-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: LineString as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/curve-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Curve as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/polygon-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Polygon as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-point-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiPoint as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-curve-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiCurve as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-surface-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiSurface as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-collection-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: GeometryCollection as GML"
+    },
+    {
+      "role": "data",
       "ref": "../representation/raster-geotiff/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Raster as GeoTIFF"

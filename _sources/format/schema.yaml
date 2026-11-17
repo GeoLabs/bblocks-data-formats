@@ -52,6 +52,14 @@ properties:
         description: {type: string}
   primaryMediaType: {type: string}
   jsonSchemaFragment: {type: object}
+  xmlSchemaElement:
+    description: The XML Schema element of the data type in this format, when one exists.
+    type: object
+    required: [namespace, localName, schema]
+    properties:
+      namespace: {type: string, format: uri}
+      localName: {type: string, pattern: '^[A-Za-z_][A-Za-z0-9._-]*$'}
+      schema: {type: string, format: uri}
   parameters:
     type: array
     items:

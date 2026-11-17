@@ -6,9 +6,9 @@ An XML encoding of geographic features and geometries.
 
 ## Specification
 
-- [OGC Geography Markup Language (GML) Encoding Standard](https://www.ogc.org/standards/gml/) (`dct:conformsTo`)
+- [OGC 07-036 Geography Markup Language (GML) Encoding Standard 3.2.1 (ISO 19136:2007)](http://www.opengis.net/doc/IS/GML/3.2.1) (`dct:conformsTo`)
 
-No GML version is established: the Implementation Profiles say `GML` only, and the testbed's `contentSchema` values (`http://fooa/gml/3.1.0/polygon.xsd`, `http://fooa/gml/3.1.0/point.xsd`) are on a placeholder host.
+GML 3.2.1 since 2026-11-17 (decision of Gérald, action `amendment-gml-3-2-1-2026-11-17`, classified substantive). Its XML Schemas are published at <https://schemas.opengis.net/gml/3.2.1/> (`gml.xsd` declares version 3.2.2), target namespace `http://www.opengis.net/gml/3.2`; each GML representation names its element there (`df:xmlSchemaElement`). When the format was added, no version was established: the Implementation Profiles said `GML` only, and the testbed's `contentSchema` values (`http://fooa/gml/3.1.0/polygon.xsd`, `http://fooa/gml/3.1.0/point.xsd`) are on a placeholder host and name GML 3.1.0.
 
 ## Observed media types
 

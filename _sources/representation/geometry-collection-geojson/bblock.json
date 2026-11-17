@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.geometry-collection",
+  "hasFormat": [
+    "data-formats.representation.geometry-collection-gml"
+  ],
   "group": "Representations",
   "highlighted": false
 }

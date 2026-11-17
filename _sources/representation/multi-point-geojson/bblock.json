@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.multi-point",
+  "hasFormat": [
+    "data-formats.representation.multi-point-gml"
+  ],
   "group": "Representations",
   "highlighted": false
 }

@@ -2,7 +2,7 @@ The multi-point data type of the data-types register, represented in GeoJSON.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/multi-point/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `MultiPoint` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.multi-point`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/multi-point-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/multi-point/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `MultiPoint` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.multi-point`. `hasFormat` names [`multi-point-gml`](../multi-point-gml/), which represents the same data type in another format.
 
 ## Schema
 

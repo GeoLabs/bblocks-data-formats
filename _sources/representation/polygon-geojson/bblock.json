@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.polygon",
+  "hasFormat": [
+    "data-formats.representation.polygon-gml"
+  ],
   "group": "Representations",
   "highlighted": false
 }

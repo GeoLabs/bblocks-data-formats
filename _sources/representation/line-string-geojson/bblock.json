@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.line-string",
+  "hasFormat": [
+    "data-formats.representation.line-string-gml"
+  ],
   "group": "Representations",
   "highlighted": false
 }

@@ -44,14 +44,14 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `data-formats.format` | The format item schema and JSON-LD context; profile of the RIM `register-item` schema |
 | `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, `eo-geojson`, and the 20 EOAP string formats `string-*` |
 | `data-formats.representation` | The representation item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `line-string-geojson`, `polygon-geojson`, `multi-point-geojson`, `multi-line-string-geojson`, `multi-polygon-geojson`, `geometry-collection-geojson`, `feature-geojson`, `eo-product-stac-item`, `eo-product-eo-geojson`, `rendered-image-png` |
+| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `line-string-gml`, `curve-gml`, `polygon-gml`, `multi-point-gml`, `multi-curve-gml`, `multi-surface-gml`, `geometry-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `line-string-geojson`, `polygon-geojson`, `multi-point-geojson`, `multi-line-string-geojson`, `multi-polygon-geojson`, `geometry-collection-geojson`, `feature-geojson`, `eo-product-stac-item`, `eo-product-eo-geojson`, `rendered-image-png` |
 
 ### Formats
 
 | Format | Specification | Observed media types |
 |---|---|---|
 | `geotiff` | OGC GeoTIFF Standard (version not stated where served) | `image/tiff` (tier 3, testbed), `image/tiff; application=geotiff` (testbed) |
-| `gml` | OGC GML Encoding Standard (version not established) | `text/xml` (tier 3, testbed) |
+| `gml` | OGC 07-036 GML 3.2.1 (ISO 19136:2007), since 2026-11-17 (version not established before) | `text/xml` (tier 3, testbed) |
 | `las` | OGC 17-030r1 LAS 1.4 | `application/vnd.las` (tier 3), `application/x-ogc-lasf` (testbed) |
 | `geojson` | RFC 7946 | `application/geo+json` (testbed); a JSON Schema fragment, the `$ref` to `https://geojson.org/schema/GeoJSON.json` (added 2026-11-17) |
 | `eo-geojson` | OGC 17-003r2 EO Dataset Metadata GeoJSON(-LD) Encoding Standard 1.0 | none observed; `application/geo+json`, stated by the specification (chapter 9); principal media type (added 2026-11-17); a JSON Schema fragment, the `$ref` to `https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json` (added 2026-11-17) |
