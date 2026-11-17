@@ -24,7 +24,7 @@ No media type observed in an Implementation Profile or on the testbed (measured 
 
 ## Replaces
 
-The data type `stac-item` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item`, which carries `dct:isReplacedBy` towards this format. Recorded by an amendment of the proposal classified clarifying (`https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11`).
+The data type `stac-item` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item`, which carries `dct:isReplacedBy` towards this format. Recorded by an amendment of the proposal classified clarifying (`https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11`).
 
 ## Related building block
 

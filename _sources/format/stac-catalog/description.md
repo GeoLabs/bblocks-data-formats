@@ -16,7 +16,7 @@ The JSON Schema fragment `$ref`s the JSON Schema the specification publishes for
 
 ## Replaces
 
-The data type `stac-catalog` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item`, which carries `dct:isReplacedBy` towards this format.
+The data type `stac-catalog` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://w3id.org/geolabs/ospd/data-types/data-type/stac-catalog/item`, which carries `dct:isReplacedBy` towards this format.
 
 ## Requested by
 

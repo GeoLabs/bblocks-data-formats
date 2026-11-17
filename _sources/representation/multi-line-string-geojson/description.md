@@ -2,7 +2,7 @@ The multi-line-string data type of the data-types register, represented in GeoJS
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/multi-line-string-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/multi-line-string/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `MultiLineString` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.multi-line-string`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/multi-line-string-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/multi-line-string/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `MultiLineString` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.multi-line-string`.
 
 ## Schema
 
