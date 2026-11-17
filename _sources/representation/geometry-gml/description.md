@@ -4,6 +4,10 @@ The geometry data type of the data-types register, represented in GML.
 
 `https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`.
 
+## Schema
+
+`df:xmlSchemaElement` names the element `gml:AbstractGeometry` (namespace `http://www.opengis.net/gml/3.2`), declared in [`geometryBasic0d1d.xsd`](https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd) of the GML 3.2.1 XML Schemas. It is abstract: a GML geometry is any element of its substitution group.
+
 ## Requested by
 
 Created because existing roles need it: 31 roles of 15 Implementation Profiles of `bblocks-generic-profiles` (branch `planes/phase-1-docs`, `b0da6aa`) have the data type `geometry` and a schema with `contentMediaType` `text/xml`, measured on 2026-11-09. They still carry that schema; they do not point to this representation yet.

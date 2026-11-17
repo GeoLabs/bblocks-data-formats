@@ -20,6 +20,17 @@ properties:
     type: string
     format: uri
     pattern: ^https://w3id\.org/geolabs/ospd/data-formats/format/[a-z0-9-]+$
+  jsonSchemaFragment:
+    description: The JSON Schema of the data type in this format, when one exists.
+    type: object
+  xmlSchemaElement:
+    description: The XML Schema element of the data type in this format, when one exists.
+    type: object
+    required: [namespace, localName, schema]
+    properties:
+      namespace: {type: string, format: uri}
+      localName: {type: string, pattern: '^[A-Za-z_][A-Za-z0-9._-]*$'}
+      schema: {type: string, format: uri}
   hasAction:
     description: >-
       The proposed addition, alone or followed by later actions on the item, as for a format. The schema

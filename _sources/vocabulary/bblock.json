@@ -203,6 +203,12 @@
     },
     {
       "role": "data",
+      "ref": "../format/eo-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: EO GeoJSON"
+    },
+    {
+      "role": "data",
       "ref": "../representation/geometry-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GML"
@@ -224,6 +230,48 @@
       "ref": "../representation/feature-collection-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Feature collection as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/line-string-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: LineString as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/curve-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Curve as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/polygon-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Polygon as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-point-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiPoint as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-curve-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiCurve as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-surface-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiSurface as GML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-collection-gml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: GeometryCollection as GML"
     },
     {
       "role": "data",
@@ -260,6 +308,72 @@
       "ref": "../representation/geometry-geojson/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/eo-product-eo-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Earth observation product as EO GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/point-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Point as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/surface-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Surface as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/feature-collection-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature collection as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/line-string-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: LineString as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/polygon-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Polygon as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-point-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiPoint as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-line-string-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiLineString as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/multi-polygon-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: MultiPolygon as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-collection-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: GeometryCollection as GeoJSON"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/feature-geojson/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature as GeoJSON"
     },
     {
       "role": "data",

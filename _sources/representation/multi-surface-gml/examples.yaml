@@ -1,0 +1,34 @@
+examples:
+  - title: MultiSurface as GML
+    content: >-
+      The register item of the representation MultiSurface as GML: it realizes version 1 of the multi-surface
+      data type of the data-types register and points to the gml format.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml",
+            "type": "Representation",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-surface/v1",
+            "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
+            "xmlSchemaElement": {
+              "namespace": "http://www.opengis.net/gml/3.2",
+              "localName": "MultiSurface",
+              "schema": "https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd"
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml",
+              "startedAtTime": "2026-11-17T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

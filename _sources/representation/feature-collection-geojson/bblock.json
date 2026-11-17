@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Feature collection as GeoJSON",
+  "abstract": "The feature-collection data type of the data-types register, represented in GeoJSON.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-17T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.feature-collection",
+  "hasFormat": [
+    "data-formats.representation.feature-collection-gml"
+  ],
+  "group": "Representations",
+  "highlighted": false
+}

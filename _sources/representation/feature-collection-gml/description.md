@@ -2,7 +2,11 @@ The feature-collection data type of the data-types register, represented in GML.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.feature-collection`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.feature-collection`. `hasFormat` names [`feature-collection-geojson`](../feature-collection-geojson/), which represents the same data type in another format.
+
+## Schema
+
+`df:xmlSchemaElement` names the element `gml:FeatureCollection` (namespace `http://www.opengis.net/gml/3.2`), declared in [`deprecatedTypes.xsd`](https://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd) of the GML 3.2.1 XML Schemas. GML 3.2.1 declares it deprecated (`appinfo` deprecated): an application schema is expected to define its own feature collection.
 
 ## Requested by
 

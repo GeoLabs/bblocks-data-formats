@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.feature-collection",
+  "hasFormat": [
+    "data-formats.representation.feature-collection-geojson"
+  ],
   "group": "Representations",
   "highlighted": false
 }

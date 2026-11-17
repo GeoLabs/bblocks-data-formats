@@ -25,6 +25,7 @@ df:FormatShape a sh:NodeShape ;
     sh:property [ sh:path df:observedMediaType ; sh:node df:MediaTypeObservationShape ] ;
     sh:property [ sh:path df:inferredMediaType ; sh:node df:MediaTypeInferenceShape ] ;
     sh:property [ sh:path df:jsonSchemaFragment ; sh:datatype rdf:JSON ] ;
+    sh:property [ sh:path df:xmlSchemaElement ; sh:node df:XmlSchemaElementShape ; sh:maxCount 1 ] ;
     sh:or ( [ sh:path df:observedMediaType ; sh:minCount 1 ]
             [ sh:path df:jsonSchemaFragment ; sh:minCount 1 ] ) ;
     sh:message "A format carries at least an observed media type or a JSON Schema fragment." .
@@ -53,7 +54,20 @@ df:RepresentationShape a sh:NodeShape ;
     sh:property [ sh:path rim:realizes ; sh:class dt:DataTypeVersion ; sh:minCount 1 ; sh:maxCount 1 ;
                   sh:message "A representation realizes exactly one dt:DataTypeVersion of the data-types register." ] ;
     sh:property [ sh:path df:format ; sh:class df:Format ; sh:minCount 1 ; sh:maxCount 1 ;
-                  sh:message "A representation points to exactly one df:Format." ] .
+                  sh:message "A representation points to exactly one df:Format." ] ;
+    sh:property [ sh:path df:jsonSchemaFragment ; sh:datatype rdf:JSON ; sh:maxCount 1 ;
+                  sh:message "The JSON Schema fragment of a representation is one JSON literal (rdf:JSON)." ] ;
+    sh:property [ sh:path df:xmlSchemaElement ; sh:node df:XmlSchemaElementShape ; sh:maxCount 1 ;
+                  sh:message "A representation names at most one XML Schema element." ] .
+
+df:XmlSchemaElementShape a sh:NodeShape ;
+    sh:property [ sh:path df:xmlNamespace ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "An XML Schema element has one namespace, an IRI (df:xmlNamespace)." ] ;
+    sh:property [ sh:path df:xmlLocalName ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:pattern "^[A-Za-z_][A-Za-z0-9._-]*$" ;
+                  sh:message "An XML Schema element has one local name, an NCName (df:xmlLocalName)." ] ;
+    sh:property [ sh:path dct:source ; sh:nodeKind sh:IRI ; sh:minCount 1 ;
+                  sh:message "An XML Schema element names the schema document that declares it (dct:source, an IRI)." ] .
 
 df:AdditionProposalShape a sh:NodeShape ;
     sh:targetClass df:Format , df:Representation ;

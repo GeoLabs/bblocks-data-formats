@@ -11,6 +11,9 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.point",
+  "hasFormat": [
+    "data-formats.representation.point-geojson"
+  ],
   "group": "Representations",
   "highlighted": false
 }

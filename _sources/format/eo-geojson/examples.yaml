@@ -1,0 +1,55 @@
+examples:
+  - title: EO GeoJSON
+    content: >-
+      The register item of the EO GeoJSON format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://docs.ogc.org/is/17-003r2/17-003r2.html",
+                "title": "OGC 17-003r2 EO Dataset Metadata GeoJSON(-LD) Encoding Standard 1.0"
+              }
+            ],
+            "primaryMediaType": "application/geo+json",
+            "jsonSchemaFragment": {
+              "$ref": "https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json"
+            },
+            "inferredMediaTypes": [
+              {
+                "mediaType": "application/geo+json",
+                "source": "https://docs.ogc.org/is/17-003r2/17-003r2.html",
+                "description": "Stated by OGC 17-003r2, chapter 9, Media Types for any data encoding(s): \"When EO Dataset Metadata is delivered using HTTP, the following MIME media types shall be used.\" The table gives application/geo+json for the \"GeoJSON representation with implicit normative context or normative context linked via a http://www.w3.org/ns/json-ld#context HTTP Link Header\"; its two other rows are the GeoJSON-LD representations (application/ld+json, with or without a profile parameter), which are not this format. Read on 2026-11-17. Not observed in an Implementation Profile or on the testbed: no role uses this format yet."
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": [
+              {
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
+                "startedAtTime": "2026-11-17T00:00:00Z"
+              },
+              {
+                "id": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson/actions/amendment-primary-media-type-2026-11-17",
+                "type": "RegisterAction",
+                "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
+                "changeClassification": "substantive",
+                "description": "Principal media type set (df:primaryMediaType): application/geo+json, the media type already recorded from the specification (df:inferredMediaType). OGC 17-003r2, chapter 9, says the listed media types shall be used when EO Dataset Metadata is delivered over HTTP, and gives application/geo+json for the GeoJSON representation, the encoding this format describes; its two application/ld+json rows are the GeoJSON-LD representations, which are not this format. application/geo+json is the media type RFC 7946 registers for GeoJSON. Checked on 2026-11-17 in https://docs.ogc.org/is/17-003r2/17-003r2.html. Decision of Gérald, 2026-11-17. The specification, the recorded media type and the JSON Schema fragment are unchanged. Classified substantive: the register specification lists the principal media type among the substantive changes.",
+                "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+                "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
+                "startedAtTime": "2026-11-17T00:00:00Z"
+              }
+            ]
+          }
+      - language: turtle
+        ref: ontology.ttl

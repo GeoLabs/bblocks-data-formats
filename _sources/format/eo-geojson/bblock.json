@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: EO GeoJSON",
+  "abstract": "A GeoJSON encoding of Earth observation dataset metadata: a Feature, or a FeatureCollection, that describes EO products.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-17T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "OGC 17-003r2 EO Dataset Metadata GeoJSON(-LD) Encoding Standard 1.0",
+      "link": "https://docs.ogc.org/is/17-003r2/17-003r2.html"
+    }
+  ]
+}

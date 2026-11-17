@@ -109,6 +109,20 @@
       "@id": "df:jsonSchemaFragment",
       "@type": "@json"
     },
+    "xmlSchemaElement": {
+      "@id": "df:xmlSchemaElement",
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      }
+    },
     "parameters": {
       "@id": "df:parameter"
     },
