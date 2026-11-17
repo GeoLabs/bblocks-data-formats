@@ -1,5 +1,6 @@
 # Must fail: a representation whose XML Schema element has no local name. It realizes a real data
-# type version and points to a real format, so only df:XmlSchemaElementShape can reject it.
+# type version and points to a real format, so only df:XmlSchemaElementShape can reject it (seen
+# through df:RepresentationShape, which applies it to df:xmlSchemaElement).
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
 @prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
