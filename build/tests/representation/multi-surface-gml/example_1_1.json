@@ -4,7 +4,7 @@
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-surface/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
   "xmlSchemaElement": {
     "namespace": "http://www.opengis.net/gml/3.2",

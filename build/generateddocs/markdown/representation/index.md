@@ -60,7 +60,7 @@ properties:
   realizes:
     type: string
     format: uri
-    pattern: ^https://geolabs\.github\.io/bblocks-data-types/def/data-type/[a-z0-9-]+/v[0-9]+$
+    pattern: ^https://w3id\.org/geolabs/ospd/data-types/data-type/[a-z0-9-]+/v[0-9]+$
     x-jsonld-id: https://w3id.org/ogc/rim/realizes
     x-jsonld-type: '@id'
   format:
@@ -232,7 +232,7 @@ x-jsonld-prefixes:
   xsd: http://www.w3.org/2001/XMLSchema#
   prov: http://www.w3.org/ns/prov#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
-  dt: https://geolabs.github.io/bblocks-data-types/def/
+  dt: https://w3id.org/geolabs/ospd/data-types/
   skos: http://www.w3.org/2004/02/skos/core#
 x-bblocks-metadata:
   itemIdentifier: data-formats.representation
@@ -471,7 +471,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

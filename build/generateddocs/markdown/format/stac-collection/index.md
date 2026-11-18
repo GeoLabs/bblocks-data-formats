@@ -29,7 +29,7 @@ The ogcincubator building block `ogc.contrib.stac.collection-v1-1-0` (STAC Colle
 
 ## Replaces
 
-The data type `stac-collection` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item`, which carries `dct:isReplacedBy` towards this format.
+The data type `stac-collection` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item`, which carries `dct:isReplacedBy` towards this format.
 
 ## Requested by
 
@@ -70,7 +70,7 @@ The register item of the STAC Collection format, of the register's format item c
       "description": "Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item",
   "seeAlso": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md",
   "validityStatus": "invalid",
   "publicationStatus": "published",
@@ -89,7 +89,7 @@ The register item of the STAC Collection format, of the register's format item c
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -115,7 +115,7 @@ The register item of the STAC Collection format, of the register's format item c
         dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> ;
         dct:description "Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection."@en ] ;
     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md> ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item> .
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item> .
 
 <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> dct:title "STAC Collection Specification 1.1.0" .
 
@@ -153,7 +153,7 @@ The register item of the STAC Collection format, of the register's format item c
       "description": "Stated by the STAC Collection Specification 1.1.0, section Media Type for STAC Collections: \"A STAC Collection is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): no process takes or returns a STAC Collection."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item",
   "seeAlso": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md",
   "validityStatus": "invalid",
   "publicationStatus": "published",
@@ -434,7 +434,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

@@ -26,7 +26,7 @@
       "description": "Given by the STAC API - Features 1.0.0, section Endpoints, whose table gives \"/collections/{collectionId}/items | application/geo+json | ItemCollection | GeoJSON FeatureCollection-conformant entity of Item objects in collection\". Derived, not stated, as for the Item Search source."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection/item",
   "validityStatus": "invalid",
   "publicationStatus": "published",
   "hasAction": [

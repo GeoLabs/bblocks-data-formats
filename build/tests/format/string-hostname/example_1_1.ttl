@@ -18,7 +18,7 @@
     rim:itemClass df:formatItemClass ;
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/string-hostname"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-hostname/item> ;
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/string-hostname/item> ;
     rim:validityStatus rim:invalid .
 
 <https://w3id.org/geolabs/ospd/data-formats/format/string-hostname/actions/addition> a rim:RegisterAction ;

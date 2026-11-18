@@ -81,7 +81,7 @@ The register item of the LAS format, of the register's format item class.
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -419,7 +419,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

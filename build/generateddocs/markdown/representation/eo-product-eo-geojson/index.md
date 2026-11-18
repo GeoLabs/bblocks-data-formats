@@ -13,7 +13,7 @@ The eo-product data type of the data-types register, represented in EO GeoJSON.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [EO GeoJSON](../../format/eo-geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`. `hasFormat` names [`eo-product-stac-item`](../eo-product-stac-item/), which represents the same data type in another format.
+`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [EO GeoJSON](../../format/eo-geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`. `hasFormat` names [`eo-product-stac-item`](../eo-product-stac-item/), which represents the same data type in another format.
 
 ## Schema
 
@@ -41,7 +41,7 @@ The register item of the representation Earth observation product as EO GeoJSON:
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/eo-product/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
   "jsonSchemaFragment": {
     "$ref": "https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json#/definitions/EarthObservation"
@@ -63,7 +63,7 @@ The register item of the representation Earth observation product as EO GeoJSON:
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -78,7 +78,7 @@ The register item of the representation Earth observation product as EO GeoJSON:
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1> ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/eo-product/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson> ;
     df:jsonSchemaFragment "{\"$ref\":\"https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json#/definitions/EarthObservation\"}"^^rdf:JSON ;
     rim:validityStatus rim:invalid ;
@@ -102,7 +102,7 @@ The register item of the representation Earth observation product as EO GeoJSON:
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/eo-product/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
   "jsonSchemaFragment": {
     "$ref": "https://schemas.opengis.net/eo-geojson/1.0/eo-geojson-schema.json#/definitions/EarthObservation"
@@ -369,7 +369,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

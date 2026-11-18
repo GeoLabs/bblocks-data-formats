@@ -34,7 +34,7 @@ Record `Duration` of the EOAP `string_format.yaml`: "Represents a duration as sp
 
 This format is carried in CWL by that record, documented by the building block [`eoap.cct.string-format`](https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format) (`seeAlso` in `bblock.json`, `rdfs:seeAlso` and `df:cwlCustomType` in `ontology.ttl`).
 
-It was registered in the data-types register as the data type `string-duration`, a proposal, withdrawn on 2026-11-09. This format supersedes its item: `rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-duration/item>`. The withdrawn item carries `dct:isReplacedBy` towards this format, unpublished by an action classified substantive. The link is carried here because data-formats depends on data-types, never the reverse.
+It was registered in the data-types register as the data type `string-duration`, a proposal, withdrawn on 2026-11-09. This format supersedes its item: `rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/string-duration/item>`. The withdrawn item carries `dct:isReplacedBy` towards this format, unpublished by an action classified substantive. The link is carried here because data-formats depends on data-types, never the reverse.
 
 ## Content of this block
 
@@ -64,7 +64,7 @@ The register item of the Duration string format, of the register's format item c
     "type": "string",
     "format": "duration"
   },
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-duration/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/string-duration/item",
   "cwlCustomType": "Duration",
   "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
   "validityStatus": "invalid",
@@ -84,7 +84,7 @@ The register item of the Duration string format, of the register's format item c
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -107,7 +107,7 @@ The register item of the Duration string format, of the register's format item c
     dct:conformsTo <https://json-schema.org/draft/2020-12/json-schema-validation#section-7.3.1> ;
     df:jsonSchemaFragment "{\"format\":\"duration\",\"type\":\"string\"}"^^rdf:JSON ;
     dct:source <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-duration/item> ;
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/string-duration/item> ;
     df:cwlCustomType "Duration" ;
     rdfs:seeAlso <https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format> .
 
@@ -140,7 +140,7 @@ The register item of the Duration string format, of the register's format item c
     "type": "string",
     "format": "duration"
   },
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-duration/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/string-duration/item",
   "cwlCustomType": "Duration",
   "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
   "validityStatus": "invalid",
@@ -422,7 +422,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

@@ -13,7 +13,7 @@ The geometry data type of the data-types register, represented in GML.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GML](../../format/gml/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`.
 
 ## Schema
 
@@ -73,7 +73,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
   "xmlSchemaElement": {
     "namespace": "http://www.opengis.net/gml/3.2",
@@ -119,7 +119,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -135,7 +135,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/gml> ;
     df:xmlSchemaElement [ df:xmlNamespace <http://www.opengis.net/gml/3.2> ;
         df:xmlLocalName "AbstractGeometry" ;
@@ -180,7 +180,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/gml",
   "xmlSchemaElement": {
     "namespace": "http://www.opengis.net/gml/3.2",
@@ -470,7 +470,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

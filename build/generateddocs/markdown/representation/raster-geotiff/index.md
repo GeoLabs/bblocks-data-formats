@@ -13,7 +13,7 @@ The raster data type of the data-types register, represented in GeoTIFF.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster`.
+`https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1` of the data-types register and points (`df:format`) to the format [GeoTIFF](../../format/geotiff/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster`.
 
 ## Requested by
 
@@ -50,7 +50,7 @@ The register item of the representation Raster as GeoTIFF: it realizes version 1
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
   "validityStatus": "invalid",
   "publicationStatus": "published",
@@ -69,7 +69,7 @@ The register item of the representation Raster as GeoTIFF: it realizes version 1
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -85,7 +85,7 @@ The register item of the representation Raster as GeoTIFF: it realizes version 1
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1> ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/geotiff> ;
     rim:validityStatus rim:invalid ;
     rim:publicationStatus rim:published ;
@@ -108,7 +108,7 @@ The register item of the representation Raster as GeoTIFF: it realizes version 1
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/raster-geotiff",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
   "validityStatus": "invalid",
   "publicationStatus": "published",
@@ -371,7 +371,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

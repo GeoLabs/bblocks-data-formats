@@ -31,7 +31,7 @@ The JSON Schema fragment `$ref`s the schema STAC API 1.0.0 publishes for an Item
 
 ## Replaces
 
-The data type `stac-item-collection` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection/item`, which carries `dct:isReplacedBy` towards this format.
+The data type `stac-item-collection` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection/item`, which carries `dct:isReplacedBy` towards this format.
 
 ## Requested by
 
@@ -77,7 +77,7 @@ The register item of the STAC Item Collection format, of the register's format i
       "description": "Given by the STAC API - Features 1.0.0, section Endpoints, whose table gives \"/collections/{collectionId}/items | application/geo+json | ItemCollection | GeoJSON FeatureCollection-conformant entity of Item objects in collection\". Derived, not stated, as for the Item Search source."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection/item",
   "validityStatus": "invalid",
   "publicationStatus": "published",
   "hasAction": [
@@ -117,7 +117,7 @@ The register item of the STAC Item Collection format, of the register's format i
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -148,7 +148,7 @@ The register item of the STAC Item Collection format, of the register's format i
         dct:source <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/ogcapi-features/README.md> ;
         dct:description "Given by the STAC API - Features 1.0.0, section Endpoints, whose table gives \"/collections/{collectionId}/items | application/geo+json | ItemCollection | GeoJSON FeatureCollection-conformant entity of Item objects in collection\". Derived, not stated, as for the Item Search source."@en ] ;
     dct:source <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/item-search/README.md> , <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/ogcapi-features/README.md> ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection/item> .
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection/item> .
 
 <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/fragments/itemcollection/README.md> dct:title "STAC API - ItemCollection Fragment 1.0.0" .
 <https://github.com/radiantearth/stac-api-spec/blob/v1.0.0/item-search/README.md> dct:title "STAC API - Item Search 1.0.0" .
@@ -211,7 +211,7 @@ The register item of the STAC Item Collection format, of the register's format i
       "description": "Given by the STAC API - Features 1.0.0, section Endpoints, whose table gives \"/collections/{collectionId}/items | application/geo+json | ItemCollection | GeoJSON FeatureCollection-conformant entity of Item objects in collection\". Derived, not stated, as for the Item Search source."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection/item",
   "validityStatus": "invalid",
   "publicationStatus": "published",
   "hasAction": [
@@ -513,7 +513,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

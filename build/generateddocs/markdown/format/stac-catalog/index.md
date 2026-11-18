@@ -27,7 +27,7 @@ The JSON Schema fragment `$ref`s the JSON Schema the specification publishes for
 
 ## Replaces
 
-The data type `stac-catalog` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item`, which carries `dct:isReplacedBy` towards this format.
+The data type `stac-catalog` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://w3id.org/geolabs/ospd/data-types/data-type/stac-catalog/item`, which carries `dct:isReplacedBy` towards this format.
 
 ## Requested by
 
@@ -68,7 +68,7 @@ The register item of the STAC Catalog format, of the register's format item clas
       "description": "Stated by the STAC Catalog Specification 1.1.0, section Media Type for STAC Catalogs: \"A STAC Catalog is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): the six testbed outputs that return a STAC Catalog (kindgrove.mangrove result, kindgrove.mangrove-workflow stac, kindgrove-steps.mangrove-workflow-steps stac, kindgrove-steps.export-stac stac_catalog, water-bodies.stac stac_catalog, water-bodies.water-bodies stac) declare a JSON object schema with format stac-catalog and no media type."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-catalog/item",
   "validityStatus": "invalid",
   "publicationStatus": "published",
   "hasAction": {
@@ -86,7 +86,7 @@ The register item of the STAC Catalog format, of the register's format item clas
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -111,7 +111,7 @@ The register item of the STAC Catalog format, of the register's format item clas
     df:inferredMediaType [ df:mediaType "application/json" ;
         dct:source <https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> ;
         dct:description "Stated by the STAC Catalog Specification 1.1.0, section Media Type for STAC Catalogs: \"A STAC Catalog is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): the six testbed outputs that return a STAC Catalog (kindgrove.mangrove result, kindgrove.mangrove-workflow stac, kindgrove-steps.mangrove-workflow-steps stac, kindgrove-steps.export-stac stac_catalog, water-bodies.stac stac_catalog, water-bodies.water-bodies stac) declare a JSON object schema with format stac-catalog and no media type."@en ] ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item> .
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/stac-catalog/item> .
 
 <https://github.com/radiantearth/stac-spec/blob/v1.1.0/catalog-spec/catalog-spec.md> dct:title "STAC Catalog Specification 1.1.0" .
 
@@ -149,7 +149,7 @@ The register item of the STAC Catalog format, of the register's format item clas
       "description": "Stated by the STAC Catalog Specification 1.1.0, section Media Type for STAC Catalogs: \"A STAC Catalog is a JSON file (RFC 8259), and thus should use the application/json as the Media Type (previously known as the MIME Type).\" Not observed in an Implementation Profile or on the testbed (measured on 2026-11-11, bblocks-process-profiles-tests-1 3d8c031): the six testbed outputs that return a STAC Catalog (kindgrove.mangrove result, kindgrove.mangrove-workflow stac, kindgrove-steps.mangrove-workflow-steps stac, kindgrove-steps.export-stac stac_catalog, water-bodies.stac stac_catalog, water-bodies.water-bodies stac) declare a JSON object schema with format stac-catalog and no media type."
     }
   ],
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-catalog/item",
   "validityStatus": "invalid",
   "publicationStatus": "published",
   "hasAction": {
@@ -429,7 +429,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

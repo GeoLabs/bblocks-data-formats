@@ -15,7 +15,7 @@
     "type": "string",
     "format": "iri-reference"
   },
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference/item",
   "cwlCustomType": "IRIReference",
   "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
   "validityStatus": "invalid",

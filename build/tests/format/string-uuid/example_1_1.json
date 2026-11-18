@@ -14,7 +14,7 @@
     "type": "string",
     "format": "uuid"
   },
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uuid/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/string-uuid/item",
   "cwlCustomType": "UUID",
   "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
   "validityStatus": "invalid",

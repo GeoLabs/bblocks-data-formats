@@ -18,7 +18,7 @@
     rim:itemClass df:formatItemClass ;
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item> ;
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item> ;
     rim:validityStatus rim:invalid .
 
 <https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer/actions/addition> a rim:RegisterAction ;

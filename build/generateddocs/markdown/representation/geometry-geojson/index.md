@@ -13,7 +13,7 @@ The geometry data type of the data-types register, represented in GeoJSON.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`. `hasFormat` names [`geometry-gml`](../geometry-gml/), which represents the same data type in another format.
+`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry`. `hasFormat` names [`geometry-gml`](../geometry-gml/), which represents the same data type in another format.
 
 ## Schema
 
@@ -23,7 +23,7 @@ The geometry data type of the data-types register, represented in GeoJSON.
 
 Added on 2026-11-10 for roles of the new Implementation Profiles of `bblocks-generic-profiles` (branch `planes/new-profiles`):
 
-- [`implementation-profile/product-selection/inputs/areaOfInterest`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/product-selection/inputs/areaOfInterest)
+- [`implementation-profile/product-selection/inputs/areaOfInterest`](https://w3id.org/geolabs/ospd/generic-profiles/implementation-profile/product-selection/inputs/areaOfInterest)
 
 The other GeoJSON object types were added the same day: every object type that geojson/schema publishes and that the data-types register defines now has a GeoJSON representation.
 
@@ -45,7 +45,7 @@ The register item of the representation Geometry as GeoJSON: it realizes version
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
   "jsonSchemaFragment": {
     "$ref": "https://geojson.org/schema/Geometry.json"
@@ -79,7 +79,7 @@ The register item of the representation Geometry as GeoJSON: it realizes version
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -94,7 +94,7 @@ The register item of the representation Geometry as GeoJSON: it realizes version
     rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson"^^xsd:anyURI ;
     rim:itemClass df:representationItemClass ;
     rim:inRegister df:register ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1> ;
     df:format <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
     df:jsonSchemaFragment "{\"$ref\":\"https://geojson.org/schema/Geometry.json\"}"^^rdf:JSON ;
     rim:validityStatus rim:invalid ;
@@ -128,7 +128,7 @@ The register item of the representation Geometry as GeoJSON: it realizes version
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-geojson",
   "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
   "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-  "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/geometry/v1",
   "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
   "jsonSchemaFragment": {
     "$ref": "https://geojson.org/schema/Geometry.json"
@@ -406,7 +406,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

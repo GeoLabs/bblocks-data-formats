@@ -15,7 +15,7 @@
     "type": "string",
     "format": "uri"
   },
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/string-uri/item",
   "cwlCustomType": "URI",
   "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
   "validityStatus": "invalid",

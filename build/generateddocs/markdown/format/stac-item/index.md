@@ -35,7 +35,7 @@ No media type observed in an Implementation Profile or on the testbed (measured 
 
 ## Replaces
 
-The data type `stac-item` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item`, which carries `dct:isReplacedBy` towards this format. Recorded by an amendment of the proposal classified clarifying (`https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11`).
+The data type `stac-item` of the data-types register, a proposal withdrawn on 2026-11-11 (decision Q4, option b): this format carries `rim:supersedes` towards its item, `https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item`, which carries `dct:isReplacedBy` towards this format. Recorded by an amendment of the proposal classified clarifying (`https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/amendment-supersedes-2026-11-11`).
 
 ## Related building block
 
@@ -70,7 +70,7 @@ The register item of the STAC Item format, of the register's format item class.
     }
   ],
   "primaryMediaType": "application/geo+json",
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item",
   "seeAlso": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md",
   "jsonSchemaFragment": {
     "$ref": "https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json"
@@ -118,7 +118,7 @@ The register item of the STAC Item format, of the register's format item class.
       "type": "RegisterAction",
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
-      "description": "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change.",
+      "description": "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change.",
       "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-11T00:00:00Z"
@@ -141,7 +141,7 @@ The register item of the STAC Item format, of the register's format item class.
 #### turtle
 ```turtle
 @prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -166,7 +166,7 @@ The register item of the STAC Item format, of the register's format item class.
         <https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/amendment-kindgrove-release-2026-11-12> ;
     dct:conformsTo <https://github.com/radiantearth/stac-spec/blob/v1.1.0/item-spec/item-spec.md> ;
     df:primaryMediaType "application/geo+json" ;
-    rim:supersedes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item> ;
+    rim:supersedes <https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item> ;
     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md> ;
     df:jsonSchemaFragment "{\"$ref\":\"https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json\"}"^^rdf:JSON ;
     df:inferredMediaType [ df:mediaType "application/geo+json" ;
@@ -203,7 +203,7 @@ The register item of the STAC Item format, of the register's format item class.
     rim:actionType df:amendmentAction ;
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:supersedes , rdfs:seeAlso ;
-    dct:description "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change."@en ;
+    dct:description "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change."@en ;
     rim:proposer df:geolabs ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .
@@ -235,7 +235,7 @@ The register item of the STAC Item format, of the register's format item class.
     }
   ],
   "primaryMediaType": "application/geo+json",
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item",
   "seeAlso": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md",
   "jsonSchemaFragment": {
     "$ref": "https://schemas.stacspec.org/v1.1.0/item-spec/json-schema/item.json"
@@ -283,7 +283,7 @@ The register item of the STAC Item format, of the register's format item class.
       "type": "RegisterAction",
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
-      "description": "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change.",
+      "description": "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change.",
       "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-11T00:00:00Z"
@@ -568,7 +568,7 @@ Links to the schema:
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "df": "https://w3id.org/geolabs/ospd/data-formats/",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

@@ -14,7 +14,7 @@
     "type": "string",
     "format": "ipv4"
   },
-  "supersedes": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv4/item",
+  "supersedes": "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item",
   "cwlCustomType": "IPv4",
   "seeAlso": "https://geolabs.github.io/bblocks-eoap-cct/bblock/eoap.cct.string-format",
   "validityStatus": "invalid",
