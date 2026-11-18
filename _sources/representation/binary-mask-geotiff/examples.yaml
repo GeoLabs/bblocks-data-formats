@@ -1,0 +1,28 @@
+examples:
+  - title: Binary mask as GeoTIFF
+    content: >-
+      The register item of the representation Binary mask as GeoTIFF: it realizes version 1 of the binary-mask data type of the data-types register and points to the geotiff format.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff",
+            "type": "Representation",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/binary-mask/v1",
+            "format": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff",
+              "startedAtTime": "2026-11-18T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

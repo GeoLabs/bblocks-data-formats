@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: JPEG 2000",
+  "abstract": "A wavelet-based image encoding, lossless or lossy, of one or more components, in the JP2 file format.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system",
+      "link": "https://www.itu.int/rec/T-REC-T.800"
+    }
+  ]
+}

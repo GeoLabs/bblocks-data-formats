@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Surface as KML",
+  "abstract": "The surface data type of the data-types register, represented in KML.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.surface",
+  "hasFormat": [
+    "data-formats.representation.surface-geojson",
+    "data-formats.representation.surface-gml"
+  ],
+  "group": "Representations",
+  "highlighted": false
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Single-band raster as JPEG",
+  "abstract": "The raster-single-band data type of the data-types register, represented in JPEG.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.raster-single-band",
+  "hasFormat": [
+    "data-formats.representation.raster-single-band-aaigrid",
+    "data-formats.representation.raster-single-band-envi",
+    "data-formats.representation.raster-single-band-geotiff",
+    "data-formats.representation.raster-single-band-png"
+  ],
+  "group": "Representations",
+  "highlighted": false
+}

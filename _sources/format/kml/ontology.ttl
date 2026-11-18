@@ -1,0 +1,31 @@
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<https://w3id.org/geolabs/ospd/data-formats/format/kml> a df:Format, rim:RegisterItem ;
+    dct:title "KML"@en ;
+    dct:description "An XML encoding of geographic features, their geometries and their presentation."@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/kml"^^xsd:anyURI ;
+    rim:itemClass df:formatItemClass ;
+    rim:inRegister df:register ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/kml/actions/addition> ;
+    dct:conformsTo <https://docs.ogc.org/is/12-007r2/12-007r2.html> ;
+    df:observedMediaType [ df:mediaType "application/vnd.google-earth.kml+xml" ; df:observedIn "testbed" ] .
+
+<https://docs.ogc.org/is/12-007r2/12-007r2.html> dct:title "OGC 12-007r2 OGC KML 2.3" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/kml/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/kml> ;
+    prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .

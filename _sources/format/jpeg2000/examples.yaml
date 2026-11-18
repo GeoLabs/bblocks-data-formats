@@ -1,0 +1,38 @@
+examples:
+  - title: JPEG 2000
+    content: >-
+      The register item of the JPEG 2000 format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://www.itu.int/rec/T-REC-T.800",
+                "title": "ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system"
+              }
+            ],
+            "observedMediaTypes": [
+              {
+                "mediaType": "image/jp2",
+                "observedIn": "testbed"
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000",
+              "startedAtTime": "2026-11-18T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

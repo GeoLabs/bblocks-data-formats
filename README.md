@@ -22,7 +22,7 @@ on it (`dependsOn: data-types.vocabulary`); data-types never depends on this reg
 
 Both are sub-classes of `rim:RegisterItem`. Every item is a proposal: an addition by GeoLabs,
 `rim:invalid` and `rim:published`. A principal media type is set only on the four STAC formats, where
-the STAC specification states it; none has been chosen for the other formats. A representation is created when an existing role needs it, or to complete, in another format, the representations of a data type that already has one, or for each object type that the specification of a format defines and that the data-types register defines as a data type; it lists the roles that need it, if any.
+the STAC specification states it; none has been chosen for the other formats. A representation is created when an existing role needs it, or to complete, in another format, the representations of a data type that already has one, or for each object type that the specification of a format defines and that the data-types register defines as a data type, or when an input or output of a deployed process of the process-profiles register (tier 4) has that data type and declares that format; it lists the roles or the deployed process inputs and outputs that need it, if any.
 
 ## Register specification
 
@@ -42,9 +42,9 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `data-formats.register` | The register, in JSON; profile of the RIM `register` schema |
 | `data-formats.item-class` | The two item classes, in JSON; profile of the RIM `register-item-class` schema |
 | `data-formats.format` | The format item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, `eo-geojson`, and the 20 EOAP string formats `string-*` |
+| `data-formats.format.<name>` | One format: `geotiff`, `gml`, `las`, `geojson`, `ogcapi-processes-bbox`, `png`, `stac-item`, `stac-item-collection`, `stac-collection`, `stac-catalog`, `eo-geojson`, `jpeg2000`, `jpeg`, `aaigrid`, `envi`, `kml`, and the 20 EOAP string formats `string-*` |
 | `data-formats.representation` | The representation item schema and JSON-LD context; profile of the RIM `register-item` schema |
-| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `line-string-gml`, `curve-gml`, `polygon-gml`, `multi-point-gml`, `multi-curve-gml`, `multi-surface-gml`, `geometry-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `line-string-geojson`, `polygon-geojson`, `multi-point-geojson`, `multi-line-string-geojson`, `multi-polygon-geojson`, `geometry-collection-geojson`, `feature-geojson`, `eo-product-stac-item`, `eo-product-eo-geojson`, `rendered-image-png` |
+| `data-formats.representation.<name>` | One representation: `geometry-gml`, `surface-gml`, `point-gml`, `feature-collection-gml`, `line-string-gml`, `curve-gml`, `polygon-gml`, `multi-point-gml`, `multi-curve-gml`, `multi-surface-gml`, `geometry-collection-gml`, `raster-geotiff`, `raster-single-band-geotiff`, `elevation-model-geotiff`, `point-cloud-las`, `bounding-box-ogcapi-processes-bbox`, `geometry-geojson`, `point-geojson`, `surface-geojson`, `feature-collection-geojson`, `line-string-geojson`, `polygon-geojson`, `multi-point-geojson`, `multi-line-string-geojson`, `multi-polygon-geojson`, `geometry-collection-geojson`, `feature-geojson`, `eo-product-stac-item`, `eo-product-eo-geojson`, `rendered-image-png`, `raster-jpeg2000`, `raster-jpeg`, `raster-single-band-jpeg`, `raster-png`, `raster-single-band-png`, `elevation-model-png`, `raster-single-band-aaigrid`, `elevation-model-aaigrid`, `raster-single-band-envi`, `elevation-model-envi`, `geometry-kml`, `surface-kml`, `feature-collection-kml`, `binary-mask-geotiff`, `date-string-date` |
 
 ### Formats
 
@@ -61,6 +61,11 @@ that replaces a data type (`rim:supersedes`). No eligibility criteria and no com
 | `stac-item-collection` | STAC API - ItemCollection Fragment 1.0.0 | none observed in a profile or on the testbed; `application/geo+json`, stated by STAC API - Item Search 1.0.0 (Endpoints) and seen on the Earth Search `/search` endpoint; principal media type (added 2026-11-11) |
 | `stac-collection` | STAC Collection Specification 1.1.0 | none observed; `application/json`, stated by the specification; principal media type (added 2026-11-11) |
 | `stac-catalog` | STAC Catalog Specification 1.1.0 | none observed (six testbed outputs return a Catalog as a JSON object schema with no media type); `application/json`, stated by the specification; principal media type (added 2026-11-11) |
+| `jpeg2000` | ITU-T T.800 JPEG 2000 Core coding system (edition not stated where served) | `image/jp2` (testbed: `algae-bloom` band inputs, added 2026-11-18) |
+| `jpeg` | ITU-T T.81 (edition not stated where served) | `image/jpeg` (testbed: `raster.*` OTB processes, added 2026-11-18) |
+| `aaigrid` | none published; GDAL driver documentation AAIGrid | `application/x-ogc-aaigrid`, not registered with IANA (testbed: SAGA processes, added 2026-11-18) |
+| `envi` | none published; GDAL driver documentation ENVI | `application/x-ogc-envi`, not registered with IANA (testbed: SAGA processes, added 2026-11-18) |
+| `kml` | OGC 12-007r2 KML 2.3 (version not stated where served) | `application/vnd.google-earth.kml+xml` (testbed, added 2026-11-18) |
 | `string-*` (19) | JSON Schema Validation 2020-12, 7.3 (`password`: OpenAPI 3.0.3 data types) | none: a JSON Schema fragment `{"type": "string", "format": ...}` |
 | `string-pattern` | JSON Schema Validation 2020-12, 6.3.3 `pattern` | none: fragment `{"type": "string"}`, parameter `pattern` |
 

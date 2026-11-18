@@ -11,6 +11,11 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.elevation-model",
+  "hasFormat": [
+    "data-formats.representation.elevation-model-aaigrid",
+    "data-formats.representation.elevation-model-envi",
+    "data-formats.representation.elevation-model-png"
+  ],
   "group": "Representations",
   "highlighted": false
 }
