@@ -11,7 +11,7 @@ examples:
             "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/surface-geojson",
             "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
             "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
-            "realizes": "https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1",
+            "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/surface/v1",
             "format": "https://w3id.org/geolabs/ospd/data-formats/format/geojson",
             "jsonSchemaFragment": {
               "oneOf": [

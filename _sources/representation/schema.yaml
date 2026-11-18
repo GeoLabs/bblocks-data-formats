@@ -15,7 +15,7 @@ properties:
   realizes:
     type: string
     format: uri
-    pattern: ^https://geolabs\.github\.io/bblocks-data-types/def/data-type/[a-z0-9-]+/v[0-9]+$
+    pattern: ^https://w3id\.org/geolabs/ospd/data-types/data-type/[a-z0-9-]+/v[0-9]+$
   format:
     type: string
     format: uri

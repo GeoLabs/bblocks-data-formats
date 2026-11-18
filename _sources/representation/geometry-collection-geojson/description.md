@@ -2,7 +2,7 @@ The geometry-collection data type of the data-types register, represented in Geo
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-collection-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `GeometryCollection` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry-collection`. `hasFormat` names [`geometry-collection-gml`](../geometry-collection-gml/), which represents the same data type in another format.
+`https://w3id.org/geolabs/ospd/data-formats/representation/geometry-collection-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/geometry-collection/v1` of the data-types register and points (`df:format`) to the format [GeoJSON](../../format/geojson/): a GeoJSON `GeometryCollection` object (RFC 7946). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.geometry-collection`. `hasFormat` names [`geometry-collection-gml`](../geometry-collection-gml/), which represents the same data type in another format.
 
 ## Schema
 

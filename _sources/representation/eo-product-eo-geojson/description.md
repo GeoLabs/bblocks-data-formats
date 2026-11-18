@@ -2,7 +2,7 @@ The eo-product data type of the data-types register, represented in EO GeoJSON.
 
 ## Definition
 
-`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [EO GeoJSON](../../format/eo-geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`. `hasFormat` names [`eo-product-stac-item`](../eo-product-stac-item/), which represents the same data type in another format.
+`https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-eo-geojson` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/eo-product/v1` of the data-types register and points (`df:format`) to the format [EO GeoJSON](../../format/eo-geojson/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.eo-product`. `hasFormat` names [`eo-product-stac-item`](../eo-product-stac-item/), which represents the same data type in another format.
 
 ## Schema
 

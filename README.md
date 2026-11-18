@@ -74,7 +74,7 @@ building block (`seeAlso`, `rdfs:seeAlso`) and the name of its CWL record (`df:c
 
 19 of them were registered in data-types as the data types `string-*`, as proposals, and were
 withdrawn on 2026-11-09. Each of these 19 formats carries `rim:supersedes` towards the withdrawn item
-(`https://geolabs.github.io/bblocks-data-types/def/data-type/string-<name>/item`), which this register
+(`https://w3id.org/geolabs/ospd/data-types/data-type/string-<name>/item`), which this register
 types through its dependency on data-types; the withdrawn item is unpublished, by an action
 classified substantive, and carries `dct:isReplacedBy` towards the format. The link is carried here
 because `rim:RegisterItemShape` rejects a `rim:supersededBy` towards an item data-types does not type,
@@ -84,7 +84,7 @@ label; the question is asked to the model maintainers.
 The four STAC formats replace, in the same way, the four STAC data types of data-types (`stac-item`,
 `stac-item-collection`, `stac-collection`, `stac-catalog`), proposals withdrawn on 2026-11-11
 (decision Q4, option b): each format carries `rim:supersedes` towards
-`https://geolabs.github.io/bblocks-data-types/def/data-type/stac-<name>/item` (for `stac-item`, by an
+`https://w3id.org/geolabs/ospd/data-types/data-type/stac-<name>/item` (for `stac-item`, by an
 amendment classified clarifying). Their JSON Schema fragments `$ref` the schemas the STAC
 specifications publish (`schemas.stacspec.org` v1.1.0 for Item, Collection and Catalog; for the Item
 Collection, which has no JSON Schema there, the `itemCollection` schema object of the STAC API 1.0.0
