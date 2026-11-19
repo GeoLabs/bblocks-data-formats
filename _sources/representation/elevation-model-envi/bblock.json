@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Elevation model as ENVI .hdr labelled raster",
+  "abstract": "The elevation-model data type of the data-types register, represented in ENVI .hdr labelled raster.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation"
+  ],
+  "isDescribedBy": "data-types.data-type.elevation-model",
+  "hasFormat": [
+    "data-formats.representation.elevation-model-aaigrid",
+    "data-formats.representation.elevation-model-geotiff",
+    "data-formats.representation.elevation-model-png"
+  ],
+  "group": "Representations",
+  "highlighted": false
+}

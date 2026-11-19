@@ -1,0 +1,38 @@
+examples:
+  - title: JPEG
+    content: >-
+      The register item of the JPEG format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://www.itu.int/rec/T-REC-T.81",
+                "title": "ITU-T Recommendation T.81, Information technology - Digital compression and coding of continuous-tone still images - Requirements and guidelines"
+              }
+            ],
+            "observedMediaTypes": [
+              {
+                "mediaType": "image/jpeg",
+                "observedIn": "testbed"
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg",
+              "startedAtTime": "2026-11-18T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

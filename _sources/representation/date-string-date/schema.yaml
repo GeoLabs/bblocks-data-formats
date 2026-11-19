@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Representation item - Date as Date string
+description: >-
+  The register item of the representation Date as Date string, in JSON.
+allOf:
+  - $ref: bblocks://data-formats.representation
+properties:
+  id: {const: https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date}

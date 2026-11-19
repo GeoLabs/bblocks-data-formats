@@ -209,6 +209,36 @@
     },
     {
       "role": "data",
+      "ref": "../format/jpeg2000/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: JPEG 2000"
+    },
+    {
+      "role": "data",
+      "ref": "../format/jpeg/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: JPEG"
+    },
+    {
+      "role": "data",
+      "ref": "../format/aaigrid/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: Arc/Info ASCII Grid"
+    },
+    {
+      "role": "data",
+      "ref": "../format/envi/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: ENVI .hdr labelled raster"
+    },
+    {
+      "role": "data",
+      "ref": "../format/kml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Format item: KML"
+    },
+    {
+      "role": "data",
       "ref": "../representation/geometry-gml/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Geometry as GML"
@@ -386,6 +416,96 @@
       "ref": "../representation/rendered-image-png/ontology.ttl",
       "format": "text/turtle",
       "title": "Representation item: Rendered image as PNG"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-jpeg2000/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Raster as JPEG 2000"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-jpeg/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Raster as JPEG"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-single-band-jpeg/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Single-band raster as JPEG"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Raster as PNG"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-single-band-png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Single-band raster as PNG"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/elevation-model-png/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Elevation model as PNG"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-single-band-aaigrid/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Single-band raster as Arc/Info ASCII Grid"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/elevation-model-aaigrid/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Elevation model as Arc/Info ASCII Grid"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/raster-single-band-envi/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Single-band raster as ENVI .hdr labelled raster"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/elevation-model-envi/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Elevation model as ENVI .hdr labelled raster"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/geometry-kml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Geometry as KML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/surface-kml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Surface as KML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/feature-collection-kml/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Feature collection as KML"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/binary-mask-geotiff/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Binary mask as GeoTIFF"
+    },
+    {
+      "role": "data",
+      "ref": "../representation/date-string-date/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Representation item: Date as Date string"
     }
   ],
   "tags": [

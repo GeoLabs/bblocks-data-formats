@@ -12,7 +12,8 @@
   ],
   "isDescribedBy": "data-types.data-type.feature-collection",
   "hasFormat": [
-    "data-formats.representation.feature-collection-gml"
+    "data-formats.representation.feature-collection-gml",
+    "data-formats.representation.feature-collection-kml"
   ],
   "group": "Representations",
   "highlighted": false

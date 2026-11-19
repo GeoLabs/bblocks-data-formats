@@ -1,0 +1,38 @@
+examples:
+  - title: ENVI .hdr labelled raster
+    content: >-
+      The register item of the ENVI .hdr labelled raster format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/envi",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/envi",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://gdal.org/en/stable/drivers/raster/envi.html",
+                "title": "GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster"
+              }
+            ],
+            "observedMediaTypes": [
+              {
+                "mediaType": "application/x-ogc-envi",
+                "observedIn": "testbed"
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/envi/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/envi",
+              "startedAtTime": "2026-11-18T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

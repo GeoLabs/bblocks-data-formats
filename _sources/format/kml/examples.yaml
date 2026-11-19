@@ -1,0 +1,38 @@
+examples:
+  - title: KML
+    content: >-
+      The register item of the KML format, of the register's format item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://w3id.org/geolabs/ospd/data-formats/format/kml",
+            "type": "Format",
+            "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/kml",
+            "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+            "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+            "specification": [
+              {
+                "id": "https://docs.ogc.org/is/12-007r2/12-007r2.html",
+                "title": "OGC 12-007r2 OGC KML 2.3"
+              }
+            ],
+            "observedMediaTypes": [
+              {
+                "mediaType": "application/vnd.google-earth.kml+xml",
+                "observedIn": "testbed"
+              }
+            ],
+            "validityStatus": "invalid",
+            "publicationStatus": "published",
+            "hasAction": {
+              "id": "https://w3id.org/geolabs/ospd/data-formats/format/kml/actions/addition",
+              "type": "RegisterAction",
+              "actionType": "addition",
+              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/kml",
+              "startedAtTime": "2026-11-18T00:00:00Z"
+            }
+          }
+      - language: turtle
+        ref: ontology.ttl

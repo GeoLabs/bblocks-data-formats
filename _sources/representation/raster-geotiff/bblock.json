@@ -11,6 +11,11 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.raster",
+  "hasFormat": [
+    "data-formats.representation.raster-jpeg",
+    "data-formats.representation.raster-jpeg2000",
+    "data-formats.representation.raster-png"
+  ],
   "group": "Representations",
   "highlighted": false
 }

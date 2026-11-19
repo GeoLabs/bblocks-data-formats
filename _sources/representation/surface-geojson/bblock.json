@@ -12,7 +12,8 @@
   ],
   "isDescribedBy": "data-types.data-type.surface",
   "hasFormat": [
-    "data-formats.representation.surface-gml"
+    "data-formats.representation.surface-gml",
+    "data-formats.representation.surface-kml"
   ],
   "group": "Representations",
   "highlighted": false

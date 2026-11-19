@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: Arc/Info ASCII Grid",
+  "abstract": "The ASCII interchange format of Arc/Info Grid: a single raster grid written as text, sometimes with a .prj file for its projection.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid",
+      "link": "https://gdal.org/en/stable/drivers/raster/aaigrid.html"
+    }
+  ]
+}

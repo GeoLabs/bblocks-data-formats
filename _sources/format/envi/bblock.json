@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: ENVI .hdr labelled raster",
+  "abstract": "Raw raster cells, band interleaved by line, by pixel or band sequential, described by an ENVI-style .hdr text header.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster",
+      "link": "https://gdal.org/en/stable/drivers/raster/envi.html"
+    }
+  ]
+}

@@ -11,6 +11,12 @@
     "data-formats.representation"
   ],
   "isDescribedBy": "data-types.data-type.raster-single-band",
+  "hasFormat": [
+    "data-formats.representation.raster-single-band-aaigrid",
+    "data-formats.representation.raster-single-band-envi",
+    "data-formats.representation.raster-single-band-jpeg",
+    "data-formats.representation.raster-single-band-png"
+  ],
   "group": "Representations",
   "highlighted": false
 }
