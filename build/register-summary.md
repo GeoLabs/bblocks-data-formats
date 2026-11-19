@@ -47,6 +47,18 @@ A format of this register, in JSON: a profile of the Registered Item Model regis
 
 A representation of this register, in JSON: a profile of the Registered Item Model register item that realizes one data type version of the data-types register and points to one format.
 
+### `data-formats.format.aaigrid` — Format: Arc/Info ASCII Grid
+
+**Type:** schema
+
+The ASCII interchange format of Arc/Info Grid: a single raster grid written as text, sometimes with a .prj file for its projection.
+
+### `data-formats.format.envi` — Format: ENVI .hdr labelled raster
+
+**Type:** schema
+
+Raw raster cells, band interleaved by line, by pixel or band sequential, described by an ENVI-style .hdr text header.
+
 ### `data-formats.format.eo-geojson` — Format: EO GeoJSON
 
 **Type:** schema
@@ -70,6 +82,24 @@ A TIFF-based encoding of georeferenced raster data.
 **Type:** schema
 
 An XML encoding of geographic features and geometries.
+
+### `data-formats.format.jpeg` — Format: JPEG
+
+**Type:** schema
+
+A lossy image encoding of continuous-tone greyscale or colour pictures.
+
+### `data-formats.format.jpeg2000` — Format: JPEG 2000
+
+**Type:** schema
+
+A wavelet-based image encoding, lossless or lossy, of one or more components, in the JP2 file format.
+
+### `data-formats.format.kml` — Format: KML
+
+**Type:** schema
+
+An XML encoding of geographic features, their geometries and their presentation.
 
 ### `data-formats.format.las` — Format: LAS
 
@@ -245,6 +275,12 @@ The bounding-box data type of the data-types register, represented as an OGC API
 
 The curve data type of the data-types register, represented in GML.
 
+### `data-formats.representation.date-string-date` — Representation: Date as Date string
+
+**Type:** schema
+
+The date data type of the data-types register, represented in Date string.
+
 ### `data-formats.representation.eo-product-eo-geojson` — Representation: Earth observation product as EO GeoJSON
 
 **Type:** schema
@@ -268,6 +304,12 @@ The feature-collection data type of the data-types register, represented in GeoJ
 **Type:** schema
 
 The feature-collection data type of the data-types register, represented in GML.
+
+### `data-formats.representation.feature-collection-kml` — Representation: Feature collection as KML
+
+**Type:** schema
+
+The feature-collection data type of the data-types register, represented in KML.
 
 ### `data-formats.representation.feature-geojson` — Representation: Feature as GeoJSON
 
@@ -299,6 +341,12 @@ The geometry data type of the data-types register, represented in GeoJSON.
 
 The geometry data type of the data-types register, represented in GML.
 
+### `data-formats.representation.geometry-kml` — Representation: Geometry as KML
+
+**Type:** schema
+
+The geometry data type of the data-types register, represented in KML.
+
 ### `data-formats.representation.point-cloud-las` — Representation: Point cloud as LAS
 
 **Type:** schema
@@ -323,11 +371,53 @@ The point data type of the data-types register, represented in GML.
 
 The raster data type of the data-types register, represented in GeoTIFF.
 
+### `data-formats.representation.raster-jpeg` — Representation: Raster as JPEG
+
+**Type:** schema
+
+The raster data type of the data-types register, represented in JPEG.
+
+### `data-formats.representation.raster-jpeg2000` — Representation: Raster as JPEG 2000
+
+**Type:** schema
+
+The raster data type of the data-types register, represented in JPEG 2000.
+
+### `data-formats.representation.raster-png` — Representation: Raster as PNG
+
+**Type:** schema
+
+The raster data type of the data-types register, represented in PNG.
+
+### `data-formats.representation.raster-single-band-aaigrid` — Representation: Single-band raster as Arc/Info ASCII Grid
+
+**Type:** schema
+
+The raster-single-band data type of the data-types register, represented in Arc/Info ASCII Grid.
+
+### `data-formats.representation.raster-single-band-envi` — Representation: Single-band raster as ENVI .hdr labelled raster
+
+**Type:** schema
+
+The raster-single-band data type of the data-types register, represented in ENVI .hdr labelled raster.
+
 ### `data-formats.representation.raster-single-band-geotiff` — Representation: Single-band raster as GeoTIFF
 
 **Type:** schema
 
 The raster-single-band data type of the data-types register, represented in GeoTIFF.
+
+### `data-formats.representation.raster-single-band-jpeg` — Representation: Single-band raster as JPEG
+
+**Type:** schema
+
+The raster-single-band data type of the data-types register, represented in JPEG.
+
+### `data-formats.representation.raster-single-band-png` — Representation: Single-band raster as PNG
+
+**Type:** schema
+
+The raster-single-band data type of the data-types register, represented in PNG.
 
 ### `data-formats.representation.rendered-image-png` — Representation: Rendered image as PNG
 
@@ -346,6 +436,12 @@ The surface data type of the data-types register, represented in GeoJSON.
 **Type:** schema
 
 The surface data type of the data-types register, represented in GML.
+
+### `data-formats.representation.surface-kml` — Representation: Surface as KML
+
+**Type:** schema
+
+The surface data type of the data-types register, represented in KML.
 
 ### `data-formats.representation.line-string-geojson` — Representation: LineString as GeoJSON
 
@@ -395,11 +491,35 @@ The polygon data type of the data-types register, represented in GeoJSON.
 
 The polygon data type of the data-types register, represented in GML.
 
+### `data-formats.representation.binary-mask-geotiff` — Representation: Binary mask as GeoTIFF
+
+**Type:** schema
+
+The binary-mask data type of the data-types register, represented in GeoTIFF.
+
+### `data-formats.representation.elevation-model-aaigrid` — Representation: Elevation model as Arc/Info ASCII Grid
+
+**Type:** schema
+
+The elevation-model data type of the data-types register, represented in Arc/Info ASCII Grid.
+
+### `data-formats.representation.elevation-model-envi` — Representation: Elevation model as ENVI .hdr labelled raster
+
+**Type:** schema
+
+The elevation-model data type of the data-types register, represented in ENVI .hdr labelled raster.
+
 ### `data-formats.representation.elevation-model-geotiff` — Representation: Elevation model as GeoTIFF
 
 **Type:** schema
 
 The elevation-model data type of the data-types register, represented in GeoTIFF.
+
+### `data-formats.representation.elevation-model-png` — Representation: Elevation model as PNG
+
+**Type:** schema
+
+The elevation-model data type of the data-types register, represented in PNG.
 
 ### `data-formats.representation.multi-line-string-geojson` — Representation: MultiLineString as GeoJSON
 

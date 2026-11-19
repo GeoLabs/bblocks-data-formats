@@ -1,0 +1,443 @@
+
+# Format: Arc/Info ASCII Grid (Schema)
+
+`data-formats.format.aaigrid` *v0.1*
+
+The ASCII interchange format of Arc/Info Grid: a single raster grid written as text, sometimes with a .prj file for its projection.
+
+[*Status*](http://www.opengis.net/def/status): Under development
+
+## Description
+
+The ASCII interchange format of Arc/Info Grid: a single raster grid written as text, sometimes with a .prj file for its projection.
+
+## Definition
+
+`https://w3id.org/geolabs/ospd/data-formats/format/aaigrid` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type.
+
+## Specification
+
+- [GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid](https://gdal.org/en/stable/drivers/raster/aaigrid.html) (`dct:conformsTo`)
+
+No formal specification of this format is published: the GDAL driver documentation, read on 2026-11-18, is the reference cited, and it cites no specification. The media type `application/x-ogc-aaigrid` is not registered with IANA (`x-` prefix); it is the one the deployed processes declare.
+
+## Observed media types
+
+Measured on 2026-11-18 in the process descriptions (`processDescription.inherited.json`) of `bblocks-process-profiles-tests-1` (branch `planes/w3id-identifiers`, `bfa5cef`), by `.claude/bblocks-audit/tier4-formats/inventory.py`. No principal media type is set: none has been chosen.
+
+| Media type | Observed in |
+|---|---|
+| `application/x-ogc-aaigrid` | testbed |
+
+Where it is declared:
+
+- [`pointcloud/point-cloud-to-grid`](https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-to-grid): output `COUNT`, output `GRIDS`, output `GRID`
+- [`terrain/hillshading`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading): input `ELEVATION`, output `SHADE`
+- [`terrain/slope`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/slope): input `ELEVATION`, output `ASPECT`, output `C_CROS`, output `C_GENE`, output `C_LONG`, output `C_MAXI`, output `C_MINI`, output `C_PLAN`, output `C_PROF`, output `C_ROTO`, output `C_TANG`, output `C_TOTA`, output `SLOPE`
+- [`terrain/terrain-ruggedness-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/terrain-ruggedness-index): input `DEM`, output `TRI`
+- [`terrain/topographic-position-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/topographic-position-index): input `DEM`, output `TPI`
+
+## Requested by
+
+Added on 2026-11-18 for the representations [`raster-single-band-aaigrid`](../../representation/raster-single-band-aaigrid/), [`elevation-model-aaigrid`](../../representation/elevation-model-aaigrid/), needed by the deployed processes above (tier 4).
+
+## Content of this block
+
+- `ontology.ttl`: the format item and its proposed addition (canonical source).
+- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.
+- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.
+
+## Examples
+
+### Arc/Info ASCII Grid
+The register item of the Arc/Info ASCII Grid format, of the register's format item class.
+#### json
+```json
+{
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://gdal.org/en/stable/drivers/raster/aaigrid.html",
+      "title": "GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid"
+    }
+  ],
+  "observedMediaTypes": [
+    {
+      "mediaType": "application/x-ogc-aaigrid",
+      "observedIn": "testbed"
+    }
+  ],
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+    "startedAtTime": "2026-11-18T00:00:00Z"
+  }
+}
+
+```
+
+#### turtle
+```turtle
+@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+
+<https://w3id.org/geolabs/ospd/data-formats/format/aaigrid> a df:Format, rim:RegisterItem ;
+    dct:title "Arc/Info ASCII Grid"@en ;
+    dct:description "The ASCII interchange format of Arc/Info Grid: a single raster grid written as text, sometimes with a .prj file for its projection."@en ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid"^^xsd:anyURI ;
+    rim:itemClass df:formatItemClass ;
+    rim:inRegister df:register ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition> ;
+    dct:conformsTo <https://gdal.org/en/stable/drivers/raster/aaigrid.html> ;
+    df:observedMediaType [ df:mediaType "application/x-ogc-aaigrid" ; df:observedIn "testbed" ] .
+
+<https://gdal.org/en/stable/drivers/raster/aaigrid.html> dct:title "GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition> a rim:RegisterAction ;
+    rim:actionType rim:additionAction ;
+    rim:proposer df:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/aaigrid> ;
+    prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/aaigrid/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://gdal.org/en/stable/drivers/raster/aaigrid.html",
+      "title": "GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid"
+    }
+  ],
+  "observedMediaTypes": [
+    {
+      "mediaType": "application/x-ogc-aaigrid",
+      "observedIn": "testbed"
+    }
+  ],
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+    "startedAtTime": "2026-11-18T00:00:00Z"
+  }
+}
+```
+
+## Schema
+
+```yaml
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Format item - Arc/Info ASCII Grid
+description: The register item of the Arc/Info ASCII Grid format, in JSON.
+allOf:
+- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml
+properties:
+  id:
+    const: https://w3id.org/geolabs/ospd/data-formats/format/aaigrid
+x-bblocks-metadata:
+  itemIdentifier: data-formats.format.aaigrid
+  register: https://geolabs.github.io/bblocks-data-formats/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-18'
+
+```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://geolabs.github.io/bblocks-data-formats/build/annotated/format/aaigrid/schema.json)
+* JSON version: [schema.json](https://geolabs.github.io/bblocks-data-formats/build/annotated/format/aaigrid/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "Register": "rim:Register",
+    "RegisterSystem": "rim:RegisterSystem",
+    "RegisterSpecification": "rim:RegisterSpecification",
+    "RegisterItemClass": "rim:RegisterItemClass",
+    "RegisterItem": "rim:RegisterItem",
+    "RegisterAction": "rim:RegisterAction",
+    "Concept": "rim:Concept",
+    "ConceptVersion": "rim:ConceptVersion",
+    "ConceptSystem": "rim:ConceptSystem",
+    "Commitment": "rim:Commitment",
+    "Agent": "prov:Agent",
+    "Organization": "prov:Organization",
+    "Person": "prov:Person",
+    "label": "rdfs:label",
+    "prefLabel": "skos:prefLabel",
+    "definition": "skos:definition",
+    "inScheme": {
+      "@id": "skos:inScheme",
+      "@type": "@id"
+    },
+    "runsOn": {
+      "@id": "rim:runsOn",
+      "@type": "@id"
+    },
+    "hasSpecification": {
+      "@id": "rim:hasSpecification",
+      "@type": "@id"
+    },
+    "definesSubstantiveChange": "rim:definesSubstantiveChange",
+    "registerOwner": {
+      "@id": "rim:registerOwner",
+      "@type": "@id"
+    },
+    "registerManager": {
+      "@id": "rim:registerManager",
+      "@type": "@id"
+    },
+    "controlBody": {
+      "@id": "rim:controlBody",
+      "@type": "@id"
+    },
+    "registerSystemManager": {
+      "@id": "rim:registerSystemManager",
+      "@type": "@id"
+    },
+    "registerUser": {
+      "@id": "rim:registerUser",
+      "@type": "@id"
+    },
+    "hasCommitment": {
+      "@id": "rim:hasCommitment",
+      "@type": "@id"
+    },
+    "commitmentCategory": {
+      "@id": "rim:commitmentCategory",
+      "@type": "@vocab"
+    },
+    "access": "rim:accessCommitment",
+    "persistence": "rim:persistenceCommitment",
+    "transparency": "rim:transparencyCommitment",
+    "definedIn": {
+      "@id": "rim:definedIn",
+      "@type": "@id"
+    },
+    "validatedBy": {
+      "@id": "rim:validatedBy",
+      "@type": "@id"
+    },
+    "versionOf": {
+      "@id": "rim:versionOf",
+      "@type": "@id"
+    },
+    "version": "rim:version",
+    "valid": "rim:valid",
+    "invalid": "rim:invalid",
+    "published": "rim:published",
+    "unpublished": "rim:unpublished",
+    "appliesTo": {
+      "@id": "rim:appliesTo",
+      "@type": "@id"
+    },
+    "proposer": {
+      "@id": "rim:proposer",
+      "@type": "@id"
+    },
+    "actionType": {
+      "@id": "rim:actionType",
+      "@type": "@vocab"
+    },
+    "addition": "rim:additionAction",
+    "publish": "rim:publishAction",
+    "unpublish": "rim:unpublishAction",
+    "invalidation": "rim:invalidationAction",
+    "supersession": "rim:supersessionAction",
+    "redaction": "rim:redactionAction",
+    "deletion": "rim:deletionAction",
+    "changeClassification": {
+      "@id": "rim:changeClassification",
+      "@type": "@vocab"
+    },
+    "substantive": "rim:substantiveChange",
+    "clarifying": "rim:clarifyingChange",
+    "correctional": "rim:correctionalChange",
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "id": "@id",
+    "type": "@type",
+    "objectIdentifier": {
+      "@id": "rim:objectIdentifier",
+      "@type": "xsd:anyURI"
+    },
+    "functionalIdentifier": {
+      "@id": "rim:functionalIdentifier",
+      "@type": "xsd:anyURI"
+    },
+    "itemClass": {
+      "@id": "rim:itemClass",
+      "@type": "@id"
+    },
+    "inRegister": {
+      "@id": "rim:inRegister",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "rim:realizes",
+      "@type": "@id"
+    },
+    "validityStatus": {
+      "@id": "rim:validityStatus",
+      "@type": "@vocab"
+    },
+    "publicationStatus": {
+      "@id": "rim:publicationStatus",
+      "@type": "@vocab"
+    },
+    "isRedacted": {
+      "@id": "rim:isRedacted",
+      "@type": "xsd:boolean"
+    },
+    "isDeleted": {
+      "@id": "rim:isDeleted",
+      "@type": "xsd:boolean"
+    },
+    "title": "dct:title",
+    "description": "dct:description",
+    "relatedItem": {
+      "@id": "rim:relatedItem",
+      "@type": "@id"
+    },
+    "supersededBy": {
+      "@id": "rim:supersededBy",
+      "@type": "@id"
+    },
+    "supersedes": {
+      "@id": "rim:supersedes",
+      "@type": "@id"
+    },
+    "hasAction": {
+      "@id": "rim:hasAction",
+      "@type": "@id"
+    },
+    "Format": "df:Format",
+    "Representation": "df:Representation",
+    "format": {
+      "@id": "df:format",
+      "@type": "@id"
+    },
+    "specification": {
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+    "observedMediaTypes": {
+      "@context": {
+        "mediaType": "df:mediaType",
+        "observedIn": "df:observedIn"
+      },
+      "@id": "df:observedMediaType"
+    },
+    "inferredMediaTypes": {
+      "@context": {
+        "mediaType": "df:mediaType",
+        "source": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:inferredMediaType"
+    },
+    "primaryMediaType": "df:primaryMediaType",
+    "jsonSchemaFragment": {
+      "@id": "df:jsonSchemaFragment",
+      "@type": "@json"
+    },
+    "xmlSchemaElement": {
+      "@context": {
+        "namespace": {
+          "@id": "df:xmlNamespace",
+          "@type": "@id"
+        },
+        "localName": "df:xmlLocalName",
+        "schema": {
+          "@id": "dct:source",
+          "@type": "@id"
+        }
+      },
+      "@id": "df:xmlSchemaElement"
+    },
+    "parameters": {
+      "@context": {
+        "name": "df:parameterName",
+        "jsonSchemaKeyword": "df:jsonSchemaKeyword"
+      },
+      "@id": "df:parameter"
+    },
+    "cwlCustomType": "df:cwlCustomType",
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "rim": "https://w3id.org/ogc/rim/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "df": "https://w3id.org/geolabs/ospd/data-formats/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://geolabs.github.io/bblocks-data-formats/build/annotated/format/aaigrid/context.jsonld)
+
+## Sources
+
+* [GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid](https://gdal.org/en/stable/drivers/raster/aaigrid.html)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/GeoLabs/bblocks-data-formats](https://github.com/GeoLabs/bblocks-data-formats)
+* Path: `_sources/format/aaigrid`
+

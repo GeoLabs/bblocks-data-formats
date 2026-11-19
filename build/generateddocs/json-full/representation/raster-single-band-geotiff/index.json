@@ -17,6 +17,12 @@
   "isDescribedBy": [
     "data-types.data-type.raster-single-band"
   ],
+  "hasFormat": [
+    "data-formats.representation.raster-single-band-aaigrid",
+    "data-formats.representation.raster-single-band-envi",
+    "data-formats.representation.raster-single-band-jpeg",
+    "data-formats.representation.raster-single-band-png"
+  ],
   "group": "Representations",
   "highlighted": false,
   "shaclShapes": {
@@ -33,7 +39,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-18",
+  "dateOfLastChange": "2026-11-19",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-geotiff/schema.yaml",

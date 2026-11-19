@@ -1,0 +1,20 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/binary-mask-geotiff/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff",
+  "type": "Representation",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/representationItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "realizes": "https://w3id.org/geolabs/ospd/data-types/data-type/binary-mask/v1",
+  "format": "https://w3id.org/geolabs/ospd/data-formats/format/geotiff",
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/binary-mask-geotiff",
+    "startedAtTime": "2026-11-18T00:00:00Z"
+  }
+}

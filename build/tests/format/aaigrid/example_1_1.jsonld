@@ -1,0 +1,30 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/aaigrid/context.jsonld",
+  "id": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+  "type": "Format",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-formats/formatItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-formats/register",
+  "specification": [
+    {
+      "id": "https://gdal.org/en/stable/drivers/raster/aaigrid.html",
+      "title": "GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid"
+    }
+  ],
+  "observedMediaTypes": [
+    {
+      "mediaType": "application/x-ogc-aaigrid",
+      "observedIn": "testbed"
+    }
+  ],
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid",
+    "startedAtTime": "2026-11-18T00:00:00Z"
+  }
+}

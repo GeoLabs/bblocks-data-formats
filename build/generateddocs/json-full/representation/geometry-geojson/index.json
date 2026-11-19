@@ -18,7 +18,8 @@
     "data-types.data-type.geometry"
   ],
   "hasFormat": [
-    "data-formats.representation.geometry-gml"
+    "data-formats.representation.geometry-gml",
+    "data-formats.representation.geometry-kml"
   ],
   "group": "Representations",
   "highlighted": false,
@@ -36,7 +37,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-18",
+  "dateOfLastChange": "2026-11-19",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-geojson/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/geometry-geojson/schema.yaml",

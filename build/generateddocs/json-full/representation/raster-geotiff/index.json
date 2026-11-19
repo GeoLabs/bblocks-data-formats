@@ -17,6 +17,11 @@
   "isDescribedBy": [
     "data-types.data-type.raster"
   ],
+  "hasFormat": [
+    "data-formats.representation.raster-jpeg",
+    "data-formats.representation.raster-jpeg2000",
+    "data-formats.representation.raster-png"
+  ],
   "group": "Representations",
   "highlighted": false,
   "shaclShapes": {
@@ -33,7 +38,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-18",
+  "dateOfLastChange": "2026-11-19",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-geotiff/schema.yaml",

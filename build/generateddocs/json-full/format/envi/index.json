@@ -1,0 +1,81 @@
+
+
+{
+  "itemIdentifier": "data-formats.format.envi",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: ENVI .hdr labelled raster",
+  "abstract": "Raw raster cells, band interleaved by line, by pixel or band sequential, described by an ENVI-style .hdr text header.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster",
+      "link": "https://gdal.org/en/stable/drivers/raster/envi.html"
+    }
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-19",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/envi/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/envi/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/envi/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/format/envi/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/envi/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/envi/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/format/envi/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/format/envi/",
+  "description": "Raw raster cells, band interleaved by line, by pixel or band sequential, described by an ENVI-style .hdr text header.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/format/envi` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type.\n\n## Specification\n\n- [GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster](https://gdal.org/en/stable/drivers/raster/envi.html) (`dct:conformsTo`)\n\nNo formal specification of this format is published: the GDAL driver documentation, read on 2026-11-18, is the reference cited, and it cites no specification. The media type `application/x-ogc-envi` is not registered with IANA (`x-` prefix); it is the one the deployed processes declare.\n\n## Observed media types\n\nMeasured on 2026-11-18 in the process descriptions (`processDescription.inherited.json`) of `bblocks-process-profiles-tests-1` (branch `planes/w3id-identifiers`, `bfa5cef`), by `.claude/bblocks-audit/tier4-formats/inventory.py`. No principal media type is set: none has been chosen.\n\n| Media type | Observed in |\n|---|---|\n| `application/x-ogc-envi` | testbed |\n\nWhere it is declared:\n\n- [`pointcloud/point-cloud-to-grid`](https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-to-grid): output `COUNT`, output `GRIDS`, output `GRID`\n- [`terrain/hillshading`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading): input `ELEVATION`, output `SHADE`\n- [`terrain/slope`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/slope): input `ELEVATION`, output `ASPECT`, output `C_CROS`, output `C_GENE`, output `C_LONG`, output `C_MAXI`, output `C_MINI`, output `C_PLAN`, output `C_PROF`, output `C_ROTO`, output `C_TANG`, output `C_TOTA`, output `SLOPE`\n- [`terrain/terrain-ruggedness-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/terrain-ruggedness-index): input `DEM`, output `TRI`\n- [`terrain/topographic-position-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/topographic-position-index): input `DEM`, output `TPI`\n\n## Requested by\n\nAdded on 2026-11-18 for the representations [`raster-single-band-envi`](../../representation/raster-single-band-envi/), [`elevation-model-envi`](../../representation/elevation-model-envi/), needed by the deployed processes above (tier 4).\n\n## Content of this block\n\n- `ontology.ttl`: the format item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.\n",
+  "examples": [
+    {
+      "title": "ENVI .hdr labelled raster",
+      "content": "The register item of the ENVI .hdr labelled raster format, of the register's format item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/envi/example_1_1.json",
+          "sizeBytes": 1048,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://gdal.org/en/stable/drivers/raster/envi.html\",\n      \"title\": \"GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"application/x-ogc-envi\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/envi/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/envi/example_1_2.ttl",
+          "sizeBytes": 1767,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/format/envi> a df:Format, rim:RegisterItem ;\n    dct:title \"ENVI .hdr labelled raster\"@en ;\n    dct:description \"Raw raster cells, band interleaved by line, by pixel or band sequential, described by an ENVI-style .hdr text header.\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/format/envi\"^^xsd:anyURI ;\n    rim:itemClass df:formatItemClass ;\n    rim:inRegister df:register ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/envi/actions/addition> ;\n    dct:conformsTo <https://gdal.org/en/stable/drivers/raster/envi.html> ;\n    df:observedMediaType [ df:mediaType \"application/x-ogc-envi\" ; df:observedIn \"testbed\" ] .\n\n<https://gdal.org/en/stable/drivers/raster/envi.html> dct:title \"GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster\" .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/envi/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/envi> ;\n    prov:startedAtTime \"2026-11-18T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/envi/example_1_1.jsonld",
+          "sizeBytes": 1154,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/format/envi/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://gdal.org/en/stable/drivers/raster/envi.html\",\n      \"title\": \"GDAL raster driver documentation: ENVI -- ENVI .hdr Labelled Raster\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"application/x-ogc-envi\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Format item - ENVI .hdr labelled raster\ndescription: The register item of the ENVI .hdr labelled raster format, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/format/envi\nx-bblocks-metadata:\n  itemIdentifier: data-formats.format.envi\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/format/envi"
+}

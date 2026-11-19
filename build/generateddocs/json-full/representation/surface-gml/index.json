@@ -18,7 +18,8 @@
     "data-types.data-type.surface"
   ],
   "hasFormat": [
-    "data-formats.representation.surface-geojson"
+    "data-formats.representation.surface-geojson",
+    "data-formats.representation.surface-kml"
   ],
   "group": "Representations",
   "highlighted": false,
@@ -36,7 +37,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-18",
+  "dateOfLastChange": "2026-11-19",
   "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/surface-gml/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/surface-gml/schema.yaml",

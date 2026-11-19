@@ -113,7 +113,7 @@ df:MediaTypeObservation a owl:Class ;
 
 df:Representation a owl:Class ;
     rdfs:label "Representation" ;
-    rdfs:comment "A data type in a format: realizes (rim:realizes) exactly one dt:DataTypeVersion of the data-types register and points (df:format) to one df:Format. Created when an existing role needs it." ;
+    rdfs:comment "A data type in a format: realizes (rim:realizes) exactly one dt:DataTypeVersion of the data-types register and points (df:format) to one df:Format. Created in the cases the register specification lists (df:specification)." ;
     rdfs:isDefinedBy df: ;
     rdfs:subClassOf rim:RegisterItem .
 

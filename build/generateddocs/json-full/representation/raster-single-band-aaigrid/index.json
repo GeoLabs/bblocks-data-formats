@@ -1,0 +1,85 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.raster-single-band-aaigrid",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Single-band raster as Arc/Info ASCII Grid",
+  "abstract": "The raster-single-band data type of the data-types register, represented in Arc/Info ASCII Grid.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.raster-single-band"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.raster-single-band"
+  ],
+  "hasFormat": [
+    "data-formats.representation.raster-single-band-envi",
+    "data-formats.representation.raster-single-band-geotiff",
+    "data-formats.representation.raster-single-band-jpeg",
+    "data-formats.representation.raster-single-band-png"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-19",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-aaigrid/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-aaigrid/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-aaigrid/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-aaigrid/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-aaigrid/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-aaigrid/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-aaigrid/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/raster-single-band-aaigrid/",
+  "description": "The raster-single-band data type of the data-types register, represented in Arc/Info ASCII Grid.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1` of the data-types register and points (`df:format`) to the format [Arc/Info ASCII Grid](../../format/aaigrid/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster-single-band`.\n\n## Requested by\n\nAdded on 2026-11-18 for inputs and outputs of deployed processes (tier 4) of `bblocks-process-profiles` whose data type is `raster-single-band` and whose description declares this format. Measured on 2026-11-18 in the process descriptions (`processDescription.inherited.json`) of `bblocks-process-profiles-tests-1` (branch `planes/w3id-identifiers`, `bfa5cef`), by `.claude/bblocks-audit/tier4-formats/inventory.py`.\n\n- [`pointcloud/point-cloud-to-grid`](https://w3id.org/geolabs/ospd/process-profiles/process-type/pointcloud/point-cloud-to-grid): output `COUNT`, output `GRIDS`, output `GRID`\n- [`terrain/hillshading`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading): output `SHADE`\n- [`terrain/slope`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/slope): output `ASPECT`, output `C_CROS`, output `C_GENE`, output `C_LONG`, output `C_MAXI`, output `C_MINI`, output `C_PLAN`, output `C_PROF`, output `C_ROTO`, output `C_TANG`, output `C_TOTA`, output `SLOPE`\n- [`terrain/terrain-ruggedness-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/terrain-ruggedness-index): output `TRI`\n- [`terrain/topographic-position-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/topographic-position-index): output `TPI`\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "Single-band raster as Arc/Info ASCII Grid",
+      "content": "The register item of the representation Single-band raster as Arc/Info ASCII Grid: it realizes version 1 of the raster-single-band data type of the data-types register and points to the aaigrid format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-single-band-aaigrid/example_1_1.json",
+          "sizeBytes": 1039,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/aaigrid\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-single-band-aaigrid/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-single-band-aaigrid/example_1_2.ttl",
+          "sizeBytes": 1667,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid> a df:Representation, rim:RegisterItem ;\n    dct:title \"Single-band raster as Arc/Info ASCII Grid\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/aaigrid> ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid/actions/addition> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid> ;\n    prov:startedAtTime \"2026-11-18T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-single-band-aaigrid/example_1_1.jsonld",
+          "sizeBytes": 1175,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-single-band-aaigrid/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/aaigrid\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - Single-band raster as Arc/Info ASCII Grid\ndescription: The register item of the representation Single-band raster as Arc/Info\n  ASCII Grid, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/raster-single-band-aaigrid\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.raster-single-band-aaigrid\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/raster-single-band-aaigrid"
+}

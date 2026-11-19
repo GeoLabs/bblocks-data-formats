@@ -1,0 +1,81 @@
+
+
+{
+  "itemIdentifier": "data-formats.format.jpeg2000",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Format: JPEG 2000",
+  "abstract": "A wavelet-based image encoding, lossless or lossy, of one or more components, in the JP2 file format.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.format"
+  ],
+  "group": "Formats",
+  "highlighted": false,
+  "sources": [
+    {
+      "title": "ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system",
+      "link": "https://www.itu.int/rec/T-REC-T.800"
+    }
+  ],
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-19",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/jpeg2000/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/jpeg2000/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/jpeg2000/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/format/jpeg2000/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/jpeg2000/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/format/jpeg2000/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/format/jpeg2000/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/format/jpeg2000/",
+  "description": "A wavelet-based image encoding, lossless or lossy, of one or more components, in the JP2 file format.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000` is a `df:Format` of the data-formats register, a `rim:RegisterItem` of the `df:formatItemClass` item class. A format realizes no concept version: it is independent of what the data means. A `df:Representation` binds it to a data type.\n\n## Specification\n\n- [ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system](https://www.itu.int/rec/T-REC-T.800) (`dct:conformsTo`)\n\nThe page of the Recommendation was read on 2026-11-18 for its title and editions (in force: T.800 (07/24)); its text was not read, and the edition the observed files follow is not stated where they are served.\n\nDecision C8 of 2026-11-10 declined a JPEG 2000 format because no media type was observed for it (only a SAFE Implementation Profile needed it). `image/jp2` is now observed on the testbed, so the rule that every format has a media type holds.\n\n## Observed media types\n\nMeasured on 2026-11-18 in the process descriptions (`processDescription.inherited.json`) of `bblocks-process-profiles-tests-1` (branch `planes/w3id-identifiers`, `bfa5cef`), by `.claude/bblocks-audit/tier4-formats/inventory.py`. No principal media type is set: none has been chosen.\n\n| Media type | Observed in |\n|---|---|\n| `image/jp2` | testbed |\n\nWhere it is declared:\n\n- [`algae-bloom/calculate-band`](https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/calculate-band): input `band_a`, input `band_b`, input `band_c`, input `band_d`, input `band_e`, input `band_f`, input `band_g`, input `band_h`, input `band_i`, input `band_j`, input `band_k`, input `band_l`, input `band_m`, input `band_n`, input `band_o`, input `band_p`, input `band_q`, input `band_r`, input `band_s`, input `band_t`, input `band_u`, input `band_v`, input `band_w`, input `band_x`, input `band_y`, input `band_z`\n- [`algae-bloom/plot-image`](https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/plot-image): input `input_image`\n- [`algae-bloom/reproject-image`](https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/reproject-image): input `input_image`\n\n## Requested by\n\nAdded on 2026-11-18 for the representations [`raster-jpeg2000`](../../representation/raster-jpeg2000/), needed by the deployed processes above (tier 4).\n\n## Content of this block\n\n- `ontology.ttl`: the format item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the format item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same item in Turtle.\n",
+  "examples": [
+    {
+      "title": "JPEG 2000",
+      "content": "The register item of the JPEG 2000 format, of the register's format item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/jpeg2000/example_1_1.json",
+          "sizeBytes": 1070,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://www.itu.int/rec/T-REC-T.800\",\n      \"title\": \"ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"image/jp2\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/format/jpeg2000/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/jpeg2000/example_1_2.ttl",
+          "sizeBytes": 1745,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000> a df:Format, rim:RegisterItem ;\n    dct:title \"JPEG 2000\"@en ;\n    dct:description \"A wavelet-based image encoding, lossless or lossy, of one or more components, in the JP2 file format.\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\"^^xsd:anyURI ;\n    rim:itemClass df:formatItemClass ;\n    rim:inRegister df:register ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000/actions/addition> ;\n    dct:conformsTo <https://www.itu.int/rec/T-REC-T.800> ;\n    df:observedMediaType [ df:mediaType \"image/jp2\" ; df:observedIn \"testbed\" ] .\n\n<https://www.itu.int/rec/T-REC-T.800> dct:title \"ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system\" .\n\n<https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000> ;\n    prov:startedAtTime \"2026-11-18T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/format/jpeg2000/example_1_1.jsonld",
+          "sizeBytes": 1180,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/format/jpeg2000/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n  \"type\": \"Format\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/formatItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"specification\": [\n    {\n      \"id\": \"https://www.itu.int/rec/T-REC-T.800\",\n      \"title\": \"ITU-T Recommendation T.800, Information technology - JPEG 2000 image coding system: Core coding system\"\n    }\n  ],\n  \"observedMediaTypes\": [\n    {\n      \"mediaType\": \"image/jp2\",\n      \"observedIn\": \"testbed\"\n    }\n  ],\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Format item - JPEG 2000\ndescription: The register item of the JPEG 2000 format, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/format/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\nx-bblocks-metadata:\n  itemIdentifier: data-formats.format.jpeg2000\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/format/jpeg2000"
+}

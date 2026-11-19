@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.elevation-model-envi",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Elevation model as ENVI .hdr labelled raster",
+  "abstract": "The elevation-model data type of the data-types register, represented in ENVI .hdr labelled raster.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.elevation-model"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.elevation-model"
+  ],
+  "hasFormat": [
+    "data-formats.representation.elevation-model-aaigrid",
+    "data-formats.representation.elevation-model-geotiff",
+    "data-formats.representation.elevation-model-png"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-19",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-envi/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-envi/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-envi/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/elevation-model-envi/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-envi/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-envi/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/elevation-model-envi/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/elevation-model-envi/",
+  "description": "The elevation-model data type of the data-types register, represented in ENVI .hdr labelled raster.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/elevation-model/v1` of the data-types register and points (`df:format`) to the format [ENVI .hdr labelled raster](../../format/envi/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.elevation-model`.\n\n## Requested by\n\nAdded on 2026-11-18 for inputs and outputs of deployed processes (tier 4) of `bblocks-process-profiles` whose data type is `elevation-model` and whose description declares this format. Measured on 2026-11-18 in the process descriptions (`processDescription.inherited.json`) of `bblocks-process-profiles-tests-1` (branch `planes/w3id-identifiers`, `bfa5cef`), by `.claude/bblocks-audit/tier4-formats/inventory.py`.\n\n- [`terrain/hillshading`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading): input `ELEVATION`\n- [`terrain/slope`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/slope): input `ELEVATION`\n- [`terrain/terrain-ruggedness-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/terrain-ruggedness-index): input `DEM`\n- [`terrain/topographic-position-index`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/topographic-position-index): input `DEM`\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "Elevation model as ENVI .hdr labelled raster",
+      "content": "The register item of the representation Elevation model as ENVI .hdr labelled raster: it realizes version 1 of the elevation-model data type of the data-types register and points to the envi format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/elevation-model-envi/example_1_1.json",
+          "sizeBytes": 1009,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://w3id.org/geolabs/ospd/data-types/data-type/elevation-model/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/elevation-model-envi/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/elevation-model-envi/example_1_2.ttl",
+          "sizeBytes": 1634,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi> a df:Representation, rim:RegisterItem ;\n    dct:title \"Elevation model as ENVI .hdr labelled raster\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/elevation-model/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/envi> ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi> ;\n    prov:startedAtTime \"2026-11-18T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/elevation-model-envi/example_1_1.jsonld",
+          "sizeBytes": 1139,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/elevation-model-envi/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://w3id.org/geolabs/ospd/data-types/data-type/elevation-model/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/envi\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - Elevation model as ENVI .hdr labelled raster\ndescription: The register item of the representation Elevation model as ENVI .hdr\n  labelled raster, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.elevation-model-envi\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/elevation-model-envi"
+}

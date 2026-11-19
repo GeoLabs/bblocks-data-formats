@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-formats.representation.raster-jpeg2000",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Representation: Raster as JPEG 2000",
+  "abstract": "The raster data type of the data-types register, represented in JPEG 2000.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "0.1",
+  "register": "data-formats",
+  "itemClass": "schema",
+  "dependsOn": [
+    "data-formats.representation",
+    "data-types.data-type.raster"
+  ],
+  "isDescribedBy": [
+    "data-types.data-type.raster"
+  ],
+  "hasFormat": [
+    "data-formats.representation.raster-geotiff",
+    "data-formats.representation.raster-jpeg",
+    "data-formats.representation.raster-png"
+  ],
+  "group": "Representations",
+  "highlighted": false,
+  "shaclShapes": {
+    "data-formats.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-formats/_sources/vocabulary/shapes.shacl"
+    ],
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-19",
+  "ontology": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-jpeg2000/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-jpeg2000/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-jpeg2000/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-jpeg2000/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-jpeg2000/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-jpeg2000/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-jpeg2000/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-formats/blob/master/build/tests/representation/raster-jpeg2000/",
+  "description": "The raster data type of the data-types register, represented in JPEG 2000.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000` is a `df:Representation`, a `rim:RegisterItem` of the `df:representationItemClass` item class. It realizes (`rim:realizes`) the version `https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1` of the data-types register and points (`df:format`) to the format [JPEG 2000](../../format/jpeg2000/). In `bblock.json`, `isDescribedBy` names the data type block `data-types.data-type.raster`.\n\n## Requested by\n\nAdded on 2026-11-18 for inputs and outputs of deployed processes (tier 4) of `bblocks-process-profiles` whose data type is `raster` and whose description declares this format. Measured on 2026-11-18 in the process descriptions (`processDescription.inherited.json`) of `bblocks-process-profiles-tests-1` (branch `planes/w3id-identifiers`, `bfa5cef`), by `.claude/bblocks-audit/tier4-formats/inventory.py`.\n\n- [`algae-bloom/calculate-band`](https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/calculate-band): input `band_a`, input `band_b`, input `band_c`, input `band_d`, input `band_e`, input `band_f`, input `band_g`, input `band_h`, input `band_i`, input `band_j`, input `band_k`, input `band_l`, input `band_m`, input `band_n`, input `band_o`, input `band_p`, input `band_q`, input `band_r`, input `band_s`, input `band_t`, input `band_u`, input `band_v`, input `band_w`, input `band_x`, input `band_y`, input `band_z`\n- [`algae-bloom/plot-image`](https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/plot-image): input `input_image`\n- [`algae-bloom/reproject-image`](https://w3id.org/geolabs/ospd/process-profiles/process-type/algae-bloom/reproject-image): input `input_image`\n\n## Content of this block\n\n- `ontology.ttl`: the representation item and its proposed addition (canonical source).\n- `schema.yaml`: a profile of the representation item schema, with `id` fixed to this item.\n- `examples.yaml`: the item in JSON and in Turtle.\n",
+  "examples": [
+    {
+      "title": "Raster as JPEG 2000",
+      "content": "The register item of the representation Raster as JPEG 2000: it realizes version 1 of the raster data type of the data-types register and points to the jpeg2000 format.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-jpeg2000/example_1_1.json",
+          "sizeBytes": 984,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-formats/_sources/representation/raster-jpeg2000/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-jpeg2000/example_1_2.ttl",
+          "sizeBytes": 1579,
+          "code": "@prefix df:   <https://w3id.org/geolabs/ospd/data-formats/> .\n@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .\n@prefix rim:  <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct:  <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix owl:  <http://www.w3.org/2002/07/owl#> .\n@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000> a df:Representation, rim:RegisterItem ;\n    dct:title \"Raster as JPEG 2000\"@en ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\"^^xsd:anyURI ;\n    rim:itemClass df:representationItemClass ;\n    rim:inRegister df:register ;\n    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1> ;\n    df:format <https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000> ;\n    rim:validityStatus rim:invalid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000/actions/addition> .\n\n<https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000/actions/addition> a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:proposer df:geolabs ;\n    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000> ;\n    prov:startedAtTime \"2026-11-18T00:00:00Z\"^^xsd:dateTime .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-formats/build/tests/representation/raster-jpeg2000/example_1_1.jsonld",
+          "sizeBytes": 1109,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/raster-jpeg2000/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\",\n  \"type\": \"Representation\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-formats/representationItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-formats/register\",\n  \"realizes\": \"https://w3id.org/geolabs/ospd/data-types/data-type/raster/v1\",\n  \"format\": \"https://w3id.org/geolabs/ospd/data-formats/format/jpeg2000\",\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\",\n  \"hasAction\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000/actions/addition\",\n    \"type\": \"RegisterAction\",\n    \"actionType\": \"addition\",\n    \"proposer\": \"https://w3id.org/geolabs/ospd/data-formats/geolabs\",\n    \"appliesTo\": \"https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\",\n    \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Representation item - Raster as JPEG 2000\ndescription: The register item of the representation Raster as JPEG 2000, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-formats/build/annotated/representation/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-formats/representation/raster-jpeg2000\nx-bblocks-metadata:\n  itemIdentifier: data-formats.representation.raster-jpeg2000\n  register: https://geolabs.github.io/bblocks-data-formats/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-formats",
+  "gitPath": "_sources/representation/raster-jpeg2000"
+}

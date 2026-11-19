@@ -1,0 +1,25 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://docs.ogc.org/is/12-007r2/12-007r2.html> dct:title "OGC 12-007r2 OGC KML 2.3" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/kml> a df:Format ;
+    dct:conformsTo <https://docs.ogc.org/is/12-007r2/12-007r2.html> ;
+    df:observedMediaType [ df:mediaType "application/vnd.google-earth.kml+xml" ;
+            df:observedIn "testbed" ] ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/kml/actions/addition> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:formatItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/kml"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/kml/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-18T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/kml> ;
+    rim:proposer df:geolabs .
+

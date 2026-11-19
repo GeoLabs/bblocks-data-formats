@@ -1,0 +1,25 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix df: <https://w3id.org/geolabs/ospd/data-formats/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://gdal.org/en/stable/drivers/raster/aaigrid.html> dct:title "GDAL raster driver documentation: AAIGrid -- Arc/Info ASCII Grid" .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/aaigrid> a df:Format ;
+    dct:conformsTo <https://gdal.org/en/stable/drivers/raster/aaigrid.html> ;
+    df:observedMediaType [ df:mediaType "application/x-ogc-aaigrid" ;
+            df:observedIn "testbed" ] ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition> ;
+    rim:inRegister df:register ;
+    rim:itemClass df:formatItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-formats/format/aaigrid"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid .
+
+<https://w3id.org/geolabs/ospd/data-formats/format/aaigrid/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-18T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/aaigrid> ;
+    rim:proposer df:geolabs .
+
