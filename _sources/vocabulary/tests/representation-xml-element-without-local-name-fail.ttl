@@ -26,4 +26,4 @@
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/xml-element-without-local-name/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .

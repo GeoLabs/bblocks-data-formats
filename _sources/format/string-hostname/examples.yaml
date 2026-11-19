@@ -30,7 +30,7 @@ examples:
               "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-hostname/actions/addition",
               "type": "RegisterAction",
               "actionType": "addition",
-              "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+              "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
               "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-hostname",
               "startedAtTime": "2026-11-09T00:00:00Z"
             }

@@ -30,7 +30,7 @@
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-09T00:00:00Z"
     }

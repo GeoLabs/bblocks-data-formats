@@ -17,9 +17,9 @@ df:register a rim:Register ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-formats/"^^xsd:anyURI ;
     dct:title "Data Formats"@en ;
     dct:description "A content register of the formats in which process inputs and outputs are encoded, and of the representations that bind a data type to a format."@en ;
-    rim:registerOwner df:geolabs ;
-    rim:registerManager df:geolabs ;
-    rim:controlBody df:geolabs ;
+    rim:registerOwner <https://w3id.org/geolabs/ospd/org/geolabs> ;
+    rim:registerManager <https://w3id.org/geolabs/ospd/org/geolabs> ;
+    rim:controlBody <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:hasSpecification df:specification ;
     rim:runsOn df:registerSystem .
 
@@ -68,8 +68,9 @@ df:representationItemClass a rim:RegisterItemClass ;
     rim:definedIn df:register ;
     rim:validatedBy df:RepresentationShape .
 
-df:geolabs a prov:Organization ;
-    dct:title "GeoLabs SARL"@en .
+# GeoLabs SARL, owner, manager, control body and proposer, is
+# <https://w3id.org/geolabs/ospd/org/geolabs>, the one agent IRI of the four OSPD registers,
+# defined in the data-types register (_sources/vocabulary/data.ttl), not here.
 
 df:registerSystem a rim:RegisterSystem ;
     dct:title "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)"@en .
