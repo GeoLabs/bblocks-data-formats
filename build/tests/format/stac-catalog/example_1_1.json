@@ -28,7 +28,7 @@
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
     "startedAtTime": "2026-11-11T00:00:00Z"
   }

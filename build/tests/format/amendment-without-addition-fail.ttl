@@ -26,7 +26,7 @@
     rim:actionType df:amendmentAction ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
     rim:changeClassification rim:clarifyingChange ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://docs.ogc.org/is/18-062r2/18-062r2.html> dct:title "OGC 18-062r2 OGC API - Processes - Part 1: Core" .
 

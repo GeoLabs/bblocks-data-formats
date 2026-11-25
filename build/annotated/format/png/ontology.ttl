@@ -22,7 +22,7 @@
     prov:startedAtTime "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/png> ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://www.w3.org/TR/png/> dct:title "W3C Portable Network Graphics (PNG) Specification (Third Edition), W3C Recommendation 24 June 2025" .
 

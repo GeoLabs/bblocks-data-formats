@@ -22,7 +22,7 @@
     prov:startedAtTime "2026-11-18T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/jpeg> ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://www.itu.int/rec/T-REC-T.81> dct:title "ITU-T Recommendation T.81, Information technology - Digital compression and coding of continuous-tone still images - Requirements and guidelines" .
 

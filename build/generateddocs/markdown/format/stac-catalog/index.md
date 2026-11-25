@@ -75,7 +75,7 @@ The register item of the STAC Catalog format, of the register's format item clas
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
     "startedAtTime": "2026-11-11T00:00:00Z"
   }
@@ -117,7 +117,7 @@ The register item of the STAC Catalog format, of the register's format item clas
 
 <https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog> ;
     prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .
 
@@ -156,7 +156,7 @@ The register item of the STAC Catalog format, of the register's format item clas
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
     "startedAtTime": "2026-11-11T00:00:00Z"
   }

@@ -87,7 +87,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
       "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -97,7 +97,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-10T00:00:00Z"
     },
@@ -107,7 +107,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "XML Schema element named (df:xmlSchemaElement): gml:AbstractGeometry, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). It is abstract: a GML geometry is any element of its substitution group. Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-17T00:00:00Z"
     }
@@ -148,7 +148,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
 
@@ -156,7 +156,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
     rim:actionType df:amendmentAction ;
     rim:changeClassification rim:clarifyingChange ;
     dct:description "The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 
@@ -165,7 +165,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
     rim:changeClassification rim:substantiveChange ;
     rim:affectedProperty df:xmlSchemaElement ;
     dct:description "XML Schema element named (df:xmlSchemaElement): gml:AbstractGeometry, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). It is abstract: a GML geometry is any element of its substitution group. Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -194,7 +194,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
       "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -204,7 +204,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The block of this representation now names geometry-geojson, the other representation of the same data type (geometry, version 1), with hasFormat, added on 2026-11-10 with geometry-geojson, the first data type with two representations (decision D6). The item, its data type and its format are unchanged. Classified clarifying: a documentary link, which changes neither what the item means nor what a register user must do.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-10T00:00:00Z"
     },
@@ -214,7 +214,7 @@ The register item of the representation Geometry as GML: it realizes version 1 o
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "XML Schema element named (df:xmlSchemaElement): gml:AbstractGeometry, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). It is abstract: a GML geometry is any element of its substitution group. Decision of G\u00e9rald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-gml",
       "startedAtTime": "2026-11-17T00:00:00Z"
     }

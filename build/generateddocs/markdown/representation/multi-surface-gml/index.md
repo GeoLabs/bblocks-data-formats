@@ -54,7 +54,7 @@ The register item of the representation MultiSurface as GML: it realizes version
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml",
     "startedAtTime": "2026-11-17T00:00:00Z"
   }
@@ -92,7 +92,7 @@ The register item of the representation MultiSurface as GML: it realizes version
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -120,7 +120,7 @@ The register item of the representation MultiSurface as GML: it realizes version
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/multi-surface-gml",
     "startedAtTime": "2026-11-17T00:00:00Z"
   }

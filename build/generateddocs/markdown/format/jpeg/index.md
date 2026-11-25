@@ -77,7 +77,7 @@ The register item of the JPEG format, of the register's format item class.
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }
@@ -115,7 +115,7 @@ The register item of the JPEG format, of the register's format item class.
 
 <https://w3id.org/geolabs/ospd/data-formats/format/jpeg/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/jpeg> ;
     prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .
 
@@ -148,7 +148,7 @@ The register item of the JPEG format, of the register's format item class.
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/jpeg",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }

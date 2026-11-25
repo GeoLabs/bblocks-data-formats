@@ -9,7 +9,7 @@
     prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-formats/format/geojson/actions/amendment-schema-fragment-2026-11-17> a rim:RegisterAction ;
     dct:description "JSON Schema fragment added (df:jsonSchemaFragment): a reference to https://geojson.org/schema/GeoJSON.json, the schema of any GeoJSON object published by https://github.com/geojson/schema. The schemas of https://github.com/geojson/schema are published without a version (the URL serves the latest build), are written in JSON Schema draft-07, and cannot check that linear rings are closed or follow the right-hand rule (RFC 7946, section 3.1.6). Decision of Gérald, 2026-11-17. The specification and the observed media type are unchanged. Classified substantive: the register specification lists the schema fragment among the substantive changes."@en ;
@@ -18,7 +18,7 @@
     rim:affectedProperty df:jsonSchemaFragment ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/geojson> ;
     rim:changeClassification rim:substantiveChange ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://www.rfc-editor.org/rfc/rfc7946> dct:title "RFC 7946 The GeoJSON Format" .
 

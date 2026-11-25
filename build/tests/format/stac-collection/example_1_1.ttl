@@ -26,7 +26,7 @@
     prov:startedAtTime "2026-11-11T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://github.com/radiantearth/stac-spec/blob/v1.1.0/collection-spec/collection-spec.md> dct:title "STAC Collection Specification 1.1.0" .
 

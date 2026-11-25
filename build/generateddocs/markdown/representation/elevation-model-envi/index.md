@@ -50,7 +50,7 @@ The register item of the representation Elevation model as ENVI .hdr labelled ra
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }
@@ -85,7 +85,7 @@ The register item of the representation Elevation model as ENVI .hdr labelled ra
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi> ;
     prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .
 
@@ -108,7 +108,7 @@ The register item of the representation Elevation model as ENVI .hdr labelled ra
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }

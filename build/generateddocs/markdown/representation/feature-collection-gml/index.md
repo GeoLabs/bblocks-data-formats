@@ -57,7 +57,7 @@ The register item of the representation Feature collection as GML: it realizes v
       "id": "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -67,7 +67,7 @@ The register item of the representation Feature collection as GML: it realizes v
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "XML Schema element named (df:xmlSchemaElement): gml:FeatureCollection, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). GML 3.2.1 declares it deprecated (`appinfo` deprecated): an application schema is expected to define its own feature collection. Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml",
       "startedAtTime": "2026-11-17T00:00:00Z"
     }
@@ -107,7 +107,7 @@ The register item of the representation Feature collection as GML: it realizes v
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
 
@@ -116,7 +116,7 @@ The register item of the representation Feature collection as GML: it realizes v
     rim:changeClassification rim:substantiveChange ;
     rim:affectedProperty df:xmlSchemaElement ;
     dct:description "XML Schema element named (df:xmlSchemaElement): gml:FeatureCollection, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). GML 3.2.1 declares it deprecated (`appinfo` deprecated): an application schema is expected to define its own feature collection. Decision of Gérald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -145,7 +145,7 @@ The register item of the representation Feature collection as GML: it realizes v
       "id": "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -155,7 +155,7 @@ The register item of the representation Feature collection as GML: it realizes v
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "XML Schema element named (df:xmlSchemaElement): gml:FeatureCollection, namespace http://www.opengis.net/gml/3.2, declared in https://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd (GML 3.2.1, the version the gml format names since 2026-11-17). GML 3.2.1 declares it deprecated (`appinfo` deprecated): an application schema is expected to define its own feature collection. Decision of G\u00e9rald, 2026-11-17. The realized data type version and the format are unchanged. Classified substantive: the element is the schema of the data type in this format.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/feature-collection-gml",
       "startedAtTime": "2026-11-17T00:00:00Z"
     }

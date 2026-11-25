@@ -1,5 +1,5 @@
 Validation report for data-formats.item-class - Data Formats item classes
-Generated 2026-11-19T10:55:22.536698+00:00
+Generated 2026-11-25T15:51:46.345915+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting
@@ -13,21 +13,22 @@ Validation passed
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - /github/workspace/_sources/item-class/../vocabulary/data.ttl
  - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl
+ - https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/catalog.ttl
+ - /github/workspace/_sources/item-class/../vocabulary/data.ttl
 Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results
 Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterItemClassShape: <https://w3id.org/geolabs/ospd/data-formats/representationItemClass>
- - Shape rim:CommitmentShape: *none*
  - Shape rim:RegisterShape: *none*
- - Shape rim:RegisterActionShape: *none*
  - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape rim:ConceptShape: *none*
- - Shape rim:TextShape: *none*
  - Shape rim:RegisterSpecificationShape: *none*
- - Shape rim:ConceptVersionShape: *none*
- - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterActionShape: *none*
+ - Shape rim:CommitmentShape: *none*
  - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:RegisterItemClassShape: <https://w3id.org/geolabs/ospd/data-formats/representationItemClass>
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:ConceptShape: *none*
 
 === End SHACL ===
 

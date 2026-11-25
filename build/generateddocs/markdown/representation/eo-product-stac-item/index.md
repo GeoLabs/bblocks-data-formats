@@ -48,7 +48,7 @@ The register item of the representation Earth observation product as STAC Item: 
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item",
     "startedAtTime": "2026-11-10T00:00:00Z"
   }
@@ -82,7 +82,7 @@ The register item of the representation Earth observation product as STAC Item: 
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 
@@ -105,7 +105,7 @@ The register item of the representation Earth observation product as STAC Item: 
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/eo-product-stac-item",
     "startedAtTime": "2026-11-10T00:00:00Z"
   }

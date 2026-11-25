@@ -73,7 +73,7 @@ The register item of the EO GeoJSON format, of the register's format item class.
       "id": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
       "startedAtTime": "2026-11-17T00:00:00Z"
     },
@@ -83,7 +83,7 @@ The register item of the EO GeoJSON format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "Principal media type set (df:primaryMediaType): application/geo+json, the media type already recorded from the specification (df:inferredMediaType). OGC 17-003r2, chapter 9, says the listed media types shall be used when EO Dataset Metadata is delivered over HTTP, and gives application/geo+json for the GeoJSON representation, the encoding this format describes; its two application/ld+json rows are the GeoJSON-LD representations, which are not this format. application/geo+json is the media type RFC 7946 registers for GeoJSON. Checked on 2026-11-17 in https://docs.ogc.org/is/17-003r2/17-003r2.html. Decision of Gérald, 2026-11-17. The specification, the recorded media type and the JSON Schema fragment are unchanged. Classified substantive: the register specification lists the principal media type among the substantive changes.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
       "startedAtTime": "2026-11-17T00:00:00Z"
     }
@@ -126,7 +126,7 @@ The register item of the EO GeoJSON format, of the register's format item class.
 
 <https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -135,7 +135,7 @@ The register item of the EO GeoJSON format, of the register's format item class.
     rim:changeClassification rim:substantiveChange ;
     rim:affectedProperty df:primaryMediaType ;
     dct:description "Principal media type set (df:primaryMediaType): application/geo+json, the media type already recorded from the specification (df:inferredMediaType). OGC 17-003r2, chapter 9, says the listed media types shall be used when EO Dataset Metadata is delivered over HTTP, and gives application/geo+json for the GeoJSON representation, the encoding this format describes; its two application/ld+json rows are the GeoJSON-LD representations, which are not this format. application/geo+json is the media type RFC 7946 registers for GeoJSON. Checked on 2026-11-17 in https://docs.ogc.org/is/17-003r2/17-003r2.html. Decision of Gérald, 2026-11-17. The specification, the recorded media type and the JSON Schema fragment are unchanged. Classified substantive: the register specification lists the principal media type among the substantive changes."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -174,7 +174,7 @@ The register item of the EO GeoJSON format, of the register's format item class.
       "id": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
       "startedAtTime": "2026-11-17T00:00:00Z"
     },
@@ -184,7 +184,7 @@ The register item of the EO GeoJSON format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "Principal media type set (df:primaryMediaType): application/geo+json, the media type already recorded from the specification (df:inferredMediaType). OGC 17-003r2, chapter 9, says the listed media types shall be used when EO Dataset Metadata is delivered over HTTP, and gives application/geo+json for the GeoJSON representation, the encoding this format describes; its two application/ld+json rows are the GeoJSON-LD representations, which are not this format. application/geo+json is the media type RFC 7946 registers for GeoJSON. Checked on 2026-11-17 in https://docs.ogc.org/is/17-003r2/17-003r2.html. Decision of G\u00e9rald, 2026-11-17. The specification, the recorded media type and the JSON Schema fragment are unchanged. Classified substantive: the register specification lists the principal media type among the substantive changes.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/eo-geojson",
       "startedAtTime": "2026-11-17T00:00:00Z"
     }

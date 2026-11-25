@@ -89,7 +89,7 @@ The register item of the STAC Item format, of the register's format item class.
       "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-10T00:00:00Z"
     },
@@ -99,7 +99,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "Principal media type set to application/geo+json, the media type the STAC Item Specification 1.1.0 states (section Media Type for STAC Item), already recorded with that source as df:inferredMediaType. Decision of 2026-11-10. Classified substantive: the validated table of this register lists the principal media type among the substantive changes; the item is a proposal, amended in place.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-10T00:00:00Z"
     },
@@ -109,7 +109,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The justification of the media type taken from the specification (df:inferredMediaType) is brought up to date: kindgrove-steps.select-scene and kindgrove-steps.download-band now serve application/geo+json, their CWL declaring it (GeoLabs/KindGrove 10887a4), where it said they served application/octet-stream. The media types and the principal media type are unchanged. Classified clarifying: a reworded justification.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-11T00:00:00Z"
     },
@@ -119,7 +119,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-11T00:00:00Z"
     },
@@ -129,7 +129,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The justification of the media type taken from the specification (df:inferredMediaType) cites the commit of GeoLabs/KindGrove that makes kindgrove-steps.select-scene and kindgrove-steps.download-band declare application/geo+json as it was published: 89e3d36, released in v0.0.2-rc3 on 2026-11-11, instead of 10887a4, said not released, a commit that is not public (checked on 2026-11-12: https://github.com/GeoLabs/KindGrove/commit/10887a4 HTTP 404, https://github.com/GeoLabs/KindGrove/commit/89e3d36 HTTP 200, 89e3d36 an ancestor of the tag v0.0.2-rc3). The action amendment-observation-2026-11-11, which cites 10887a4, stays as recorded. Decision of Gérald, 2026-11-12. The media types and the principal media type are unchanged. Classified clarifying: a reference in a justification is corrected.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-12T00:00:00Z"
     }
@@ -177,7 +177,7 @@ The register item of the STAC Item format, of the register's format item class.
 
 <https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 
@@ -186,7 +186,7 @@ The register item of the STAC Item format, of the register's format item class.
     rim:changeClassification rim:substantiveChange ;
     rim:affectedProperty df:primaryMediaType ;
     dct:description "Principal media type set to application/geo+json, the media type the STAC Item Specification 1.1.0 states (section Media Type for STAC Item), already recorded with that source as df:inferredMediaType. Decision of 2026-11-10. Classified substantive: the validated table of this register lists the principal media type among the substantive changes; the item is a proposal, amended in place."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 
@@ -195,7 +195,7 @@ The register item of the STAC Item format, of the register's format item class.
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty df:inferredMediaType ;
     dct:description "The justification of the media type taken from the specification (df:inferredMediaType) is brought up to date: kindgrove-steps.select-scene and kindgrove-steps.download-band now serve application/geo+json, their CWL declaring it (GeoLabs/KindGrove 10887a4), where it said they served application/octet-stream. The media types and the principal media type are unchanged. Classified clarifying: a reworded justification."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .
 
@@ -204,7 +204,7 @@ The register item of the STAC Item format, of the register's format item class.
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:supersedes , rdfs:seeAlso ;
     dct:description "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-11T00:00:00Z"^^xsd:dateTime .
 
@@ -213,7 +213,7 @@ The register item of the STAC Item format, of the register's format item class.
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty df:inferredMediaType ;
     dct:description "The justification of the media type taken from the specification (df:inferredMediaType) cites the commit of GeoLabs/KindGrove that makes kindgrove-steps.select-scene and kindgrove-steps.download-band declare application/geo+json as it was published: 89e3d36, released in v0.0.2-rc3 on 2026-11-11, instead of 10887a4, said not released, a commit that is not public (checked on 2026-11-12: https://github.com/GeoLabs/KindGrove/commit/10887a4 HTTP 404, https://github.com/GeoLabs/KindGrove/commit/89e3d36 HTTP 200, 89e3d36 an ancestor of the tag v0.0.2-rc3). The action amendment-observation-2026-11-11, which cites 10887a4, stays as recorded. Decision of Gérald, 2026-11-12. The media types and the principal media type are unchanged. Classified clarifying: a reference in a justification is corrected."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/stac-item> ;
     prov:startedAtTime "2026-11-12T00:00:00Z"^^xsd:dateTime .
 
@@ -254,7 +254,7 @@ The register item of the STAC Item format, of the register's format item class.
       "id": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-10T00:00:00Z"
     },
@@ -264,7 +264,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "substantive",
       "description": "Principal media type set to application/geo+json, the media type the STAC Item Specification 1.1.0 states (section Media Type for STAC Item), already recorded with that source as df:inferredMediaType. Decision of 2026-11-10. Classified substantive: the validated table of this register lists the principal media type among the substantive changes; the item is a proposal, amended in place.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-10T00:00:00Z"
     },
@@ -274,7 +274,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The justification of the media type taken from the specification (df:inferredMediaType) is brought up to date: kindgrove-steps.select-scene and kindgrove-steps.download-band now serve application/geo+json, their CWL declaring it (GeoLabs/KindGrove 10887a4), where it said they served application/octet-stream. The media types and the principal media type are unchanged. Classified clarifying: a reworded justification.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-11T00:00:00Z"
     },
@@ -284,7 +284,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The format records that it replaces the data type stac-item of the data-types register, withdrawn on 2026-11-11 (decision Q4, option b): rim:supersedes towards https://w3id.org/geolabs/ospd/data-types/data-type/stac-item/item, which carries dct:isReplacedBy towards this format. It also cites the ogcincubator building block ogc.contrib.stac.item-v1-1-0 (rdfs:seeAlso), whose schema combines the STAC Item 1.1.0 JSON Schema with the constraints of the building blocks ogc.geo.features.feature and ogc.api.records.v1.schemas.recordGeoJSON. The media types, the principal media type, the specification and the JSON Schema fragment are unchanged. Classified clarifying: a relation and a link are added, and what the format is does not change.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-11T00:00:00Z"
     },
@@ -294,7 +294,7 @@ The register item of the STAC Item format, of the register's format item class.
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The justification of the media type taken from the specification (df:inferredMediaType) cites the commit of GeoLabs/KindGrove that makes kindgrove-steps.select-scene and kindgrove-steps.download-band declare application/geo+json as it was published: 89e3d36, released in v0.0.2-rc3 on 2026-11-11, instead of 10887a4, said not released, a commit that is not public (checked on 2026-11-12: https://github.com/GeoLabs/KindGrove/commit/10887a4 HTTP 404, https://github.com/GeoLabs/KindGrove/commit/89e3d36 HTTP 200, 89e3d36 an ancestor of the tag v0.0.2-rc3). The action amendment-observation-2026-11-11, which cites 10887a4, stays as recorded. Decision of G\u00e9rald, 2026-11-12. The media types and the principal media type are unchanged. Classified clarifying: a reference in a justification is corrected.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
       "startedAtTime": "2026-11-12T00:00:00Z"
     }

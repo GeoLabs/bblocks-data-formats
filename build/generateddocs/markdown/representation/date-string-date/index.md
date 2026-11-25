@@ -47,7 +47,7 @@ The register item of the representation Date as Date string: it realizes version
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }
@@ -82,7 +82,7 @@ The register item of the representation Date as Date string: it realizes version
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date> ;
     prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .
 
@@ -105,7 +105,7 @@ The register item of the representation Date as Date string: it realizes version
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/date-string-date",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }

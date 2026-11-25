@@ -48,7 +48,7 @@ The register item of the representation Geometry as KML: it realizes version 1 o
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-kml/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-kml",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }
@@ -83,7 +83,7 @@ The register item of the representation Geometry as KML: it realizes version 1 o
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-kml/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/geometry-kml> ;
     prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .
 
@@ -106,7 +106,7 @@ The register item of the representation Geometry as KML: it realizes version 1 o
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-kml/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/geometry-kml",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }

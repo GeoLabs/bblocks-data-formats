@@ -73,7 +73,7 @@ The register item of the Email address string format, of the register's format i
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-email/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-email",
     "startedAtTime": "2026-11-09T00:00:00Z"
   }
@@ -115,7 +115,7 @@ The register item of the Email address string format, of the register's format i
 
 <https://w3id.org/geolabs/ospd/data-formats/format/string-email/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/string-email> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
 
@@ -149,7 +149,7 @@ The register item of the Email address string format, of the register's format i
     "id": "https://w3id.org/geolabs/ospd/data-formats/format/string-email/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/string-email",
     "startedAtTime": "2026-11-09T00:00:00Z"
   }

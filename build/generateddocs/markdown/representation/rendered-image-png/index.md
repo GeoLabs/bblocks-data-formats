@@ -47,7 +47,7 @@ The register item of the representation Rendered image as PNG: it realizes versi
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png",
     "startedAtTime": "2026-11-10T00:00:00Z"
   }
@@ -81,7 +81,7 @@ The register item of the representation Rendered image as PNG: it realizes versi
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 
@@ -104,7 +104,7 @@ The register item of the representation Rendered image as PNG: it realizes versi
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/rendered-image-png",
     "startedAtTime": "2026-11-10T00:00:00Z"
   }

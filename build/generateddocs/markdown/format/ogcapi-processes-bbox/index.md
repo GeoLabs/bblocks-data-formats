@@ -81,7 +81,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
       "id": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -91,7 +91,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -101,7 +101,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The description, the title of the source and the abstract of the block name the OGC API - Processes bbox building block by its identifier after its renaming by GeoLabs on 2026-11-10 (Part 1, edition 1.0: ogc.api.processes.part1.v1.schemas.bbox). The format, its specification and its media types are unchanged. Classified clarifying: a reworded description.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
@@ -147,7 +147,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
 
 <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
 
@@ -156,7 +156,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty df:inferredMediaType ;
     dct:description "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
 
@@ -165,7 +165,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty dct:description ;
     dct:description "The description, the title of the source and the abstract of the block name the OGC API - Processes bbox building block by its identifier after its renaming by GeoLabs on 2026-11-10 (Part 1, edition 1.0: ogc.api.processes.part1.v1.schemas.bbox). The format, its specification and its media types are unchanged. Classified clarifying: a reworded description."@en ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox> ;
     prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 
@@ -204,7 +204,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
       "id": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -214,7 +214,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "Media type application/json added as inferred (df:inferredMediaType), not observed: inferred from the bbox JSON schema; OGC 18-062r2 states none (Requirement 23, Recommendation 17). Decision of 2026-11-09.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-09T00:00:00Z"
     },
@@ -224,7 +224,7 @@ The register item of the OGC API - Processes bounding box format, of the registe
       "actionType": "https://w3id.org/geolabs/ospd/data-formats/amendmentAction",
       "changeClassification": "clarifying",
       "description": "The description, the title of the source and the abstract of the block name the OGC API - Processes bbox building block by its identifier after its renaming by GeoLabs on 2026-11-10 (Part 1, edition 1.0: ogc.api.processes.part1.v1.schemas.bbox). The format, its specification and its media types are unchanged. Classified clarifying: a reworded description.",
-      "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/format/ogcapi-processes-bbox",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }

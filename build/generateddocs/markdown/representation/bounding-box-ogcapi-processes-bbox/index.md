@@ -45,7 +45,7 @@ The register item of the representation Bounding box as OGC API - Processes bbox
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox",
     "startedAtTime": "2026-11-09T00:00:00Z"
   }
@@ -80,7 +80,7 @@ The register item of the representation Bounding box as OGC API - Processes bbox
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox> ;
     prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
 
@@ -103,7 +103,7 @@ The register item of the representation Bounding box as OGC API - Processes bbox
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/bounding-box-ogcapi-processes-bbox",
     "startedAtTime": "2026-11-09T00:00:00Z"
   }

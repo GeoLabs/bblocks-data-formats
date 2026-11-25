@@ -12,7 +12,7 @@
     "id": "https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi/actions/addition",
     "type": "RegisterAction",
     "actionType": "addition",
-    "proposer": "https://w3id.org/geolabs/ospd/data-formats/geolabs",
+    "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
     "appliesTo": "https://w3id.org/geolabs/ospd/data-formats/representation/elevation-model-envi",
     "startedAtTime": "2026-11-18T00:00:00Z"
   }
