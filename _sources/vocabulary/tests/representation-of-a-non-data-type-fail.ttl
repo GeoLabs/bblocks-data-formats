@@ -40,11 +40,11 @@
 
 <https://w3id.org/geolabs/ospd/data-formats/format/test-format/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-formats/not-a-data-type> a rim:Concept ;
     skos:prefLabel "Not a data type" .
 
 <https://w3id.org/geolabs/ospd/data-formats/representation/of-a-non-data-type/actions/addition> a rim:RegisterAction ;
     rim:actionType rim:additionAction ;
-    rim:proposer df:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
